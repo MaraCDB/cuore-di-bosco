@@ -106,7 +106,7 @@ useHead({
 
 
 <style scope>
-.landing-image {
+.landing-image:where(:not(.redesign, .redesign *)) {
     width: 100%;
     height: 400px;
     object-fit: cover;
@@ -114,11 +114,11 @@ useHead({
     display: block;
 }
 
-.landing-text {
+.landing-text:where(:not(.redesign, .redesign *)) {
     position: relative;
 }
 
-.landing-title {
+.landing-title:where(:not(.redesign, .redesign *)) {
     color: white;
     line-height: 1.25;
     font-size: 64px;
@@ -127,16 +127,16 @@ useHead({
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.landing-title strong {
+.landing-title strong:where(:not(.redesign, .redesign *)) {
     font-weight: 15555;
 }
 
-.welcome {
+.welcome:where(:not(.redesign, .redesign *)) {
     position: relative;
     overflow: hidden;
 }
 
-.landing-text {
+.landing-text:where(:not(.redesign, .redesign *)) {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -145,17 +145,17 @@ useHead({
     text-align: center;
 }
 
-#cookie-policy-text {
+#cookie-policy-text:where(:not(.redesign, .redesign *)) {
     margin-top: 15px;
     padding-left: 15px;
     padding-right: 10px;
 }
 
-#cookie-policy-text h3 {
+#cookie-policy-text h3:where(:not(.redesign, .redesign *)) {
     margin-top: 1em;
 }
 
-#cookie-policy-text a {
+#cookie-policy-text a:where(:not(.redesign, .redesign *)) {
     text-decoration: underline;
 }
 </style>

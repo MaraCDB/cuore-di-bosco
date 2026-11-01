@@ -18,6 +18,8 @@ export default withNuxt(
   },
   {
     ignores: [
+      '.superpowers/**',
+      '.taste-skill/**',
       'components/button.vue',
       'components/carousel.vue',
       'components/toast.vue',

@@ -8,11 +8,14 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/eslint',
   ],
-  css: ['@/assets/css/global.css'],
+  css: ['@/assets/css/global.css', '@/assets/css/legacy.css'],
   googleFonts: {
     families: {
-      Cardo: [400, 700], 
-      Yesteryear:[400, 700]
+      Cardo: [400, 700],
+      Yesteryear: [400, 700],
+      'Mountains of Christmas': [400, 700],
+      Montserrat: [300, 400, 500, 600],
+      Numans: [400],
     },
     display: 'swap',
     preconnect: true,

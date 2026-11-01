@@ -1,0 +1,100 @@
+:root {
+    --color-primary: #1ca81c;
+    --color-secondary: #088406;
+    --color-success: #1b650d;
+    --color-background: #f5f1e8;
+    --font-base: 'Roboto', sans-serif;
+    --spacing-base: 1rem;
+}
+
+a:where(:not(.redesign, .redesign *)),
+.link:where(:not(.redesign, .redesign *)) {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover:where(:not(.redesign, .redesign *)),
+.link:hover:where(:not(.redesign, .redesign *)) {
+    color: var(--color-secondary);
+    transition: color 0.2s ease-in-out;
+}
+
+*:where(:not(.redesign, .redesign *)) {
+    font-family: 'Cardo', sans-serif;
+    font-style: normal;
+}
+
+body:where(:not(.redesign, .redesign *)) {
+    margin: 0;
+}
+
+.link:where(:not(.redesign, .redesign *)) {
+    cursor: pointer;
+}
+
+.text-white:where(:not(.redesign, .redesign *)) {
+    color: white;
+}
+
+.text-black:where(:not(.redesign, .redesign *)) {
+    color: black;
+}
+
+.text-center:where(:not(.redesign, .redesign *)) {
+    text-align: center;
+}
+
+.text-left:where(:not(.redesign, .redesign *)) {
+    text-align: left;
+}
+
+.italic:where(:not(.redesign, .redesign *)) {
+    font-style: italic;
+}
+
+h1:where(:not(.redesign, .redesign *)) {
+    font-size: 26pt;
+    font-variant: small-caps;
+}
+
+h2:where(:not(.redesign, .redesign *)) {
+    font-size: 24pt;
+}
+
+h3:where(:not(.redesign, .redesign *)) {
+    font-size: 18pt;
+}
+
+p:where(:not(.redesign, .redesign *)) {
+    font-size: 16pt;
+}
+
+li:where(:not(.redesign, .redesign *)) {
+    font-size: 16pt;
+    margin: 0.5em 0;
+}
+
+section:where(:not(.redesign, .redesign *)) {
+    padding: 0.5em 2em;
+    margin: 1em auto;
+    max-width: 700px;
+}
+
+@media (max-width: 1024px) {
+    p:where(:not(.redesign, .redesign *)) {
+        font-size: 14pt;
+    }
+
+    h1:where(:not(.redesign, .redesign *)),
+    .page-title:where(:not(.redesign, .redesign *)) {
+        font-size: 20pt;
+    }
+
+    h2:where(:not(.redesign, .redesign *)) {
+        font-size: 18pt;
+    }
+
+    h3:where(:not(.redesign, .redesign *)) {
+        font-size: 16pt;
+    }
+}
