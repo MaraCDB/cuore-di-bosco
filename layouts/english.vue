@@ -73,6 +73,7 @@
                     <div>
                     </div>
                 </div>
+                <p><button type="button" class="link cookie-preferences" @click="openPreferences">Cookie preferences</button></p>
             </div>
         </footer>
 
@@ -87,6 +88,7 @@ import Toast from '~/components/toast.vue';
 
 const { setLocale } = useI18n();
 setLocale("en");
+const { openPreferences } = useCookieConsent();
 
 useHead({
   htmlAttrs: { lang: 'en' },
@@ -193,6 +195,13 @@ header {
     background-color: var(--color-background);
     padding: 2em;
     text-align: center;
+}
+
+.cookie-preferences {
+    font: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
 }
 
 .footer-cards {

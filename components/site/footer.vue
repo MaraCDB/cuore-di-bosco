@@ -14,10 +14,14 @@
     </div>
     <div class="footer-info">
       <p><strong>B&amp;B Cuore di Bosco</strong><br>Via Gardesani, 15<br>Brentonico – fraz. Prada (TN)</p>
-      <p class="footer-legal">CIN IT022025C1W3ZHJVK4<br>CF MLCMRA86P66L781J · <NuxtLink to="/it/privacy-policy" no-prefetch>Privacy</NuxtLink></p>
+      <p class="footer-legal">CIN IT022025C1W3ZHJVK4<br>CF MLCMRA86P66L781J · <NuxtLink to="/it/privacy-policy" no-prefetch>Privacy</NuxtLink> · <button type="button" class="cookie-preferences" @click="openPreferences">Preferenze cookie</button></p>
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+const { openPreferences } = useCookieConsent()
+</script>
 
 <style scoped>
 .site-footer{background:var(--forest-deep);color:var(--on-forest);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:20px clamp(32px,5vw,96px);align-items:end;padding:28px max(var(--margin),calc((100% - var(--page-max)) / 2 + var(--margin))) calc(16px + 64px + env(safe-area-inset-bottom))}
@@ -34,6 +38,7 @@
 .footer-info{grid-column:2;grid-row:1 / span 2;align-self:start}
 .footer-info p{margin:0}
 .site-footer a{color:var(--on-forest)}
+.cookie-preferences{font:inherit;color:var(--on-forest);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
 .footer-info .footer-legal{margin-top:16px;font-size:var(--step-small);color:var(--on-forest-soft)}
 @media (max-width:900px){
   .site-footer{grid-template-columns:minmax(0,1fr)}

@@ -1,5 +1,5 @@
 <template>
-    <div v-if="!consentGiven" class="cookie-banner">
+    <div v-if="isBannerOpen" class="cookie-banner" :class="{ 'above-dock': props.aboveDock }">
         <div class="cookie-text">
             {{ $t("cookies-banner-message") }}
             <a :href="policyPage" class="link">
@@ -7,38 +7,22 @@
             </a>
         </div>
         <div class="cookie-buttons">
-            <button @click="acceptCookies" class="accept-button">{{ $t("common.accept") }}</button>
-            <button @click="declineCookies" class="decline-button">{{ $t("common.reject") }}</button>
+            <button @click="accept" class="accept-button">{{ $t("common.accept") }}</button>
+            <button @click="decline" class="decline-button">{{ $t("common.reject") }}</button>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+const props = defineProps({
+    aboveDock: { type: Boolean, default: false },
+});
 
 const route = useRoute();
 const currentLocale = computed(() => route?.path?.split('/')[1]);
-
-const consentGiven = ref(true);
 const policyPage = computed(() => `/${currentLocale.value || 'it'}/privacy-policy`);
 
-onMounted(() => {
-    const cookie = useCookie('cookie_consent')
-    consentGiven.value = cookie.value === 'accepted' || cookie.value === 'declined'
-});
-
-const acceptCookies = () => {
-    const cookie = useCookie('cookie_consent');
-    cookie.value = 'accepted';
-    consentGiven.value = true;
-    location.reload();
-};
-
-const declineCookies = () => {
-    const cookie = useCookie('cookie_consent');
-    cookie.value = 'declined';
-    consentGiven.value = true;
-};
+const { isBannerOpen, accept, decline } = useCookieConsent();
 </script>
 
 <style scoped>
