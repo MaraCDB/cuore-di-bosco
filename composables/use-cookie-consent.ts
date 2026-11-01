@@ -2,8 +2,18 @@ const CONSENT_COOKIE = 'cookie_consent'
 const ANALYTICS_COOKIE_PREFIX = '_ga'
 const EXPIRED_DATE = 'Thu, 01 Jan 1970 00:00:00 GMT'
 
+function getCookieDomains(hostname: string) {
+  const labels = hostname.split('.')
+  const domains: string[] = []
+  for (let start = 0; labels.length - start >= 2; start++) {
+    const suffix = labels.slice(start).join('.')
+    domains.push(suffix, `.${suffix}`)
+  }
+  return domains
+}
+
 function expireAnalyticsCookies() {
-  const hostname = window.location.hostname
+  const domains = getCookieDomains(window.location.hostname)
   document.cookie
     .split(';')
     .map(entry => entry.split('=')[0].trim())
@@ -11,8 +21,9 @@ function expireAnalyticsCookies() {
     .forEach((name) => {
       const expired = `${name}=; expires=${EXPIRED_DATE}; path=/`
       document.cookie = expired
-      document.cookie = `${expired}; domain=${hostname}`
-      document.cookie = `${expired}; domain=.${hostname}`
+      domains.forEach((domain) => {
+        document.cookie = `${expired}; domain=${domain}`
+      })
     })
 }
 

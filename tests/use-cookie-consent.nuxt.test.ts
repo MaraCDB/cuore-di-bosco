@@ -1,5 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
+import CookieBanner from '~/components/cookie-banner.vue'
+import cookieBannerSource from '~/components/cookie-banner.vue?raw'
 import SiteFooter from '~/components/site/footer.vue'
 import { useCookieConsent } from '~/composables/use-cookie-consent'
 
@@ -10,6 +12,14 @@ function clearAllCookies() {
       document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`
     }
   })
+}
+
+function findCookieOwner(): Document {
+  let candidate: object | null = document
+  while (candidate && !Object.getOwnPropertyDescriptor(candidate, 'cookie')) {
+    candidate = Object.getPrototypeOf(candidate)
+  }
+  return candidate as Document
 }
 
 describe('useCookieConsent', () => {
@@ -102,5 +112,50 @@ describe('footer cookie preferences button', () => {
     expect(isBannerOpen.value).toBe(true)
     wrapper.unmount()
     document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'
+  })
+})
+
+describe('analytics cookie expiry domains', () => {
+  it('targets the host and every parent domain down to the registrable one, never the bare TLD', () => {
+    vi.stubGlobal('location', { ...window.location, hostname: 'www.example.it', reload: vi.fn() })
+    document.cookie = 'cookie_consent=accepted; path=/'
+    document.cookie = '_ga=1; path=/'
+    const writes: string[] = []
+    const cookieOwner = findCookieOwner()
+    const originalDescriptor = Object.getOwnPropertyDescriptor(cookieOwner, 'cookie')!
+    const setterSpy = vi.spyOn(cookieOwner, 'cookie', 'set').mockImplementation(function (this: Document, value: string) {
+      writes.push(value)
+      originalDescriptor.set!.call(this, value)
+    })
+    const { decline } = useCookieConsent()
+
+    decline()
+    setterSpy.mockRestore()
+
+    const expiryDomains = writes
+      .filter(write => write.startsWith('_ga=;'))
+      .map(write => write.match(/domain=([^;]+)/)?.[1])
+    expect(expiryDomains).toEqual([undefined, 'www.example.it', '.www.example.it', 'example.it', '.example.it'])
+  })
+})
+
+describe('CookieBanner position', () => {
+  beforeEach(() => {
+    clearAllCookies()
+    clearNuxtState('cookie-banner-open')
+  })
+
+  it('applies the dock offset class only when asked', async () => {
+    const withDock = await mountSuspended(CookieBanner, { props: { aboveDock: true } })
+    expect(withDock.find('.cookie-banner').classes()).toContain('above-dock')
+    withDock.unmount()
+
+    const withoutDock = await mountSuspended(CookieBanner)
+    expect(withoutDock.find('.cookie-banner').classes()).not.toContain('above-dock')
+    withoutDock.unmount()
+  })
+
+  it('offsets the banner above the 64px dock plus the safe area', () => {
+    expect(cookieBannerSource).toMatch(/\.cookie-banner\.above-dock\s*\{\s*bottom:\s*calc\(64px \+ env\(safe-area-inset-bottom\)\);/)
   })
 })

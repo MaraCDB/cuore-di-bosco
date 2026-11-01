@@ -39,6 +39,10 @@ const { isBannerOpen, accept, decline } = useCookieConsent();
     text-align: center;
 }
 
+.cookie-banner.above-dock {
+    bottom: calc(64px + env(safe-area-inset-bottom));
+}
+
 .cookie-text {
     margin-bottom: 12px;
     font-size: 12px;
