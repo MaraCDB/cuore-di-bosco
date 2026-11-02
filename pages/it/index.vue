@@ -107,7 +107,7 @@
               <li>Colazione inclusa</li>
               <li>Bagno privato in camera</li>
               <li>Balcone privato con stendino e sdraio</li>
-              <li>Angolo bollitore</li>
+              <li>Angolo bollitore attrezzato</li>
               <li>Prodotti per igiene personale, pulizia e biancheria inclusi</li>
             </ul>
             <p class="beds">Da 2 a 4 posti letto adulti</p>
@@ -130,7 +130,7 @@
               <li>Colazione inclusa</li>
               <li>Bagno privato in camera</li>
               <li>Balcone privato con stendino e sdraio</li>
-              <li>Angolo bollitore</li>
+              <li>Angolo bollitore attrezzato</li>
               <li>Prodotti per igiene personale, pulizia e biancheria inclusi</li>
             </ul>
             <p class="beds">Da 2 a 4 posti letto adulti</p>
