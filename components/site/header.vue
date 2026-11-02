@@ -5,7 +5,7 @@
         <NuxtLink v-for="link in links" :key="link.to" :to="link.to" no-prefetch>{{ link.label }}</NuxtLink>
         <NuxtLink :to="englishTwin(route.path)" no-prefetch>English</NuxtLink>
         <button ref="menuButton" type="button" class="button button-quiet menu" :aria-expanded="isMenuOpen"
-          aria-controls="site-menu" @click="isMenuOpen = true">Menu</button>
+          :aria-controls="isMenuOpen ? 'site-menu' : undefined" @click="isMenuOpen = true">Menu</button>
         <NuxtLink class="button button-light" to="/it/prenota" no-prefetch>Prenota</NuxtLink>
       </nav>
     </header>
@@ -19,10 +19,12 @@ const links = primaryLinks()
 const isMenuOpen = ref(false)
 const menuButton = ref<HTMLButtonElement | null>(null)
 
-async function closeMenu() {
+async function closeMenu(restoreFocus: boolean) {
   isMenuOpen.value = false
-  await nextTick()
-  menuButton.value?.focus()
+  if (restoreFocus) {
+    await nextTick()
+    menuButton.value?.focus()
+  }
 }
 </script>
 
