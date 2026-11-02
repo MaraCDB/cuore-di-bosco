@@ -29,6 +29,7 @@
 .redesign .band{background:var(--forest);color:var(--on-forest)}
 .redesign .band h2,.redesign .band h3{color:var(--on-forest)}
 .redesign .band a:not(.button){color:var(--on-forest)}
+@media (min-width:901px){.redesign{zoom:0.7}}
 
 .reveal-ready [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity var(--t-reveal) var(--ease-soft),transform var(--t-reveal) var(--ease-soft)}
 .reveal-ready [data-reveal].is-in{opacity:1;transform:none}
