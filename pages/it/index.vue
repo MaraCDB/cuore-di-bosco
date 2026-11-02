@@ -103,8 +103,16 @@
           <div data-reveal>
             <h3>Lampone</h3>
             <p class="lead">Spaziosa e accogliente, adatta a famiglie che desiderano comfort e tranquillità.</p>
-            <p>Ampia camera da 34 mq con letto matrimoniale e due letti singoli. Armadio con cassettiera, bollitore, frigobar. Bagno privato con doccia, lavabo e bidet. Prodotti per igiene personale, pulizia e biancheria inclusi.</p>
+            <ul class="room-features">
+              <li>Bagno privato in camera</li>
+              <li>Balcone privato con stendino e sdraio</li>
+              <li>Angolo bollitore</li>
+            </ul>
             <p class="beds">Da 2 a 4 posti letto adulti</p>
+            <div class="room-actions">
+              <NuxtLink class="button button-quiet" to="/it/prenota#lampone" no-prefetch>Dettagli</NuxtLink>
+              <NuxtLink class="button" to="/it/prenota" no-prefetch>Prenota</NuxtLink>
+            </div>
           </div>
         </article>
         <article class="room">
@@ -116,11 +124,19 @@
           <div data-reveal>
             <h3>Mirtillo</h3>
             <p class="lead">Fresca e luminosa, perfetta per chi ama la natura.</p>
-            <p>Ampia camera matrimoniale da 28 mq con letto matrimoniale. Armadio con cassettiera, zona relax con divano e scrivania. Divano letto matrimoniale per aggiungere due ospiti in più. Bagno privato con doccia, lavabo e bidet.</p>
-            <p>Per famiglia o tra amici, con vista panoramica e pace!</p>
+            <ul class="room-features">
+              <li>Bagno privato in camera</li>
+              <li>Balcone privato con stendino e sdraio</li>
+              <li>Angolo bollitore</li>
+            </ul>
             <p class="beds">Da 2 a 4 posti letto adulti</p>
+            <div class="room-actions">
+              <NuxtLink class="button button-quiet" to="/it/prenota#mirtillo" no-prefetch>Dettagli</NuxtLink>
+              <NuxtLink class="button" to="/it/prenota" no-prefetch>Prenota</NuxtLink>
+            </div>
           </div>
         </article>
+        <p class="rooms-family" data-reveal>Culla gratis · Primo bambino gratis · Secondo bambino al 50% · Bambini &lt;12 anni</p>
       </section>
 
       <section class="band breakfast" id="colazione">
@@ -283,6 +299,10 @@ useReveal(root);
 .room h3{font-family:var(--display);font-weight:var(--display-weight);font-size:var(--step-head);line-height:1.05;color:var(--forest)}
 .room .lead{margin:12px 0 20px}
 .room .beds{display:inline-block;margin:8px 0 0;padding:8px 18px;border-radius:999px;background:var(--champagne);color:var(--forest-deep);font-weight:600}
+.room-features{margin:0 0 12px;padding-left:1.1em}
+.room-features li{margin-bottom:8px}
+.room-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.rooms-family{margin:32px 0 0;text-align:center;font-family:var(--sub);font-weight:600;color:var(--forest-deep)}
 
 .breakfast{margin-top:var(--section-gap);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
 .breakfast-photo{position:relative;min-height:520px}

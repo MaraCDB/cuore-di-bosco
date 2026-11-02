@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import HomePage from '~/pages/it/index.vue'
+import BookingPage from '~/pages/it/prenota.vue'
 
 const mountedWrappers: Array<{ unmount: () => void }> = []
 
@@ -27,6 +28,22 @@ describe('italian home page', () => {
 
     expect(images.length).toBeGreaterThan(0)
     expect(images.filter(image => image.hasAttribute('width') || image.hasAttribute('height'))).toEqual([])
+  })
+
+  it('links each room card to its own section of the booking page', async () => {
+    const wrapper = await mountHome()
+    const detailTargets = wrapper.findAllComponents({ name: 'NuxtLink' })
+      .map(link => link.props('to'))
+      .filter(target => String(target).startsWith('/it/prenota#'))
+
+    expect(detailTargets).toEqual(['/it/prenota#lampone', '/it/prenota#mirtillo'])
+  })
+
+  it.each(['lampone', 'mirtillo'])('has the #%s room section on the booking page', async (roomId) => {
+    const wrapper = await mountSuspended(BookingPage, { attachTo: document.body })
+    mountedWrappers.push(wrapper)
+
+    expect(wrapper.element.querySelector(`#${roomId}`)).not.toBeNull()
   })
 
   it('never prefetches pages from its links', async () => {

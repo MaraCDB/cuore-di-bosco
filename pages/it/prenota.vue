@@ -49,7 +49,7 @@
 
     <section class="rooms">
       <!-- CAMERA LAMPONE -->
-      <div class="room-block">
+      <div class="room-block" id="lampone">
         <div class="card text-center">
           <figure>
             <img decoding="async" width="128" height="128"
@@ -79,7 +79,7 @@
       </div>
 
       <!-- CAMERA MIRTILLO -->
-      <div class="room-block">
+      <div class="room-block" id="mirtillo">
         <div class="card text-center">
           <figure>
             <img decoding="async" width="128" height="128"
