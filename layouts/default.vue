@@ -1,7 +1,7 @@
 <template>
     <SiteHeader />
 
-    <CookieBanner above-dock />
+    <CookieBanner above-dock redesign />
 
     <main :class="{ redesign: isRedesignedRoute }">
         <slot />

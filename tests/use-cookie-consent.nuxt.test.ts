@@ -2,6 +2,8 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import CookieBanner from '~/components/cookie-banner.vue'
 import cookieBannerSource from '~/components/cookie-banner.vue?raw'
+import defaultLayoutSource from '~/layouts/default.vue?raw'
+import englishLayoutSource from '~/layouts/english.vue?raw'
 import SiteFooter from '~/components/site/footer.vue'
 import gtagPlugin from '~/plugins/gtag.client'
 import { expireDeclinedAnalyticsCookies, useCookieConsent } from '~/composables/use-cookie-consent'
@@ -310,5 +312,35 @@ describe('CookieBanner position', () => {
 
   it('offsets the banner above the 64px dock plus the safe area', () => {
     expect(cookieBannerSource).toMatch(/\.cookie-banner\.above-dock\s*\{\s*bottom:\s*calc\(64px \+ env\(safe-area-inset-bottom\)\);/)
+  })
+})
+
+describe('CookieBanner style', () => {
+  beforeEach(() => {
+    clearAllCookies()
+    clearNuxtState('cookie-banner-open')
+  })
+
+  it('uses the redesigned look and pill buttons only when asked', async () => {
+    const redesigned = await mountSuspended(CookieBanner, { props: { redesign: true } })
+    expect(redesigned.find('.cookie-banner').classes()).toContain('redesign')
+    expect(redesigned.findAll('.cookie-buttons button').map(button => button.classes())).toEqual([
+      ['button', 'button-light'],
+      ['button', 'button-quiet'],
+    ])
+    redesigned.unmount()
+
+    const legacy = await mountSuspended(CookieBanner)
+    expect(legacy.find('.cookie-banner').classes()).not.toContain('redesign')
+    expect(legacy.findAll('.cookie-buttons button').map(button => button.classes())).toEqual([
+      ['accept-button'],
+      ['decline-button'],
+    ])
+    legacy.unmount()
+  })
+
+  it('keeps the redesigned banner on the italian layout only', () => {
+    expect(defaultLayoutSource).toMatch(/<CookieBanner above-dock redesign \/>/)
+    expect(englishLayoutSource).toMatch(/<CookieBanner \/>/)
   })
 })

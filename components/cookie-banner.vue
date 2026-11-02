@@ -1,5 +1,5 @@
 <template>
-    <div v-if="isBannerOpen" class="cookie-banner" :class="{ 'above-dock': props.aboveDock }">
+    <div v-if="isBannerOpen" class="cookie-banner" :class="{ 'above-dock': props.aboveDock, redesign: props.redesign }">
         <div class="cookie-text">
             {{ $t("cookies-banner-message") }}
             <a :href="policyPage" class="link">
@@ -7,8 +7,8 @@
             </a>
         </div>
         <div class="cookie-buttons">
-            <button ref="acceptButton" @click="accept" class="accept-button">{{ $t("common.accept") }}</button>
-            <button @click="decline" class="decline-button">{{ $t("common.reject") }}</button>
+            <button ref="acceptButton" @click="accept" :class="props.redesign ? 'button button-light' : 'accept-button'">{{ $t("common.accept") }}</button>
+            <button @click="decline" :class="props.redesign ? 'button button-quiet' : 'decline-button'">{{ $t("common.reject") }}</button>
         </div>
     </div>
 </template>
@@ -16,6 +16,7 @@
 <script setup>
 const props = defineProps({
     aboveDock: { type: Boolean, default: false },
+    redesign: { type: Boolean, default: false },
 });
 
 const route = useRoute();
@@ -89,5 +90,51 @@ watch(shouldFocusBanner, async (isFocusRequested) => {
 
 .decline-button:hover {
     background-color: #d5d5d5;
+}
+
+.cookie-banner.redesign {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px 32px;
+    padding: 16px var(--margin);
+    background: var(--forest);
+    color: var(--on-forest);
+    border-top: 0;
+    box-shadow: 0 -8px 24px rgba(36, 71, 44, 0.18);
+    text-align: left;
+}
+
+.cookie-banner.redesign .cookie-text {
+    flex: 0 1 60ch;
+    margin: 0;
+    font-family: var(--sub);
+    font-size: var(--step-small);
+    line-height: 1.5;
+    color: inherit;
+}
+
+.cookie-banner.redesign a {
+    color: var(--on-forest);
+    font-weight: 600;
+}
+
+.cookie-banner.redesign .button {
+    min-height: 44px;
+    padding: 0 24px;
+    border: 0;
+    cursor: pointer;
+    font-size: var(--step-small);
+}
+
+.cookie-banner.redesign :focus-visible {
+    outline-color: var(--lime);
+}
+
+@media (max-width: 600px) {
+    .cookie-banner.redesign .cookie-text {
+        flex-basis: 100%;
+    }
 }
 </style>
