@@ -33,11 +33,11 @@ const RevealFixture = defineComponent({
 })
 
 describe('useReveal', () => {
-  let rootClassesWhenFoldWasMarked: string[] | null
+  let aboveTheFoldClassesWhenRevealWasEnabled: string[] | null
 
   beforeEach(() => {
     observerInstances.length = 0
-    rootClassesWhenFoldWasMarked = null
+    aboveTheFoldClassesWhenRevealWasEnabled = null
     vi.stubGlobal('IntersectionObserver', FakeIntersectionObserver)
     vi.stubGlobal('innerHeight', VIEWPORT_HEIGHT)
     vi.spyOn(Element.prototype, 'getBoundingClientRect').mockImplementation(function (this: Element) {
@@ -57,16 +57,17 @@ describe('useReveal', () => {
     vi.spyOn(classListPrototype, 'add').mockImplementation(function (this: DOMTokenList, ...tokens: unknown[]) {
       if (tokens.includes('reveal-ready')) {
         const aboveTheFold = document.getElementById('above-the-fold')
-        rootClassesWhenFoldWasMarked = aboveTheFold ? [...aboveTheFold.classList] : []
+        aboveTheFoldClassesWhenRevealWasEnabled = aboveTheFold ? [...aboveTheFold.classList] : []
       }
       return originalAdd.apply(this, tokens)
     })
 
     const wrapper = await mountSuspended(RevealFixture, { attachTo: document.body })
 
-    expect(rootClassesWhenFoldWasMarked).toContain('is-in')
+    expect(aboveTheFoldClassesWhenRevealWasEnabled).toContain('is-in')
     expect(wrapper.classes()).toContain('reveal-ready')
     expect(wrapper.get('#above-the-fold').classes()).toContain('is-in')
+    expect(observerInstances[0].observe).not.toHaveBeenCalledWith(wrapper.get('#above-the-fold').element)
     wrapper.unmount()
   })
 
@@ -86,6 +87,27 @@ describe('useReveal', () => {
     observer.callback([{ isIntersecting: true, target: belowTheFold }])
     expect(belowTheFold.classList.contains('is-in')).toBe(true)
     expect(observer.unobserve).toHaveBeenCalledWith(belowTheFold)
+    wrapper.unmount()
+  })
+
+  it('leaves everything visible when IntersectionObserver is missing', async () => {
+    vi.stubGlobal('IntersectionObserver', undefined)
+
+    const wrapper = await mountSuspended(RevealFixture, { attachTo: document.body })
+
+    expect(wrapper.classes()).not.toContain('reveal-ready')
+    expect(observerInstances).toHaveLength(0)
+    wrapper.unmount()
+  })
+
+  it('leaves everything visible when creating the IntersectionObserver throws', async () => {
+    vi.stubGlobal('IntersectionObserver', vi.fn(function () {
+      throw new Error('unsupported')
+    }))
+
+    const wrapper = await mountSuspended(RevealFixture, { attachTo: document.body })
+
+    expect(wrapper.classes()).not.toContain('reveal-ready')
     wrapper.unmount()
   })
 

@@ -100,6 +100,10 @@ describe('useCookieConsent', () => {
 })
 
 describe('footer cookie preferences button', () => {
+  afterEach(() => {
+    clearAllCookies()
+  })
+
   it('reopens the banner after a stored choice', async () => {
     clearNuxtState('cookie-banner-open')
     document.cookie = 'cookie_consent=declined; path=/'
@@ -111,11 +115,15 @@ describe('footer cookie preferences button', () => {
 
     expect(isBannerOpen.value).toBe(true)
     wrapper.unmount()
-    document.cookie = 'cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'
   })
 })
 
 describe('analytics cookie expiry domains', () => {
+  afterEach(() => {
+    vi.unstubAllGlobals()
+    clearAllCookies()
+  })
+
   it('targets the host and every parent domain down to the registrable one, never the bare TLD', () => {
     vi.stubGlobal('location', { ...window.location, hostname: 'www.example.it', reload: vi.fn() })
     document.cookie = 'cookie_consent=accepted; path=/'
@@ -129,8 +137,12 @@ describe('analytics cookie expiry domains', () => {
     })
     const { decline } = useCookieConsent()
 
-    decline()
-    setterSpy.mockRestore()
+    try {
+      decline()
+    }
+    finally {
+      setterSpy.mockRestore()
+    }
 
     const expiryDomains = writes
       .filter(write => write.startsWith('_ga=;'))
