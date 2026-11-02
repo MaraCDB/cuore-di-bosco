@@ -346,6 +346,12 @@ useReveal(root);
 .map-frame{position:relative;min-height:440px}
 .map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .map-link{position:absolute;inset:0}
+@media (min-width:901px){
+  .hero{min-height:min(calc(100svh - 84px),600px)}
+  .welcome img{aspect-ratio:16/9}
+  .guest-walkers img{aspect-ratio:3/2}
+  .photo-row{height:min(44svh,420px)}
+}
 @media (max-width:900px){
   .hero,.welcome,.everyone-head,.pilgrims-grid,.guests,.room,.room:nth-of-type(even),.breakfast,.garden-head,.arrive{grid-template-columns:minmax(0,1fr)}
   .hero{min-height:0}
