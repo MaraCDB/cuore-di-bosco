@@ -104,9 +104,11 @@
             <h3>Lampone</h3>
             <p class="lead">Spaziosa e accogliente, adatta a famiglie che desiderano comfort e tranquillità.</p>
             <ul class="room-features">
+              <li>Colazione inclusa</li>
               <li>Bagno privato in camera</li>
               <li>Balcone privato con stendino e sdraio</li>
               <li>Angolo bollitore</li>
+              <li>Prodotti per igiene personale, pulizia e biancheria inclusi</li>
             </ul>
             <p class="beds">Da 2 a 4 posti letto adulti</p>
             <div class="room-actions">
@@ -125,9 +127,11 @@
             <h3>Mirtillo</h3>
             <p class="lead">Fresca e luminosa, perfetta per chi ama la natura.</p>
             <ul class="room-features">
+              <li>Colazione inclusa</li>
               <li>Bagno privato in camera</li>
               <li>Balcone privato con stendino e sdraio</li>
               <li>Angolo bollitore</li>
+              <li>Prodotti per igiene personale, pulizia e biancheria inclusi</li>
             </ul>
             <p class="beds">Da 2 a 4 posti letto adulti</p>
             <div class="room-actions">
