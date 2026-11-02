@@ -7,7 +7,7 @@
             </a>
         </div>
         <div class="cookie-buttons">
-            <button @click="accept" class="accept-button">{{ $t("common.accept") }}</button>
+            <button ref="acceptButton" @click="accept" class="accept-button">{{ $t("common.accept") }}</button>
             <button @click="decline" class="decline-button">{{ $t("common.reject") }}</button>
         </div>
     </div>
@@ -22,7 +22,15 @@ const route = useRoute();
 const currentLocale = computed(() => route?.path?.split('/')[1]);
 const policyPage = computed(() => `/${currentLocale.value || 'it'}/privacy-policy`);
 
-const { isBannerOpen, accept, decline } = useCookieConsent();
+const acceptButton = ref(null);
+const { isBannerOpen, shouldFocusBanner, accept, decline } = useCookieConsent();
+
+watch(shouldFocusBanner, async (isFocusRequested) => {
+    if (!isFocusRequested) return;
+    await nextTick();
+    acceptButton.value?.focus();
+    shouldFocusBanner.value = false;
+});
 </script>
 
 <style scoped>

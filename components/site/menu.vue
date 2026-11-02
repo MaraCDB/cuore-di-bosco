@@ -21,7 +21,7 @@ const panel = ref<HTMLElement | null>(null)
 const closeButton = ref<HTMLButtonElement | null>(null)
 
 const links = computed<SiteLink[]>(() => [
-  { label: 'Home', to: '/it' },
+  { label: 'Home', to: '/it#top' },
   ...primaryLinks(),
   { label: 'English', to: englishTwin(route.path) },
 ])
@@ -75,7 +75,7 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.menu-panel{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(24px,6vw,48px);padding:var(--margin);overflow-y:auto;overscroll-behavior:contain;background:var(--forest-deep);color:var(--on-forest)}
+.menu-panel{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(24px,6vw,48px);padding:var(--margin);overflow-y:auto;overscroll-behavior:contain;background:var(--forest-deep);color:var(--on-forest)}
 .menu-panel :focus-visible{outline-color:var(--lime)}
 .menu-close{align-self:flex-end;min-height:48px;padding:0 24px;border:0;border-radius:999px;background:var(--lime);color:var(--ink);cursor:pointer;font-family:var(--sub);font-size:var(--step-small);font-weight:600;text-transform:uppercase;letter-spacing:0.08em}
 nav{display:flex;flex-direction:column;gap:clamp(12px,3vw,20px)}

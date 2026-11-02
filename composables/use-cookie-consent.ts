@@ -27,8 +27,25 @@ function expireAnalyticsCookies() {
     })
 }
 
+function disableAnalytics() {
+  const analyticsWindow = window as unknown as Record<string, unknown>
+  analyticsWindow[`ga-disable-${GA_MEASUREMENT_ID}`] = true
+  if (typeof analyticsWindow.gtag === 'function') {
+    analyticsWindow.gtag('consent', 'update', { analytics_storage: 'denied' })
+  }
+}
+
 function reloadAfterCookieWrite() {
   nextTick(() => window.location.reload())
+}
+
+/**
+ * Expires leftover analytics cookies when the stored choice is `declined`, so a late write by gtag.js during a reload cannot survive.
+ */
+export function expireDeclinedAnalyticsCookies() {
+  if (useCookie(CONSENT_COOKIE).value === 'declined') {
+    expireAnalyticsCookies()
+  }
 }
 
 /**
@@ -39,6 +56,7 @@ export function useCookieConsent() {
   const hasStoredChoice = () => consentCookie.value === 'accepted' || consentCookie.value === 'declined'
 
   const isBannerOpen = useState<boolean>('cookie-banner-open', () => import.meta.client && !hasStoredChoice())
+  const shouldFocusBanner = useState<boolean>('cookie-banner-focus-request', () => false)
 
   if (getCurrentInstance()) {
     onMounted(() => {
@@ -48,6 +66,7 @@ export function useCookieConsent() {
 
   function openPreferences() {
     isBannerOpen.value = true
+    shouldFocusBanner.value = true
   }
 
   function accept() {
@@ -60,11 +79,12 @@ export function useCookieConsent() {
     const wasAccepted = consentCookie.value === 'accepted'
     consentCookie.value = 'declined'
     isBannerOpen.value = false
+    disableAnalytics()
+    expireAnalyticsCookies()
     if (wasAccepted) {
-      expireAnalyticsCookies()
       reloadAfterCookieWrite()
     }
   }
 
-  return { isBannerOpen, openPreferences, accept, decline }
+  return { isBannerOpen, shouldFocusBanner, openPreferences, accept, decline }
 }

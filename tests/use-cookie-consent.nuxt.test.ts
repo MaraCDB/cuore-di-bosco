@@ -3,7 +3,15 @@ import { mountSuspended } from '@nuxt/test-utils/runtime'
 import CookieBanner from '~/components/cookie-banner.vue'
 import cookieBannerSource from '~/components/cookie-banner.vue?raw'
 import SiteFooter from '~/components/site/footer.vue'
-import { useCookieConsent } from '~/composables/use-cookie-consent'
+import gtagPlugin from '~/plugins/gtag.client'
+import { expireDeclinedAnalyticsCookies, useCookieConsent } from '~/composables/use-cookie-consent'
+
+const DISABLE_FLAG = `ga-disable-${GA_MEASUREMENT_ID}`
+
+function clearAnalyticsWindowState() {
+  Reflect.deleteProperty(window, DISABLE_FLAG)
+  Reflect.deleteProperty(window, 'gtag')
+}
 
 function clearAllCookies() {
   document.cookie.split(';').forEach((entry) => {
@@ -35,6 +43,7 @@ describe('useCookieConsent', () => {
   afterEach(() => {
     vi.unstubAllGlobals()
     clearAllCookies()
+    clearAnalyticsWindowState()
   })
 
   it('opens the banner when no choice was stored', () => {
@@ -99,6 +108,102 @@ describe('useCookieConsent', () => {
   })
 })
 
+describe('analytics opt-out', () => {
+  let reloadSpy: ReturnType<typeof vi.fn>
+
+  beforeEach(() => {
+    clearAllCookies()
+    clearNuxtState('cookie-banner-open')
+    reloadSpy = vi.fn()
+    vi.stubGlobal('location', { ...window.location, hostname: 'localhost', reload: reloadSpy })
+  })
+
+  afterEach(() => {
+    vi.unstubAllGlobals()
+    clearAllCookies()
+    clearAnalyticsWindowState()
+  })
+
+  it('sets the opt-out flag before the first analytics cookie is expired', () => {
+    document.cookie = 'cookie_consent=accepted; path=/'
+    document.cookie = '_ga=1; path=/'
+    const flagWhenExpired: unknown[] = []
+    const cookieOwner = findCookieOwner()
+    const originalDescriptor = Object.getOwnPropertyDescriptor(cookieOwner, 'cookie')!
+    const setterSpy = vi.spyOn(cookieOwner, 'cookie', 'set').mockImplementation(function (this: Document, value: string) {
+      if (value.startsWith('_ga=;')) {
+        flagWhenExpired.push((window as unknown as Record<string, unknown>)[DISABLE_FLAG])
+      }
+      originalDescriptor.set!.call(this, value)
+    })
+    const { decline } = useCookieConsent()
+
+    try {
+      decline()
+    }
+    finally {
+      setterSpy.mockRestore()
+    }
+
+    expect(flagWhenExpired.length).toBeGreaterThan(0)
+    expect(flagWhenExpired.every(flag => flag === true)).toBe(true)
+  })
+
+  it('denies analytics storage through gtag when it is loaded', () => {
+    const gtagSpy = vi.fn();
+    (window as unknown as Record<string, unknown>).gtag = gtagSpy
+    const { decline } = useCookieConsent()
+
+    decline()
+
+    expect(gtagSpy).toHaveBeenCalledWith('consent', 'update', { analytics_storage: 'denied' })
+  })
+
+  it('expires leftover analytics cookies on decline even without an accepted choice, without reloading', async () => {
+    document.cookie = '_ga=1; path=/'
+    document.cookie = '_ga_TXLTJ3ZLGZ=2; path=/'
+    const { decline } = useCookieConsent()
+
+    decline()
+    await nextTick()
+
+    expect(document.cookie).not.toContain('_ga')
+    expect(document.cookie).toContain('cookie_consent=declined')
+    expect(reloadSpy).not.toHaveBeenCalled()
+  })
+
+  it('expires leftover analytics cookies on start when the stored choice is declined', () => {
+    document.cookie = 'cookie_consent=declined; path=/'
+    document.cookie = '_ga_TXLTJ3ZLGZ=2; path=/'
+
+    expireDeclinedAnalyticsCookies()
+
+    expect(document.cookie).not.toContain('_ga')
+    expect(document.cookie).toContain('cookie_consent=declined')
+  })
+
+  it('keeps analytics cookies on start when the choice is accepted or missing', () => {
+    document.cookie = '_ga=1; path=/'
+    expireDeclinedAnalyticsCookies()
+    expect(document.cookie).toContain('_ga=1')
+
+    document.cookie = 'cookie_consent=accepted; path=/'
+    expireDeclinedAnalyticsCookies()
+    expect(document.cookie).toContain('_ga=1')
+  })
+
+  it('runs the start cleanup from the gtag plugin without loading the script', async () => {
+    document.cookie = 'cookie_consent=declined; path=/'
+    document.cookie = '_ga=1; path=/'
+    const scriptsBefore = document.head.querySelectorAll('script').length
+
+    await (gtagPlugin as unknown as (nuxtApp: ReturnType<typeof useNuxtApp>) => Promise<void>)(useNuxtApp())
+
+    expect(document.cookie).not.toContain('_ga')
+    expect(document.head.querySelectorAll('script').length).toBe(scriptsBefore)
+  })
+})
+
 describe('footer cookie preferences button', () => {
   afterEach(() => {
     clearAllCookies()
@@ -148,6 +253,42 @@ describe('analytics cookie expiry domains', () => {
       .filter(write => write.startsWith('_ga=;'))
       .map(write => write.match(/domain=([^;]+)/)?.[1])
     expect(expiryDomains).toEqual([undefined, 'www.example.it', '.www.example.it', 'example.it', '.example.it'])
+  })
+})
+
+describe('CookieBanner focus', () => {
+  beforeEach(() => {
+    clearAllCookies()
+    clearNuxtState('cookie-banner-open')
+    clearNuxtState('cookie-banner-focus-request')
+  })
+
+  afterEach(() => {
+    clearAllCookies()
+  })
+
+  it('moves focus to the accept button when the banner is reopened from the preferences link', async () => {
+    document.cookie = 'cookie_consent=declined; path=/'
+    const wrapper = await mountSuspended(CookieBanner, { attachTo: document.body })
+    expect(wrapper.find('.cookie-banner').exists()).toBe(false)
+
+    useCookieConsent().openPreferences()
+    await nextTick()
+    await nextTick()
+
+    expect(document.activeElement).toBe(wrapper.get('.accept-button').element)
+    expect(useCookieConsent().shouldFocusBanner.value).toBe(false)
+    wrapper.unmount()
+  })
+
+  it('does not take focus when the first-visit banner shows at load', async () => {
+    const wrapper = await mountSuspended(CookieBanner, { attachTo: document.body })
+    await nextTick()
+    await nextTick()
+
+    expect(wrapper.find('.cookie-banner').exists()).toBe(true)
+    expect(document.activeElement).not.toBe(wrapper.get('.accept-button').element)
+    wrapper.unmount()
   })
 })
 

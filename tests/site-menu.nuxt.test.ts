@@ -2,6 +2,8 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import SiteHeader from '~/components/site/header.vue'
 import SiteMenu from '~/components/site/menu.vue'
+import menuSource from '~/components/site/menu.vue?raw'
+import bannerSource from '~/components/cookie-banner.vue?raw'
 
 const mountedWrappers: Array<{ unmount: () => void }> = []
 
@@ -54,6 +56,23 @@ describe('site menu', () => {
     await nextTick()
 
     expect(wrapper.findComponent(SiteMenu).emitted('close')).toHaveLength(1)
+  })
+
+  it('points the Home link at the top of the home page', async () => {
+    const { menuButton } = await mountHeader()
+    await menuButton.trigger('click')
+
+    const homeLink = document.querySelector<HTMLAnchorElement>('[role=dialog] a')
+
+    expect(homeLink?.textContent).toBe('Home')
+    expect(homeLink?.getAttribute('href')).toBe('/it#top')
+  })
+
+  it('stacks the menu panel above the cookie banner', () => {
+    const menuZIndex = Number(menuSource.match(/\.menu-panel\{[^}]*z-index:(\d+)/)?.[1])
+    const bannerZIndex = Number(bannerSource.match(/\.cookie-banner\s*\{[^}]*z-index:\s*(\d+)/)?.[1])
+
+    expect(menuZIndex).toBeGreaterThan(bannerZIndex)
   })
 
   it('closes with the Chiudi button and returns focus to the Menu button', async () => {

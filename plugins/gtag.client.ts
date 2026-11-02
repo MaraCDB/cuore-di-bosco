@@ -1,7 +1,5 @@
 export default defineNuxtPlugin(() => {
     const consent = useCookie('cookie_consent');
-    const GA_MEASUREMENT_ID = 'G-TXLTJ3ZLGZ';
-
     if (consent.value === 'accepted') {
         // Carica GA script
         const script1 = document.createElement('script')
@@ -17,5 +15,8 @@ export default defineNuxtPlugin(() => {
       gtag('config', '${GA_MEASUREMENT_ID}', { anonymize_ip: true });
     `
         document.head.appendChild(script2)
+    }
+    else {
+        expireDeclinedAnalyticsCookies()
     }
 })
