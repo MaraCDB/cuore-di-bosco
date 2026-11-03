@@ -295,9 +295,6 @@ useReveal(root);
 .guest img,.guest-placeholder{width:100%;aspect-ratio:3/2;object-fit:cover}
 .guest-placeholder{display:grid;place-items:center;background:var(--linen);color:var(--forest);font-size:var(--step-small);font-weight:600;letter-spacing:0.08em;text-transform:uppercase}
 .guests h3{margin-bottom:10px}
-.guests ul{margin:16px 0 0;padding-left:1.1em}
-.guests li{margin-bottom:6px}
-.guests li::marker{color:var(--meadow)}
 
 .rooms{margin-top:var(--section-gap)}
 .rooms-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
@@ -368,7 +365,6 @@ useReveal(root);
   .guest{gap:14px}
   .guest img,.guest-placeholder{aspect-ratio:16/9}
   .guests h3{margin-bottom:7px}
-  .guests ul{margin:11px 0 0}
   .rooms-head{gap:17px}
   .room{gap:clamp(22px,3.5vw,67px);margin-top:22px}
   .room-photos img{min-height:140px}

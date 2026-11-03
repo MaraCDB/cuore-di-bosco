@@ -81,9 +81,4 @@ onBeforeUnmount(() => {
 nav{display:flex;flex-direction:column;gap:clamp(12px,3vw,20px)}
 nav a{font-family:var(--display);font-weight:var(--display-weight);font-size:var(--step-head);line-height:1.1;color:var(--on-forest);text-decoration:none}
 @media (hover:hover){nav a:hover{text-decoration:underline}}
-@media (min-width:901px){
-  .menu-panel{gap:clamp(17px,4.2vw,34px)}
-  .menu-close{min-height:44px;padding:0 17px}
-  nav{gap:clamp(8px,2.1vw,14px)}
-}
 </style>
