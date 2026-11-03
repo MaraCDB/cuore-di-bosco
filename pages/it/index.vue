@@ -63,7 +63,10 @@
               </div>
             </article>
             <article class="guest guest-nearby" data-reveal>
-              <div class="guest-placeholder" role="img" aria-label="Foto in arrivo: il panorama dall’Altissimo">Foto in arrivo</div>
+              <figure class="guest-photo">
+                <img src="/images/home/castello-avio-1280.webp" alt="Il castello di Avio tra i cipressi" loading="lazy">
+                <figcaption class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Martina Vanzo</figcaption>
+              </figure>
               <div>
                 <h3>A breve distanza</h3>
                 <p>A breve distanza in auto è possibile visitare anche <strong>Rovereto</strong> con la sua offerta culturale e <strong>Ala</strong> con il suo antico centro storico e il vicino castello di Avio con il suo scenografico mercatino di Natale. Non lontano c’è anche l’alto <strong>Lago di Garda</strong>, per una giornata tra panorami e borghi affacciati sull’acqua.</p>
@@ -292,8 +295,9 @@ useReveal(root);
 .everyone-head .lead{margin:0}
 .guests{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,5vw,64px) clamp(32px,5vw,96px);margin-top:28px;align-items:start}
 .guest{display:grid;gap:20px}
-.guest img,.guest-placeholder{width:100%;aspect-ratio:3/2;object-fit:cover}
-.guest-placeholder{display:grid;place-items:center;background:var(--linen);color:var(--forest);font-size:var(--step-small);font-weight:600;letter-spacing:0.08em;text-transform:uppercase}
+.guest img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.guest-photo{display:grid;gap:6px;margin:0}
+.photo-credit{font-size:var(--step-micro);line-height:1.4;color:var(--muted)}
 .guests h3{margin-bottom:10px}
 
 .rooms{margin-top:var(--section-gap)}
@@ -363,7 +367,7 @@ useReveal(root);
   .everyone-head{gap:clamp(22px,3.5vw,67px)}
   .guests{gap:clamp(28px,3.5vw,45px) clamp(22px,3.5vw,67px);margin-top:20px}
   .guest{gap:14px}
-  .guest img,.guest-placeholder{aspect-ratio:16/9}
+  .guest img{aspect-ratio:16/9}
   .guests h3{margin-bottom:7px}
   .rooms-head{gap:17px}
   .room{gap:clamp(22px,3.5vw,67px);margin-top:22px}

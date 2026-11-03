@@ -89,14 +89,17 @@ describe('italian home page', () => {
     expect(nearbyText).not.toContain('famoso castello')
   })
 
-  it('lays out the four guest cards in order with a placeholder for the Altissimo panorama', async () => {
+  it('lays out the four guest cards in order with the APT photo of the castle of Avio and its credit', async () => {
     const wrapper = await mountHome()
     const cardTitles = [...wrapper.element.querySelectorAll('.guests > .guest h3')].map(title => title.textContent)
-    const placeholder = wrapper.element.querySelector('.guest-nearby .guest-placeholder')
+    const nearbyPhoto = wrapper.element.querySelector('.guest-nearby figure img')
+    const nearbyCredit = wrapper.element.querySelector('.guest-nearby figure figcaption')
 
     expect(cardTitles).toEqual(['Per chi cammina', 'Per chi ama la natura e i paesaggi', 'Per le famiglie', 'A breve distanza'])
-    expect(placeholder?.getAttribute('role')).toBe('img')
-    expect(placeholder?.getAttribute('aria-label')).toContain('Altissimo')
+    expect(nearbyPhoto?.getAttribute('src')).toBe('/images/home/castello-avio-1280.webp')
+    expect(nearbyPhoto?.hasAttribute('width')).toBe(false)
+    expect(nearbyCredit?.textContent).toBe('Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Martina Vanzo')
+    expect(wrapper.element.querySelector('.guest-placeholder')).toBeNull()
   })
 
   it('closes the page with the garden of Europe right after the directions', async () => {
