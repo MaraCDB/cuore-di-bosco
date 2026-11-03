@@ -18,7 +18,8 @@ const { setLocale } = useI18n();
 setLocale("it");
 
 const route = useRoute();
-const isRedesignedRoute = computed(() => route.path === '/it' || route.path === '/it/');
+const redesignedRoutes = new Set(['/it', '/it/', '/it/esplora', '/it/esplora/']);
+const isRedesignedRoute = computed(() => redesignedRoutes.has(route.path));
 
 useHead({
   htmlAttrs: { lang: 'it' },

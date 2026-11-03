@@ -8,6 +8,7 @@ import footerSource from '~/components/site/footer.vue?raw'
 import toTopSource from '~/components/site/to-top.vue?raw'
 import cookieBannerSource from '~/components/cookie-banner.vue?raw'
 
+const exploreSource = readFileSync('pages/it/esplora.vue', 'utf8')
 const globalStyles = readFileSync('assets/css/global.css', 'utf8')
 const nuxtConfig = readFileSync('nuxt.config.ts', 'utf8')
 
@@ -65,7 +66,7 @@ describe('exact sizes', () => {
   })
 
   it('sets Montserrat for all non-display text', () => {
-    const redesignSources = [globalStyles, homeSource, headerSource, dockSource, footerSource, toTopSource, menuSource, cookieBannerSource]
+    const redesignSources = [globalStyles, homeSource, exploreSource, headerSource, dockSource, footerSource, toTopSource, menuSource, cookieBannerSource]
 
     expect(globalStyles).not.toContain('Numans')
     expect(nuxtConfig).not.toContain('Numans')
@@ -78,7 +79,7 @@ describe('exact sizes', () => {
   it('sizes redesigned text only through the scale tokens', () => {
     const styles = [
       globalStyles,
-      ...[homeSource, headerSource, dockSource, footerSource, toTopSource, menuSource].map(extractStyleBlocks),
+      ...[homeSource, exploreSource, headerSource, dockSource, footerSource, toTopSource, menuSource].map(extractStyleBlocks),
       cookieBannerRedesignRules,
     ].join('\n')
     const fontSizes = extractFontSizes(styles)

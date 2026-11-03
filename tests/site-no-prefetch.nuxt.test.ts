@@ -4,6 +4,7 @@ import SiteHeader from '~/components/site/header.vue'
 import SiteMenu from '~/components/site/menu.vue'
 import SiteFooter from '~/components/site/footer.vue'
 import SiteDock from '~/components/site/dock.vue'
+import ExplorePage from '~/pages/it/esplora.vue'
 
 const mountedWrappers: Array<{ unmount: () => void }> = []
 
@@ -25,5 +26,14 @@ describe('site chrome links', () => {
 
     expect(links.length).toBeGreaterThan(0)
     links.forEach(link => expect(link.props('noPrefetch')).toBe(true))
+  })
+})
+
+describe('explore page links', () => {
+  it('never prefetch pages from the explore page', async () => {
+    const wrapper = await mountSuspended(ExplorePage, { attachTo: document.body })
+    mountedWrappers.push(wrapper)
+
+    wrapper.findAllComponents({ name: 'NuxtLink' }).forEach(link => expect(link.props('noPrefetch')).toBe(true))
   })
 })
