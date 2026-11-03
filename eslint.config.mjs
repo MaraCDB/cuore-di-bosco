@@ -25,7 +25,6 @@ export default withNuxt(
       'components/toast.vue',
       'components/top-navbar.vue',
       'pages/en/booking.vue',
-      'pages/it/prenota.vue',
       'plugins/reload-script.client.ts',
       'pages/index.vue',
       'pages/[[]...slug].vue',

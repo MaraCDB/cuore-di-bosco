@@ -295,7 +295,7 @@ useHead({
 });
 
 onMounted(() => {
-  const w = window as any;
+  const w = window as Window & { WdgBe?: { wdgInitAll?: () => void } };
   const initWidget = () => {
     if (w.WdgBe && typeof w.WdgBe.wdgInitAll === 'function') {
       w.WdgBe.wdgInitAll();
