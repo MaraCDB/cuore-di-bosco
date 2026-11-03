@@ -73,8 +73,23 @@ describe('italian home page', () => {
 
     expect(wrapper.element.querySelector('.guest-sport h3')?.textContent).toBe('Sport e natura')
     expect(sportParagraphs.join(' ')).not.toContain('Dai sentieri facili')
-    expect(sportParagraphs.at(-1)).toContain('bike park di Polsa')
-    expect(wrapper.element.querySelector('.guest-nature p')?.textContent?.endsWith(walkingSentence)).toBe(true)
+    expect(sportParagraphs.at(-1)).toContain('Parco Family Adventure Polsa')
+    expect(sportParagraphs.at(-1)).toContain('Sull’Altopiano si svolgono inoltre campi scuola e ritiri sportivi.')
+    expect(sportParagraphs.at(-1)).not.toContain('meta ideale')
+    expect([...wrapper.element.querySelectorAll('.guest-nature p')].map(paragraph => paragraph.textContent).at(-1)).toBe(walkingSentence)
+  })
+
+  it('lists the baby equipment in its own paragraph and drops the baby kit link', async () => {
+    const wrapper = await mountHome()
+    const familyCard = [...wrapper.element.querySelectorAll('.guests > .guest')].find(card => card.querySelector('h3')?.textContent === 'Per le famiglie')
+    const familyParagraphs = [...familyCard?.querySelectorAll('p') ?? []].map(paragraph => paragraph.textContent)
+
+    expect(familyParagraphs).toHaveLength(2)
+    expect(familyParagraphs[0]).toMatch(/ai genitori! Abbiamo tutto quello che serve, dimezzate i bagagli!$/)
+    expect(familyParagraphs[1]).toMatch(/^Lettino, sponde per letto, fasciatoio,/)
+    expect(familyParagraphs[1]).toMatch(/frigobar in camera lampone, .* materiali per colorare, disegnare e adesivi in quantità!$/)
+    expect(familyCard?.querySelector('a')).toBeNull()
+    expect(familyCard?.textContent).not.toContain('baby kit')
   })
 
   it('highlights the welcome keywords in bold and names the private bathroom and balcony', async () => {
@@ -96,7 +111,7 @@ describe('italian home page', () => {
     const wrapper = await mountHome()
     const boldWordsIn = (selector: string) => [...wrapper.element.querySelectorAll(`${selector} strong`)].map(word => word.textContent)
 
-    expect(boldWordsIn('.guest-sport')).toEqual(['località sciistiche', 'bike park di Polsa', 'Canyon della Sorna', 'arrampicate', 'trekking', 'campi scuola e ritiri sportivi'])
+    expect(boldWordsIn('.guest-sport')).toEqual(['località sciistiche', 'bike park di Polsa', 'Parco Family Adventure Polsa', 'Canyon della Sorna', 'arrampicate', 'trekking', 'campi scuola e ritiri sportivi'])
     expect(boldWordsIn('.guest-nature')).toEqual(['Prada', 'Parco Naturale del Monte Baldo', 'bambini', 'trekking', 'Monte Baldo'])
     expect(boldWordsIn('.guest-nearby')).toEqual(['Rovereto', 'Ala', 'Lago di Garda'])
   })
@@ -107,6 +122,18 @@ describe('italian home page', () => {
 
     expect(nearbyText).toContain('il vicino castello di Avio con il suo scenografico mercatino di Natale. Non lontano c’è anche l’alto')
     expect(nearbyText).not.toContain('famoso castello')
+  })
+
+  it('adds the trains and the Trentino Guest Card link to the nearby card', async () => {
+    const wrapper = await mountHome()
+    const nearbyParagraphs = [...wrapper.element.querySelectorAll('.guest-nearby p')]
+    const guestCardLink = nearbyParagraphs.at(-1)?.querySelector('a')
+
+    expect(nearbyParagraphs).toHaveLength(2)
+    expect(nearbyParagraphs.at(-1)?.textContent).toBe('Dalla stazione di Rovereto o Mori sono comodamente raggiungibili in treno anche località più lontane come Verona, Trento, Bolzano. I mezzi pubblici in territorio trentino sono tutti inclusi nella Trentino Guest Card insieme a sconti e convenzioni!')
+    expect(guestCardLink?.textContent).toBe('Trentino Guest Card')
+    expect(guestCardLink?.getAttribute('href')).toBe('https://www.visittrentino.info/it/esperienze/trentino-guest-card')
+    expect(guestCardLink?.getAttribute('rel')).toBe('noopener')
   })
 
   it('lays out the four guest cards in order with the APT photos of the families and the castle of Avio and their credits', async () => {

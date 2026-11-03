@@ -45,14 +45,15 @@
               <div>
                 <h3>Sport e natura</h3>
                 <p>La posizione è perfetta per chi ama la natura e le attività all’aria aperta in ogni stagione. Nei mesi invernali, in pochi minuti è possibile raggiungere le <strong>località sciistiche</strong> di Polsa, San Valentino e San Giacomo.</p>
-                <p>Per chi ama lo sport ci sono il <strong>bike park di Polsa</strong>, il <strong>Canyon della Sorna</strong>, le <strong>arrampicate</strong> e il <strong>trekking</strong>, e l’Altopiano è una meta ideale anche per <strong>campi scuola e ritiri sportivi</strong>.</p>
+                <p>Per chi ama lo sport, a pochi minuti ci sono il <strong>bike park di Polsa</strong> e il <strong>Parco Family Adventure Polsa</strong>, mentre il <strong>Canyon della Sorna</strong>, le <strong>arrampicate</strong> e il <strong>trekking</strong> permettono di vivere la montagna in modo attivo. Sull’Altopiano si svolgono inoltre <strong>campi scuola e ritiri sportivi</strong>.</p>
               </div>
             </article>
             <article class="guest guest-nature" data-reveal>
               <img src="/images/home/prada-1280.webp" alt="Il paese di Prada tra le vigne e le montagne" loading="lazy">
               <div>
                 <h3>Per chi ama la natura e i paesaggi</h3>
-                <p>A pochi minuti da Brentonico, <strong>Prada</strong> è una piccola frazione di montagna nel cuore del <strong>Parco Naturale del Monte Baldo</strong>, un luogo tranquillo ma facile da raggiungere, ottimo punto per escursioni e attività di ogni genere. Dai sentieri facili per passeggiate con <strong>bambini</strong> ai percorsi panoramici per <strong>trekking</strong>, ogni camminata offre scenari mozzafiato immersi nella natura del <strong>Monte Baldo</strong> e dei boschi circostanti.</p>
+                <p>A pochi minuti da Brentonico, <strong>Prada</strong> è una piccola frazione di montagna nel cuore del <strong>Parco Naturale del Monte Baldo</strong>, un luogo tranquillo ma facile da raggiungere, ottimo punto per escursioni e attività di ogni genere.</p>
+                <p>Dai sentieri facili per passeggiate con <strong>bambini</strong> ai percorsi panoramici per <strong>trekking</strong>, ogni camminata offre scenari mozzafiato immersi nella natura del <strong>Monte Baldo</strong> e dei boschi circostanti.</p>
               </div>
             </article>
             <article class="guest" data-reveal>
@@ -62,8 +63,8 @@
               </figure>
               <div>
                 <h3>Per le famiglie</h3>
-                <p>Sappiamo bene quanto è complicato spostarsi e rilassarsi con uno o più figli! Per questo abbiamo cercato di rendere la vita più facile e la vacanza più rilassata ai genitori!</p>
-                <NuxtLink to="/it/prenota" no-prefetch>Il nostro baby kit</NuxtLink>
+                <p>Sappiamo bene quanto è complicato spostarsi e rilassarsi con uno o più figli! Per questo abbiamo cercato di rendere la vita più facile e la vacanza più rilassata ai genitori! Abbiamo tutto quello che serve, dimezzate i bagagli!</p>
+                <p>Lettino, sponde per letto, fasciatoio, vasini, seggiolone, scaldabiberon o microonde a disposizione in sala colazione, frigobar in camera lampone, passeggino, marsupio 6/36 mesi o preschool 3-6 anni o fasce, scaletta o gradino per il bagno, piattini, posate e bicchieri da bimbi, libreria ed angolo giochi attrezzato, materiali per colorare, disegnare e adesivi in quantità!</p>
               </div>
             </article>
             <article class="guest guest-nearby" data-reveal>
@@ -74,6 +75,7 @@
               <div>
                 <h3>A breve distanza</h3>
                 <p>A breve distanza in auto è possibile visitare anche <strong>Rovereto</strong> con la sua offerta culturale e <strong>Ala</strong> con il suo antico centro storico e il vicino castello di Avio con il suo scenografico mercatino di Natale. Non lontano c’è anche l’alto <strong>Lago di Garda</strong>, per una giornata tra panorami e borghi affacciati sull’acqua.</p>
+                <p>Dalla stazione di Rovereto o Mori sono comodamente raggiungibili in treno anche località più lontane come Verona, Trento, Bolzano. I mezzi pubblici in territorio trentino sono tutti inclusi nella <a href="https://www.visittrentino.info/it/esperienze/trentino-guest-card" target="_blank" rel="noopener">Trentino Guest Card</a> insieme a sconti e convenzioni!</p>
               </div>
             </article>
           </div>
