@@ -230,7 +230,9 @@ describe('italian explore page', () => {
     expect(redesignedRoutesDeclaration).toContain("'/it/esplora/'")
     expect(redesignedRoutesDeclaration).toContain("'/it/regolamento'")
     expect(redesignedRoutesDeclaration).toContain("'/it/regolamento/'")
-    for (const route of ['prenota', 'privacy']) {
+    expect(redesignedRoutesDeclaration).toContain("'/it/privacy-policy'")
+    expect(redesignedRoutesDeclaration).toContain("'/it/privacy-policy/'")
+    for (const route of ['prenota']) {
       expect(redesignedRoutesDeclaration).not.toContain(route)
     }
   })

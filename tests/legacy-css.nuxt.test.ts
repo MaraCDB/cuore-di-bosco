@@ -25,7 +25,6 @@ const legacySelectors = [
 const unscopedPageFiles: Array<[string, string[]]> = [
   ['pages/it/prenota.vue', bookingSelectors],
   ['pages/en/booking.vue', bookingSelectors],
-  ['pages/it/privacy-policy.vue', privacySelectors],
   ['pages/en/privacy-policy.vue', privacySelectors],
 ]
 
