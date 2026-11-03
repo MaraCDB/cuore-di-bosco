@@ -62,8 +62,27 @@ describe('italian home page', () => {
   it('leaves the storage service to the booking page', async () => {
     const wrapper = await mountHome()
 
-    expect(wrapper.element.querySelector('.guest-walkers')?.textContent).not.toContain('Servizio deposito')
-    expect(wrapper.element.querySelector('.guest-walkers')?.textContent).toContain('Polsa, San Valentino e San Giacomo')
+    expect(wrapper.element.querySelector('.guest-sport')?.textContent).not.toContain('Servizio deposito')
+    expect(wrapper.element.querySelector('.guest-sport')?.textContent).toContain('Polsa, San Valentino e San Giacomo')
+  })
+
+  it('moves the walking sentence to the nature card and closes the sport card with the sport places', async () => {
+    const wrapper = await mountHome()
+    const sportParagraphs = [...wrapper.element.querySelectorAll('.guest-sport p')].map(paragraph => paragraph.textContent)
+    const walkingSentence = 'Dai sentieri facili per passeggiate con bambini ai percorsi panoramici per trekking, ogni camminata offre scenari mozzafiato immersi nella natura del Monte Baldo e dei boschi circostanti.'
+
+    expect(wrapper.element.querySelector('.guest-sport h3')?.textContent).toBe('Sport e natura')
+    expect(sportParagraphs.join(' ')).not.toContain('Dai sentieri facili')
+    expect(sportParagraphs.at(-1)).toContain('bike park di Polsa')
+    expect(wrapper.element.querySelector('.guest-nature p')?.textContent?.endsWith(walkingSentence)).toBe(true)
+  })
+
+  it('highlights the welcome keywords in bold and names the private bathroom and balcony', async () => {
+    const wrapper = await mountHome()
+    const welcomeBoldWords = [...wrapper.element.querySelectorAll('.welcome-text p:not(.lead) strong')].map(word => word.textContent)
+
+    expect(welcomeBoldWords).toEqual(['uscita di Rovereto Sud', 'Monte Baldo', 'montagna', 'ospiti', 'coppie', 'famiglie', 'bagno e balcone privati', 'bambini'])
+    expect(wrapper.element.querySelector('.welcome-text')?.textContent).not.toContain('bagno privato')
   })
 
   it('shows the family terms for both rooms right under the rooms heading', async () => {
@@ -73,11 +92,12 @@ describe('italian home page', () => {
     expect(familyTerms?.textContent).toBe('Culla gratis · 1° bambino gratis · 2° bambino al 50% · <12 anni')
   })
 
-  it('highlights the walkers and nearby keywords in bold', async () => {
+  it('highlights the sport, nature and nearby keywords in bold', async () => {
     const wrapper = await mountHome()
     const boldWordsIn = (selector: string) => [...wrapper.element.querySelectorAll(`${selector} strong`)].map(word => word.textContent)
 
-    expect(boldWordsIn('.guest-walkers')).toEqual(['bambini', 'trekking', 'Monte Baldo', 'località sciistiche'])
+    expect(boldWordsIn('.guest-sport')).toEqual(['località sciistiche', 'bike park di Polsa', 'Canyon della Sorna', 'arrampicate', 'trekking', 'campi scuola e ritiri sportivi'])
+    expect(boldWordsIn('.guest-nature')).toEqual(['Prada', 'Parco Naturale del Monte Baldo', 'bambini', 'trekking', 'Monte Baldo'])
     expect(boldWordsIn('.guest-nearby')).toEqual(['Rovereto', 'Ala', 'Lago di Garda'])
   })
 
@@ -98,7 +118,7 @@ describe('italian home page', () => {
       credit: figure.querySelector('figcaption')?.textContent,
     }))
 
-    expect(cardTitles).toEqual(['Per chi cammina', 'Per chi ama la natura e i paesaggi', 'Per le famiglie', 'A breve distanza'])
+    expect(cardTitles).toEqual(['Sport e natura','Per chi ama la natura e i paesaggi', 'Per le famiglie', 'A breve distanza'])
     expect(creditedPhotos).toEqual([
       { src: '/images/home/famiglia-castione-1280.webp', hasWidth: false, credit: 'Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Graziano Galvagni' },
       { src: '/images/home/castello-avio-1280.webp', hasWidth: false, credit: 'Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Martina Vanzo' },

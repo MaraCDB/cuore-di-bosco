@@ -27,9 +27,9 @@
         <div class="welcome-text" data-reveal>
           <h2>Benvenuti</h2>
           <p class="lead">Benvenuti al <strong>B&amp;B Cuore di Bosco</strong>, un rifugio immerso nella natura della <strong>Vallagarina</strong>, sull’<strong>Altopiano di Brentonico, il giardino d’Europa</strong>. Circondati da rigogliose montagne, il tempo rallenta e la tranquillità regna sovrana.</p>
-          <p>Il B&amp;B è facilmente raggiungibile in auto dall’<strong>uscita di Rovereto Sud</strong> dell’autostrada A22 e rappresenta un punto di partenza ideale per esplorare il Monte Baldo in ogni stagione.</p>
-          <p>La casa, realizzata in pietra e arredata con legno e materiali naturali, offre ambienti caldi e curati, dove ogni dettaglio racconta un profondo legame con la montagna e con uno stile di vita più lento e consapevole. L’accoglienza è semplice e autentica, pensata per far sentire gli ospiti a proprio agio fin dal primo momento.</p>
-          <p>Le camere sono spaziose e luminose, ideali sia per coppie sia per famiglie. Offrono comfort moderni, bagno privato, biancheria inclusa e un’atmosfera rilassante che invita al riposo. Su richiesta sono disponibili dotazioni dedicate ai più piccoli, per garantire un soggiorno sereno anche a chi viaggia con bambini.</p>
+          <p>Il B&amp;B è facilmente raggiungibile in auto dall’<strong>uscita di Rovereto Sud</strong> dell’autostrada A22 e rappresenta un punto di partenza ideale per esplorare il <strong>Monte Baldo</strong> in ogni stagione.</p>
+          <p>La casa, realizzata in pietra e arredata con legno e materiali naturali, offre ambienti caldi e curati, dove ogni dettaglio racconta un profondo legame con la <strong>montagna</strong> e con uno stile di vita più lento e consapevole. L’accoglienza è semplice e autentica, pensata per far sentire gli <strong>ospiti</strong> a proprio agio fin dal primo momento.</p>
+          <p>Le camere sono spaziose e luminose, ideali sia per <strong>coppie</strong> sia per <strong>famiglie</strong>. Offrono comfort moderni, <strong>bagno e balcone privati</strong>, biancheria inclusa e un’atmosfera rilassante che invita al riposo. Su richiesta sono disponibili dotazioni dedicate ai più piccoli, per garantire un soggiorno sereno anche a chi viaggia con <strong>bambini</strong>.</p>
         </div>
       </section>
 
@@ -40,18 +40,19 @@
             <p class="lead">Camminatori, amanti della natura e dei paesaggi, famiglie, amici: qui c’è posto per ognuno.</p>
           </div>
           <div class="guests">
-            <article class="guest guest-walkers" data-reveal>
+            <article class="guest guest-sport" data-reveal>
               <img src="/images/home/bosco-900.webp" alt="Un sentiero nel bosco vicino a Prada" loading="lazy">
               <div>
-                <h3>Per chi cammina</h3>
-                <p>La posizione è perfetta per chi ama la natura e le attività all’aria aperta in ogni stagione. Dai sentieri facili per passeggiate con <strong>bambini</strong> ai percorsi panoramici per <strong>trekking</strong>, ogni camminata offre scenari mozzafiato immersi nella natura del <strong>Monte Baldo</strong> e dei boschi circostanti. Nei mesi invernali, in pochi minuti è possibile raggiungere le <strong>località sciistiche</strong> di Polsa, San Valentino e San Giacomo.</p>
+                <h3>Sport e natura</h3>
+                <p>La posizione è perfetta per chi ama la natura e le attività all’aria aperta in ogni stagione. Nei mesi invernali, in pochi minuti è possibile raggiungere le <strong>località sciistiche</strong> di Polsa, San Valentino e San Giacomo.</p>
+                <p>Per chi ama lo sport ci sono il <strong>bike park di Polsa</strong>, il <strong>Canyon della Sorna</strong>, le <strong>arrampicate</strong> e il <strong>trekking</strong>, e l’Altopiano è una meta ideale anche per <strong>campi scuola e ritiri sportivi</strong>.</p>
               </div>
             </article>
-            <article class="guest" data-reveal>
+            <article class="guest guest-nature" data-reveal>
               <img src="/images/home/prada-1280.webp" alt="Il paese di Prada tra le vigne e le montagne" loading="lazy">
               <div>
                 <h3>Per chi ama la natura e i paesaggi</h3>
-                <p>A pochi minuti da Brentonico, <strong>Prada</strong> è una piccola frazione di montagna nel cuore del <strong>Parco Naturale del Monte Baldo</strong>, un luogo tranquillo ma facile da raggiungere, ottimo punto per escursioni e attività di ogni genere.</p>
+                <p>A pochi minuti da Brentonico, <strong>Prada</strong> è una piccola frazione di montagna nel cuore del <strong>Parco Naturale del Monte Baldo</strong>, un luogo tranquillo ma facile da raggiungere, ottimo punto per escursioni e attività di ogni genere. Dai sentieri facili per passeggiate con <strong>bambini</strong> ai percorsi panoramici per <strong>trekking</strong>, ogni camminata offre scenari mozzafiato immersi nella natura del <strong>Monte Baldo</strong> e dei boschi circostanti.</p>
               </div>
             </article>
             <article class="guest" data-reveal>
