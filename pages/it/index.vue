@@ -82,7 +82,7 @@
       <section class="band pilgrims" id="cammino">
         <div class="wrap pilgrims-grid">
           <img class="pilgrims-photo" src="/images/home/cammino-san-rocco-960.webp" alt="Il segnavia del Cammino di San Rocco su un muro in pietra" loading="lazy" data-reveal>
-          <div data-reveal>
+          <div class="pilgrims-text" data-reveal>
             <h2>Il Cammino di San Rocco</h2>
             <p class="lead">Il <strong>Cammino di San Rocco</strong> passa proprio davanti alla nostra struttura ed è un suggestivo percorso ad anello di circa 70 km, strutturato in 5 tappe, che unisce storia, natura e cultura tra la Val di Gresta, Mori, Ronzo-Chienis e l’altopiano di Brentonico.</p>
             <p>Attraversa boschi, borghi storici e trincee della Grande Guerra, ed è percorribile tutto l’anno. È possibile ritirare il “passaporto del pellegrino” a Mori e seguire le tracce GPX segnalate dai cartelli SAT. Per maggiori informazioni e per scaricare la mappa <a href="https://camminosanrocco.it/" target="_blank" rel="noopener">vai sul sito ufficiale</a></p>
@@ -209,7 +209,6 @@
           <p class="lead">Una volta arrivati, vi accoglierà il silenzio e la bellezza dell’Altopiano di Brentonico, con la sua cornice di verdi montagne.</p>
         </div>
         <div class="photo-row" tabindex="0" aria-label="Fotografie della casa, dell'Altopiano e dei dintorni">
-          <figure><img src="/images/home/lampone-balcone-1200.webp" alt="Il Monte Baldo innevato visto dal balcone della camera Lampone" loading="lazy"><figcaption>Dal balcone di Lampone</figcaption></figure>
           <figure><img src="/images/home/bosco-1920.webp" alt="Il sentiero nel bosco" loading="lazy"><figcaption>Il bosco</figcaption></figure>
           <figure><img src="/images/home/calanchi-san-giacomo-1200.webp" alt="I calanchi di San Giacomo in autunno sotto le pareti del Monte Baldo" loading="lazy"><figcaption>Calanchi di San Giacomo<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Graziano Galvagni</span></figcaption></figure>
           <figure><img src="/images/home/famiglia-castione-1280.webp" alt="Una famiglia nel bosco di Castione in autunno" loading="lazy"><figcaption>Castione<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Graziano Galvagni</span></figcaption></figure>
@@ -222,6 +221,7 @@
           <figure><img src="/images/home/campana-caduti-700.webp" alt="La Campana dei Caduti a Rovereto" loading="lazy"><figcaption>Campana dei Caduti, Rovereto<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Luca Matassoni</span></figcaption></figure>
           <figure><img src="/images/home/castello-avio-1280.webp" alt="Il castello di Avio tra i cipressi" loading="lazy"><figcaption>Castello di Avio<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Martina Vanzo</span></figcaption></figure>
           <figure><img src="/images/home/casa-1600.webp" alt="La casa in pietra" loading="lazy"><figcaption>Via Gardesani 15, Prada</figcaption></figure>
+          <figure><img src="/images/home/lampone-balcone-1200.webp" alt="Il Monte Baldo innevato visto dal balcone della camera Lampone" loading="lazy"><figcaption>Dal balcone di Lampone</figcaption></figure>
         </div>
       </section>
     </div>
@@ -310,6 +310,7 @@ useReveal(root);
 .guest img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .guest-photo{display:grid;gap:6px;margin:0}
 .photo-credit{font-size:var(--step-micro);line-height:1.4;color:var(--muted)}
+.welcome-text p,.pilgrims-text p,.guest p,.breakfast-text p{max-width:68ch;text-align:justify;hyphens:auto}
 .guests h3{margin-bottom:10px}
 
 .rooms{margin-top:var(--section-gap)}
@@ -361,7 +362,7 @@ useReveal(root);
 .reviews{margin-top:var(--section-gap);padding:clamp(20px,2vw,32px) 0}
 .reviews-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
-.arrive{margin-top:var(--section-gap);margin-bottom:var(--section-gap);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,96px);align-items:stretch}
+.arrive{margin-top:var(--section-gap);margin-bottom:var(--section-gap);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,96px);align-items:stretch}
 .arrive h2{margin-bottom:20px}
 .arrive h3{margin:36px 0 10px}
 .map-frame{position:relative;min-height:440px}
@@ -369,7 +370,7 @@ useReveal(root);
 .map-link{position:absolute;inset:0}
 @media (min-width:901px){
   .hero{min-height:min(calc(70svh - 59px),420px)}
-  .hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px;padding-left:max(var(--margin),calc((100vw - 1440px) * 0.35 + var(--margin)))}
+  .hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px}
   .hero-title{gap:clamp(11px,1.4vw,22px)}
   .hero-logo{width:clamp(50px,5.95vw,90px)}
   .hero .tagline{margin:20px 0 0}
@@ -391,7 +392,7 @@ useReveal(root);
   .room-actions{gap:8px;margin-top:17px}
   .rooms-family{margin:14px 0 0;padding:10px 17px}
   .breakfast-photo{min-height:364px}
-  .breakfast-text,.welcome-text{padding-left:clamp(22px,3.5vw,67px);padding-right:max(var(--margin),calc((100vw - 1440px) * 0.35 + var(--margin)))}
+  .breakfast-text,.welcome-text{padding-left:clamp(22px,3.5vw,67px)}
   .breakfast-text h2{margin-bottom:17px}
   .pilgrims-grid{gap:14px clamp(22px,3.5vw,67px)}
   .pilgrims h2{margin-bottom:17px}
@@ -409,7 +410,7 @@ useReveal(root);
   .arrive{gap:clamp(22px,3.5vw,67px)}
   .arrive h2{margin-bottom:14px}
   .arrive h3{margin:25px 0 7px}
-  .map-frame{min-height:308px}
+  .map-frame{min-height:308px;max-height:622px}
 }
 @media (max-width:900px){
   .hero,.welcome,.everyone-head,.pilgrims-grid,.guests,.room,.room:nth-of-type(even),.breakfast,.garden-head,.arrive{grid-template-columns:minmax(0,1fr)}
@@ -424,5 +425,6 @@ useReveal(root);
 }
 @media (max-width:520px){
   .hero-logo{width:60px}
+  .welcome-text p,.pilgrims-text p,.guest p,.breakfast-text p{text-align:left}
 }
 </style>

@@ -104,11 +104,34 @@ describe('exact sizes', () => {
     expect(footerSource).toMatch(/\.footer-name\{[^}]*font-size:var\(--step-display\)/)
   })
 
-  it('keeps the split bands text as wide as the zoomed layout on desktop', () => {
-    const zoomedOuterPadding = 'max(var(--margin),calc((100vw - 1440px) * 0.35 + var(--margin)))'
+  it('widens the desktop page to 1440px and aligns the split bands text with the content', () => {
+    const contentEdgePadding = 'max(var(--margin),calc((100vw - var(--page-max)) / 2 + var(--margin)))'
+    const desktopRoot = globalStyles.match(/@media \(min-width:901px\)\{\s*:root\{([^}]*)\}/)?.[1]
 
-    expect(homeSource).toContain(`.hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px;padding-left:${zoomedOuterPadding}}`)
-    expect(homeSource).toContain(`.breakfast-text,.welcome-text{padding-left:clamp(22px,3.5vw,67px);padding-right:${zoomedOuterPadding}}`)
+    expect(globalStyles).toMatch(/:root\{[^}]*--page-max:1440px/)
+    expect(desktopRoot).not.toContain('--page-max')
+    expect(homeSource).toContain(`.hero-text{align-self:center;padding:48px clamp(32px,4vw,64px) 72px ${contentEdgePadding}}`)
+    expect(homeSource).toContain(`.breakfast-text,.welcome-text{padding:var(--band-pad) ${contentEdgePadding} var(--band-pad) clamp(32px,5vw,96px)}`)
+    expect(homeSource).toContain('.hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px}')
+    expect(homeSource).toContain('.breakfast-text,.welcome-text{padding-left:clamp(22px,3.5vw,67px)}')
+    expect(homeSource).not.toContain('* 0.35')
+  })
+
+  it('justifies the welcome, San Rocco, guest and breakfast paragraphs within 68ch', () => {
+    expect(homeSource).toContain('.welcome-text p,.pilgrims-text p,.guest p,.breakfast-text p{max-width:68ch;text-align:justify;hyphens:auto}')
+  })
+
+  it('aligns the justified paragraphs to the left on phones', () => {
+    const phoneRules = homeSource.match(/@media \(max-width:520px\)\{([\s\S]*?)\n\}/)?.[1]
+
+    expect(phoneRules).toContain('.welcome-text p,.pilgrims-text p,.guest p,.breakfast-text p{text-align:left}')
+  })
+
+  it('gives the map more width than the directions text without changing its height', () => {
+    expect(homeSource).toContain('.arrive{margin-top:var(--section-gap);margin-bottom:var(--section-gap);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);')
+    expect(homeSource).toContain('.map-frame{position:relative;min-height:440px}')
+    expect(homeSource).toContain('.map-frame{min-height:308px;max-height:622px}')
+    expect(homeSource).toContain('.map-frame{min-height:320px}')
   })
 
   it('stretches the welcome photo to the full band height on desktop', () => {

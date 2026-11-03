@@ -137,6 +137,24 @@ describe('italian home page', () => {
     expect(creditOf('monte-altissimo-1200.webp')).toBe('360gardalife. Foto di Angela Trawoeger')
   })
 
+  it('ends the garden row with the view from the Lampone balcony right after the house', async () => {
+    const wrapper = await mountHome()
+    const gardenSources = [...wrapper.element.querySelectorAll('.garden .photo-row figure img')].map(image => image.getAttribute('src'))
+    const lastFigure = wrapper.element.querySelector('.garden .photo-row figure:last-child')
+
+    expect(gardenSources.slice(-2)).toEqual(['/images/home/casa-1600.webp', '/images/home/lampone-balcone-1200.webp'])
+    expect(gardenSources.filter(source => source?.includes('lampone-balcone'))).toHaveLength(1)
+    expect(lastFigure?.querySelector('figcaption')?.textContent).toBe('Dal balcone di Lampone')
+  })
+
+  it('marks the San Rocco text column for justified paragraphs', async () => {
+    const wrapper = await mountHome()
+    const pilgrimsText = wrapper.element.querySelector('#cammino .pilgrims-text')
+
+    expect(pilgrimsText?.querySelector('h2')?.textContent).toBe('Il Cammino di San Rocco')
+    expect(pilgrimsText?.querySelectorAll('p')).toHaveLength(3)
+  })
+
   it('gives the motorway exit its own welcome paragraph after the lead', async () => {
     const wrapper = await mountHome()
     const exitParagraph = wrapper.element.querySelector('.welcome-text .lead + p')
