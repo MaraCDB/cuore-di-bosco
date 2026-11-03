@@ -68,7 +68,7 @@ const flowerAlts = [
 ]
 const flowerCredits = ['Valentino Azzolini', 'Luca Matassoni', 'Luca Matassoni', 'Tommaso Prugnola', 'Graziano Galvagni'].map(aptCredit)
 
-const sectionOrder = ['explore-intro', 'places', 'explore-nature', 'explore-around', 'explore-flower', 'explore-garden', 'seasons', 'explore-note']
+const sectionOrder = ['explore-intro', 'places', 'places-note', 'explore-nature', 'explore-around', 'explore-flower', 'explore-garden', 'seasons', 'explore-note']
 
 const mountedWrappers: Array<{ unmount: () => void }> = []
 
@@ -108,6 +108,35 @@ describe('italian explore page', () => {
     expect(tiles.map(tile => tile.querySelector('figure > img')?.getAttribute('src'))).toEqual(placePhotos.map(name => `/images/home/${name}.webp`))
     expect(tiles.map(tile => tile.querySelector('figcaption > .photo-credit')?.textContent ?? null)).toEqual(placeCredits)
     expect(tiles.map(tile => tile.querySelector('.place-name')?.textContent)).not.toContain('Lago di Loppio')
+  })
+
+  it('keeps the Cammino di San Rocco out of the summer card', async () => {
+    const wrapper = await mountExplore()
+    const summerCard = [...wrapper.element.querySelectorAll('.season')].find(card => card.querySelector('h3')?.textContent?.startsWith('Estate'))
+
+    expect(summerCard?.querySelector('h3')?.textContent).toBe('Estate sul Monte Baldo: trekking e malghe')
+    expect(normalize(summerCard?.textContent ?? '')).not.toContain('Cammino di San Rocco')
+  })
+
+  it('places the all-year Cammino di San Rocco note right after the places grid', async () => {
+    const wrapper = await mountExplore()
+    const note = wrapper.element.querySelector('ul.places + p.places-note')
+    const link = note?.querySelector('a')
+
+    expect(note).not.toBeNull()
+    expect(normalize(note?.textContent ?? '')).toBe('Il Cammino di San Rocco passa proprio davanti alla nostra struttura ed è percorribile tutto l’anno. Per maggiori informazioni e per scaricare la mappa vai sul sito ufficiale')
+    expect(link?.getAttribute('href')).toBe('https://camminosanrocco.it/')
+    expect(link?.getAttribute('target')).toBe('_blank')
+  })
+
+  it('reveals the explore note paragraphs while the band stays still', async () => {
+    const wrapper = await mountExplore()
+    const band = wrapper.element.querySelector('section.explore-note')
+    const paragraphs = [...(band?.querySelectorAll('p') ?? [])]
+
+    expect(band?.hasAttribute('data-reveal')).toBe(false)
+    expect(paragraphs).toHaveLength(2)
+    expect(paragraphs.every(paragraph => paragraph.hasAttribute('data-reveal'))).toBe(true)
   })
 
   it('shows the flower of Baldo photos as a credited row', async () => {
@@ -161,13 +190,17 @@ describe('italian explore page', () => {
     for (const name of ['explore-nature', 'explore-garden', 'explore-note']) {
       expect(ruleBody(`.${name}`)).toMatch(/background:var\(--champagne\)/)
     }
-    for (const name of ['places', 'explore-around', 'seasons']) {
+    for (const name of ['places', 'places-note', 'explore-around', 'seasons']) {
       expect(ruleBody(`.${name}`) ?? '').not.toMatch(/background/)
     }
   })
 
   it('uses the light credit colour on the forest band', () => {
     expect(ruleBody('.explore-flower .photo-credit')).toMatch(/color:var\(--on-forest-soft\)/)
+  })
+
+  it('keeps each flower row credit inside the visible width', () => {
+    expect(ruleBody('.photo-row .photo-credit')).toContain('max-width:calc(100vw - 2 * var(--margin))')
   })
 
   it('lays the places out four across on desktop and two on phones', () => {

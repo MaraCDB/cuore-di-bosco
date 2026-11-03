@@ -66,6 +66,12 @@
       </li>
     </ul>
 
+    <p class="places-note" data-reveal>
+      Il <strong>Cammino di San Rocco</strong> passa proprio davanti alla nostra struttura ed è percorribile tutto l’anno.
+      Per maggiori informazioni e per scaricare la mappa
+      <a href="https://camminosanrocco.it/" target="_blank" rel="noopener">vai sul sito ufficiale</a>
+    </p>
+
     <section class="explore-nature">
       <div class="wrap">
         <div class="text-columns" data-reveal>
@@ -250,20 +256,11 @@
       </article>
 
       <article class="season" data-reveal>
-        <h3>Estate sul Monte Baldo: trekking, malghe e Cammino di San Rocco</h3>
+        <h3>Estate sul Monte Baldo: trekking e malghe</h3>
         <p>
           L’estate sul Monte Baldo significa attività all’aria aperta: escursionismo, mountain bike, passeggiate a cavallo
           e visite ai rifugi e malghe per assaporare latte e formaggi locali. Sentieri panoramici offrono viste sul Lago di Garda,
           e il Sentiero della Pace attraversa luoghi della Grande Guerra come trincee, gallerie e fortificazioni.
-        </p>
-        <p>
-          Il <strong>Cammino di San Rocco</strong> passa proprio davanti alla nostra struttura ed è un suggestivo percorso
-          ad anello di circa 70 km, strutturato in 5 tappe, che unisce storia,
-          natura e cultura tra la Val di Gresta, Mori, Ronzo-Chienis e l’altopiano di Brentonico.
-          Attraversa boschi, borghi storici e trincee della Grande Guerra, ed è percorribile tutto l’anno.
-          È possibile ritirare il “passaporto del pellegrino” a Mori e seguire le tracce GPX segnalate dai cartelli SAT.
-          Per maggiori informazioni e per scaricare la mappa
-          <a href="https://camminosanrocco.it/" target="_blank">vai sul sito ufficiale</a>
         </p>
         <p>
           L’altopiano di Brentonico è inoltre sede di&nbsp;<a
@@ -322,15 +319,15 @@
       </article>
     </section>
 
-    <section class="explore-note" data-reveal>
-      <p>
+    <section class="explore-note">
+      <p data-reveal>
         <strong>Per scoprire tutti gli eventi in corso ti consigliamo il sito
           <a href="https://www.visitrovereto.it" target="_blank">www.visitrovereto.it</a>
           e l’<a href="https://www.visitrovereto.it/info/uffici-turistici-rovereto-vallagarina/">apt di Brentonico</a>,
           inoltre troverai un display in struttura con mappe e depliant
           aggiornati della zona a tua disposizione!</strong>
       </p>
-      <p>
+      <p data-reveal>
         <strong>FONTE TESTO
           <a href="https://www.visitrovereto.it" target="_blank">WWW.VISITROVERETO.IT</a></strong>
       </p>
@@ -411,7 +408,8 @@ useReveal(root);
 .park-logo{width:132px;height:auto}
 .text-columns{column-gap:clamp(32px,5vw,96px)}
 .explore-nature p,.explore-around p,.explore-garden p,.season p{max-width:68ch;text-align:justify;hyphens:auto}
-.explore-nature a,.explore-around a,.explore-garden a,.season a,.explore-note a{overflow-wrap:anywhere}
+.places-note{max-width:var(--page-max);margin:var(--section-gap) auto 0;padding:0 var(--margin);text-align:left}
+.explore-nature a,.explore-around a,.explore-garden a,.season a,.explore-note a,.places-note a{overflow-wrap:anywhere}
 
 .explore-around{margin-top:var(--section-gap)}
 .panorama{max-width:850px;margin:var(--section-gap) auto 0;display:grid;gap:6px}
@@ -425,7 +423,7 @@ useReveal(root);
 .photo-row figure{flex:none;margin:0;scroll-snap-align:start;display:flex;flex-direction:column;gap:10px}
 .photo-row img{height:calc(min(64svh,620px) - 36px);width:auto;object-fit:cover}
 .photo-row figcaption{width:0;min-width:100%}
-.photo-row .photo-credit{display:block;margin-top:2px}
+.photo-row .photo-credit{display:block;margin-top:2px;max-width:calc(100vw - 2 * var(--margin))}
 
 .explore-garden{background:var(--champagne);margin-top:var(--section-gap);padding:var(--band-pad) 0}
 .explore-garden h2{margin-bottom:20px}
