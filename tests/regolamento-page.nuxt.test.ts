@@ -100,6 +100,8 @@ describe('italian rules page', () => {
 
     expect(ruleBody('.rule')).toContain('border-top:3px solid var(--meadow)')
     expect(ruleBody('.rule h2')).toContain('font-size:var(--step-title)')
+    expect(ruleBody('.rule li+li')).toContain('margin-top:0.5em')
+    expect(ruleBody('.rule>:last-child')).toContain('margin-bottom:0')
     expect(desktopRules).toContain('.rules{grid-template-columns:repeat(2,minmax(0,1fr))')
   })
 

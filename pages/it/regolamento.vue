@@ -174,6 +174,8 @@ useReveal(root);
 .rule h2{font-family:var(--display);font-weight:var(--display-weight);font-size:var(--step-title);line-height:1.1;color:var(--forest);margin-bottom:10px}
 .rule p,.rule li{max-width:68ch;text-align:justify;hyphens:auto}
 .rule ul{list-style:disc;padding-left:1.1em}
+.rule li+li{margin-top:0.5em}
+.rule>:last-child{margin-bottom:0}
 
 .rules-closing{background:var(--champagne);margin-top:var(--section-gap);padding:var(--band-pad) var(--margin);text-align:center}
 .rules-closing p{max-width:46rem;margin:0 auto;font-style:italic}
