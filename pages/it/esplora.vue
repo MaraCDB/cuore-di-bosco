@@ -66,12 +66,6 @@
       </li>
     </ul>
 
-    <p class="places-note" data-reveal>
-      Il <strong>Cammino di San Rocco</strong> passa proprio davanti alla nostra struttura ed è percorribile tutto l’anno.
-      Per maggiori informazioni e per scaricare la mappa
-      <a href="https://camminosanrocco.it/" target="_blank" rel="noopener">vai sul sito ufficiale</a>
-    </p>
-
     <section class="explore-nature">
       <div class="wrap">
         <div class="text-columns" data-reveal>
@@ -103,14 +97,21 @@
             Non perdere il magnifico <strong>Canyon della Sorna</strong>, una meraviglia naturale con gole scavate dall’acqua,
             cascate e punti panoramici unici per passeggiate e fotografie.
           </p>
-          <p>
-            Sul sito del Parco qui sotto puoi
-            trovare i percorsi e le tante attività in programma!
+          <p class="cammino-note">
+            Il <strong>Cammino di San Rocco</strong> passa proprio davanti alla nostra struttura ed è percorribile tutto l’anno.
+            Per maggiori informazioni e per scaricare la mappa
+            <a href="https://camminosanrocco.it/" target="_blank" rel="noopener">vai sul sito ufficiale</a>
           </p>
+          <div class="park-link">
+            <p>
+              Sul sito del Parco qui sotto puoi
+              trovare i percorsi e le tante attività in programma!
+            </p>
+            <figure class="park-logo-figure">
+              <a href="https://www.parcomontebaldo.tn.it/it" target="_blank" rel="noopener noreferrer nofollow"><img class="park-logo" src="/images/logo-parco-monte-baldo.svg" alt="Logo Parco Naturale Monte Baldo" loading="lazy"></a>
+            </figure>
+          </div>
         </div>
-        <figure class="park-logo-figure" data-reveal>
-          <a href="https://www.parcomontebaldo.tn.it/it" target="_blank" rel="noopener noreferrer nofollow"><img class="park-logo" src="/images/logo-parco-monte-baldo.svg" alt="Logo Parco Naturale Monte Baldo" loading="lazy"></a>
-        </figure>
       </div>
     </section>
 
@@ -184,13 +185,7 @@
         <div class="wrap" data-reveal>
           <h2 id="flower-title">Brentonico, il fiore del Baldo</h2>
         </div>
-        <div class="photo-row" tabindex="0" aria-labelledby="flower-title">
-          <figure><img src="https://www.visitrovereto.it/wp-content/uploads/2019/11/paesaggio-inverno-monte-baldo-foto-valentino-azzolini-1.jpg" alt="Monte Baldo in inverno - paesaggio innevato Altopiano di Brentonico" loading="lazy"><figcaption><span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Valentino Azzolini</span></figcaption></figure>
-          <figure><img src="https://www.visitrovereto.it/wp-content/uploads/2023/07/palazzo-eccheli-baisi-giardino-botanico-brentonico-luca-matassoni-2023-3.jpg" alt="Giardino botanico di Palazzo Eccheli-Baisi a Brentonico" loading="lazy"><figcaption><span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Luca Matassoni</span></figcaption></figure>
-          <figure><img src="https://www.visitrovereto.it/wp-content/uploads/2023/06/Giardino-Botanico-ph-lucamatassoni-web.png" alt="Giardino Botanico del Parco Naturale Monte Baldo" loading="lazy"><figcaption><span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Luca Matassoni</span></figcaption></figure>
-          <figure><img src="https://www.visitrovereto.it/wp-content/uploads/2019/10/paesaggio-inverno-monte-baldo-foto-tommaso-prugnola-3.jpg" alt="Paesaggio invernale Monte Baldo - Trentino" loading="lazy"><figcaption><span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Tommaso Prugnola</span></figcaption></figure>
-          <figure><img src="https://www.visitrovereto.it/wp-content/uploads/2024/10/Brentonico-il-fiore-del-Baldo-Graziano-Galvagni.jpg" alt="Brentonico il fiore del Baldo - panorama montano" loading="lazy"><figcaption><span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Graziano Galvagni</span></figcaption></figure>
-        </div>
+        <SitePhotoCarousel :photos="flowerPhotos" label="Brentonico, il fiore del Baldo" />
       </section>
     </div>
 
@@ -336,6 +331,16 @@
 </template>
 
 <script lang="ts" setup>
+const aptCredit = "Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di";
+
+const flowerPhotos = [
+  { src: "https://www.visitrovereto.it/wp-content/uploads/2019/11/paesaggio-inverno-monte-baldo-foto-valentino-azzolini-1.jpg", alt: "Monte Baldo in inverno - paesaggio innevato Altopiano di Brentonico", credit: `${aptCredit} Valentino Azzolini` },
+  { src: "https://www.visitrovereto.it/wp-content/uploads/2023/07/palazzo-eccheli-baisi-giardino-botanico-brentonico-luca-matassoni-2023-3.jpg", alt: "Giardino botanico di Palazzo Eccheli-Baisi a Brentonico", credit: `${aptCredit} Luca Matassoni` },
+  { src: "https://www.visitrovereto.it/wp-content/uploads/2023/06/Giardino-Botanico-ph-lucamatassoni-web.png", alt: "Giardino Botanico del Parco Naturale Monte Baldo", credit: `${aptCredit} Luca Matassoni` },
+  { src: "https://www.visitrovereto.it/wp-content/uploads/2019/10/paesaggio-inverno-monte-baldo-foto-tommaso-prugnola-3.jpg", alt: "Paesaggio invernale Monte Baldo - Trentino", credit: `${aptCredit} Tommaso Prugnola` },
+  { src: "https://www.visitrovereto.it/wp-content/uploads/2024/10/Brentonico-il-fiore-del-Baldo-Graziano-Galvagni.jpg", alt: "Brentonico il fiore del Baldo - panorama montano", credit: `${aptCredit} Graziano Galvagni` },
+];
+
 useHead({
   title: "Esplora i dintorni di Brentonico | B&B Cuore di Bosco - Trekking, malghe e attività famiglie",
   meta: [
@@ -404,12 +409,12 @@ useReveal(root);
 .photo-credit{font-size:var(--step-micro);line-height:1.4;color:var(--muted)}
 
 .explore-nature{background:var(--champagne);margin-top:var(--section-gap);padding:var(--band-pad) 0}
-.park-logo-figure{margin:var(--section-gap) 0 0}
+.park-link{break-inside:avoid}
+.park-logo-figure{margin:12px 0 0;display:flex;justify-content:center}
 .park-logo{width:132px;height:auto}
 .text-columns{column-gap:clamp(32px,5vw,96px)}
 .explore-nature p,.explore-around p,.explore-garden p,.season p{max-width:68ch;text-align:justify;hyphens:auto}
-.places-note{max-width:var(--page-max);margin:var(--section-gap) auto 0;padding:0 var(--margin);text-align:left}
-.explore-nature a,.explore-around a,.explore-garden a,.season a,.explore-note a,.places-note a{overflow-wrap:anywhere}
+.explore-nature a,.explore-around a,.explore-garden a,.season a,.explore-note a{overflow-wrap:anywhere}
 
 .explore-around{margin-top:var(--section-gap)}
 .panorama{max-width:850px;margin:var(--section-gap) auto 0;display:grid;gap:6px}
@@ -417,13 +422,7 @@ useReveal(root);
 .pdf-guide{margin-top:var(--section-gap);text-align:center}
 
 .flower-band{margin-top:var(--section-gap)}
-.explore-flower{padding:var(--band-pad) 0}
-.explore-flower .photo-credit{color:var(--on-forest-soft)}
-.photo-row{display:flex;align-items:flex-start;gap:6px;margin:24px auto 0;max-width:var(--page-max);padding:0 var(--margin) 20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--margin)}
-.photo-row figure{flex:none;margin:0;scroll-snap-align:start;display:flex;flex-direction:column;gap:10px}
-.photo-row img{height:calc(min(64svh,620px) - 36px);width:auto;object-fit:cover}
-.photo-row figcaption{width:0;min-width:100%}
-.photo-row .photo-credit{display:block;margin-top:2px;max-width:calc(100vw - 2 * var(--margin))}
+.explore-flower{padding:var(--band-pad) 0;--carousel-credit:var(--on-forest-soft);--carousel-control:var(--on-forest);--carousel-control-ink:var(--forest)}
 
 .explore-garden{background:var(--champagne);margin-top:var(--section-gap);padding:var(--band-pad) 0}
 .explore-garden h2{margin-bottom:20px}
@@ -439,12 +438,6 @@ useReveal(root);
   .text-columns{column-count:2}
   .places{grid-template-columns:repeat(4,minmax(0,1fr))}
   .seasons{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .photo-row{margin:17px auto 0;padding-bottom:14px}
-  .photo-row figure{gap:7px}
-  .photo-row img{height:calc(min(30.8svh,294px) - 25px)}
-}
-@media (max-width:900px){
-  .photo-row img{height:calc(56svh - 36px)}
 }
 @media (max-width:520px){
   .explore-nature p,.explore-around p,.explore-garden p,.season p{text-align:left}

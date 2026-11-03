@@ -68,7 +68,7 @@ const flowerAlts = [
 ]
 const flowerCredits = ['Valentino Azzolini', 'Luca Matassoni', 'Luca Matassoni', 'Tommaso Prugnola', 'Graziano Galvagni'].map(aptCredit)
 
-const sectionOrder = ['explore-intro', 'places', 'places-note', 'explore-nature', 'explore-around', 'explore-flower', 'explore-garden', 'seasons', 'explore-note']
+const sectionOrder = ['explore-intro', 'places', 'explore-nature', 'explore-around', 'explore-flower', 'explore-garden', 'seasons', 'explore-note']
 
 const mountedWrappers: Array<{ unmount: () => void }> = []
 
@@ -118,12 +118,13 @@ describe('italian explore page', () => {
     expect(normalize(summerCard?.textContent ?? '')).not.toContain('Cammino di San Rocco')
   })
 
-  it('places the all-year Cammino di San Rocco note right after the places grid', async () => {
+  it('places the all-year Cammino di San Rocco note between the Sorna and the park paragraphs', async () => {
     const wrapper = await mountExplore()
-    const note = wrapper.element.querySelector('ul.places + p.places-note')
+    const note = wrapper.element.querySelector('.explore-nature .text-columns > p.cammino-note')
     const link = note?.querySelector('a')
 
-    expect(note).not.toBeNull()
+    expect(normalize(note?.previousElementSibling?.textContent ?? '')).toMatch(/^Non perdere il magnifico Canyon della Sorna/)
+    expect(note?.nextElementSibling?.matches('.park-link')).toBe(true)
     expect(normalize(note?.textContent ?? '')).toBe('Il Cammino di San Rocco passa proprio davanti alla nostra struttura ed è percorribile tutto l’anno. Per maggiori informazioni e per scaricare la mappa vai sul sito ufficiale')
     expect(link?.getAttribute('href')).toBe('https://camminosanrocco.it/')
     expect(link?.getAttribute('target')).toBe('_blank')
@@ -141,7 +142,7 @@ describe('italian explore page', () => {
 
   it('shows the flower of Baldo photos as a credited row', async () => {
     const wrapper = await mountExplore()
-    const photos = [...wrapper.element.querySelectorAll('.explore-flower .photo-row > figure')]
+    const photos = [...wrapper.element.querySelectorAll('.explore-flower .photo-row > figure:not([aria-hidden])')]
 
     expect(photos.map(photo => photo.querySelector('img')?.getAttribute('src'))).toEqual(flowerPhotos)
     expect(photos.map(photo => photo.querySelector('img')?.getAttribute('alt'))).toEqual(flowerAlts)
@@ -162,6 +163,16 @@ describe('italian explore page', () => {
 
     expect(logo?.getAttribute('src')).toBe('/images/logo-parco-monte-baldo.svg')
     expect(logo?.getAttribute('alt')).toBe('Logo Parco Naturale Monte Baldo')
+  })
+
+  it('keeps the park logo right under the sentence that points to it', async () => {
+    const wrapper = await mountExplore()
+    const parkLink = wrapper.element.querySelector('.explore-nature .text-columns > .park-link')
+
+    expect(normalize(parkLink?.querySelector('p')?.textContent ?? '')).toBe('Sul sito del Parco qui sotto puoi trovare i percorsi e le tante attività in programma!')
+    expect(parkLink?.querySelector('p + figure.park-logo-figure img.park-logo')).not.toBeNull()
+    expect(ruleBody('.park-link')).toMatch(/break-inside:avoid/)
+    expect(ruleBody('.park-logo-figure')).toMatch(/display:flex;justify-content:center/)
   })
 
   it('keeps every legacy link', async () => {
@@ -190,17 +201,13 @@ describe('italian explore page', () => {
     for (const name of ['explore-nature', 'explore-garden', 'explore-note']) {
       expect(ruleBody(`.${name}`)).toMatch(/background:var\(--champagne\)/)
     }
-    for (const name of ['places', 'places-note', 'explore-around', 'seasons']) {
+    for (const name of ['places', 'explore-around', 'seasons']) {
       expect(ruleBody(`.${name}`) ?? '').not.toMatch(/background/)
     }
   })
 
-  it('uses the light credit colour on the forest band', () => {
-    expect(ruleBody('.explore-flower .photo-credit')).toMatch(/color:var\(--on-forest-soft\)/)
-  })
-
-  it('keeps each flower row credit inside the visible width', () => {
-    expect(ruleBody('.photo-row .photo-credit')).toContain('max-width:calc(100vw - 2 * var(--margin))')
+  it('uses the light credit and control colours on the forest band', () => {
+    expect(ruleBody('.explore-flower')).toContain('--carousel-credit:var(--on-forest-soft);--carousel-control:var(--on-forest);--carousel-control-ink:var(--forest)')
   })
 
   it('lays the places out four across on desktop and two on phones', () => {
