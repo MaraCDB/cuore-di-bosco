@@ -199,4 +199,11 @@ describe('italian explore page', () => {
     expect(keywords).toContain('Castello di Avio')
     expect(keywords).not.toContain('Castello di Ala')
   })
+
+  it('names the castle of Avio on the english explore page', () => {
+    const englishSource = readFileSync('pages/en/explore.vue', 'utf8')
+
+    expect(englishSource).toContain('<strong>Castello di Avio</strong>')
+    expect(englishSource).not.toContain('Castello di Ala')
+  })
 })

@@ -69,7 +69,7 @@
       </p>
 
       <p>
-        In the surrounding area, you can also visit <strong>Castello di Ala</strong>, an important example of local history and architecture,
+        In the surrounding area, you can also visit <strong>Castello di Avio</strong>, an important example of local history and architecture,
         and <strong>Lago di Loppio</strong>, perfect for nature walks and birdwatching.
         To complete your holiday, in about 30 minutes you can reach <strong>Lake Garda</strong>,
         with Torbole and Riva del Garda, for excursions, water sports, clean water and unique panoramas.
