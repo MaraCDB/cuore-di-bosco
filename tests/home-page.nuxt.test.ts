@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import { afterEach, describe, expect, it } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import HomePage from '~/pages/it/index.vue'
@@ -151,6 +152,21 @@ describe('italian home page', () => {
       { src: '/images/home/castello-avio-1280.webp', hasWidth: false, credit: 'Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Martina Vanzo' },
     ])
     expect(wrapper.element.querySelector('.guest-placeholder')).toBeNull()
+  })
+
+  it('moves the rooms and breakfast sections right after the welcome', async () => {
+    const wrapper = await mountHome()
+    const sectionOrder = [...wrapper.element.querySelectorAll('section')]
+      .map(section => section.id || [...section.classList].find(name => !['band', 'wrap'].includes(name)))
+
+    expect(sectionOrder).toEqual(['hero', 'welcome', 'camere', 'colazione', 'everyone', 'cammino', 'storia', 'reviews', 'arrivare', 'garden'])
+  })
+
+  it('sets the welcome and the garden on champagne bands so the cream rooms and directions never touch another cream section', () => {
+    const homeStyles = readFileSync('pages/it/index.vue', 'utf8')
+
+    expect(homeStyles).toMatch(/\n\.welcome\{background:var\(--champagne\);/)
+    expect(homeStyles).toMatch(/\n\.garden\{background:var\(--champagne\);[^}]*padding:var\(--band-pad\) 0\}/)
   })
 
   it('closes the page with the garden of Europe right after the directions', async () => {

@@ -33,6 +33,73 @@
         </div>
       </section>
 
+      <section class="wrap rooms" id="camere">
+        <div class="rooms-head" data-reveal>
+          <h2>Le nostre camere</h2>
+          <NuxtLink class="button" to="/it/prenota" no-prefetch>Verifica le date</NuxtLink>
+        </div>
+        <p class="rooms-family" data-reveal>Culla gratis · 1° bambino gratis · 2° bambino al 50% · &lt;12 anni</p>
+        <article class="room">
+          <div class="room-photos" data-reveal>
+            <img src="/images/home/lampone-camera-1600.webp" alt="La camera Lampone" loading="lazy">
+            <img src="/images/home/lampone-finestra-700.webp" alt="La finestra di Lampone sulle montagne" loading="lazy">
+            <img src="/images/home/lampone-divano-900.webp" alt="L'angolo con il divano di Lampone" loading="lazy">
+          </div>
+          <div data-reveal>
+            <h3>Lampone</h3>
+            <p class="lead">Spaziosa e accogliente, adatta a famiglie che desiderano comfort e tranquillità.</p>
+            <ul class="room-features">
+              <li>Colazione inclusa</li>
+              <li>Bagno privato in camera</li>
+              <li>Balcone privato con stendino e sdraio</li>
+              <li>Angolo bollitore attrezzato</li>
+              <li>Prodotti per igiene personale e biancheria inclusi</li>
+              <li>Pulizie incluse</li>
+            </ul>
+            <p class="beds">Da 2 a 4 posti letto adulti</p>
+            <div class="room-actions">
+              <NuxtLink class="button button-quiet" to="/it/prenota#lampone" no-prefetch>Dettagli</NuxtLink>
+              <NuxtLink class="button" to="/it/prenota" no-prefetch>Prenota</NuxtLink>
+            </div>
+          </div>
+        </article>
+        <article class="room">
+          <div class="room-photos" data-reveal>
+            <img src="/images/home/mirtillo-camera-1280.webp" alt="La camera Mirtillo" loading="lazy">
+            <img src="/images/home/mirtillo-armadio-700.webp" alt="La camera Mirtillo con l'armadio dipinto" loading="lazy">
+            <img src="/images/home/porta-libri-700.webp" alt="La porta con il portalibri" loading="lazy">
+          </div>
+          <div data-reveal>
+            <h3>Mirtillo</h3>
+            <p class="lead">Fresca e luminosa, perfetta per chi ama la natura.</p>
+            <ul class="room-features">
+              <li>Colazione inclusa</li>
+              <li>Bagno privato in camera</li>
+              <li>Balcone privato con stendino e sdraio</li>
+              <li>Angolo bollitore attrezzato</li>
+              <li>Prodotti per igiene personale e biancheria inclusi</li>
+              <li>Pulizie incluse</li>
+            </ul>
+            <p class="beds">Da 2 a 4 posti letto adulti</p>
+            <div class="room-actions">
+              <NuxtLink class="button button-quiet" to="/it/prenota#mirtillo" no-prefetch>Dettagli</NuxtLink>
+              <NuxtLink class="button" to="/it/prenota" no-prefetch>Prenota</NuxtLink>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="band breakfast" id="colazione">
+        <div class="breakfast-photo"><img src="/images/home/colazione-1280.webp" alt="La colazione con la torta fatta in casa" loading="lazy"></div>
+        <div class="breakfast-text" data-reveal>
+          <h2>A colazione da noi</h2>
+          <p class="lead">La colazione a casa nostra è un momento speciale, da gustare con calma e in buona compagnia. Ogni mattina prepariamo con cura un buffet ricco di bontà: dolci casalinghi, pane fresco, salumi e formaggi del territorio, frutta di stagione e qualcosa di goloso per iniziare la giornata col sorriso.</p>
+          <p>È possibile scegliere tra proposte dolci o salate e segnalare eventuali intolleranze o preferenze alimentari, così da trovare sempre una colazione adatta alle proprie esigenze. Su richiesta, la colazione può essere servita direttamente in camera, per godersi un risveglio ancora più lento, accompagnato dal profumo del legno e dalla luce del bosco che entra dalle finestre.</p>
+          <p>Grande attenzione è riservata alla qualità degli ingredienti, selezionati privilegiando produttori locali, per offrire sapori autentici e un’esperienza che racconta il territorio fin dal primo mattino.</p>
+          <p>E se ami i prodotti dei nostri produttori locali siamo a disposizione per ordinarli e farteli trovare per portare la Vallagarina a casa con te al rientro! Marmellate, sciroppi, erbe, tisane, miele, farine e tanto altro!</p>
+        </div>
+      </section>
+
       <section class="everyone">
         <div class="wrap">
           <div class="everyone-head" data-reveal>
@@ -103,73 +170,6 @@
             </ul>
             <p><a href="tel:+393494960228">Chiamaci</a> per accordarci e per la pianificazione della tappa</p>
           </div>
-        </div>
-      </section>
-
-      <section class="wrap rooms" id="camere">
-        <div class="rooms-head" data-reveal>
-          <h2>Le nostre camere</h2>
-          <NuxtLink class="button" to="/it/prenota" no-prefetch>Verifica le date</NuxtLink>
-        </div>
-        <p class="rooms-family" data-reveal>Culla gratis · 1° bambino gratis · 2° bambino al 50% · &lt;12 anni</p>
-        <article class="room">
-          <div class="room-photos" data-reveal>
-            <img src="/images/home/lampone-camera-1600.webp" alt="La camera Lampone" loading="lazy">
-            <img src="/images/home/lampone-finestra-700.webp" alt="La finestra di Lampone sulle montagne" loading="lazy">
-            <img src="/images/home/lampone-divano-900.webp" alt="L'angolo con il divano di Lampone" loading="lazy">
-          </div>
-          <div data-reveal>
-            <h3>Lampone</h3>
-            <p class="lead">Spaziosa e accogliente, adatta a famiglie che desiderano comfort e tranquillità.</p>
-            <ul class="room-features">
-              <li>Colazione inclusa</li>
-              <li>Bagno privato in camera</li>
-              <li>Balcone privato con stendino e sdraio</li>
-              <li>Angolo bollitore attrezzato</li>
-              <li>Prodotti per igiene personale e biancheria inclusi</li>
-              <li>Pulizie incluse</li>
-            </ul>
-            <p class="beds">Da 2 a 4 posti letto adulti</p>
-            <div class="room-actions">
-              <NuxtLink class="button button-quiet" to="/it/prenota#lampone" no-prefetch>Dettagli</NuxtLink>
-              <NuxtLink class="button" to="/it/prenota" no-prefetch>Prenota</NuxtLink>
-            </div>
-          </div>
-        </article>
-        <article class="room">
-          <div class="room-photos" data-reveal>
-            <img src="/images/home/mirtillo-camera-1280.webp" alt="La camera Mirtillo" loading="lazy">
-            <img src="/images/home/mirtillo-armadio-700.webp" alt="La camera Mirtillo con l'armadio dipinto" loading="lazy">
-            <img src="/images/home/porta-libri-700.webp" alt="La porta con il portalibri" loading="lazy">
-          </div>
-          <div data-reveal>
-            <h3>Mirtillo</h3>
-            <p class="lead">Fresca e luminosa, perfetta per chi ama la natura.</p>
-            <ul class="room-features">
-              <li>Colazione inclusa</li>
-              <li>Bagno privato in camera</li>
-              <li>Balcone privato con stendino e sdraio</li>
-              <li>Angolo bollitore attrezzato</li>
-              <li>Prodotti per igiene personale e biancheria inclusi</li>
-              <li>Pulizie incluse</li>
-            </ul>
-            <p class="beds">Da 2 a 4 posti letto adulti</p>
-            <div class="room-actions">
-              <NuxtLink class="button button-quiet" to="/it/prenota#mirtillo" no-prefetch>Dettagli</NuxtLink>
-              <NuxtLink class="button" to="/it/prenota" no-prefetch>Prenota</NuxtLink>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="band breakfast" id="colazione">
-        <div class="breakfast-photo"><img src="/images/home/colazione-1280.webp" alt="La colazione con la torta fatta in casa" loading="lazy"></div>
-        <div class="breakfast-text" data-reveal>
-          <h2>A colazione da noi</h2>
-          <p class="lead">La colazione a casa nostra è un momento speciale, da gustare con calma e in buona compagnia. Ogni mattina prepariamo con cura un buffet ricco di bontà: dolci casalinghi, pane fresco, salumi e formaggi del territorio, frutta di stagione e qualcosa di goloso per iniziare la giornata col sorriso.</p>
-          <p>È possibile scegliere tra proposte dolci o salate e segnalare eventuali intolleranze o preferenze alimentari, così da trovare sempre una colazione adatta alle proprie esigenze. Su richiesta, la colazione può essere servita direttamente in camera, per godersi un risveglio ancora più lento, accompagnato dal profumo del legno e dalla luce del bosco che entra dalle finestre.</p>
-          <p>Grande attenzione è riservata alla qualità degli ingredienti, selezionati privilegiando produttori locali, per offrire sapori autentici e un’esperienza che racconta il territorio fin dal primo mattino.</p>
-          <p>E se ami i prodotti dei nostri produttori locali siamo a disposizione per ordinarli e farteli trovare per portare la Vallagarina a casa con te al rientro! Marmellate, sciroppi, erbe, tisane, miele, farine e tanto altro!</p>
         </div>
       </section>
 
@@ -301,7 +301,7 @@ useReveal(root);
 .hero-photo{margin:0;position:relative}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 70%}
 
-.welcome{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}
+.welcome{background:var(--champagne);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}
 .welcome img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 0}
 .welcome h2{margin-bottom:20px}
 
@@ -348,7 +348,7 @@ useReveal(root);
 .pilgrims-welcome li::marker{color:var(--lime)}
 .pilgrims-welcome p{margin:16px 0 0}
 
-.garden{margin-top:var(--section-gap)}
+.garden{background:var(--champagne);margin-top:var(--section-gap);padding:var(--band-pad) 0}
 .garden-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,96px);align-items:end}
 .garden-head p{margin:0}
 .photo-row{display:flex;align-items:flex-start;gap:6px;margin:24px auto 0;max-width:var(--page-max);padding:0 var(--margin) 20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--margin)}
