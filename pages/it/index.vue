@@ -26,7 +26,8 @@
         <img src="/images/home/casa-1600.webp" alt="La casa in pietra del B&B Cuore di Bosco a Prada" loading="lazy">
         <div class="welcome-text" data-reveal>
           <h2>Benvenuti</h2>
-          <p class="lead">Benvenuti al <strong>B&amp;B Cuore di Bosco</strong>, un rifugio immerso nella natura della <strong>Vallagarina</strong>, sull’<strong>Altopiano di Brentonico, il giardino d’Europa</strong>. Circondati da rigogliose montagne, il tempo rallenta e la tranquillità regna sovrana. Il B&amp;B è facilmente raggiungibile in auto dall’uscita di Rovereto Sud dell’autostrada A22 e rappresenta un punto di partenza ideale per esplorare il Monte Baldo in ogni stagione.</p>
+          <p class="lead">Benvenuti al <strong>B&amp;B Cuore di Bosco</strong>, un rifugio immerso nella natura della <strong>Vallagarina</strong>, sull’<strong>Altopiano di Brentonico, il giardino d’Europa</strong>. Circondati da rigogliose montagne, il tempo rallenta e la tranquillità regna sovrana.</p>
+          <p>Il B&amp;B è facilmente raggiungibile in auto dall’<strong>uscita di Rovereto Sud</strong> dell’autostrada A22 e rappresenta un punto di partenza ideale per esplorare il Monte Baldo in ogni stagione.</p>
           <p>La casa, realizzata in pietra e arredata con legno e materiali naturali, offre ambienti caldi e curati, dove ogni dettaglio racconta un profondo legame con la montagna e con uno stile di vita più lento e consapevole. L’accoglienza è semplice e autentica, pensata per far sentire gli ospiti a proprio agio fin dal primo momento.</p>
           <p>Le camere sono spaziose e luminose, ideali sia per coppie sia per famiglie. Offrono comfort moderni, bagno privato, biancheria inclusa e un’atmosfera rilassante che invita al riposo. Su richiesta sono disponibili dotazioni dedicate ai più piccoli, per garantire un soggiorno sereno anche a chi viaggia con bambini.</p>
         </div>

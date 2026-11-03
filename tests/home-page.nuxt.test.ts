@@ -65,6 +65,14 @@ describe('italian home page', () => {
     expect(familyTerms?.textContent).toBe('Culla gratis · 1° bambino gratis · 2° bambino al 50% · <12 anni')
   })
 
+  it('gives the motorway exit its own welcome paragraph after the lead', async () => {
+    const wrapper = await mountHome()
+    const exitParagraph = wrapper.element.querySelector('.welcome-text .lead + p')
+
+    expect(exitParagraph?.querySelector('strong')?.textContent).toBe('uscita di Rovereto Sud')
+    expect(exitParagraph?.textContent).toContain('dell’autostrada A22')
+  })
+
   it('describes the breakfast as a buffet', async () => {
     const wrapper = await mountHome()
     const breakfastText = wrapper.element.querySelector('.breakfast-text')?.textContent
