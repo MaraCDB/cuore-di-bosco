@@ -208,10 +208,19 @@
           <h2>Il giardino d’Europa</h2>
           <p class="lead">Una volta arrivati, vi accoglierà il silenzio e la bellezza dell’Altopiano di Brentonico, con la sua cornice di verdi montagne.</p>
         </div>
-        <div class="photo-row" tabindex="0" aria-label="Fotografie dell'Altopiano e della casa">
+        <div class="photo-row" tabindex="0" aria-label="Fotografie della casa, dell'Altopiano e dei dintorni">
           <figure><img src="/images/home/lampone-balcone-1200.webp" alt="Il Monte Baldo innevato visto dal balcone della camera Lampone" loading="lazy"><figcaption>Dal balcone di Lampone</figcaption></figure>
           <figure><img src="/images/home/bosco-1920.webp" alt="Il sentiero nel bosco" loading="lazy"><figcaption>Il bosco</figcaption></figure>
-          <figure><img src="/images/home/lampone-finestra-1200.webp" alt="La vista dalla finestra di Lampone" loading="lazy"><figcaption>Dalla finestra di Lampone</figcaption></figure>
+          <figure><img src="/images/home/calanchi-san-giacomo-1200.webp" alt="I calanchi di San Giacomo in autunno sotto le pareti del Monte Baldo" loading="lazy"><figcaption>Calanchi di San Giacomo<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Graziano Galvagni</span></figcaption></figure>
+          <figure><img src="/images/home/famiglia-castione-1280.webp" alt="Una famiglia nel bosco di Castione in autunno" loading="lazy"><figcaption>Castione<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Graziano Galvagni</span></figcaption></figure>
+          <figure><img src="/images/home/palazzo-eccheli-baisi-1280.webp" alt="Il giardino all’italiana di Palazzo Eccheli Baisi a Brentonico" loading="lazy"><figcaption>Palazzo Eccheli Baisi, Brentonico<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Luca Matassoni</span></figcaption></figure>
+          <figure><img src="/images/home/inverno-brentonico-1280.webp" alt="L’Altopiano di Brentonico innevato" loading="lazy"><figcaption>Inverno a Brentonico<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Tommaso Prugnola</span></figcaption></figure>
+          <figure><img src="/images/home/trekking-baldo-1280.webp" alt="Escursionisti su uno sperone di roccia del Monte Baldo in autunno" loading="lazy"><figcaption>Trekking sul Monte Baldo<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Tommaso Prugnola</span></figcaption></figure>
+          <figure><img src="/images/home/monte-altissimo-1200.webp" alt="Il Lago di Garda visto dal Monte Altissimo" loading="lazy"><figcaption>Dal Monte Altissimo<span class="photo-credit">360gardalife. Foto di Angela Trawoeger</span></figcaption></figure>
+          <figure><img src="/images/home/forra-sorna-1280.webp" alt="Un tuffo nelle acque della Forra della Sorna" loading="lazy"><figcaption>Forra della Sorna<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Tommaso Prugnola</span></figcaption></figure>
+          <figure><img src="/images/home/castello-rovereto-700.webp" alt="Il Castello di Rovereto e la cascata del Leno" loading="lazy"><figcaption>Castello di Rovereto<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Luca Matassoni</span></figcaption></figure>
+          <figure><img src="/images/home/campana-caduti-700.webp" alt="La Campana dei Caduti a Rovereto" loading="lazy"><figcaption>Campana dei Caduti, Rovereto<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Luca Matassoni</span></figcaption></figure>
+          <figure><img src="/images/home/castello-avio-1280.webp" alt="Il castello di Avio tra i cipressi" loading="lazy"><figcaption>Castello di Avio<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Martina Vanzo</span></figcaption></figure>
           <figure><img src="/images/home/casa-1600.webp" alt="La casa in pietra" loading="lazy"><figcaption>Via Gardesani 15, Prada</figcaption></figure>
         </div>
       </section>
@@ -338,10 +347,11 @@ useReveal(root);
 .garden{margin-top:var(--section-gap)}
 .garden-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,96px);align-items:end}
 .garden-head p{margin:0}
-.photo-row{display:flex;gap:6px;height:min(64svh,620px);margin:24px auto 0;max-width:var(--page-max);padding:0 var(--margin) 20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--margin)}
-.photo-row figure{flex:none;height:100%;margin:0;scroll-snap-align:start;display:flex;flex-direction:column;gap:10px}
-.photo-row img{height:calc(100% - 36px);width:auto;object-fit:cover}
-.photo-row figcaption{font-size:var(--step-small);color:var(--muted)}
+.photo-row{display:flex;align-items:flex-start;gap:6px;margin:24px auto 0;max-width:var(--page-max);padding:0 var(--margin) 20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--margin)}
+.photo-row figure{flex:none;margin:0;scroll-snap-align:start;display:flex;flex-direction:column;gap:10px}
+.photo-row img{height:calc(min(64svh,620px) - 36px);width:auto;object-fit:cover}
+.photo-row figcaption{width:0;min-width:100%;font-size:var(--step-small);color:var(--muted)}
+.photo-row .photo-credit{display:block;margin-top:2px}
 
 .story{background:var(--champagne);margin-top:var(--section-gap);padding:var(--band-pad) var(--margin);text-align:center}
 .story-inner{max-width:46rem;margin:0 auto}
@@ -388,9 +398,9 @@ useReveal(root);
   .pilgrims-welcome{padding:clamp(20px,2.1vw,34px)}
   .pilgrims-welcome ul,.pilgrims-welcome p{margin:11px 0 0}
   .garden-head{gap:clamp(22px,3.5vw,67px)}
-  .photo-row{height:min(30.8svh,294px);margin:17px auto 0;padding-bottom:14px}
+  .photo-row{margin:17px auto 0;padding-bottom:14px}
   .photo-row figure{gap:7px}
-  .photo-row img{height:calc(100% - 25px)}
+  .photo-row img{height:calc(min(30.8svh,294px) - 25px)}
   .story-inner{max-width:32.2rem}
   .story .logo{width:105px;margin:0 auto 17px}
   .story h2{margin-bottom:20px}
@@ -409,7 +419,7 @@ useReveal(root);
   .hero-text,.breakfast-text,.welcome-text{padding:24px var(--margin) 32px}
   .pilgrims-photo{grid-row:auto;aspect-ratio:4/5}
   .room:nth-of-type(even) .room-photos{order:0}
-  .photo-row{height:56svh}
+  .photo-row img{height:calc(56svh - 36px)}
   .map-frame{min-height:320px}
 }
 @media (max-width:520px){

@@ -114,6 +114,29 @@ describe('italian home page', () => {
     expect(lastSection?.previousElementSibling?.id).toBe('arrivare')
   })
 
+  it('credits every APT and Altissimo photo in the garden row and drops the window view', async () => {
+    const wrapper = await mountHome()
+    const gardenFigures = [...wrapper.element.querySelectorAll('.garden .photo-row figure')]
+    const creditOf = (source: string) => gardenFigures
+      .find(figure => figure.querySelector('img')?.getAttribute('src') === `/images/home/${source}`)
+      ?.querySelector('.photo-credit')?.textContent
+    const aptCredit = 'Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di '
+
+    expect(gardenFigures).toHaveLength(13)
+    expect(gardenFigures.some(figure => figure.querySelector('img')?.getAttribute('src')?.includes('lampone-finestra'))).toBe(false)
+    expect(gardenFigures.some(figure => figure.querySelector('img')?.hasAttribute('width'))).toBe(false)
+    expect(creditOf('calanchi-san-giacomo-1200.webp')).toBe(`${aptCredit}Graziano Galvagni`)
+    expect(creditOf('famiglia-castione-1280.webp')).toBe(`${aptCredit}Graziano Galvagni`)
+    expect(creditOf('palazzo-eccheli-baisi-1280.webp')).toBe(`${aptCredit}Luca Matassoni`)
+    expect(creditOf('castello-rovereto-700.webp')).toBe(`${aptCredit}Luca Matassoni`)
+    expect(creditOf('campana-caduti-700.webp')).toBe(`${aptCredit}Luca Matassoni`)
+    expect(creditOf('forra-sorna-1280.webp')).toBe(`${aptCredit}Tommaso Prugnola`)
+    expect(creditOf('trekking-baldo-1280.webp')).toBe(`${aptCredit}Tommaso Prugnola`)
+    expect(creditOf('inverno-brentonico-1280.webp')).toBe(`${aptCredit}Tommaso Prugnola`)
+    expect(creditOf('castello-avio-1280.webp')).toBe(`${aptCredit}Martina Vanzo`)
+    expect(creditOf('monte-altissimo-1200.webp')).toBe('360gardalife. Foto di Angela Trawoeger')
+  })
+
   it('gives the motorway exit its own welcome paragraph after the lead', async () => {
     const wrapper = await mountHome()
     const exitParagraph = wrapper.element.querySelector('.welcome-text .lead + p')
