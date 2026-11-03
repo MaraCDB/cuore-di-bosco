@@ -169,6 +169,14 @@ describe('italian home page', () => {
     expect(homeStyles).toMatch(/\n\.garden\{background:var\(--champagne\);[^}]*padding:var\(--band-pad\) 0\}/)
   })
 
+  it('shows the hero logo larger on phones and on desktop', () => {
+    const homeStyles = readFileSync('pages/it/index.vue', 'utf8')
+
+    expect(homeStyles).toContain('.hero-logo{width:clamp(90px,10.6vw,160px);')
+    expect(homeStyles).toMatch(/@media \(min-width:901px\)\{[^@]*\.hero-logo\{width:clamp\(75px,8\.9vw,135px\)\}/)
+    expect(homeStyles).toMatch(/@media \(max-width:520px\)\{[^@]*\.hero-logo\{width:75px\}/)
+  })
+
   it('closes the page with the garden of Europe right after the directions', async () => {
     const wrapper = await mountHome()
     const lastSection = [...wrapper.element.querySelectorAll('section')].at(-1)

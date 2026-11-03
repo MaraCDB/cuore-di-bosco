@@ -2,6 +2,7 @@
   <div class="redesign masthead" id="top">
     <header class="topbar">
       <nav aria-label="Principale">
+        <NuxtLink to="/it#top" no-prefetch>Home</NuxtLink>
         <NuxtLink v-for="link in links" :key="link.to" :to="link.to" no-prefetch>{{ link.label }}</NuxtLink>
         <NuxtLink :to="englishTwin(route.path)" no-prefetch>English</NuxtLink>
         <button ref="menuButton" type="button" class="button button-quiet menu" :aria-expanded="isMenuOpen"

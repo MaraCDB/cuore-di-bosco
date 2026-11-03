@@ -294,7 +294,7 @@ useReveal(root);
 .hero-text{align-self:center;padding:48px clamp(32px,4vw,64px) 72px max(var(--margin),calc((100vw - var(--page-max)) / 2 + var(--margin)))}
 .hero h1{font-size:var(--step-display);line-height:1;color:var(--on-forest)}
 .hero-title{display:flex;align-items:center;justify-content:space-between;gap:clamp(16px,2vw,32px)}
-.hero-logo{width:clamp(72px,8.5vw,128px);height:auto;flex:none}
+.hero-logo{width:clamp(90px,10.6vw,160px);height:auto;flex:none}
 .hero .tagline{font-family:var(--sub);font-size:var(--step-tagline);font-weight:300;line-height:1.25;margin:28px 0 0;text-wrap:balance}
 .hero .lead{margin:20px 0 40px;max-width:34ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
@@ -375,7 +375,7 @@ useReveal(root);
   .hero{min-height:min(calc(70svh - 59px),420px)}
   .hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px}
   .hero-title{gap:clamp(11px,1.4vw,22px)}
-  .hero-logo{width:clamp(50px,5.95vw,90px)}
+  .hero-logo{width:clamp(75px,8.9vw,135px)}
   .hero .tagline{margin:20px 0 0}
   .hero .lead{margin:14px 0 28px}
   .hero-actions{gap:8px}
@@ -427,7 +427,7 @@ useReveal(root);
   .map-frame{min-height:320px}
 }
 @media (max-width:520px){
-  .hero-logo{width:60px}
+  .hero-logo{width:75px}
   .welcome-text p,.pilgrims-text p,.guest p,.breakfast-text p{text-align:left}
 }
 </style>

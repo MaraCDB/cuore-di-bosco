@@ -68,6 +68,14 @@ describe('site menu', () => {
     expect(homeLink?.getAttribute('href')).toBe('/it#top')
   })
 
+  it('starts the desktop top bar with a Home link to the top of the home page', async () => {
+    const { wrapper } = await mountHeader()
+    const firstTopBarLink = wrapper.find<HTMLAnchorElement>('.topbar nav a')
+
+    expect(firstTopBarLink.text()).toBe('Home')
+    expect(firstTopBarLink.attributes('href')).toBe('/it#top')
+  })
+
   it('stacks the menu panel above the cookie banner', () => {
     const menuZIndex = Number(menuSource.match(/\.menu-panel\{[^}]*z-index:(\d+)/)?.[1])
     const bannerZIndex = Number(bannerSource.match(/\.cookie-banner\s*\{[^}]*z-index:\s*(\d+)/)?.[1])
