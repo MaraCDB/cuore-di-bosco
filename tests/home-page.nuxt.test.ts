@@ -39,6 +39,18 @@ describe('italian home page', () => {
     expect(detailTargets).toEqual(['/it/prenota#lampone', '/it/prenota#mirtillo'])
   })
 
+  it('lists toiletries and linen apart from cleaning on both room cards', async () => {
+    const wrapper = await mountHome()
+    const featureLists = [...wrapper.element.querySelectorAll('.room-features')]
+      .map(list => [...list.querySelectorAll('li')].map(item => item.textContent?.trim()))
+
+    expect(featureLists).toHaveLength(2)
+    featureLists.forEach(features => expect(features).toEqual(expect.arrayContaining([
+      'Prodotti per igiene personale e biancheria inclusi',
+      'Pulizie incluse',
+    ])))
+  })
+
   it.each(['lampone', 'mirtillo'])('has the #%s room section on the booking page', async (roomId) => {
     const wrapper = await mountSuspended(BookingPage, { attachTo: document.body })
     mountedWrappers.push(wrapper)

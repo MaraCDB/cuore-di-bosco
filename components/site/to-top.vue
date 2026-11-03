@@ -22,4 +22,5 @@ onBeforeUnmount(() => window.removeEventListener('scroll', updateVisibility))
 .to-top.is-visible{opacity:1;visibility:visible}
 .to-top svg{width:22px;height:22px}
 @media (hover:hover){.to-top:hover{background:var(--forest)}}
+@media (min-width:901px){.to-top{bottom:calc(72px + env(safe-area-inset-bottom) + 16px)}}
 </style>

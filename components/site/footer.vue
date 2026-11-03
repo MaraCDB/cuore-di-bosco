@@ -40,6 +40,9 @@ const { openPreferences } = useCookieConsent()
 .site-footer a{color:var(--on-forest)}
 .cookie-preferences{font:inherit;color:var(--on-forest);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
 .footer-info .footer-legal{margin-top:16px;font-size:var(--step-small);color:var(--on-forest-soft)}
+@media (min-width:901px){
+  .site-footer{padding-bottom:calc(16px + 72px + env(safe-area-inset-bottom))}
+}
 @media (max-width:900px){
   .site-footer{grid-template-columns:minmax(0,1fr)}
   .footer-info{grid-column:auto;grid-row:auto}

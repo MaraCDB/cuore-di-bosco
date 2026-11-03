@@ -37,6 +37,9 @@ async function closeMenu(restoreFocus: boolean) {
 @media (hover:hover){.topbar nav a:not(.button):hover{text-decoration:underline}}
 .topbar .menu{display:none;border:0;cursor:pointer;font-size:var(--step-body);line-height:1.65}
 .topbar .button-light{font-size:var(--step-small);text-transform:uppercase;letter-spacing:0.08em}
+@media (min-width:901px){
+  .topbar nav a:not(.button),.topbar .button-light{font-size:1.1875rem}
+}
 @media (max-width:900px){
   .topbar nav a:not(.button){display:none}
   .topbar .menu{display:inline-flex}

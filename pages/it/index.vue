@@ -108,7 +108,8 @@
               <li>Bagno privato in camera</li>
               <li>Balcone privato con stendino e sdraio</li>
               <li>Angolo bollitore attrezzato</li>
-              <li>Prodotti per igiene personale, pulizia e biancheria inclusi</li>
+              <li>Prodotti per igiene personale e biancheria inclusi</li>
+              <li>Pulizie incluse</li>
             </ul>
             <p class="beds">Da 2 a 4 posti letto adulti</p>
             <div class="room-actions">
@@ -131,7 +132,8 @@
               <li>Bagno privato in camera</li>
               <li>Balcone privato con stendino e sdraio</li>
               <li>Angolo bollitore attrezzato</li>
-              <li>Prodotti per igiene personale, pulizia e biancheria inclusi</li>
+              <li>Prodotti per igiene personale e biancheria inclusi</li>
+              <li>Pulizie incluse</li>
             </ul>
             <p class="beds">Da 2 a 4 posti letto adulti</p>
             <div class="room-actions">
@@ -306,7 +308,7 @@ useReveal(root);
 .room-features{margin:0 0 12px;padding-left:1.1em}
 .room-features li{margin-bottom:8px}
 .room-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.rooms-family{margin:32px 0 0;text-align:center;font-family:var(--sub);font-weight:600;color:var(--forest-deep)}
+.rooms-family{margin:32px 0 0;padding:14px 24px;border-radius:999px;background:var(--lime);color:var(--ink);text-align:center;font-family:var(--sub);font-size:var(--step-small);font-weight:600;text-transform:uppercase;letter-spacing:0.08em}
 
 .breakfast{margin-top:var(--section-gap);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
 .breakfast-photo{position:relative;min-height:520px}

@@ -1,7 +1,7 @@
 <template>
     <div v-if="isBannerOpen" class="cookie-banner" :class="{ 'above-dock': props.aboveDock, redesign: props.redesign }">
         <div class="cookie-text">
-            {{ $t("cookies-banner-message") }}
+            {{ bannerMessage }}
             <a :href="policyPage" class="link">
                 {{ $t("cookies-banner-read-policy") }}
             </a>
@@ -22,6 +22,12 @@ const props = defineProps({
 const route = useRoute();
 const currentLocale = computed(() => route?.path?.split('/')[1]);
 const policyPage = computed(() => `/${currentLocale.value || 'it'}/privacy-policy`);
+
+const { t } = useI18n();
+const bannerMessage = computed(() => {
+    const message = t('cookies-banner-message');
+    return props.redesign ? message.replace('. ', '.\n') : message;
+});
 
 const acceptButton = ref(null);
 const { isBannerOpen, shouldFocusBanner, accept, decline } = useCookieConsent();
@@ -50,6 +56,12 @@ watch(shouldFocusBanner, async (isFocusRequested) => {
 
 .cookie-banner.above-dock {
     bottom: calc(64px + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 901px) {
+    .cookie-banner.above-dock {
+        bottom: calc(72px + env(safe-area-inset-bottom));
+    }
 }
 
 .cookie-text {
@@ -113,6 +125,7 @@ watch(shouldFocusBanner, async (isFocusRequested) => {
     font-size: var(--step-small);
     line-height: 1.5;
     color: inherit;
+    white-space: pre-line;
 }
 
 .cookie-banner.redesign a {

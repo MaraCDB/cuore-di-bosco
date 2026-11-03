@@ -18,6 +18,11 @@
 .dock svg{width:20px;height:20px;flex:none}
 .dock .button{margin-left:auto;min-height:46px;font-size:var(--step-small);text-transform:uppercase;letter-spacing:0.08em}
 @media (hover:hover){.dock a:not(.button):hover{text-decoration:underline}}
+@media (min-width:901px){
+  .dock-inner{min-height:72px}
+  .dock a:not(.button),.dock .button{font-size:1.1875rem}
+  .dock svg{width:26px;height:26px}
+}
 @media (max-width:520px){
   .dock-inner{gap:4px;padding:6px 12px}
   .dock a:not(.button){flex:1;flex-direction:column;justify-content:center;gap:2px;font-size:0.75rem}
