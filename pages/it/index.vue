@@ -55,7 +55,10 @@
               </div>
             </article>
             <article class="guest" data-reveal>
-              <img src="/images/home/porta-libri-960.webp" alt="La porta di casa con il portalibri per i bambini" loading="lazy">
+              <figure class="guest-photo">
+                <img src="/images/home/famiglia-castione-1280.webp" alt="Una famiglia nel bosco di Castione in autunno" loading="lazy">
+                <figcaption class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Graziano Galvagni</figcaption>
+              </figure>
               <div>
                 <h3>Per le famiglie</h3>
                 <p>Sappiamo bene quanto è complicato spostarsi e rilassarsi con uno o più figli! Per questo abbiamo cercato di rendere la vita più facile e la vacanza più rilassata ai genitori!</p>

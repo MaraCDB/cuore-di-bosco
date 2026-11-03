@@ -89,16 +89,20 @@ describe('italian home page', () => {
     expect(nearbyText).not.toContain('famoso castello')
   })
 
-  it('lays out the four guest cards in order with the APT photo of the castle of Avio and its credit', async () => {
+  it('lays out the four guest cards in order with the APT photos of the families and the castle of Avio and their credits', async () => {
     const wrapper = await mountHome()
     const cardTitles = [...wrapper.element.querySelectorAll('.guests > .guest h3')].map(title => title.textContent)
-    const nearbyPhoto = wrapper.element.querySelector('.guest-nearby figure img')
-    const nearbyCredit = wrapper.element.querySelector('.guest-nearby figure figcaption')
+    const creditedPhotos = [...wrapper.element.querySelectorAll('.guests figure.guest-photo')].map(figure => ({
+      src: figure.querySelector('img')?.getAttribute('src'),
+      hasWidth: figure.querySelector('img')?.hasAttribute('width'),
+      credit: figure.querySelector('figcaption')?.textContent,
+    }))
 
     expect(cardTitles).toEqual(['Per chi cammina', 'Per chi ama la natura e i paesaggi', 'Per le famiglie', 'A breve distanza'])
-    expect(nearbyPhoto?.getAttribute('src')).toBe('/images/home/castello-avio-1280.webp')
-    expect(nearbyPhoto?.hasAttribute('width')).toBe(false)
-    expect(nearbyCredit?.textContent).toBe('Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Martina Vanzo')
+    expect(creditedPhotos).toEqual([
+      { src: '/images/home/famiglia-castione-1280.webp', hasWidth: false, credit: 'Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Graziano Galvagni' },
+      { src: '/images/home/castello-avio-1280.webp', hasWidth: false, credit: 'Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Martina Vanzo' },
+    ])
     expect(wrapper.element.querySelector('.guest-placeholder')).toBeNull()
   })
 
