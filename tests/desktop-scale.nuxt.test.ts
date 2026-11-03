@@ -111,6 +111,10 @@ describe('exact sizes', () => {
     expect(homeSource).toContain(`.breakfast-text,.welcome-text{padding-left:clamp(22px,3.5vw,67px);padding-right:${zoomedOuterPadding}}`)
   })
 
+  it('stretches the welcome photo to the full band height on desktop', () => {
+    expect(homeSource).toContain('.welcome img{aspect-ratio:16/9;align-self:stretch;height:100%}')
+  })
+
   it('shortens the reveal offset on desktop without overriding reduced motion', () => {
     const baseRevealIndex = globalStyles.indexOf('.reveal-ready [data-reveal]{opacity:0;transform:translateY(20px)')
     const desktopRevealIndex = globalStyles.indexOf('@media (min-width:901px){.reveal-ready [data-reveal]{transform:translateY(14px)}}')

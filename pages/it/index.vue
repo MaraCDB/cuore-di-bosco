@@ -40,25 +40,33 @@
             <p class="lead">Camminatori, amanti della natura e dei paesaggi, famiglie, amici: qui c’è posto per ognuno.</p>
           </div>
           <div class="guests">
-            <article class="guest-walkers" data-reveal>
-              <img src="/images/home/bosco-1920.webp" alt="Un sentiero nel bosco vicino a Prada" loading="lazy">
-              <h3>Per chi cammina</h3>
-              <p>La posizione è perfetta per chi ama la natura e le attività all’aria aperta in ogni stagione. Dai sentieri facili per passeggiate con bambini ai percorsi panoramici per trekking, ogni camminata offre scenari mozzafiato immersi nella natura del Monte Baldo e dei boschi circostanti. Nei mesi invernali, in pochi minuti è possibile raggiungere le località sciistiche di Polsa, San Valentino e San Giacomo.</p>
-              <p>A breve distanza in auto è possibile visitare anche Rovereto con la sua offerta culturale, Ala con il famoso castello e l’antico centro storico e l’alto Lago di Garda, per una giornata tra panorami e borghi affacciati sull’acqua.</p>
+            <article class="guest guest-walkers" data-reveal>
+              <img src="/images/home/bosco-900.webp" alt="Un sentiero nel bosco vicino a Prada" loading="lazy">
+              <div>
+                <h3>Per chi cammina</h3>
+                <p>La posizione è perfetta per chi ama la natura e le attività all’aria aperta in ogni stagione. Dai sentieri facili per passeggiate con <strong>bambini</strong> ai percorsi panoramici per <strong>trekking</strong>, ogni camminata offre scenari mozzafiato immersi nella natura del <strong>Monte Baldo</strong> e dei boschi circostanti. Nei mesi invernali, in pochi minuti è possibile raggiungere le <strong>località sciistiche</strong> di Polsa, San Valentino e San Giacomo.</p>
+              </div>
             </article>
-            <article class="guest-side" data-reveal>
-              <img src="/images/home/prada-700.webp" alt="Il paese di Prada tra le vigne e le montagne" loading="lazy">
+            <article class="guest" data-reveal>
+              <img src="/images/home/prada-1280.webp" alt="Il paese di Prada tra le vigne e le montagne" loading="lazy">
               <div>
                 <h3>Per chi ama la natura e i paesaggi</h3>
                 <p>A pochi minuti da Brentonico, <strong>Prada</strong> è una piccola frazione di montagna nel cuore del <strong>Parco Naturale del Monte Baldo</strong>, un luogo tranquillo ma facile da raggiungere, ottimo punto per escursioni e attività di ogni genere.</p>
               </div>
             </article>
-            <article class="guest-side" data-reveal>
-              <img src="/images/home/porta-libri-700.webp" alt="La porta di casa con il portalibri per i bambini" loading="lazy">
+            <article class="guest" data-reveal>
+              <img src="/images/home/porta-libri-960.webp" alt="La porta di casa con il portalibri per i bambini" loading="lazy">
               <div>
                 <h3>Per le famiglie</h3>
                 <p>Sappiamo bene quanto è complicato spostarsi e rilassarsi con uno o più figli! Per questo abbiamo cercato di rendere la vita più facile e la vacanza più rilassata ai genitori!</p>
                 <NuxtLink to="/it/prenota" no-prefetch>Il nostro baby kit</NuxtLink>
+              </div>
+            </article>
+            <article class="guest guest-nearby" data-reveal>
+              <div class="guest-placeholder" role="img" aria-label="Foto in arrivo: il panorama dall’Altissimo">Foto in arrivo</div>
+              <div>
+                <h3>A breve distanza</h3>
+                <p>A breve distanza in auto è possibile visitare anche <strong>Rovereto</strong> con la sua offerta culturale, <strong>Ala</strong> con il famoso castello e l’antico centro storico e l’alto <strong>Lago di Garda</strong>, per una giornata tra panorami e borghi affacciati sull’acqua.</p>
               </div>
             </article>
           </div>
@@ -156,19 +164,6 @@
         </div>
       </section>
 
-      <section class="garden">
-        <div class="wrap garden-head" data-reveal>
-          <h2>Il giardino d’Europa</h2>
-          <p class="lead">Una volta arrivati, vi accoglierà il silenzio e la bellezza dell’Altopiano di Brentonico, con la sua cornice di verdi montagne.</p>
-        </div>
-        <div class="photo-row" tabindex="0" aria-label="Fotografie dell'Altopiano e della casa">
-          <figure><img src="/images/home/lampone-balcone-1200.webp" alt="Il Monte Baldo innevato visto dal balcone della camera Lampone" loading="lazy"><figcaption>Dal balcone di Lampone</figcaption></figure>
-          <figure><img src="/images/home/bosco-1920.webp" alt="Il sentiero nel bosco" loading="lazy"><figcaption>Il bosco</figcaption></figure>
-          <figure><img src="/images/home/lampone-finestra-1200.webp" alt="La vista dalla finestra di Lampone" loading="lazy"><figcaption>Dalla finestra di Lampone</figcaption></figure>
-          <figure><img src="/images/home/casa-1600.webp" alt="La casa in pietra" loading="lazy"><figcaption>Via Gardesani 15, Prada</figcaption></figure>
-        </div>
-      </section>
-
       <section class="story" id="storia">
         <div class="story-inner">
           <img class="logo" :src="logo" alt="Il logo di Cuore di Bosco: un cuore di legno con frutti di bosco">
@@ -199,6 +194,19 @@
         <div class="map-frame">
           <iframe title="Mappa: B&amp;B Cuore di Bosco, Via Gardesani 15, Prada" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4628.566893163929!2d10.95615487755049!3d45.80152017108149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782051cad11ec19%3A0x135a8894e1f97c2d!2sVia%20Gardesani%2C%2015%2C%2038060%20Prada%20TN!5e1!3m2!1sit!2sit!4v1749392711552!5m2!1sit!2sit"></iframe>
           <a class="map-link" href="https://www.google.com/maps/place/Via+Gardesani,+15,+38060+Prada+TN" target="_blank" rel="noopener" aria-label="Apri la mappa in Google Maps"></a>
+        </div>
+      </section>
+
+      <section class="garden">
+        <div class="wrap garden-head" data-reveal>
+          <h2>Il giardino d’Europa</h2>
+          <p class="lead">Una volta arrivati, vi accoglierà il silenzio e la bellezza dell’Altopiano di Brentonico, con la sua cornice di verdi montagne.</p>
+        </div>
+        <div class="photo-row" tabindex="0" aria-label="Fotografie dell'Altopiano e della casa">
+          <figure><img src="/images/home/lampone-balcone-1200.webp" alt="Il Monte Baldo innevato visto dal balcone della camera Lampone" loading="lazy"><figcaption>Dal balcone di Lampone</figcaption></figure>
+          <figure><img src="/images/home/bosco-1920.webp" alt="Il sentiero nel bosco" loading="lazy"><figcaption>Il bosco</figcaption></figure>
+          <figure><img src="/images/home/lampone-finestra-1200.webp" alt="La vista dalla finestra di Lampone" loading="lazy"><figcaption>Dalla finestra di Lampone</figcaption></figure>
+          <figure><img src="/images/home/casa-1600.webp" alt="La casa in pietra" loading="lazy"><figcaption>Via Gardesani 15, Prada</figcaption></figure>
         </div>
       </section>
     </div>
@@ -280,13 +288,12 @@ useReveal(root);
 .welcome h2{margin-bottom:20px}
 
 .everyone{background:var(--champagne);padding:var(--band-pad) 0}
-.everyone-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,96px);align-items:end}
+.everyone-head{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,5vw,96px);align-items:end}
 .everyone-head .lead{margin:0}
-.guests{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,5vw,64px) clamp(32px,5vw,96px);margin-top:28px}
-.guest-walkers{grid-row:1 / span 2}
-.guest-walkers img{width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:28px}
-.guest-side{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:24px;align-items:start}
-.guest-side img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.guests{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,5vw,64px) clamp(32px,5vw,96px);margin-top:28px;align-items:start}
+.guest{display:grid;gap:20px}
+.guest img,.guest-placeholder{width:100%;aspect-ratio:3/2;object-fit:cover}
+.guest-placeholder{display:grid;place-items:center;background:var(--linen);color:var(--forest);font-size:var(--step-small);font-weight:600;letter-spacing:0.08em;text-transform:uppercase}
 .guests h3{margin-bottom:10px}
 .guests ul{margin:16px 0 0;padding-left:1.1em}
 .guests li{margin-bottom:6px}
@@ -354,12 +361,12 @@ useReveal(root);
   .hero .tagline{margin:20px 0 0}
   .hero .lead{margin:14px 0 28px}
   .hero-actions{gap:8px}
-  .welcome img{aspect-ratio:16/9}
+  .welcome img{aspect-ratio:16/9;align-self:stretch;height:100%}
   .welcome h2{margin-bottom:14px}
   .everyone-head{gap:clamp(22px,3.5vw,67px)}
   .guests{gap:clamp(28px,3.5vw,45px) clamp(22px,3.5vw,67px);margin-top:20px}
-  .guest-walkers img{aspect-ratio:3/2;margin-bottom:20px}
-  .guest-side{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:17px}
+  .guest{gap:14px}
+  .guest img,.guest-placeholder{aspect-ratio:16/9}
   .guests h3{margin-bottom:7px}
   .guests ul{margin:11px 0 0}
   .rooms-head{gap:17px}
@@ -397,15 +404,12 @@ useReveal(root);
   .hero-photo,.breakfast-photo{aspect-ratio:4/3;min-height:0}
   .hero-photo{order:-1}
   .hero-text,.breakfast-text,.welcome-text{padding:24px var(--margin) 32px}
-  .guest-walkers{grid-row:auto}
   .pilgrims-photo{grid-row:auto;aspect-ratio:4/5}
   .room:nth-of-type(even) .room-photos{order:0}
   .photo-row{height:56svh}
   .map-frame{min-height:320px}
 }
 @media (max-width:520px){
-  .guest-side{grid-template-columns:minmax(0,1fr)}
   .hero-logo{width:60px}
-  .guest-side img{aspect-ratio:16/10}
 }
 </style>

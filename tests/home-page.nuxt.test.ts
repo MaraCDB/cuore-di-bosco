@@ -73,6 +73,32 @@ describe('italian home page', () => {
     expect(familyTerms?.textContent).toBe('Culla gratis · 1° bambino gratis · 2° bambino al 50% · <12 anni')
   })
 
+  it('highlights the walkers and nearby keywords in bold', async () => {
+    const wrapper = await mountHome()
+    const boldWordsIn = (selector: string) => [...wrapper.element.querySelectorAll(`${selector} strong`)].map(word => word.textContent)
+
+    expect(boldWordsIn('.guest-walkers')).toEqual(['bambini', 'trekking', 'Monte Baldo', 'località sciistiche'])
+    expect(boldWordsIn('.guest-nearby')).toEqual(['Rovereto', 'Ala', 'Lago di Garda'])
+  })
+
+  it('lays out the four guest cards in order with a placeholder for the Altissimo panorama', async () => {
+    const wrapper = await mountHome()
+    const cardTitles = [...wrapper.element.querySelectorAll('.guests > .guest h3')].map(title => title.textContent)
+    const placeholder = wrapper.element.querySelector('.guest-nearby .guest-placeholder')
+
+    expect(cardTitles).toEqual(['Per chi cammina', 'Per chi ama la natura e i paesaggi', 'Per le famiglie', 'A breve distanza'])
+    expect(placeholder?.getAttribute('role')).toBe('img')
+    expect(placeholder?.getAttribute('aria-label')).toContain('Altissimo')
+  })
+
+  it('closes the page with the garden of Europe right after the directions', async () => {
+    const wrapper = await mountHome()
+    const lastSection = [...wrapper.element.querySelectorAll('section')].at(-1)
+
+    expect(lastSection?.classList.contains('garden')).toBe(true)
+    expect(lastSection?.previousElementSibling?.id).toBe('arrivare')
+  })
+
   it('gives the motorway exit its own welcome paragraph after the lead', async () => {
     const wrapper = await mountHome()
     const exitParagraph = wrapper.element.querySelector('.welcome-text .lead + p')
