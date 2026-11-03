@@ -31,7 +31,7 @@
 
       <section class="rule" data-reveal>
         <h2>POLITICHE DI CANCELLAZIONE</h2>
-        <p>In caso di cancellazione comunicata entro il 15° giorno prima dell’arrivo, restituiremo per intero l’acconto versato. Non sono previsti rimborsi per cancellazioni comunicate negli ultimi 7 giorni o per partenze anticipate rispetto alla prenotazione originaria.</p>
+        <p>In caso di cancellazione comunicata entro il 7° giorno prima dell’arrivo, restituiremo per intero l’acconto versato. Non sono previsti rimborsi per cancellazioni comunicate negli ultimi 7 giorni o per partenze anticipate rispetto alla prenotazione originaria. Previo accordi è possibile spostare il soggiorno ad altra data in caso di salute o impegni improrogabili, salvo alta stagione.</p>
       </section>
 
       <section class="rule" data-reveal>
@@ -73,9 +73,10 @@
         <p>La colazione viene servita nella nostra <b>sala colazioni dalle 7:30 alle 9:30</b>. Offriamo prodotti locali e specialità montane per iniziare al meglio le vostre giornate all’aria aperta.
           Se preferite un orario differente faremo del nostro meglio per accontentarvi. Vi preghiamo di avvisarci per tempo per organizzarci.</p>
         <p>Inoltre possiamo preparare una colazione da consumare in camera (a richiesta)</p>
+        <p>Siamo a disposizione per ogni esigenza di regime alimentare, vegetariano, vegano, intolleranze o allergie, vi preghiamo di avvisarci per tempo prima dell'arrivo per potervi offrire una scelta adeguata.</p>
       </section>
 
-      <section class="rule" data-reveal>
+      <section class="rule rule-conduct" data-reveal>
         <h2>NORME COMPORTAMENTALI</h2>
         <p>Vi chiediamo cortesemente di:</p>
         <ul>
@@ -183,6 +184,7 @@ useReveal(root);
   .rules-hero{min-height:min(calc(50svh - 59px),340px)}
   .rules-hero .hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px}
   .rules{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rule-conduct{grid-row:span 2}
 }
 @media (max-width:900px){
   .rules-hero{grid-template-columns:minmax(0,1fr);min-height:0}

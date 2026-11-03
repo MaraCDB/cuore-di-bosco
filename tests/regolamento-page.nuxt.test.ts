@@ -48,11 +48,19 @@ describe('italian rules page', () => {
     }
   })
 
-  it('keeps the cancellation policy untouched', async () => {
+  it('shows the owners\' seven-day cancellation policy', async () => {
     const wrapper = await mountRules()
     const pageText = normalize(wrapper.element.textContent ?? '')
 
-    expect(pageText).toContain('In caso di cancellazione comunicata entro il 15° giorno prima dell’arrivo, restituiremo per intero l’acconto versato. Non sono previsti rimborsi per cancellazioni comunicate negli ultimi 7 giorni o per partenze anticipate rispetto alla prenotazione originaria.')
+    expect(pageText).toContain('In caso di cancellazione comunicata entro il 7° giorno prima dell’arrivo, restituiremo per intero l’acconto versato. Non sono previsti rimborsi per cancellazioni comunicate negli ultimi 7 giorni o per partenze anticipate rispetto alla prenotazione originaria. Previo accordi è possibile spostare il soggiorno ad altra data in caso di salute o impegni improrogabili, salvo alta stagione.')
+    expect(pageText).not.toContain('15° giorno')
+  })
+
+  it('offers breakfast for every diet in the breakfast card', async () => {
+    const wrapper = await mountRules()
+    const breakfastCard = [...wrapper.element.querySelectorAll('.rule')].find(card => card.querySelector('h2')?.textContent === 'COLAZIONE')
+
+    expect(breakfastCard?.querySelector('p:last-child')?.textContent).toBe('Siamo a disposizione per ogni esigenza di regime alimentare, vegetariano, vegano, intolleranze o allergie, vi preghiamo di avvisarci per tempo prima dell\'arrivo per potervi offrire una scelta adeguata.')
   })
 
   it('lists the thirteen rules in order as cards', async () => {
@@ -103,6 +111,16 @@ describe('italian rules page', () => {
     expect(ruleBody('.rule li+li')).toContain('margin-top:0.5em')
     expect(ruleBody('.rule>:last-child')).toContain('margin-bottom:0')
     expect(desktopRules).toContain('.rules{grid-template-columns:repeat(2,minmax(0,1fr))')
+  })
+
+  it('stacks the access card under the external services card beside the conduct rules on desktop', async () => {
+    const wrapper = await mountRules()
+    const cards = [...wrapper.element.querySelectorAll('.rules > .rule')]
+    const desktopRules = pageStyles.match(/@media \(min-width:901px\)\{([\s\S]*?)\n\}/)?.[1] ?? ''
+
+    expect(cards.at(-3)?.classList.contains('rule-conduct')).toBe(true)
+    expect(cards.at(-3)?.querySelector('h2')?.textContent).toBe('NORME COMPORTAMENTALI')
+    expect(desktopRules).toContain('.rule-conduct{grid-row:span 2}')
   })
 
   it('justifies rule paragraphs and list items within 68ch and aligns them left on phones', () => {
