@@ -348,7 +348,7 @@ useReveal(root);
 .map-link{position:absolute;inset:0}
 @media (min-width:901px){
   .hero{min-height:min(calc(70svh - 59px),420px)}
-  .hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px}
+  .hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px;padding-left:max(var(--margin),calc((100vw - 1440px) * 0.35 + var(--margin)))}
   .hero-title{gap:clamp(11px,1.4vw,22px)}
   .hero-logo{width:clamp(50px,5.95vw,90px)}
   .hero .tagline{margin:20px 0 0}
@@ -371,7 +371,7 @@ useReveal(root);
   .room-actions{gap:8px;margin-top:17px}
   .rooms-family{margin:14px 0 0;padding:10px 17px}
   .breakfast-photo{min-height:364px}
-  .breakfast-text,.welcome-text{padding-left:clamp(22px,3.5vw,67px)}
+  .breakfast-text,.welcome-text{padding-left:clamp(22px,3.5vw,67px);padding-right:max(var(--margin),calc((100vw - 1440px) * 0.35 + var(--margin)))}
   .breakfast-text h2{margin-bottom:17px}
   .pilgrims-grid{gap:14px clamp(22px,3.5vw,67px)}
   .pilgrims h2{margin-bottom:17px}

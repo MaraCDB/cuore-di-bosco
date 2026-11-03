@@ -103,4 +103,21 @@ describe('exact sizes', () => {
     expect(homeSource).toMatch(/\.room h3\{[^}]*font-size:var\(--step-title\)/)
     expect(footerSource).toMatch(/\.footer-name\{[^}]*font-size:var\(--step-display\)/)
   })
+
+  it('keeps the split bands text as wide as the zoomed layout on desktop', () => {
+    const zoomedOuterPadding = 'max(var(--margin),calc((100vw - 1440px) * 0.35 + var(--margin)))'
+
+    expect(homeSource).toContain(`.hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px;padding-left:${zoomedOuterPadding}}`)
+    expect(homeSource).toContain(`.breakfast-text,.welcome-text{padding-left:clamp(22px,3.5vw,67px);padding-right:${zoomedOuterPadding}}`)
+  })
+
+  it('shortens the reveal offset on desktop without overriding reduced motion', () => {
+    const baseRevealIndex = globalStyles.indexOf('.reveal-ready [data-reveal]{opacity:0;transform:translateY(20px)')
+    const desktopRevealIndex = globalStyles.indexOf('@media (min-width:901px){.reveal-ready [data-reveal]{transform:translateY(14px)}}')
+    const reducedMotionIndex = globalStyles.indexOf('@media (prefers-reduced-motion:reduce){.reveal-ready [data-reveal]{opacity:1;transform:none}}')
+
+    expect(baseRevealIndex).toBeGreaterThan(-1)
+    expect(desktopRevealIndex).toBeGreaterThan(baseRevealIndex)
+    expect(reducedMotionIndex).toBeGreaterThan(desktopRevealIndex)
+  })
 })
