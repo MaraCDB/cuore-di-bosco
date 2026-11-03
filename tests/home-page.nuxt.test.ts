@@ -81,6 +81,14 @@ describe('italian home page', () => {
     expect(boldWordsIn('.guest-nearby')).toEqual(['Rovereto', 'Ala', 'Lago di Garda'])
   })
 
+  it('names the castle of Avio near Ala and gives Lake Garda its own sentence', async () => {
+    const wrapper = await mountHome()
+    const nearbyText = wrapper.element.querySelector('.guest-nearby p')?.textContent
+
+    expect(nearbyText).toContain('il vicino castello di Avio con il suo scenografico mercatino di Natale. Non lontano c’è anche l’alto')
+    expect(nearbyText).not.toContain('famoso castello')
+  })
+
   it('lays out the four guest cards in order with a placeholder for the Altissimo panorama', async () => {
     const wrapper = await mountHome()
     const cardTitles = [...wrapper.element.querySelectorAll('.guests > .guest h3')].map(title => title.textContent)

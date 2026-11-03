@@ -66,7 +66,7 @@
               <div class="guest-placeholder" role="img" aria-label="Foto in arrivo: il panorama dall’Altissimo">Foto in arrivo</div>
               <div>
                 <h3>A breve distanza</h3>
-                <p>A breve distanza in auto è possibile visitare anche <strong>Rovereto</strong> con la sua offerta culturale, <strong>Ala</strong> con il famoso castello e l’antico centro storico e l’alto <strong>Lago di Garda</strong>, per una giornata tra panorami e borghi affacciati sull’acqua.</p>
+                <p>A breve distanza in auto è possibile visitare anche <strong>Rovereto</strong> con la sua offerta culturale e <strong>Ala</strong> con il suo antico centro storico e il vicino castello di Avio con il suo scenografico mercatino di Natale. Non lontano c’è anche l’alto <strong>Lago di Garda</strong>, per una giornata tra panorami e borghi affacciati sull’acqua.</p>
               </div>
             </article>
           </div>
