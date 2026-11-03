@@ -26,8 +26,9 @@
         <img src="/images/home/casa-1600.webp" alt="La casa in pietra del B&B Cuore di Bosco a Prada" loading="lazy">
         <div class="welcome-text" data-reveal>
           <h2>Benvenuti</h2>
-          <p class="lead">Benvenuti al <strong>B&amp;B Cuore di Bosco</strong>, un rifugio immerso nella natura della <strong>Vallagarina</strong>, sull’<strong>Altopiano di Brentonico, il giardino d’Europa</strong>. Circondati da rigogliose montagne, il tempo rallenta e la tranquillità regna sovrana.</p>
-          <p>La nostra casa in pietra, con arredi in legno e dettagli curati, offre un’accoglienza calorosa e autentica. Qui, ogni angolo racconta una storia di semplicità e amore per la montagna.</p>
+          <p class="lead">Benvenuti al <strong>B&amp;B Cuore di Bosco</strong>, un rifugio immerso nella natura della <strong>Vallagarina</strong>, sull’<strong>Altopiano di Brentonico, il giardino d’Europa</strong>. Circondati da rigogliose montagne, il tempo rallenta e la tranquillità regna sovrana. Il B&amp;B è facilmente raggiungibile in auto dall’uscita di Rovereto Sud dell’autostrada A22 e rappresenta un punto di partenza ideale per esplorare il Monte Baldo in ogni stagione.</p>
+          <p>La casa, realizzata in pietra e arredata con legno e materiali naturali, offre ambienti caldi e curati, dove ogni dettaglio racconta un profondo legame con la montagna e con uno stile di vita più lento e consapevole. L’accoglienza è semplice e autentica, pensata per far sentire gli ospiti a proprio agio fin dal primo momento.</p>
+          <p>Le camere sono spaziose e luminose, ideali sia per coppie sia per famiglie. Offrono comfort moderni, bagno privato, biancheria inclusa e un’atmosfera rilassante che invita al riposo. Su richiesta sono disponibili dotazioni dedicate ai più piccoli, per garantire un soggiorno sereno anche a chi viaggia con bambini.</p>
         </div>
       </section>
 
@@ -41,10 +42,8 @@
             <article class="guest-walkers" data-reveal>
               <img src="/images/home/bosco-1920.webp" alt="Un sentiero nel bosco vicino a Prada" loading="lazy">
               <h3>Per chi cammina</h3>
-              <p>Dai sentieri facili per passeggiate con bambini ai percorsi panoramici per trekking, ogni camminata offre scenari mozzafiato immersi nella natura del Monte Baldo e dei boschi circostanti.</p>
-              <ul>
-                <li>Servizio deposito bici / scarponi / sci e altro materiale</li>
-              </ul>
+              <p>La posizione è perfetta per chi ama la natura e le attività all’aria aperta in ogni stagione. Dai sentieri facili per passeggiate con bambini ai percorsi panoramici per trekking, ogni camminata offre scenari mozzafiato immersi nella natura del Monte Baldo e dei boschi circostanti. Nei mesi invernali, in pochi minuti è possibile raggiungere le località sciistiche di Polsa, San Valentino e San Giacomo.</p>
+              <p>A breve distanza in auto è possibile visitare anche Rovereto con la sua offerta culturale, Ala con il famoso castello e l’antico centro storico e l’alto Lago di Garda, per una giornata tra panorami e borghi affacciati sull’acqua.</p>
             </article>
             <article class="guest-side" data-reveal>
               <img src="/images/home/prada-700.webp" alt="Il paese di Prada tra le vigne e le montagne" loading="lazy">
@@ -94,6 +93,7 @@
           <h2>Le nostre camere</h2>
           <NuxtLink class="button" to="/it/prenota" no-prefetch>Verifica le date</NuxtLink>
         </div>
+        <p class="rooms-family" data-reveal>Culla gratis · 1° bambino gratis · 2° bambino al 50% · &lt;12 anni</p>
         <article class="room">
           <div class="room-photos" data-reveal>
             <img src="/images/home/lampone-camera-1600.webp" alt="La camera Lampone" loading="lazy">
@@ -142,17 +142,16 @@
             </div>
           </div>
         </article>
-        <p class="rooms-family" data-reveal>Culla gratis · Primo bambino gratis · Secondo bambino al 50% · Bambini &lt;12 anni</p>
       </section>
 
       <section class="band breakfast" id="colazione">
         <div class="breakfast-photo"><img src="/images/home/colazione-1280.webp" alt="La colazione con la torta fatta in casa" loading="lazy"></div>
         <div class="breakfast-text" data-reveal>
           <h2>A colazione da noi</h2>
-          <p class="lead">La colazione a casa nostra è un momento speciale, da gustare con calma e in buona compagnia. Ogni mattina prepariamo con cura un vassoio ricco di bontà: dolci casalinghi, pane fresco, salumi e formaggi del territorio, frutta di stagione e qualcosa di goloso per iniziare la giornata col sorriso.</p>
-          <p>Preferisci il dolce o il salato? Hai intolleranze o preferenze alimentari? Basta farcelo sapere il giorno prima: pensiamo noi a tutto.</p>
-          <p>E se vuoi regalarti un risveglio ancora più lento, possiamo portartela in camera, per gustarla con calma, tra il profumo del legno e la luce del bosco che filtra dalle finestre.</p>
-          <p>Teniamo moltissimo alla qualità dei nostri ingredienti, e per questo ci riforniamo il più possibile da produttori locali.</p>
+          <p class="lead">La colazione a casa nostra è un momento speciale, da gustare con calma e in buona compagnia. Ogni mattina prepariamo con cura un buffet ricco di bontà: dolci casalinghi, pane fresco, salumi e formaggi del territorio, frutta di stagione e qualcosa di goloso per iniziare la giornata col sorriso.</p>
+          <p>È possibile scegliere tra proposte dolci o salate e segnalare eventuali intolleranze o preferenze alimentari, così da trovare sempre una colazione adatta alle proprie esigenze. Su richiesta, la colazione può essere servita direttamente in camera, per godersi un risveglio ancora più lento, accompagnato dal profumo del legno e dalla luce del bosco che entra dalle finestre.</p>
+          <p>Grande attenzione è riservata alla qualità degli ingredienti, selezionati privilegiando produttori locali, per offrire sapori autentici e un’esperienza che racconta il territorio fin dal primo mattino.</p>
+          <p>E se ami i prodotti dei nostri produttori locali siamo a disposizione per ordinarli e farteli trovare per portare la Vallagarina a casa con te al rientro! Marmellate, sciroppi, erbe, tisane, miele, farine e tanto altro!</p>
         </div>
       </section>
 
@@ -174,8 +173,7 @@
           <img class="logo" :src="logo" alt="Il logo di Cuore di Bosco: un cuore di legno con frutti di bosco">
           <h2>Tutti i progetti nascono da un sogno</h2>
           <div class="lead">
-            <p>La volontà di una vita più serena e meno di fretta per noi e per la nostra famiglia ci ha portato ad un cambio di vita completo, dalla brulicante ed asfaltata pianura padana all’Altopiano di Brentonico.</p>
-            <p>E’ stato amore a prima vista. Il nostro posto. Noi ci siamo ripresi il nostro tempo lento e la nostra pace, unitevi anche voi!</p>
+            <p>Cuore di Bosco nasce da un progetto di vita più serena e meno di fretta per noi e per la nostra famiglia e dal desiderio di condividere un’idea di ospitalità fatta di tempo, attenzione e passione. Un luogo dove sentirsi accolti, respirare la montagna e vivere un’esperienza genuina, in equilibrio tra natura, comfort e autenticità.</p>
           </div>
         </div>
       </section>
@@ -308,7 +306,7 @@ useReveal(root);
 .room-features{margin:0 0 12px;padding-left:1.1em}
 .room-features li{margin-bottom:8px}
 .room-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.rooms-family{margin:32px 0 0;padding:14px 24px;border-radius:999px;background:var(--lime);color:var(--ink);text-align:center;font-family:var(--sub);font-size:var(--step-small);font-weight:600;text-transform:uppercase;letter-spacing:0.08em}
+.rooms-family{margin:20px 0 0;padding:14px 24px;border-radius:999px;background:var(--lime);color:var(--ink);text-align:center;font-family:var(--sub);font-size:var(--step-small);font-weight:600;text-transform:uppercase;letter-spacing:0.08em}
 
 .breakfast{margin-top:var(--section-gap);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
 .breakfast-photo{position:relative;min-height:520px}

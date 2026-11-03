@@ -51,6 +51,28 @@ describe('italian home page', () => {
     ])))
   })
 
+  it('leaves the storage service to the booking page', async () => {
+    const wrapper = await mountHome()
+
+    expect(wrapper.element.querySelector('.guest-walkers')?.textContent).not.toContain('Servizio deposito')
+    expect(wrapper.element.querySelector('.guest-walkers')?.textContent).toContain('Polsa, San Valentino e San Giacomo')
+  })
+
+  it('shows the family terms for both rooms right under the rooms heading', async () => {
+    const wrapper = await mountHome()
+    const familyTerms = wrapper.element.querySelector('.rooms-head + .rooms-family')
+
+    expect(familyTerms?.textContent).toBe('Culla gratis · 1° bambino gratis · 2° bambino al 50% · <12 anni')
+  })
+
+  it('describes the breakfast as a buffet', async () => {
+    const wrapper = await mountHome()
+    const breakfastText = wrapper.element.querySelector('.breakfast-text')?.textContent
+
+    expect(breakfastText).toContain('un buffet ricco di bontà')
+    expect(breakfastText).toContain('Marmellate, sciroppi, erbe, tisane, miele, farine e tanto altro!')
+  })
+
   it.each(['lampone', 'mirtillo'])('has the #%s room section on the booking page', async (roomId) => {
     const wrapper = await mountSuspended(BookingPage, { attachTo: document.body })
     mountedWrappers.push(wrapper)
