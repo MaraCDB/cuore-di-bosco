@@ -154,6 +154,13 @@ describe('italian home page', () => {
     expect(wrapper.element.querySelector('.guest-placeholder')).toBeNull()
   })
 
+  it('opens the nearby card paragraph with "In auto" instead of repeating its title', async () => {
+    const wrapper = await mountHome()
+    const nearbyParagraph = wrapper.element.querySelector('.guest-nearby h3 + p')
+
+    expect(nearbyParagraph?.textContent).toMatch(/^In auto è possibile visitare anche Rovereto/)
+  })
+
   it('moves the rooms and breakfast sections right after the welcome', async () => {
     const wrapper = await mountHome()
     const sectionOrder = [...wrapper.element.querySelectorAll('section')]
@@ -187,13 +194,13 @@ describe('italian home page', () => {
 
   it('credits every APT and Altissimo photo in the garden row and drops the window view', async () => {
     const wrapper = await mountHome()
-    const gardenFigures = [...wrapper.element.querySelectorAll('.garden .photo-row figure')]
+    const gardenFigures = [...wrapper.element.querySelectorAll('.garden .photo-row figure:not([aria-hidden])')]
     const creditOf = (source: string) => gardenFigures
       .find(figure => figure.querySelector('img')?.getAttribute('src') === `/images/home/${source}`)
       ?.querySelector('.photo-credit')?.textContent
     const aptCredit = 'Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di '
 
-    expect(gardenFigures).toHaveLength(13)
+    expect(gardenFigures).toHaveLength(12)
     expect(gardenFigures.some(figure => figure.querySelector('img')?.getAttribute('src')?.includes('lampone-finestra'))).toBe(false)
     expect(gardenFigures.some(figure => figure.querySelector('img')?.hasAttribute('width'))).toBe(false)
     expect(creditOf('calanchi-san-giacomo-1200.webp')).toBe(`${aptCredit}Graziano Galvagni`)
@@ -208,14 +215,12 @@ describe('italian home page', () => {
     expect(creditOf('monte-altissimo-1200.webp')).toBe('360gardalife. Foto di Angela Trawoeger')
   })
 
-  it('ends the garden row with the view from the Lampone balcony right after the house', async () => {
+  it('ends the garden carousel with the house and leaves the Lampone balcony out', async () => {
     const wrapper = await mountHome()
-    const gardenSources = [...wrapper.element.querySelectorAll('.garden .photo-row figure img')].map(image => image.getAttribute('src'))
-    const lastFigure = wrapper.element.querySelector('.garden .photo-row figure:last-child')
+    const gardenSources = [...wrapper.element.querySelectorAll('.garden .photo-row figure:not([aria-hidden]) img')].map(image => image.getAttribute('src'))
 
-    expect(gardenSources.slice(-2)).toEqual(['/images/home/casa-1600.webp', '/images/home/lampone-balcone-1200.webp'])
-    expect(gardenSources.filter(source => source?.includes('lampone-balcone'))).toHaveLength(1)
-    expect(lastFigure?.querySelector('figcaption')?.textContent).toBe('Dal balcone di Lampone')
+    expect(gardenSources.at(-1)).toBe('/images/home/casa-1600.webp')
+    expect(gardenSources.filter(source => source?.includes('lampone-balcone'))).toEqual([])
   })
 
   it('marks the San Rocco text column for justified paragraphs', async () => {

@@ -141,7 +141,7 @@
               </figure>
               <div>
                 <h3>A breve distanza</h3>
-                <p>A breve distanza in auto è possibile visitare anche <strong>Rovereto</strong> con la sua offerta culturale e <strong>Ala</strong> con il suo antico centro storico e il vicino castello di Avio con il suo scenografico mercatino di Natale. Non lontano c’è anche l’alto <strong>Lago di Garda</strong>, per una giornata tra panorami e borghi affacciati sull’acqua.</p>
+                <p>In auto è possibile visitare anche <strong>Rovereto</strong> con la sua offerta culturale e <strong>Ala</strong> con il suo antico centro storico e il vicino castello di Avio con il suo scenografico mercatino di Natale. Non lontano c’è anche l’alto <strong>Lago di Garda</strong>, per una giornata tra panorami e borghi affacciati sull’acqua.</p>
                 <p>Dalla stazione di Rovereto o Mori sono comodamente raggiungibili in treno anche località più lontane come Verona, Trento, Bolzano. I mezzi pubblici in territorio trentino sono tutti inclusi nella <a href="https://www.visittrentino.info/it/esperienze/trentino-guest-card" target="_blank" rel="noopener">Trentino Guest Card</a> insieme a sconti e convenzioni!</p>
               </div>
             </article>
@@ -211,21 +211,7 @@
           <h2>Il giardino d’Europa</h2>
           <p class="lead">Una volta arrivati, vi accoglierà il silenzio e la bellezza dell’Altopiano di Brentonico, con la sua cornice di verdi montagne.</p>
         </div>
-        <div class="photo-row" tabindex="0" aria-label="Fotografie della casa, dell'Altopiano e dei dintorni">
-          <figure><img src="/images/home/bosco-1920.webp" alt="Il sentiero nel bosco" loading="lazy"><figcaption>Il bosco</figcaption></figure>
-          <figure><img src="/images/home/calanchi-san-giacomo-1200.webp" alt="I calanchi di San Giacomo in autunno sotto le pareti del Monte Baldo" loading="lazy"><figcaption>Calanchi di San Giacomo<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Graziano Galvagni</span></figcaption></figure>
-          <figure><img src="/images/home/famiglia-castione-1280.webp" alt="Una famiglia nel bosco di Castione in autunno" loading="lazy"><figcaption>Castione<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Graziano Galvagni</span></figcaption></figure>
-          <figure><img src="/images/home/palazzo-eccheli-baisi-1280.webp" alt="Il giardino all’italiana di Palazzo Eccheli Baisi a Brentonico" loading="lazy"><figcaption>Palazzo Eccheli Baisi, Brentonico<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Luca Matassoni</span></figcaption></figure>
-          <figure><img src="/images/home/inverno-brentonico-1280.webp" alt="L’Altopiano di Brentonico innevato" loading="lazy"><figcaption>Inverno a Brentonico<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Tommaso Prugnola</span></figcaption></figure>
-          <figure><img src="/images/home/trekking-baldo-1280.webp" alt="Escursionisti su uno sperone di roccia del Monte Baldo in autunno" loading="lazy"><figcaption>Trekking sul Monte Baldo<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Tommaso Prugnola</span></figcaption></figure>
-          <figure><img src="/images/home/monte-altissimo-1200.webp" alt="Il Lago di Garda visto dal Monte Altissimo" loading="lazy"><figcaption>Dal Monte Altissimo<span class="photo-credit">360gardalife. Foto di Angela Trawoeger</span></figcaption></figure>
-          <figure><img src="/images/home/forra-sorna-1280.webp" alt="Un tuffo nelle acque della Forra della Sorna" loading="lazy"><figcaption>Forra della Sorna<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Tommaso Prugnola</span></figcaption></figure>
-          <figure><img src="/images/home/castello-rovereto-700.webp" alt="Il Castello di Rovereto e la cascata del Leno" loading="lazy"><figcaption>Castello di Rovereto<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Luca Matassoni</span></figcaption></figure>
-          <figure><img src="/images/home/campana-caduti-700.webp" alt="La Campana dei Caduti a Rovereto" loading="lazy"><figcaption>Campana dei Caduti, Rovereto<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Luca Matassoni</span></figcaption></figure>
-          <figure><img src="/images/home/castello-avio-1280.webp" alt="Il castello di Avio tra i cipressi" loading="lazy"><figcaption>Castello di Avio<span class="photo-credit">Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di Martina Vanzo</span></figcaption></figure>
-          <figure><img src="/images/home/casa-1600.webp" alt="La casa in pietra" loading="lazy"><figcaption>Via Gardesani 15, Prada</figcaption></figure>
-          <figure><img src="/images/home/lampone-balcone-1200.webp" alt="Il Monte Baldo innevato visto dal balcone della camera Lampone" loading="lazy"><figcaption>Dal balcone di Lampone</figcaption></figure>
-        </div>
+        <SitePhotoCarousel :photos="gardenPhotos" label="Fotografie della casa, dell'Altopiano e dei dintorni" />
       </section>
     </div>
   </div>
@@ -233,6 +219,23 @@
 
 <script setup lang="ts">
 import logo from "~/assets/images/logo_400.webp";
+
+const aptCredit = "Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di";
+
+const gardenPhotos = [
+  { src: "/images/home/bosco-1920.webp", alt: "Il sentiero nel bosco", caption: "Il bosco" },
+  { src: "/images/home/calanchi-san-giacomo-1200.webp", alt: "I calanchi di San Giacomo in autunno sotto le pareti del Monte Baldo", caption: "Calanchi di San Giacomo", credit: `${aptCredit} Graziano Galvagni` },
+  { src: "/images/home/famiglia-castione-1280.webp", alt: "Una famiglia nel bosco di Castione in autunno", caption: "Castione", credit: `${aptCredit} Graziano Galvagni` },
+  { src: "/images/home/palazzo-eccheli-baisi-1280.webp", alt: "Il giardino all’italiana di Palazzo Eccheli Baisi a Brentonico", caption: "Palazzo Eccheli Baisi, Brentonico", credit: `${aptCredit} Luca Matassoni` },
+  { src: "/images/home/inverno-brentonico-1280.webp", alt: "L’Altopiano di Brentonico innevato", caption: "Inverno a Brentonico", credit: `${aptCredit} Tommaso Prugnola` },
+  { src: "/images/home/trekking-baldo-1280.webp", alt: "Escursionisti su uno sperone di roccia del Monte Baldo in autunno", caption: "Trekking sul Monte Baldo", credit: `${aptCredit} Tommaso Prugnola` },
+  { src: "/images/home/monte-altissimo-1200.webp", alt: "Il Lago di Garda visto dal Monte Altissimo", caption: "Dal Monte Altissimo", credit: "360gardalife. Foto di Angela Trawoeger" },
+  { src: "/images/home/forra-sorna-1280.webp", alt: "Un tuffo nelle acque della Forra della Sorna", caption: "Forra della Sorna", credit: `${aptCredit} Tommaso Prugnola` },
+  { src: "/images/home/castello-rovereto-700.webp", alt: "Il Castello di Rovereto e la cascata del Leno", caption: "Castello di Rovereto", credit: `${aptCredit} Luca Matassoni` },
+  { src: "/images/home/campana-caduti-700.webp", alt: "La Campana dei Caduti a Rovereto", caption: "Campana dei Caduti, Rovereto", credit: `${aptCredit} Luca Matassoni` },
+  { src: "/images/home/castello-avio-1280.webp", alt: "Il castello di Avio tra i cipressi", caption: "Castello di Avio", credit: `${aptCredit} Martina Vanzo` },
+  { src: "/images/home/casa-1600.webp", alt: "La casa in pietra", caption: "Via Gardesani 15, Prada" },
+];
 
 useHead({
   title: "B&B Cuore di Bosco | Vacanze in montagna per famiglie - Brentonico, Trentino",
@@ -351,11 +354,6 @@ useReveal(root);
 .garden{background:var(--champagne);margin-top:var(--section-gap);padding:var(--band-pad) 0}
 .garden-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,96px);align-items:end}
 .garden-head p{margin:0}
-.photo-row{display:flex;align-items:flex-start;gap:6px;margin:24px auto 0;max-width:var(--page-max);padding:0 var(--margin) 20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--margin)}
-.photo-row figure{flex:none;margin:0;scroll-snap-align:start;display:flex;flex-direction:column;gap:10px}
-.photo-row img{height:calc(min(64svh,620px) - 36px);width:auto;object-fit:cover}
-.photo-row figcaption{width:0;min-width:100%;font-size:var(--step-small);color:var(--muted)}
-.photo-row .photo-credit{display:block;margin-top:2px}
 
 .story{background:var(--champagne);margin-top:var(--section-gap);padding:var(--band-pad) var(--margin);text-align:center}
 .story-inner{max-width:46rem;margin:0 auto}
@@ -402,9 +400,6 @@ useReveal(root);
   .pilgrims-welcome{padding:clamp(20px,2.1vw,34px)}
   .pilgrims-welcome ul,.pilgrims-welcome p{margin:11px 0 0}
   .garden-head{gap:clamp(22px,3.5vw,67px)}
-  .photo-row{margin:17px auto 0;padding-bottom:14px}
-  .photo-row figure{gap:7px}
-  .photo-row img{height:calc(min(30.8svh,294px) - 25px)}
   .story-inner{max-width:32.2rem}
   .story .logo{width:105px;margin:0 auto 17px}
   .story h2{margin-bottom:20px}
@@ -423,7 +418,6 @@ useReveal(root);
   .hero-text,.breakfast-text,.welcome-text{padding:24px var(--margin) 32px}
   .pilgrims-photo{grid-row:auto;aspect-ratio:4/5}
   .room:nth-of-type(even) .room-photos{order:0}
-  .photo-row img{height:calc(56svh - 36px)}
   .map-frame{min-height:320px}
 }
 @media (max-width:520px){
