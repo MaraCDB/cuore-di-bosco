@@ -18,9 +18,9 @@ onBeforeUnmount(() => window.removeEventListener('scroll', updateVisibility))
 </script>
 
 <style scoped>
-.to-top{position:fixed;right:var(--margin);bottom:calc(64px + env(safe-area-inset-bottom) + 16px);z-index:50;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:2px solid var(--on-forest);background:var(--forest-deep);color:var(--on-forest);opacity:0;visibility:hidden;transition:opacity 240ms var(--ease-out),visibility 240ms}
+.to-top{position:fixed;right:var(--margin);bottom:calc(var(--dock-height) + env(safe-area-inset-bottom) + 16px);z-index:50;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:2px solid var(--on-forest);background:var(--forest-deep);color:var(--on-forest);opacity:0;visibility:hidden;transition:opacity 240ms var(--ease-out),visibility 240ms}
 .to-top.is-visible{opacity:1;visibility:visible}
 .to-top svg{width:22px;height:22px}
 @media (hover:hover){.to-top:hover{background:var(--forest)}}
-@media (min-width:901px){.to-top{bottom:calc(72px + env(safe-area-inset-bottom) + 16px)}}
+@media (min-width:901px){.to-top{width:44px;height:44px}.to-top svg{width:18px;height:18px}}
 </style>

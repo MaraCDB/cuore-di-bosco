@@ -1,13 +1,12 @@
 @import 'flag-icons/css/flag-icons.min.css';
 
 :root{--linen:#f9f5ec;--champagne:#f2e8cf;--forest:#386641;--forest-deep:#24472c;--meadow:#6a994e;--on-forest:#fbf8f1;--on-forest-soft:#dbe6d3;--ink:#2b241b;--muted:#5e5446;--lime:#a7c957;
---display:'Mountains of Christmas',serif;--display-weight:700;--sub:'Montserrat',system-ui,sans-serif;--body:'Numans',system-ui,sans-serif;
---step-small:clamp(0.875rem,0.85rem + 0.1vw,0.9375rem);--step-body:clamp(1rem,0.95rem + 0.2vw,1.125rem);
---step-lead:clamp(1.0625rem,1rem + 0.35vw,1.3125rem);--step-tagline:clamp(1.25rem,0.95rem + 1.1vw,1.75rem);--step-head:clamp(1.875rem,1.3rem + 2vw,3rem);--step-display:clamp(2.5rem,5vw,4.5rem);
---page-max:1440px;--margin:clamp(20px,4vw,64px);--section-gap:clamp(28px,3vw,48px);--band-pad:clamp(24px,2.75vw,44px);
+--display:'Mountains of Christmas',serif;--display-weight:700;--sub:'Montserrat',system-ui,sans-serif;
+--step-micro:0.75rem;--step-small:0.875rem;--step-nav:0.875rem;--step-body:1rem;--step-lead:1.0625rem;--step-tagline:1.25rem;--step-title:1.5rem;--step-head:1.875rem;--step-display:2.5rem;
+--page-max:1440px;--margin:clamp(20px,4vw,64px);--section-gap:clamp(28px,3vw,48px);--band-pad:clamp(24px,2.75vw,44px);--dock-height:64px;
 --ease-out:cubic-bezier(0.22,1,0.36,1);--ease-soft:cubic-bezier(0.33,1,0.68,1);--t-hover:200ms;--t-reveal:900ms}
 .redesign,.redesign *,.redesign *::before,.redesign *::after{box-sizing:border-box}
-.redesign{background:var(--linen);color:var(--ink);font:400 var(--step-body)/1.65 var(--body)}
+.redesign{background:var(--linen);color:var(--ink);font:400 var(--step-body)/1.65 var(--sub)}
 .redesign img{display:block;max-width:100%}
 .redesign a{color:var(--forest-deep);text-underline-offset:0.2em}
 .redesign :focus-visible{outline:3px solid var(--forest);outline-offset:3px}
@@ -29,7 +28,11 @@
 .redesign .band{background:var(--forest);color:var(--on-forest)}
 .redesign .band h2,.redesign .band h3{color:var(--on-forest)}
 .redesign .band a:not(.button){color:var(--on-forest)}
-@media (min-width:901px){.redesign{zoom:0.7}}
+@media (min-width:901px){
+:root{--step-nav:0.9375rem;--step-lead:1.125rem;--step-tagline:1.375rem;--step-title:1.75rem;--step-head:2.25rem;--step-display:3.25rem;--page-max:1008px;--margin:clamp(14px,2.8vw,45px);--section-gap:clamp(20px,2.1vw,34px);--band-pad:clamp(17px,1.93vw,31px);--dock-height:56px}
+.redesign .button{min-height:44px;padding:0 21px}
+.reveal-ready [data-reveal]{transform:translateY(14px)}
+}
 
 .reveal-ready [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity var(--t-reveal) var(--ease-soft),transform var(--t-reveal) var(--ease-soft)}
 .reveal-ready [data-reveal].is-in{opacity:1;transform:none}

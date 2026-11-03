@@ -24,10 +24,10 @@ const { openPreferences } = useCookieConsent()
 </script>
 
 <style scoped>
-.site-footer{background:var(--forest-deep);color:var(--on-forest);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:20px clamp(32px,5vw,96px);align-items:end;padding:28px max(var(--margin),calc((100% - var(--page-max)) / 2 + var(--margin))) calc(16px + 64px + env(safe-area-inset-bottom))}
+.site-footer{background:var(--forest-deep);color:var(--on-forest);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:20px clamp(32px,5vw,96px);align-items:end;padding:28px max(var(--margin),calc((100% - var(--page-max)) / 2 + var(--margin))) calc(16px + var(--dock-height) + env(safe-area-inset-bottom))}
 .site-footer :focus-visible{outline-color:var(--lime)}
-.footer-name{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.25rem,1.25rem + 3.5vw,4rem);line-height:1;margin:0}
-.footer-welcome h2,.footer-welcome p,.footer-info{font-family:var(--body);font-size:var(--step-body)}
+.footer-name{font-family:var(--display);font-weight:var(--display-weight);font-size:var(--step-display);line-height:1;margin:0}
+.footer-welcome h2,.footer-welcome p,.footer-info{font-family:var(--sub);font-size:var(--step-body)}
 .footer-welcome h2{font-weight:700;line-height:1.65;margin-bottom:4px;color:inherit}
 .footer-welcome p{max-width:56ch;margin:0}
 .footer-welcome a{white-space:nowrap}
@@ -41,7 +41,11 @@ const { openPreferences } = useCookieConsent()
 .cookie-preferences{font:inherit;color:var(--on-forest);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
 .footer-info .footer-legal{margin-top:16px;font-size:var(--step-small);color:var(--on-forest-soft)}
 @media (min-width:901px){
-  .site-footer{padding-bottom:calc(16px + 72px + env(safe-area-inset-bottom))}
+  .site-footer{gap:14px clamp(22px,3.5vw,67px);padding-top:20px}
+  .footer-contacts{margin:11px 0 0}
+  .footer-contacts a{width:44px;height:44px}
+  .footer-contacts svg{width:18px;height:18px}
+  .footer-info .footer-legal{margin-top:11px}
 }
 @media (max-width:900px){
   .site-footer{grid-template-columns:minmax(0,1fr)}

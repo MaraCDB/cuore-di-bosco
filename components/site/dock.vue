@@ -13,19 +13,20 @@
 <style scoped>
 .dock{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--forest-deep);color:var(--on-forest);padding-bottom:env(safe-area-inset-bottom)}
 .dock :focus-visible{outline-color:var(--lime)}
-.dock-inner{max-width:var(--page-max);margin:0 auto;padding:8px var(--margin);min-height:64px;display:flex;align-items:center;gap:clamp(16px,3vw,40px)}
-.dock a:not(.button){display:inline-flex;align-items:center;gap:10px;min-height:48px;font-family:var(--sub);font-size:var(--step-small);font-weight:600;color:inherit;text-decoration:none}
+.dock-inner{max-width:var(--page-max);margin:0 auto;padding:8px var(--margin);min-height:var(--dock-height);display:flex;align-items:center;gap:clamp(16px,3vw,40px)}
+.dock a:not(.button){display:inline-flex;align-items:center;gap:10px;min-height:48px;font-family:var(--sub);font-size:var(--step-nav);font-weight:600;color:inherit;text-decoration:none}
 .dock svg{width:20px;height:20px;flex:none}
-.dock .button{margin-left:auto;min-height:46px;font-size:var(--step-small);text-transform:uppercase;letter-spacing:0.08em}
+.dock .button{margin-left:auto;min-height:46px;font-size:var(--step-nav);text-transform:uppercase;letter-spacing:0.08em}
 @media (hover:hover){.dock a:not(.button):hover{text-decoration:underline}}
 @media (min-width:901px){
-  .dock-inner{min-height:72px}
-  .dock a:not(.button),.dock .button{font-size:1.1875rem}
-  .dock svg{width:26px;height:26px}
+  .dock-inner{padding:6px var(--margin);gap:clamp(11px,2.1vw,28px)}
+  .dock a:not(.button){gap:7px;min-height:44px}
+  .dock .button{min-height:44px}
+  .dock svg{width:18px;height:18px}
 }
 @media (max-width:520px){
   .dock-inner{gap:4px;padding:6px 12px}
-  .dock a:not(.button){flex:1;flex-direction:column;justify-content:center;gap:2px;font-size:0.75rem}
+  .dock a:not(.button){flex:1;flex-direction:column;justify-content:center;gap:2px;font-size:var(--step-micro)}
   .dock .button{padding:0 14px;letter-spacing:0.03em}
 }
 </style>

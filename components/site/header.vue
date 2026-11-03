@@ -33,12 +33,14 @@ async function closeMenu(restoreFocus: boolean) {
 .masthead :focus-visible{outline-color:var(--lime)}
 .topbar{max-width:var(--page-max);margin:0 auto;display:flex;align-items:center;justify-content:flex-end;gap:24px;padding:14px var(--margin)}
 .topbar nav{display:flex;align-items:center;gap:28px}
-.topbar nav a:not(.button){font-family:var(--sub);font-size:var(--step-small);text-decoration:none;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:inherit}
+.topbar nav a:not(.button){font-family:var(--sub);font-size:var(--step-nav);text-decoration:none;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:inherit}
 @media (hover:hover){.topbar nav a:not(.button):hover{text-decoration:underline}}
 .topbar .menu{display:none;border:0;cursor:pointer;font-size:var(--step-body);line-height:1.65}
-.topbar .button-light{font-size:var(--step-small);text-transform:uppercase;letter-spacing:0.08em}
+.topbar .button-light{font-size:var(--step-nav);text-transform:uppercase;letter-spacing:0.08em}
 @media (min-width:901px){
-  .topbar nav a:not(.button),.topbar .button-light{font-size:1.1875rem}
+  .topbar{gap:17px;padding:10px var(--margin)}
+  .topbar nav{gap:20px}
+  .topbar .button-light{min-height:44px}
 }
 @media (max-width:900px){
   .topbar nav a:not(.button){display:none}

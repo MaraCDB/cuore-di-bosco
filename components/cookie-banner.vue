@@ -55,13 +55,7 @@ watch(shouldFocusBanner, async (isFocusRequested) => {
 }
 
 .cookie-banner.above-dock {
-    bottom: calc(64px + env(safe-area-inset-bottom));
-}
-
-@media (min-width: 901px) {
-    .cookie-banner.above-dock {
-        bottom: calc(72px + env(safe-area-inset-bottom));
-    }
+    bottom: calc(var(--dock-height) + env(safe-area-inset-bottom));
 }
 
 .cookie-text {
@@ -143,6 +137,17 @@ watch(shouldFocusBanner, async (isFocusRequested) => {
 
 .cookie-banner.redesign :focus-visible {
     outline-color: var(--lime);
+}
+
+@media (min-width: 901px) {
+    .cookie-banner.redesign {
+        gap: 8px 22px;
+        padding: 11px var(--margin);
+    }
+
+    .cookie-banner.redesign .button {
+        padding: 0 17px;
+    }
 }
 
 @media (max-width: 600px) {

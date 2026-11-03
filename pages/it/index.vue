@@ -277,7 +277,6 @@ useReveal(root);
 .welcome{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}
 .welcome img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 0}
 .welcome h2{margin-bottom:20px}
-.welcome,.everyone,.pilgrims{font-family:var(--sub)}
 
 .everyone{background:var(--champagne);padding:var(--band-pad) 0}
 .everyone-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,96px);align-items:end}
@@ -300,7 +299,7 @@ useReveal(root);
 .room-photos{display:grid;grid-template-columns:2fr 1fr;gap:6px}
 .room-photos img{width:100%;height:100%;min-height:200px;object-fit:cover}
 .room-photos img:first-child{grid-row:span 2;aspect-ratio:4/4.4}
-.room h3{font-family:var(--display);font-weight:var(--display-weight);font-size:var(--step-head);line-height:1.05;color:var(--forest)}
+.room h3{font-family:var(--display);font-weight:var(--display-weight);font-size:var(--step-title);line-height:1.05;color:var(--forest)}
 .room .lead{margin:12px 0 20px}
 .room .beds{display:inline-block;margin:8px 0 0;padding:8px 18px;border-radius:999px;background:var(--champagne);color:var(--forest-deep);font-weight:600}
 .room-features{margin:0 0 12px;padding-left:1.1em}
@@ -347,10 +346,49 @@ useReveal(root);
 .map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .map-link{position:absolute;inset:0}
 @media (min-width:901px){
-  .hero{min-height:min(calc(100svh - 84px),600px)}
+  .hero{min-height:min(calc(70svh - 59px),420px)}
+  .hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px}
+  .hero-title{gap:clamp(11px,1.4vw,22px)}
+  .hero-logo{width:clamp(50px,5.95vw,90px)}
+  .hero .tagline{margin:20px 0 0}
+  .hero .lead{margin:14px 0 28px}
+  .hero-actions{gap:8px}
   .welcome img{aspect-ratio:16/9}
-  .guest-walkers img{aspect-ratio:3/2}
-  .photo-row{height:min(44svh,420px)}
+  .welcome h2{margin-bottom:14px}
+  .everyone-head{gap:clamp(22px,3.5vw,67px)}
+  .guests{gap:clamp(28px,3.5vw,45px) clamp(22px,3.5vw,67px);margin-top:20px}
+  .guest-walkers img{aspect-ratio:3/2;margin-bottom:20px}
+  .guest-side{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:17px}
+  .guests h3{margin-bottom:7px}
+  .guests ul{margin:11px 0 0}
+  .rooms-head{gap:17px}
+  .room{gap:clamp(22px,3.5vw,67px);margin-top:22px}
+  .room-photos img{min-height:140px}
+  .room .lead{margin:8px 0 14px}
+  .room .beds{padding:8px 13px}
+  .room-features{margin:0 0 8px}
+  .room-actions{gap:8px;margin-top:17px}
+  .rooms-family{margin:14px 0 0;padding:10px 17px}
+  .breakfast-photo{min-height:364px}
+  .breakfast-text,.welcome-text{padding-left:clamp(22px,3.5vw,67px)}
+  .breakfast-text h2{margin-bottom:17px}
+  .pilgrims-grid{gap:14px clamp(22px,3.5vw,67px)}
+  .pilgrims h2{margin-bottom:17px}
+  .pilgrims-welcome{padding:clamp(20px,2.1vw,34px)}
+  .pilgrims-welcome ul,.pilgrims-welcome p{margin:11px 0 0}
+  .garden-head{gap:clamp(22px,3.5vw,67px)}
+  .photo-row{height:min(30.8svh,294px);margin:17px auto 0;padding-bottom:14px}
+  .photo-row figure{gap:7px}
+  .photo-row img{height:calc(100% - 25px)}
+  .story-inner{max-width:32.2rem}
+  .story .logo{width:105px;margin:0 auto 17px}
+  .story h2{margin-bottom:20px}
+  .reviews{padding:clamp(14px,1.4vw,22px) 0}
+  .reviews-inner{gap:17px}
+  .arrive{gap:clamp(22px,3.5vw,67px)}
+  .arrive h2{margin-bottom:14px}
+  .arrive h3{margin:25px 0 7px}
+  .map-frame{min-height:308px}
 }
 @media (max-width:900px){
   .hero,.welcome,.everyone-head,.pilgrims-grid,.guests,.room,.room:nth-of-type(even),.breakfast,.garden-head,.arrive{grid-template-columns:minmax(0,1fr)}

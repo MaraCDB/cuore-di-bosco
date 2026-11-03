@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import CookieBanner from '~/components/cookie-banner.vue'
@@ -311,20 +312,19 @@ describe('CookieBanner position', () => {
     withoutDock.unmount()
   })
 
-  it('offsets the banner above the 64px dock plus the safe area', () => {
-    expect(cookieBannerSource).toMatch(/\.cookie-banner\.above-dock\s*\{\s*bottom:\s*calc\(64px \+ env\(safe-area-inset-bottom\)\);/)
+  it('offsets the banner above the dock plus the safe area', () => {
+    expect(cookieBannerSource).toMatch(/\.cookie-banner\.above-dock\s*\{\s*bottom:\s*calc\(var\(--dock-height\) \+ env\(safe-area-inset-bottom\)\);/)
   })
 
   it('follows the dock height on mobile and desktop', () => {
-    const mobileDockHeight = dockSource.match(/\.dock-inner\{[^}]*min-height:(\d+)px/)?.[1]
-    const desktopDockHeight = dockSource.match(/@media \(min-width:901px\)\{\s*\.dock-inner\{min-height:(\d+)px\}/)?.[1]
-    const mobileBannerOffset = cookieBannerSource.match(/\.cookie-banner\.above-dock\s*\{\s*bottom:\s*calc\((\d+)px \+ env\(safe-area-inset-bottom\)\);/)?.[1]
-    const desktopBannerOffset = cookieBannerSource.match(/@media \(min-width: 901px\)\s*\{\s*\.cookie-banner\.above-dock\s*\{\s*bottom:\s*calc\((\d+)px \+ env\(safe-area-inset-bottom\)\);/)?.[1]
+    const globalStyles = readFileSync('assets/css/global.css', 'utf8')
+    const mobileDockHeight = globalStyles.match(/:root\{[^}]*--dock-height:(\d+)px/)?.[1]
+    const desktopDockHeight = globalStyles.match(/@media \(min-width:901px\)\{\s*:root\{[^}]*--dock-height:(\d+)px/)?.[1]
 
     expect(mobileDockHeight).toBe('64')
-    expect(desktopDockHeight).toBe('72')
-    expect(mobileBannerOffset).toBe(mobileDockHeight)
-    expect(desktopBannerOffset).toBe(desktopDockHeight)
+    expect(desktopDockHeight).toBe('56')
+    expect(dockSource).toMatch(/\.dock-inner\{[^}]*min-height:var\(--dock-height\)/)
+    expect(cookieBannerSource).not.toContain('72px')
   })
 })
 
