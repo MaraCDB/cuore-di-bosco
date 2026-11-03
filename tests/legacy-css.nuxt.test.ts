@@ -23,7 +23,6 @@ const legacySelectors = [
   '.italic', 'h1', 'h2', 'h3', 'p', 'li', 'section', '.page-title',
 ]
 const unscopedPageFiles: Array<[string, string[]]> = [
-  ['pages/it/prenota.vue', bookingSelectors],
   ['pages/en/booking.vue', bookingSelectors],
   ['pages/en/privacy-policy.vue', privacySelectors],
 ]

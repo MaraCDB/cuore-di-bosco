@@ -225,16 +225,15 @@ describe('italian explore page', () => {
     expect(pageStyles).toMatch(/a\{[^}]*overflow-wrap:anywhere/)
   })
 
-  it('turns the redesign on for the explore and rules pages only among the inner italian pages', () => {
+  it('turns the redesign on for every inner italian page', () => {
     expect(redesignedRoutesDeclaration).toContain("'/it/esplora'")
     expect(redesignedRoutesDeclaration).toContain("'/it/esplora/'")
     expect(redesignedRoutesDeclaration).toContain("'/it/regolamento'")
     expect(redesignedRoutesDeclaration).toContain("'/it/regolamento/'")
     expect(redesignedRoutesDeclaration).toContain("'/it/privacy-policy'")
     expect(redesignedRoutesDeclaration).toContain("'/it/privacy-policy/'")
-    for (const route of ['prenota']) {
-      expect(redesignedRoutesDeclaration).not.toContain(route)
-    }
+    expect(redesignedRoutesDeclaration).toContain("'/it/prenota'")
+    expect(redesignedRoutesDeclaration).toContain("'/it/prenota/'")
   })
 
   it('names the castle of Avio in the SEO keywords', () => {

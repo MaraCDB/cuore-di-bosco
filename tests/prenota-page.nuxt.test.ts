@@ -1,0 +1,176 @@
+import { readFileSync } from 'node:fs'
+import { afterEach, describe, expect, it } from 'vitest'
+import { mountSuspended } from '@nuxt/test-utils/runtime'
+import BookingPage from '~/pages/it/prenota.vue'
+
+const pageSource = readFileSync('pages/it/prenota.vue', 'utf8')
+const pageStyles = pageSource.match(/<style[^>]*>([\s\S]*?)<\/style>/)?.[1] ?? ''
+const legacyTexts: string[] = JSON.parse(readFileSync('tests/fixtures/prenota-legacy-text.json', 'utf8'))
+
+const iconCaptions = ['FREE WIFI', 'ASCIUGAMANI E BIANCHERIA INCLUSI', 'DOTAZIONI DI CORTESIA PER GLI OSPITI', 'DOCCIA E BAGNO PRIVATI', 'COLAZIONE DOLCE E SALATA', 'SET BOLLITORE', 'LAVANDERIA', 'BICICLETTE A DISPOSIZIONE', 'GIOCHI PER BAMBINI', 'DOTAZIONI PER BAMBINI', 'CULLA PER BAMBINI', 'MATERIALI PER BAMBINI', 'SUPPORTI PER PORTARE', 'LIBRERIA PER ADULTI E BAMBINI', 'PIC-NIC']
+const carouselSources = ['/images/home/casa-1600.webp', '/images/lampone/1.webp', '/images/lampone/2.webp', '/images/lampone/3.webp', '/images/lampone/4.webp', '/images/lampone/5.webp', '/images/home/lampone-balcone-1200.webp', '/images/mirtillo/1.webp', '/images/mirtillo/2.webp', '/images/mirtillo/3.webp', '/images/mirtillo/4.webp', '/images/home/colazione-1280.webp']
+const carouselAlts = [
+  'La casa in pietra del B&B Cuore di Bosco a Prada',
+  ...[1, 2, 3, 4, 5].map(number => `Camera Lampone foto ${number}`),
+  'Il Monte Baldo innevato visto dal balcone della camera Lampone',
+  ...[1, 2, 3, 4].map(number => `Camera Mirtillo foto ${number}`),
+  'La colazione con la torta fatta in casa',
+]
+
+const mountedWrappers: Array<{ unmount: () => void }> = []
+
+function normalize(text: string): string {
+  return text.replace(/\xa0/g, ' ').replace(/\s+/g, ' ').trim()
+}
+
+function blockTexts(root: ParentNode, selector: string): string[] {
+  return [...root.querySelectorAll(selector)].map((node) => {
+    const copy = node.cloneNode(true) as Element
+    copy.querySelectorAll('br').forEach(lineBreak => lineBreak.replaceWith(' '))
+    return normalize(copy.textContent ?? '')
+  })
+}
+
+async function mountBooking() {
+  const wrapper = await mountSuspended(BookingPage, { attachTo: document.body })
+  mountedWrappers.push(wrapper)
+  return wrapper
+}
+
+async function mountedPageText(): Promise<string> {
+  const wrapper = await mountBooking()
+  return blockTexts(wrapper.element, 'h1, h2, h3, p, figcaption').join(' ')
+}
+
+function ruleBody(selector: string): string | undefined {
+  const escaped = selector.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  return pageStyles.match(new RegExp(`(?:^|[\\s,}])${escaped}\\{([^}]*)\\}`, 'm'))?.[1]
+}
+
+afterEach(() => {
+  mountedWrappers.splice(0).forEach(wrapper => wrapper.unmount())
+})
+
+describe('italian booking page', () => {
+  it('keeps every legacy text word for word', async () => {
+    const pageText = await mountedPageText()
+
+    expect(legacyTexts.length).toBe(39)
+    expect(legacyTexts.filter(text => !pageText.includes(text))).toEqual([])
+  })
+
+  it('applies the owners\' text fixes and drops the paid-service captions', async () => {
+    const pageText = await mountedPageText()
+
+    for (const removed of ['troverei', '(in realizzazione)', 'SERVIZIO LAVANDERIA', 'SERVIZIO PIC-NIC']) {
+      expect(pageText).not.toContain(removed)
+    }
+    expect(pageText).toContain('Nell’apposito stand inoltre troverai tutte le mappe')
+    expect(pageText).toContain('libreria ed angolo giochi attrezzato.')
+  })
+
+  it('shows no payment or cancellation conditions', async () => {
+    const pageText = (await mountedPageText()).toLowerCase()
+
+    for (const forbidden of ['acconto', 'cancellazion', 'rimbors', 'caparra']) {
+      expect(pageText).not.toContain(forbidden)
+    }
+  })
+
+  it('titles the page and its sections', async () => {
+    const wrapper = await mountBooking()
+    const titles = (selector: string) => blockTexts(wrapper.element, selector)
+
+    expect(titles('h1')).toEqual(['PRENOTA'])
+    expect(titles('h2')).toEqual(['Scopri le nostre camere', 'I nostri servizi'])
+    expect(titles('h3')).toEqual(['Lampone', 'Mirtillo', 'Servizi per famiglie', 'Servizi in camera', 'Altri servizi per te!'])
+  })
+
+  it('opens with the photo carousel on the forest band', async () => {
+    const wrapper = await mountBooking()
+    const band = wrapper.element.firstElementChild
+    const images = [...(band?.querySelectorAll('img') ?? [])].slice(0, 12)
+
+    expect(band?.matches('.band.booking-carousel')).toBe(true)
+    expect(band?.querySelector('.carousel')?.getAttribute('aria-label')).toBe('Fotografie delle camere e della casa')
+    expect(images.map(image => image.getAttribute('src'))).toEqual(carouselSources)
+    expect(images.map(image => image.getAttribute('alt'))).toEqual(carouselAlts)
+  })
+
+  it('keeps the booking widget container exactly as before', async () => {
+    const wrapper = await mountBooking()
+    const container = wrapper.element.querySelector('.booking-strip .js-booking-engine-container')
+
+    expect(container?.classList.contains('booking-widget')).toBe(true)
+    expect(container?.getAttribute('data-idstruttura')).toBe('68002')
+    expect(container?.getAttribute('data-tipostruttura')).toBe('bbit')
+    expect(container?.getAttribute('data-tipo')).toBe('widget')
+    expect(container?.getAttribute('data-lingua')).toBe('it')
+    expect(container?.getAttribute('data-action')).toBe('https://www.bed-and-breakfast.it/it/trentino-alto-adige/bb-cuore-di-bosco-brentonico/68002')
+    expect(container?.getAttribute('data-colore')).toBe('green')
+    expect(container?.getAttribute('data-wl')).toBe('true')
+    expect(ruleBody('.booking-strip')).toContain('background:var(--lime)')
+    expect(wrapper.element.querySelector('.booking-strip h1')?.textContent).toBe('PRENOTA')
+    expect(wrapper.element.querySelectorAll('.booking-carousel [data-reveal], .booking-carousel[data-reveal], .booking-strip [data-reveal], .booking-strip[data-reveal]')).toHaveLength(0)
+  })
+
+  it.each(['lampone', 'mirtillo'])('gives the %s card its anchor, texts and four photos', async (roomId) => {
+    const wrapper = await mountBooking()
+    const room = wrapper.element.querySelector(`article.room#${roomId}`)
+    const roomName = roomId === 'lampone' ? 'Lampone' : 'Mirtillo'
+    const images = [...(room?.querySelectorAll('.room-photos img') ?? [])]
+
+    expect(room).not.toBeNull()
+    expect(images.map(image => image.getAttribute('src'))).toEqual([1, 2, 3, 4].map(number => `/images/${roomId}/${number}.webp`))
+    expect(images.map(image => image.getAttribute('alt'))).toEqual([1, 2, 3, 4].map(number => `Camera ${roomName} foto ${number}`))
+    expect(room?.querySelector('p.beds')?.textContent).toBe('Da 2 a 4 posti letto adulti')
+  })
+
+  it('puts the family line under the two room cards', async () => {
+    const wrapper = await mountBooking()
+    const familyLine = wrapper.element.querySelector('.booking-rooms p.rooms-family')
+    const lastRoom = wrapper.element.querySelector('#mirtillo')
+
+    expect(familyLine?.textContent).toBe('Culla gratis · 1° bambino gratis · 2° bambino al 50% · <12 anni')
+    expect((lastRoom?.compareDocumentPosition(familyLine as Node) ?? 0) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
+    expect(ruleBody('.booking-rooms')).toContain('background:var(--champagne)')
+  })
+
+  it('shows the fifteen service icons in one panel', async () => {
+    const wrapper = await mountBooking()
+    const figures = [...wrapper.element.querySelectorAll('.services.band .service-icons > figure')]
+    const desktopRules = pageStyles.match(/@media \(min-width:901px\)\{([\s\S]*?)\n\}/)?.[1] ?? ''
+
+    expect(figures.map(figure => normalize(figure.querySelector('figcaption')?.textContent ?? ''))).toEqual(iconCaptions)
+    expect(figures.map(figure => figure.querySelector('img')?.getAttribute('alt'))).toEqual(iconCaptions)
+    expect(desktopRules).toContain('.service-icons{grid-template-columns:repeat(8,minmax(0,1fr))')
+  })
+
+  it('sets the service texts in three columns with a meadow top border', async () => {
+    const wrapper = await mountBooking()
+    const columns = [...wrapper.element.querySelectorAll('.service-texts > .service-column')]
+    const desktopRules = pageStyles.match(/@media \(min-width:901px\)\{([\s\S]*?)\n\}/)?.[1] ?? ''
+
+    expect(columns).toHaveLength(3)
+    expect(columns.map(column => column.querySelector('h3')?.textContent)).toEqual(['Servizi per famiglie', 'Servizi in camera', 'Altri servizi per te!'])
+    expect(ruleBody('.service-column')).toContain('border-top:3px solid var(--meadow)')
+    expect(desktopRules).toContain('.service-texts{grid-template-columns:repeat(3,minmax(0,1fr))')
+  })
+
+  it('never sets width or height on images and drops the legacy heroes', async () => {
+    const wrapper = await mountBooking()
+    const images = [...wrapper.element.querySelectorAll('img')]
+
+    expect(images.filter(image => image.hasAttribute('width') || image.hasAttribute('height'))).toEqual([])
+    expect(images.filter(image => /camere|colazioni|separator/.test(image.getAttribute('src') ?? ''))).toEqual([])
+    expect(pageSource).not.toContain('v-html')
+    expect(pageSource).not.toMatch(/<style(?![^>]*scoped)[^>]*>/)
+  })
+
+  it('justifies the long paragraphs within 68ch and aligns them left on phones', () => {
+    const phoneRules = pageStyles.match(/@media \(max-width:520px\)\{([\s\S]*?)\n\}/)?.[1] ?? ''
+
+    expect(pageStyles).toMatch(/\.booking-intro p,\.rooms-head p,\.room-text p,\.service-column p\{max-width:68ch;text-align:justify;hyphens:auto\}/)
+    expect(phoneRules).toContain('.booking-intro p,.rooms-head p,.room-text p,.service-column p{text-align:left}')
+  })
+})

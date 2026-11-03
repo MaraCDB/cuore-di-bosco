@@ -18,7 +18,7 @@ const { setLocale } = useI18n();
 setLocale("it");
 
 const route = useRoute();
-const redesignedRoutes = new Set(['/it', '/it/', '/it/esplora', '/it/esplora/', '/it/regolamento', '/it/regolamento/', '/it/privacy-policy', '/it/privacy-policy/']);
+const redesignedRoutes = new Set(['/it', '/it/', '/it/esplora', '/it/esplora/', '/it/regolamento', '/it/regolamento/', '/it/privacy-policy', '/it/privacy-policy/', '/it/prenota', '/it/prenota/']);
 const isRedesignedRoute = computed(() => redesignedRoutes.has(route.path));
 
 useHead({
