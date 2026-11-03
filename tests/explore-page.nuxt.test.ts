@@ -225,10 +225,12 @@ describe('italian explore page', () => {
     expect(pageStyles).toMatch(/a\{[^}]*overflow-wrap:anywhere/)
   })
 
-  it('turns the redesign on for the explore page only among the inner italian pages', () => {
+  it('turns the redesign on for the explore and rules pages only among the inner italian pages', () => {
     expect(redesignedRoutesDeclaration).toContain("'/it/esplora'")
     expect(redesignedRoutesDeclaration).toContain("'/it/esplora/'")
-    for (const route of ['prenota', 'regolamento', 'privacy']) {
+    expect(redesignedRoutesDeclaration).toContain("'/it/regolamento'")
+    expect(redesignedRoutesDeclaration).toContain("'/it/regolamento/'")
+    for (const route of ['prenota', 'privacy']) {
       expect(redesignedRoutesDeclaration).not.toContain(route)
     }
   })
