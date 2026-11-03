@@ -39,6 +39,14 @@ describe('italian home page', () => {
     expect(detailTargets).toEqual(['/it/prenota#lampone', '/it/prenota#mirtillo'])
   })
 
+  it('leads the Mirtillo card with the large room photo and the wardrobe beside it', async () => {
+    const wrapper = await mountHome()
+    const mirtilloPhotos = [...wrapper.element.querySelectorAll('.room:nth-of-type(2) .room-photos img')]
+      .map(image => image.getAttribute('src'))
+
+    expect(mirtilloPhotos.slice(0, 2)).toEqual(['/images/home/mirtillo-camera-1280.webp', '/images/home/mirtillo-armadio-700.webp'])
+  })
+
   it('lists toiletries and linen apart from cleaning on both room cards', async () => {
     const wrapper = await mountHome()
     const featureLists = [...wrapper.element.querySelectorAll('.room-features')]

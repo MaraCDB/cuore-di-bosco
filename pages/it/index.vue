@@ -121,8 +121,8 @@
         </article>
         <article class="room">
           <div class="room-photos" data-reveal>
-            <img src="/images/home/mirtillo-armadio-960.webp" alt="La camera Mirtillo con l'armadio dipinto" loading="lazy">
-            <img src="/images/home/mirtillo-camera-900.webp" alt="La camera Mirtillo" loading="lazy">
+            <img src="/images/home/mirtillo-camera-1280.webp" alt="La camera Mirtillo" loading="lazy">
+            <img src="/images/home/mirtillo-armadio-700.webp" alt="La camera Mirtillo con l'armadio dipinto" loading="lazy">
             <img src="/images/home/porta-libri-700.webp" alt="La porta con il portalibri" loading="lazy">
           </div>
           <div data-reveal>
