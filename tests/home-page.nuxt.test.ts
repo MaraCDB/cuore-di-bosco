@@ -179,14 +179,14 @@ describe('italian home page', () => {
   })
 
   it('sets the welcome and the garden on champagne bands so the cream rooms and directions never touch another cream section', () => {
-    const homeStyles = readFileSync('pages/it/index.vue', 'utf8')
+    const homeStyles = readFileSync('assets/css/pages/home.css', 'utf8')
 
     expect(homeStyles).toMatch(/\n\.welcome\{background:var\(--champagne\);/)
     expect(homeStyles).toMatch(/\n\.garden\{background:var\(--champagne\);[^}]*padding:var\(--band-pad\) 0\}/)
   })
 
   it('shows the hero logo larger on phones and on desktop', () => {
-    const homeStyles = readFileSync('pages/it/index.vue', 'utf8')
+    const homeStyles = readFileSync('assets/css/pages/home.css', 'utf8')
 
     expect(homeStyles).toContain('.hero-logo{width:clamp(90px,10.6vw,160px);')
     expect(homeStyles).toMatch(/@media \(min-width:901px\)\{[^@]*\.hero-logo\{width:clamp\(75px,8\.9vw,135px\)\}/)

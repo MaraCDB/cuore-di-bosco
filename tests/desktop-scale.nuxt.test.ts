@@ -1,6 +1,5 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import homeSource from '~/pages/it/index.vue?raw'
 import headerSource from '~/components/site/header.vue?raw'
 import menuSource from '~/components/site/menu.vue?raw'
 import dockSource from '~/components/site/dock.vue?raw'
@@ -12,6 +11,7 @@ import cookieBannerSource from '~/components/cookie-banner.vue?raw'
 const exploreSource = readFileSync('pages/it/esplora.vue', 'utf8')
 const rulesSource = readFileSync('pages/it/regolamento.vue', 'utf8')
 const bookingStyles = readFileSync('assets/css/pages/booking.css', 'utf8')
+const homeStyles = readFileSync('assets/css/pages/home.css', 'utf8')
 const globalStyles = readFileSync('assets/css/global.css', 'utf8')
 const nuxtConfig = readFileSync('nuxt.config.ts', 'utf8')
 
@@ -77,7 +77,7 @@ describe('exact sizes', () => {
   })
 
   it('sets Montserrat for all non-display text', () => {
-    const redesignSources = [globalStyles, homeSource, exploreSource, rulesSource, bookingStyles, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource, cookieBannerSource]
+    const redesignSources = [globalStyles, homeStyles, exploreSource, rulesSource, bookingStyles, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource, cookieBannerSource]
 
     expect(globalStyles).not.toContain('Numans')
     expect(nuxtConfig).not.toContain('Numans')
@@ -90,7 +90,8 @@ describe('exact sizes', () => {
   it('sizes redesigned text only through the scale tokens', () => {
     const styles = [
       globalStyles,
-      ...[homeSource, exploreSource, rulesSource, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource].map(extractStyleBlocks),
+      ...[exploreSource, rulesSource, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource].map(extractStyleBlocks),
+      homeStyles,
       bookingStyles,
       cookieBannerRedesignRules,
     ].join('\n')
@@ -113,7 +114,7 @@ describe('exact sizes', () => {
   })
 
   it('gives room names their own step below the section title', () => {
-    expect(homeSource).toMatch(/\.room h3\{[^}]*font-size:var\(--step-title\)/)
+    expect(homeStyles).toMatch(/\.room h3\{[^}]*font-size:var\(--step-title\)/)
     expect(footerSource).toMatch(/\.footer-name\{[^}]*font-size:var\(--step-display\)/)
   })
 
@@ -123,32 +124,32 @@ describe('exact sizes', () => {
 
     expect(globalStyles).toMatch(/:root\{[^}]*--page-max:1440px/)
     expect(desktopRoot).not.toContain('--page-max')
-    expect(homeSource).toContain(`.hero-text{align-self:center;padding:48px clamp(32px,4vw,64px) 72px ${contentEdgePadding}}`)
-    expect(homeSource).toContain(`.breakfast-text,.welcome-text{padding:var(--band-pad) ${contentEdgePadding} var(--band-pad) clamp(32px,5vw,96px)}`)
-    expect(homeSource).toContain('.hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px}')
-    expect(homeSource).toContain('.breakfast-text,.welcome-text{padding-left:clamp(22px,3.5vw,67px)}')
-    expect(homeSource).not.toContain('* 0.35')
+    expect(homeStyles).toContain(`.hero-text{align-self:center;padding:48px clamp(32px,4vw,64px) 72px ${contentEdgePadding}}`)
+    expect(homeStyles).toContain(`.breakfast-text,.welcome-text{padding:var(--band-pad) ${contentEdgePadding} var(--band-pad) clamp(32px,5vw,96px)}`)
+    expect(homeStyles).toContain('.hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px}')
+    expect(homeStyles).toContain('.breakfast-text,.welcome-text{padding-left:clamp(22px,3.5vw,67px)}')
+    expect(homeStyles).not.toContain('* 0.35')
   })
 
   it('justifies the welcome, San Rocco, guest and breakfast paragraphs within 68ch', () => {
-    expect(homeSource).toContain('.welcome-text p,.pilgrims-text p,.guest p,.breakfast-text p{max-width:68ch;text-align:justify;hyphens:auto}')
+    expect(homeStyles).toContain('.welcome-text p,.pilgrims-text p,.guest p,.breakfast-text p{max-width:68ch;text-align:justify;hyphens:auto}')
   })
 
   it('aligns the justified paragraphs to the left on phones', () => {
-    const phoneRules = homeSource.match(/@media \(max-width:520px\)\{([\s\S]*?)\n\}/)?.[1]
+    const phoneRules = homeStyles.match(/@media \(max-width:520px\)\{([\s\S]*?)\n\}/)?.[1]
 
     expect(phoneRules).toContain('.welcome-text p,.pilgrims-text p,.guest p,.breakfast-text p{text-align:left}')
   })
 
   it('gives the map more width than the directions text without changing its height', () => {
-    expect(homeSource).toContain('.arrive{margin-top:var(--section-gap);margin-bottom:var(--section-gap);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);')
-    expect(homeSource).toContain('.map-frame{position:relative;min-height:440px}')
-    expect(homeSource).toContain('.map-frame{min-height:308px;max-height:622px}')
-    expect(homeSource).toContain('.map-frame{min-height:320px}')
+    expect(homeStyles).toContain('.arrive{margin-top:var(--section-gap);margin-bottom:var(--section-gap);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);')
+    expect(homeStyles).toContain('.map-frame{position:relative;min-height:440px}')
+    expect(homeStyles).toContain('.map-frame{min-height:308px;max-height:622px}')
+    expect(homeStyles).toContain('.map-frame{min-height:320px}')
   })
 
   it('stretches the welcome photo to the full band height on desktop', () => {
-    expect(homeSource).toContain('.welcome img{aspect-ratio:16/9;align-self:stretch;height:100%}')
+    expect(homeStyles).toContain('.welcome img{aspect-ratio:16/9;align-self:stretch;height:100%}')
   })
 
   it('shortens the reveal offset on desktop without overriding reduced motion', () => {
