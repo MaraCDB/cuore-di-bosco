@@ -386,6 +386,7 @@ onMounted(() => {
 .lightbox-img{max-width:90vw;max-height:85vh;object-fit:contain}
 .lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;display:flex;align-items:center;justify-content:center;width:48px;height:48px;padding:0;border:0;border-radius:50%;background:rgba(251,248,241,0.14);color:var(--on-forest);font-size:var(--step-display);line-height:1;cursor:pointer;transition:background var(--t-hover) var(--ease-out)}
 .lightbox-close{top:1rem;right:1rem;font-size:var(--step-title)}
+.lightbox-prev,.lightbox-next{padding:0 0 0.17em}
 .lightbox-prev{left:1rem;top:50%;transform:translateY(-50%)}
 .lightbox-next{right:1rem;top:50%;transform:translateY(-50%)}
 .lightbox-close:focus-visible,.lightbox-prev:focus-visible,.lightbox-next:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
