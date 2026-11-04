@@ -6,7 +6,7 @@ import ExplorePage from '~/pages/it/esplora.vue'
 const pageSource = readFileSync('pages/it/esplora.vue', 'utf8')
 const layoutSource = readFileSync('layouts/default.vue', 'utf8')
 const redesignedRoutesDeclaration = layoutSource.match(/const redesignedRoutes = new Set\(\[[^\]]*\]\)/)?.[0] ?? ''
-const pageStyles = pageSource.match(/<style[^>]*>([\s\S]*?)<\/style>/)?.[1] ?? ''
+const pageStyles = readFileSync('assets/css/pages/explore.css', 'utf8')
 const legacyTexts: string[] = JSON.parse(readFileSync('tests/fixtures/esplora-legacy-text.json', 'utf8'))
 
 const apt = 'Archivio Fotografico APT Rovereto Vallagarina Monte Baldo'

@@ -8,7 +8,7 @@ import toTopSource from '~/components/site/to-top.vue?raw'
 import photoCarouselSource from '~/components/site/photo-carousel.vue?raw'
 import cookieBannerSource from '~/components/cookie-banner.vue?raw'
 
-const exploreSource = readFileSync('pages/it/esplora.vue', 'utf8')
+const exploreStyles = readFileSync('assets/css/pages/explore.css', 'utf8')
 const rulesSource = readFileSync('pages/it/regolamento.vue', 'utf8')
 const bookingStyles = readFileSync('assets/css/pages/booking.css', 'utf8')
 const homeStyles = readFileSync('assets/css/pages/home.css', 'utf8')
@@ -77,7 +77,7 @@ describe('exact sizes', () => {
   })
 
   it('sets Montserrat for all non-display text', () => {
-    const redesignSources = [globalStyles, homeStyles, exploreSource, rulesSource, bookingStyles, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource, cookieBannerSource]
+    const redesignSources = [globalStyles, homeStyles, exploreStyles, rulesSource, bookingStyles, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource, cookieBannerSource]
 
     expect(globalStyles).not.toContain('Numans')
     expect(nuxtConfig).not.toContain('Numans')
@@ -90,8 +90,9 @@ describe('exact sizes', () => {
   it('sizes redesigned text only through the scale tokens', () => {
     const styles = [
       globalStyles,
-      ...[exploreSource, rulesSource, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource].map(extractStyleBlocks),
+      ...[rulesSource, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource].map(extractStyleBlocks),
       homeStyles,
+      exploreStyles,
       bookingStyles,
       cookieBannerRedesignRules,
     ].join('\n')

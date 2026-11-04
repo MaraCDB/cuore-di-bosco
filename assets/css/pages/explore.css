@@ -1,0 +1,45 @@
+.explore-intro{padding:calc(var(--band-pad) * 1.5) 0}
+.explore-intro h1{font-size:var(--step-display);line-height:1;color:var(--on-forest)}
+.explore-intro .lead{margin:20px 0 0;max-width:60ch}
+
+.places{list-style:none;max-width:var(--page-max);margin:var(--section-gap) auto 0;padding:0 var(--margin);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2vw,28px) 6px}
+.place figure{display:grid;gap:10px;margin:0}
+.place img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.place figcaption{display:grid;gap:2px}
+.place-name{font-family:var(--display);font-weight:var(--display-weight);font-size:var(--step-title);line-height:1.05;color:var(--forest)}
+.photo-credit{font-size:var(--step-micro);line-height:1.4;color:var(--muted)}
+
+.explore-nature{background:var(--champagne);margin-top:var(--section-gap);padding:var(--band-pad) 0}
+.park-link{break-inside:avoid}
+.park-logo-figure{margin:12px 0 0;display:flex;justify-content:center}
+.park-logo{width:132px;height:auto}
+.text-columns{column-gap:clamp(32px,5vw,96px)}
+.explore-nature p,.explore-around p,.explore-garden p,.season p{max-width:68ch;text-align:justify;hyphens:auto}
+.explore-nature a,.explore-around a,.explore-garden a,.season a,.explore-note a{overflow-wrap:anywhere}
+
+.explore-around{margin-top:var(--section-gap)}
+.panorama{max-width:850px;margin:var(--section-gap) auto 0;display:grid;gap:6px}
+.panorama img{width:100%;aspect-ratio:850/371;object-fit:cover}
+.pdf-guide{margin-top:var(--section-gap);text-align:center}
+
+.flower-band{margin-top:var(--section-gap)}
+.explore-flower{padding:var(--band-pad) 0;--carousel-credit:var(--on-forest-soft);--carousel-control:var(--on-forest);--carousel-control-ink:var(--forest)}
+
+.explore-garden{background:var(--champagne);margin-top:var(--section-gap);padding:var(--band-pad) 0}
+.explore-garden h2{margin-bottom:20px}
+
+.seasons{max-width:var(--page-max);margin:var(--section-gap) auto 0;padding:0 var(--margin);display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(28px,3.5vw,56px) clamp(32px,5vw,96px)}
+.season{border-top:3px solid var(--meadow);padding-top:16px}
+.season h3{font-family:var(--display);font-weight:var(--display-weight);font-size:var(--step-title);line-height:1.1;color:var(--forest);margin-bottom:10px}
+
+.explore-note{background:var(--champagne);margin-top:var(--section-gap);padding:var(--band-pad) var(--margin);text-align:center}
+.explore-note p{max-width:68ch;margin:0 auto 1em}
+.explore-note p:last-child{margin-bottom:0}
+@media (min-width:901px){
+  .text-columns{column-count:2}
+  .places{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .seasons{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:520px){
+  .explore-nature p,.explore-around p,.explore-garden p,.season p{text-align:left}
+}
