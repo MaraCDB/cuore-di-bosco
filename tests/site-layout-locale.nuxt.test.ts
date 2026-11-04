@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import DefaultLayout from '~/layouts/default.vue'
@@ -52,6 +53,12 @@ describe('default layout language', () => {
     await vi.waitFor(() => expect(document.documentElement.lang).toBe('en'))
     await vi.waitFor(() => expect(useNuxtApp().$i18n.locale.value).toBe('en'))
     expect(emittedJsonLd().tourBookingPage).toContain('/en/booking')
+  })
+})
+
+describe('default layout source', () => {
+  it('awaits the locale change so the prerendered chrome has the page language', () => {
+    expect(readFileSync('layouts/default.vue', 'utf8')).toContain('await setLocale(')
   })
 })
 

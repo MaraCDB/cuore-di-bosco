@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { START_LOCATION } from 'vue-router'
 import type { RouteLocationNormalized } from 'vue-router'
 import routerOptions from '~/app/router.options'
@@ -20,9 +20,25 @@ async function resolveAfterPageLoad(result: Promise<Position> | Position) {
   return result
 }
 
+const addedAnchors: HTMLElement[] = []
+
+function addAnchors(...ids: string[]) {
+  ids.forEach((id) => {
+    const anchor = document.createElement('div')
+    anchor.id = id
+    document.body.appendChild(anchor)
+    addedAnchors.push(anchor)
+  })
+}
+
 describe('router scroll behavior', () => {
+  beforeEach(() => {
+    addAnchors('camere', 'colazione', 'arrivare')
+  })
+
   afterEach(() => {
     vi.unstubAllGlobals()
+    addedAnchors.splice(0).forEach(anchor => anchor.remove())
   })
 
   it('scrolls to the hash when navigating from another page', async () => {
@@ -57,5 +73,32 @@ describe('router scroll behavior', () => {
 
   it('scrolls to the top when the hash is removed within the same page', () => {
     expect(scrollBehavior(route('/it'), route('/it', '#camere'))).toEqual({ left: 0, top: 0 })
+  })
+
+  it('scrolls to the top when the hash has no matching element on another page', async () => {
+    const position = await resolveAfterPageLoad(scrollBehavior(route('/en', '#rooms'), route('/en/rules')))
+    expect(position).toEqual({ left: 0, top: 0, behavior: 'instant' })
+  })
+
+  it('checks the hash element after the page has loaded', async () => {
+    const result = scrollBehavior(route('/en', '#directions'), route('/en/rules'))
+    addAnchors('directions')
+    const position = await resolveAfterPageLoad(result)
+    expect(position).toEqual({ el: '#directions', behavior: 'instant' })
+  })
+
+  it('scrolls to the top when the hash has no matching element on the first navigation', async () => {
+    const position = await scrollBehavior(route('/en', '#rooms'), START_LOCATION)
+    expect(position).toEqual({ left: 0, top: 0, behavior: 'instant' })
+  })
+
+  it('restores the saved position even when the hash has no matching element', async () => {
+    const saved = { left: 0, top: 400 }
+    const position = await resolveAfterPageLoad(scrollBehavior(route('/en', '#rooms'), route('/en/rules'), saved))
+    expect(position).toEqual(saved)
+  })
+
+  it('scrolls to the top when the hash has no matching element within the same page', () => {
+    expect(scrollBehavior(route('/en', '#rooms'), route('/en', '#top'))).toEqual({ left: 0, top: 0 })
   })
 })

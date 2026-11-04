@@ -19,7 +19,7 @@ const route = useRoute();
 const locale = computed(() => siteLocale(route.path));
 
 await setLocale(locale.value);
-watch(locale, siteLanguage => setLocale(siteLanguage));
+watch(locale, siteLanguage => setLocale(siteLanguage).catch(() => {}));
 
 const redesignedRoutes = new Set(['/it', '/it/', '/it/esplora', '/it/esplora/', '/it/regolamento', '/it/regolamento/', '/it/privacy-policy', '/it/privacy-policy/', '/it/prenota', '/it/prenota/', '/en/booking', '/en/booking/']);
 const isRedesignedRoute = computed(() => redesignedRoutes.has(route.path));

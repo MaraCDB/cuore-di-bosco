@@ -10,13 +10,13 @@ export default <RouterConfig>{
   scrollBehavior(to: RouteLocationNormalized, from: RouteLocationNormalized, savedPosition) {
     if (to.path === from.path) {
       if (to.hash) {
-        return { el: to.hash, behavior: 'auto' }
+        return document.querySelector(to.hash) ? { el: to.hash, behavior: 'auto' } : { left: 0, top: 0 }
       }
       return from.hash ? { left: 0, top: 0 } : false
     }
 
     const resolvePosition = () => savedPosition
-      ?? (to.hash ? { el: to.hash, behavior: 'instant' as const } : { left: 0, top: 0, behavior: 'instant' as const })
+      ?? (to.hash && document.querySelector(to.hash) ? { el: to.hash, behavior: 'instant' as const } : { left: 0, top: 0, behavior: 'instant' as const })
 
     const nuxtApp = useNuxtApp()
     return new Promise((resolve) => {
