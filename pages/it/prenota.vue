@@ -175,6 +175,22 @@ const mirtilloPhotos: RoomPhoto[] = [
 ];
 
 const carouselPhotos: { src: string, alt: string }[] = [
+  { src: '/images/home/casa-portone-960.webp', alt: 'Il portone in legno della casa sotto l’arco in pietra, con la ghirlanda' },
+  { src: '/images/home/terrazza-neve-1280.webp', alt: 'La terrazza coperta di neve con le luci accese e un albero carico di neve' },
+  { src: '/images/home/terrazza-estate-1280.webp', alt: 'La terrazza con la vista sui prati e sulle montagne in una giornata di sole' },
+  { src: '/images/home/terrazza-tramonto-1280.webp', alt: 'La terrazza al tramonto, con il cielo rosa sopra le montagne' },
+  { src: '/images/home/mirtillo-letto-960.webp', alt: 'Il letto matrimoniale della camera Mirtillo con il copriletto a fiori' },
+  { src: '/images/home/mirtillo-relax-960.webp', alt: 'La zona relax della camera Mirtillo con il divano azzurro e la scrivania' },
+  { src: '/images/home/mirtillo-balcone-960.webp', alt: 'Il balcone della camera Mirtillo con la vista sugli alberi e sulle montagne' },
+  { src: '/images/home/lampone-letti-1280.webp', alt: 'La camera Lampone con il letto matrimoniale, il letto singolo e l’armadio dipinto' },
+  { src: '/images/home/lampone-angolo-960.webp', alt: 'L’angolo in legno con il bollitore nella camera Lampone' },
+  { src: '/images/home/colazione-dolci-1280.webp', alt: 'Il bancone della colazione con torte, dolci e marmellate' },
+  { src: '/images/home/sala-colazione-1280.webp', alt: 'La sala colazioni con i tavoli e la panca lungo la parete' },
+  { src: '/images/home/colazione-frutta-1280.webp', alt: 'Il bancone della colazione con frutta, succhi e dolci' },
+  { src: '/images/home/colazione-bancone-1280.webp', alt: 'Il bancone della sala colazioni con bicchieri, tazze e piatti' },
+  { src: '/images/home/sala-tavolo-960.webp', alt: 'Un tavolo della sala colazioni accanto alla finestra' },
+  { src: '/images/home/colazione-yogurt-1280.webp', alt: 'Yogurt, succhi, marmellate e una torta sul bancone della colazione' },
+  { src: '/images/home/ingresso-mappe-960.webp', alt: 'L’ingresso con il porta-depliant e le mappe del territorio' },
   { src: '/images/home/casa-1600.webp', alt: 'La casa in pietra del B&B Cuore di Bosco a Prada' },
   { src: '/images/lampone/1.webp', alt: 'Camera Lampone foto 1' },
   { src: '/images/lampone/2.webp', alt: 'Camera Lampone foto 2' },

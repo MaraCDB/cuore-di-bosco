@@ -9,8 +9,25 @@ const pageStyles = pageSource.match(/<style[^>]*>([\s\S]*?)<\/style>/)?.[1] ?? '
 const legacyTexts: string[] = JSON.parse(readFileSync('tests/fixtures/prenota-legacy-text.json', 'utf8'))
 
 const iconCaptions = ['FREE WIFI', 'ASCIUGAMANI E BIANCHERIA INCLUSI', 'DOTAZIONI DI CORTESIA PER GLI OSPITI', 'DOCCIA E BAGNO PRIVATI', 'COLAZIONE DOLCE E SALATA', 'SET BOLLITORE', 'LAVANDERIA', 'BICICLETTE A DISPOSIZIONE', 'GIOCHI PER BAMBINI', 'DOTAZIONI PER BAMBINI', 'CULLA PER BAMBINI', 'MATERIALI PER BAMBINI', 'SUPPORTI PER PORTARE', 'LIBRERIA PER ADULTI E BAMBINI', 'PIC-NIC']
-const carouselSources = ['/images/home/casa-1600.webp', '/images/lampone/1.webp', '/images/lampone/2.webp', '/images/lampone/3.webp', '/images/lampone/5.webp', '/images/home/lampone-balcone-1200.webp', '/images/mirtillo/1.webp', '/images/mirtillo/2.webp', '/images/mirtillo/3.webp', '/images/mirtillo/4.webp', '/images/home/colazione-1280.webp']
+const ownerCarouselPhotos = ['casa-portone-960', 'terrazza-neve-1280', 'terrazza-estate-1280', 'terrazza-tramonto-1280', 'mirtillo-letto-960', 'mirtillo-relax-960', 'mirtillo-balcone-960', 'lampone-letti-1280', 'lampone-angolo-960', 'colazione-dolci-1280', 'sala-colazione-1280', 'colazione-frutta-1280', 'colazione-bancone-1280', 'sala-tavolo-960', 'colazione-yogurt-1280', 'ingresso-mappe-960']
+const carouselSources = [...ownerCarouselPhotos.map(name => `/images/home/${name}.webp`), '/images/home/casa-1600.webp', '/images/lampone/1.webp', '/images/lampone/2.webp', '/images/lampone/3.webp', '/images/lampone/5.webp', '/images/home/lampone-balcone-1200.webp', '/images/mirtillo/1.webp', '/images/mirtillo/2.webp', '/images/mirtillo/3.webp', '/images/mirtillo/4.webp', '/images/home/colazione-1280.webp']
 const carouselAlts = [
+  'Il portone in legno della casa sotto l’arco in pietra, con la ghirlanda',
+  'La terrazza coperta di neve con le luci accese e un albero carico di neve',
+  'La terrazza con la vista sui prati e sulle montagne in una giornata di sole',
+  'La terrazza al tramonto, con il cielo rosa sopra le montagne',
+  'Il letto matrimoniale della camera Mirtillo con il copriletto a fiori',
+  'La zona relax della camera Mirtillo con il divano azzurro e la scrivania',
+  'Il balcone della camera Mirtillo con la vista sugli alberi e sulle montagne',
+  'La camera Lampone con il letto matrimoniale, il letto singolo e l’armadio dipinto',
+  'L’angolo in legno con il bollitore nella camera Lampone',
+  'Il bancone della colazione con torte, dolci e marmellate',
+  'La sala colazioni con i tavoli e la panca lungo la parete',
+  'Il bancone della colazione con frutta, succhi e dolci',
+  'Il bancone della sala colazioni con bicchieri, tazze e piatti',
+  'Un tavolo della sala colazioni accanto alla finestra',
+  'Yogurt, succhi, marmellate e una torta sul bancone della colazione',
+  'L’ingresso con il porta-depliant e le mappe del territorio',
   'La casa in pietra del B&B Cuore di Bosco a Prada',
   ...[1, 2, 3, 5].map(number => `Camera Lampone foto ${number}`),
   'Il Monte Baldo innevato visto dal balcone della camera Lampone',
