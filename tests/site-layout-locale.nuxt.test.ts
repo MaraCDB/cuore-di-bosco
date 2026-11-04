@@ -43,6 +43,13 @@ describe('default layout language', () => {
     expect(englishJsonLd.tourBookingPage).toContain('/en/booking')
   })
 
+  it('uses German, the German html lang and the German JSON-LD on a /de path', async () => {
+    await mountDefaultLayout('/de')
+    await vi.waitFor(() => expect(useNuxtApp().$i18n.locale.value).toBe('de'))
+    await vi.waitFor(() => expect(document.documentElement.lang).toBe('de'))
+    expect(emittedJsonLd().tourBookingPage).toContain('/de/buchen')
+  })
+
   it('follows a route change from Italian to English without remounting', async () => {
     await mountDefaultLayout('/it/regolamento')
     await vi.waitFor(() => expect(document.documentElement.lang).toBe('it'))

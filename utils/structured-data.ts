@@ -130,9 +130,44 @@ const englishLodgingBusiness: Record<string, unknown> = {
   ]
 }
 
+const germanLodgingBusiness: Record<string, unknown> = {
+  ...italianLodgingBusiness,
+  "description": "B&B für Familien mit Kindern auf der Hochebene von Brentonico im Trentino. Natürliches Frühstück, Babyausstattung, Fahrräder und Angebote für Familien, mitten in der Natur des Naturparks Monte Baldo.",
+  "paymentAccepted": "Bargeld, Kreditkarte, Debitkarte, Banküberweisung",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Kostenloses WLAN", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Frühstück inklusive", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Kostenlose Parkmöglichkeit", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Angebote für Familien", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Fahrräder zur Verfügung", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Wäscheservice", "value": true }
+  ],
+  "containedInPlace": {
+    "@type": "Place",
+    "name": "Hochebene von Brentonico",
+    "description": "Die Hochebene von Brentonico, bekannt als Garten Europas, liegt im Naturpark Monte Baldo im Trentino, Italien.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.8175,
+      "longitude": 10.9575
+    },
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Trentino-Südtirol, Italien"
+    }
+  },
+  "tourBookingPage": "https://www.cuoredibosco.it/de/buchen"
+}
+
+const lodgingBusinessByLocale: Record<SiteLocale, Record<string, unknown>> = {
+  it: italianLodgingBusiness,
+  en: englishLodgingBusiness,
+  de: germanLodgingBusiness,
+}
+
 /**
  * Returns the schema.org LodgingBusiness description of the B&B in the given language.
  */
 export function lodgingBusinessJsonLd(locale: SiteLocale): Record<string, unknown> {
-  return locale === 'en' ? englishLodgingBusiness : italianLodgingBusiness
+  return lodgingBusinessByLocale[locale]
 }

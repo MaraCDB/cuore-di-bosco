@@ -15,8 +15,7 @@
 
 <script setup>
 const route = useRoute();
-const currentLocale = computed(() => route?.path?.split('/')[1]);
-const policyPage = computed(() => `/${currentLocale.value || 'it'}/privacy-policy`);
+const policyPage = computed(() => localePath(siteLocale(route?.path ?? ''), 'privacy-policy'));
 
 const { t } = useI18n();
 const bannerMessage = computed(() => t('cookies-banner-message').replace('. ', '.\n'));
