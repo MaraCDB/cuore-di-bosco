@@ -1,12 +1,12 @@
 <template>
-  <div class="carousel" role="region" aria-roledescription="carosello" :aria-label="label">
+  <div class="carousel" role="region" :aria-roledescription="$t('site.carousel')" :aria-label="label">
     <div ref="track" class="photo-row" tabindex="0" @scroll.passive="onScroll" @pointerenter="onPointerEnter" @pointerleave="onPointerLeave" @pointerdown="onPointerDown" @pointerup="onPointerRelease" @pointercancel="onPointerRelease" @focusin="onFocusIn" @focusout="onFocusOut">
       <figure v-for="(photo, index) in loopPhotos" :key="index" :aria-hidden="index >= photos.length ? 'true' : undefined"><img :src="photo.src" :alt="photo.alt" loading="lazy"><figcaption v-if="photo.caption || photo.credit">{{ photo.caption }}<span v-if="photo.credit" class="photo-credit">{{ photo.credit }}</span></figcaption></figure>
     </div>
     <div class="carousel-controls">
-      <button type="button" aria-label="Foto precedente" @click="scrollByPhoto(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-      <button type="button" :aria-label="isPlaying ? 'Ferma lo scorrimento' : 'Avvia lo scorrimento'" @click="togglePlaying"><svg v-if="isPlaying" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg><svg v-else viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
-      <button type="button" aria-label="Foto successiva" @click="scrollByPhoto(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <button type="button" :aria-label="$t('site.photo-previous')" @click="scrollByPhoto(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button type="button" :aria-label="isPlaying ? $t('site.scroll-pause') : $t('site.scroll-start')" @click="togglePlaying"><svg v-if="isPlaying" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg><svg v-else viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+      <button type="button" :aria-label="$t('site.photo-next')" @click="scrollByPhoto(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
 </template>

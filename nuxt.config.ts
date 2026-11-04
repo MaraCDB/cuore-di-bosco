@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'it',
     lazy: true,
+    detectBrowserLanguage: false,
     strategy: 'no_prefix' // puoi anche usare 'prefix' se vuoi sempre il prefisso /en /it
   },
   nitro: {

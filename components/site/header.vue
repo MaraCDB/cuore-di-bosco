@@ -1,13 +1,13 @@
 <template>
   <div class="redesign masthead" id="top">
     <header class="topbar">
-      <nav aria-label="Principale">
-        <NuxtLink to="/it#top" no-prefetch>Home</NuxtLink>
+      <nav :aria-label="$t('site.nav-main')">
+        <NuxtLink :to="homePath(locale) + '#top'" no-prefetch>{{ $t('site.home') }}</NuxtLink>
         <NuxtLink v-for="link in links" :key="link.to" :to="link.to" no-prefetch>{{ link.label }}</NuxtLink>
-        <NuxtLink :to="englishTwin(route.path)" no-prefetch>English</NuxtLink>
+        <NuxtLink :to="twinPath(route.path, otherLocale)" no-prefetch>{{ $t('site.language') }}</NuxtLink>
         <button ref="menuButton" type="button" class="button button-quiet menu" :aria-expanded="isMenuOpen"
-          :aria-controls="isMenuOpen ? 'site-menu' : undefined" @click="isMenuOpen = true">Menu</button>
-        <NuxtLink class="button button-light" to="/it/prenota" no-prefetch>Prenota</NuxtLink>
+          :aria-controls="isMenuOpen ? 'site-menu' : undefined" @click="isMenuOpen = true">{{ $t('site.menu') }}</button>
+        <NuxtLink class="button button-light" :to="localePath(locale, 'booking')" no-prefetch>{{ $t('site.book') }}</NuxtLink>
       </nav>
     </header>
     <SiteMenu :open="isMenuOpen" @close="closeMenu" />
@@ -16,7 +16,10 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const links = primaryLinks()
+const { locale: i18nLocale } = useI18n()
+const locale = computed(() => i18nLocale.value as SiteLocale)
+const otherLocale = computed<SiteLocale>(() => locale.value === 'en' ? 'it' : 'en')
+const links = computed(() => primaryLinks(locale.value))
 const isMenuOpen = ref(false)
 const menuButton = ref<HTMLButtonElement | null>(null)
 

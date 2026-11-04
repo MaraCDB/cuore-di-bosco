@@ -1,9 +1,9 @@
 <template>
   <Teleport to="body">
     <div v-if="open" id="site-menu" ref="panel" class="redesign menu-panel" role="dialog" aria-modal="true"
-      aria-label="Menu">
-      <button ref="closeButton" type="button" class="menu-close" @click="emit('close', true)">Chiudi</button>
-      <nav aria-label="Pagine del sito">
+      :aria-label="$t('site.menu')">
+      <button ref="closeButton" type="button" class="menu-close" @click="emit('close', true)">{{ $t('site.close') }}</button>
+      <nav :aria-label="$t('site.nav-pages')">
         <NuxtLink v-for="link in links" :key="link.to" :to="link.to" no-prefetch @click="emit('close', false)">{{ link.label }}</NuxtLink>
       </nav>
     </div>
@@ -17,14 +17,18 @@ const emit = defineEmits<{ close: [restoreFocus: boolean] }>()
 const DESKTOP_MIN_WIDTH = 901
 
 const route = useRoute()
+const { t, locale: i18nLocale } = useI18n()
 const panel = ref<HTMLElement | null>(null)
 const closeButton = ref<HTMLButtonElement | null>(null)
 
-const links = computed<SiteLink[]>(() => [
-  { label: 'Home', to: '/it#top' },
-  ...primaryLinks(),
-  { label: 'English', to: englishTwin(route.path) },
-])
+const links = computed<SiteLink[]>(() => {
+  const locale = i18nLocale.value as SiteLocale
+  return [
+    { label: t('site.home'), to: homePath(locale) + '#top' },
+    ...primaryLinks(locale),
+    { label: t('site.language'), to: twinPath(route.path, locale === 'en' ? 'it' : 'en') },
+  ]
+})
 
 function handleKeydown(event: KeyboardEvent) {
   if (event.key === 'Escape') {
