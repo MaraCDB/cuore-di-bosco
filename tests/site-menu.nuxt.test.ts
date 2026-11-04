@@ -3,6 +3,7 @@ import { mountSuspended } from '@nuxt/test-utils/runtime'
 import SiteHeader from '~/components/site/header.vue'
 import SiteMenu from '~/components/site/menu.vue'
 import menuSource from '~/components/site/menu.vue?raw'
+import headerSource from '~/components/site/header.vue?raw'
 import bannerSource from '~/components/cookie-banner.vue?raw'
 
 const mountedWrappers: Array<{ unmount: () => void }> = []
@@ -74,6 +75,17 @@ describe('site menu', () => {
 
     expect(firstTopBarLink.text()).toBe('Home')
     expect(firstTopBarLink.attributes('href')).toBe('/it#top')
+  })
+
+  it('collapses the top-bar links into the menu below 1180px and hides the switch only up to 900px', () => {
+    const belowTopBarLinks = headerSource.match(/@media \(max-width:1179px\)\{([\s\S]*?)\n\}/)?.[1] ?? ''
+    const phoneRules = headerSource.match(/@media \(max-width:900px\)\{([^}]*\})\}/)?.[1] ?? ''
+
+    expect(belowTopBarLinks).toContain('.topbar nav a:not(.button){display:none}')
+    expect(belowTopBarLinks).toContain('.topbar .menu{display:inline-flex}')
+    expect(belowTopBarLinks).not.toContain('.topbar-languages')
+    expect(phoneRules).toBe('.topbar-languages{display:none}')
+    expect(headerSource).toMatch(/\.topbar nav a:not\(\.button\)\{[^}]*white-space:nowrap/)
   })
 
   it('stacks the menu panel above the cookie banner', () => {
@@ -152,17 +164,17 @@ describe('site menu', () => {
     expect(menuButton.attributes('aria-expanded')).toBe('false')
   })
 
-  it('closes when the viewport grows past 900px and stays open below it', async () => {
+  it('closes when the viewport grows past 1179px and stays open below it', async () => {
     const { menuButton } = await mountHeader()
     await menuButton.trigger('click')
     await nextTick()
 
-    vi.stubGlobal('innerWidth', 900)
+    vi.stubGlobal('innerWidth', 1179)
     window.dispatchEvent(new Event('resize'))
     await nextTick()
     expect(document.querySelector('[role=dialog]')).not.toBeNull()
 
-    vi.stubGlobal('innerWidth', 901)
+    vi.stubGlobal('innerWidth', 1180)
     window.dispatchEvent(new Event('resize'))
     await nextTick()
     expect(document.querySelector('[role=dialog]')).toBeNull()

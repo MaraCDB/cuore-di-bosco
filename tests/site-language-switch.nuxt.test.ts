@@ -90,4 +90,10 @@ describe('language switch source', () => {
     nuxtLinks.forEach(tag => expect(tag).toContain('no-prefetch'))
     expect(languageSwitchSource).not.toMatch(/<img[^>]*\s(width|height)=/)
   })
+
+  it('never shrinks or wraps the flags and codes', () => {
+    expect(languageSwitchSource).toMatch(/\.language-switch\{[^}]*flex-shrink:0/)
+    expect(languageSwitchSource).toMatch(/\.language-switch a\{[^}]*flex-shrink:0[^}]*white-space:nowrap/)
+    expect(languageSwitchSource).toMatch(/\.language-switch img\{[^}]*flex-shrink:0/)
+  })
 })

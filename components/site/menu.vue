@@ -15,7 +15,7 @@
 const props = defineProps<{ open: boolean }>()
 const emit = defineEmits<{ close: [restoreFocus: boolean] }>()
 
-const DESKTOP_MIN_WIDTH = 901
+const TOP_BAR_LINKS_MIN_WIDTH = 1180
 
 const route = useRoute()
 const { t, locale: i18nLocale } = useI18n()
@@ -49,7 +49,7 @@ function handleKeydown(event: KeyboardEvent) {
 }
 
 function handleResize() {
-  if (window.innerWidth >= DESKTOP_MIN_WIDTH) {
+  if (window.innerWidth >= TOP_BAR_LINKS_MIN_WIDTH) {
     emit('close', false)
   }
 }

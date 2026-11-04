@@ -19,9 +19,9 @@ const languages: Array<{ locale: SiteLocale, name: string, code: string, flag: s
 </script>
 
 <style scoped>
-.language-switch{display:flex;align-items:center;gap:14px}
-.language-switch a{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-family:var(--sub);font-size:var(--step-nav);font-weight:600;text-transform:uppercase;color:inherit;text-decoration:none}
-.language-switch img{height:0.9em;aspect-ratio:3/2;object-fit:cover}
+.language-switch{display:flex;flex-shrink:0;align-items:center;gap:14px}
+.language-switch a{display:inline-flex;flex-shrink:0;align-items:center;gap:6px;min-height:44px;font-family:var(--sub);font-size:var(--step-nav);font-weight:600;text-transform:uppercase;color:inherit;text-decoration:none;white-space:nowrap}
+.language-switch img{flex-shrink:0;height:0.9em;aspect-ratio:3/2;object-fit:cover}
 .language-switch a[aria-current=true]{text-decoration-line:underline;text-decoration-color:var(--lime);text-decoration-thickness:2px;text-underline-offset:0.3em}
 @media (hover:hover){.language-switch a:hover{text-decoration-line:underline}}
 </style>
