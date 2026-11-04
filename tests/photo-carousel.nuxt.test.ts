@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
+import { nextTick } from 'vue'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import PhotoCarousel from '~/components/site/photo-carousel.vue'
 import carouselSource from '~/components/site/photo-carousel.vue?raw'
@@ -22,6 +23,36 @@ async function mountCarousel() {
 function ruleBody(selector: string): string | undefined {
   const escaped = selector.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
   return carouselStyles.match(new RegExp(`(?:^|[\\s,}])${escaped}\\{([^}]*)\\}`, 'm'))?.[1]
+}
+
+function pointer(type: string, clientX: number, init: PointerEventInit = {}): PointerEvent {
+  return new PointerEvent(type, { bubbles: true, pointerId: 1, pointerType: 'mouse', button: 0, buttons: 1, clientX, ...init })
+}
+
+function controlTime() {
+  const clock = { now: 1000 }
+  const frames: FrameRequestCallback[] = []
+  vi.spyOn(performance, 'now').mockImplementation(() => clock.now)
+  const requestFrame = vi.spyOn(window, 'requestAnimationFrame').mockImplementation(callback => frames.push(callback))
+  return { clock, frames, requestFrame }
+}
+
+async function mountSizedTrack() {
+  const wrapper = await mountCarousel()
+  const track = wrapper.find('.photo-row').element as HTMLElement
+  Object.defineProperty(track, 'scrollWidth', { value: 5000 })
+  Object.defineProperty(track, 'clientWidth', { value: 400 })
+  return { wrapper, track }
+}
+
+function flingLeft(track: HTMLElement, clock: { now: number }) {
+  track.dispatchEvent(pointer('pointerdown', 300))
+  for (const clientX of [260, 220, 180]) {
+    clock.now += 16
+    track.dispatchEvent(pointer('pointermove', clientX))
+  }
+  clock.now += 2
+  track.dispatchEvent(pointer('pointerup', 180, { buttons: 0 }))
 }
 
 afterEach(() => {
@@ -84,5 +115,85 @@ describe('photo carousel', () => {
 
   it('keeps the control buttons at least 44px wide for touch', () => {
     expect(ruleBody('.carousel-controls button')).toContain('width:44px;height:44px')
+  })
+
+  it('follows the mouse while dragging and marks the track as dragging', async () => {
+    const { clock } = controlTime()
+    const { wrapper, track } = await mountSizedTrack()
+
+    track.dispatchEvent(pointer('pointerdown', 300))
+    clock.now += 16
+    track.dispatchEvent(pointer('pointermove', 220))
+    await nextTick()
+
+    expect(track.scrollLeft).toBe(80)
+    expect(wrapper.find('.photo-row').classes()).toContain('is-dragging')
+
+    clock.now += 500
+    track.dispatchEvent(pointer('pointerup', 220, { buttons: 0 }))
+    await nextTick()
+
+    expect(track.scrollLeft).toBe(80)
+    expect(wrapper.find('.photo-row').classes()).not.toContain('is-dragging')
+  })
+
+  it('ignores a mouse press that moves less than the drag threshold', async () => {
+    controlTime()
+    const { wrapper, track } = await mountSizedTrack()
+
+    track.dispatchEvent(pointer('pointerdown', 300))
+    track.dispatchEvent(pointer('pointermove', 297))
+    await nextTick()
+
+    expect(track.scrollLeft).toBe(0)
+    expect(wrapper.find('.photo-row').classes()).not.toContain('is-dragging')
+  })
+
+  it('leaves touch scrolling to the browser', async () => {
+    controlTime()
+    const { wrapper, track } = await mountSizedTrack()
+
+    track.dispatchEvent(pointer('pointerdown', 300, { pointerType: 'touch' }))
+    track.dispatchEvent(pointer('pointermove', 200, { pointerType: 'touch' }))
+    await nextTick()
+
+    expect(track.scrollLeft).toBe(0)
+    expect(wrapper.find('.photo-row').classes()).not.toContain('is-dragging')
+  })
+
+  it('keeps the photos from being dragged as images', async () => {
+    const wrapper = await mountCarousel()
+
+    expect(wrapper.findAll('.photo-row img').map(image => image.attributes('draggable'))).toEqual(Array(photos.length * 2).fill('false'))
+  })
+
+  it('keeps gliding after a fast release', async () => {
+    const { clock, frames } = controlTime()
+    const { track } = await mountSizedTrack()
+
+    flingLeft(track, clock)
+    const releasedAt = track.scrollLeft
+    frames.at(-1)?.(2000)
+    frames.at(-1)?.(2016)
+
+    expect(releasedAt).toBe(120)
+    expect(track.scrollLeft).toBeGreaterThan(releasedAt)
+  })
+
+  it('stops after the release for visitors who ask for reduced motion', async () => {
+    vi.spyOn(window, 'matchMedia').mockReturnValue({ matches: true } as MediaQueryList)
+    const { clock, requestFrame } = controlTime()
+    const { track } = await mountSizedTrack()
+    const framesBeforeFling = requestFrame.mock.calls.length
+
+    flingLeft(track, clock)
+
+    expect(track.scrollLeft).toBe(120)
+    expect(requestFrame.mock.calls.length).toBe(framesBeforeFling)
+  })
+
+  it('shows a grab cursor on mouse devices and blocks text selection while dragging', () => {
+    expect(carouselStyles).toContain('@media (hover:hover) and (pointer:fine){.photo-row{cursor:grab}}')
+    expect(ruleBody('.photo-row.is-dragging')).toBe('cursor:grabbing;user-select:none')
   })
 })
