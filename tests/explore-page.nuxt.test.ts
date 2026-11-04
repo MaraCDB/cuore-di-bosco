@@ -252,6 +252,8 @@ describe('italian explore page', () => {
     expect(redesignedRoutesDeclaration).toContain("'/en/rules/'")
     expect(redesignedRoutesDeclaration).toContain("'/en/privacy-policy'")
     expect(redesignedRoutesDeclaration).toContain("'/en/privacy-policy/'")
+    expect(redesignedRoutesDeclaration).toContain("'/de/buchen'")
+    expect(redesignedRoutesDeclaration).toContain("'/de/buchen/'")
   })
 
   it('names the castle of Avio in the SEO keywords', () => {

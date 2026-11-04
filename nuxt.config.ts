@@ -46,6 +46,7 @@ export default defineNuxtConfig({
         '/en/explore',
         '/en/rules',
         '/en/privacy-policy',
+        '/de/buchen',
       ],
     },
   },
