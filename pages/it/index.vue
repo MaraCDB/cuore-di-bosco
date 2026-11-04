@@ -224,7 +224,7 @@ const aptCredit = "Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Fo
 const ownerCredit = "Photo Mara";
 
 const gardenPhotos = [
-  { src: "/images/home/bosco-1920.webp", alt: "Il sentiero nel bosco", caption: "Il bosco" },
+  { src: "/images/home/bosco-1920.webp", alt: "Il sentiero nel bosco", caption: "Il bosco di Prada", credit: ownerCredit },
   { src: "/images/home/calanchi-san-giacomo-1200.webp", alt: "I calanchi di San Giacomo in autunno sotto le pareti del Monte Baldo", caption: "Calanchi di San Giacomo", credit: `${aptCredit} Graziano Galvagni` },
   { src: "/images/home/famiglia-castione-1280.webp", alt: "Una famiglia nel bosco di Castione in autunno", caption: "Castione", credit: `${aptCredit} Graziano Galvagni` },
   { src: "/images/home/palazzo-eccheli-baisi-1280.webp", alt: "Il giardino all’italiana di Palazzo Eccheli Baisi a Brentonico", caption: "Palazzo Eccheli Baisi, Brentonico", credit: `${aptCredit} Luca Matassoni` },
@@ -239,7 +239,7 @@ const gardenPhotos = [
   { src: "/images/home/estate-arcobaleno-1280.webp", alt: "Una strada bianca tra i prati verdi sotto un cielo di pioggia con l’arcobaleno", caption: "Arcobaleno d’estate", credit: ownerCredit },
   { src: "/images/home/autunno-nuvole-1280.webp", alt: "Nuvole d’autunno tra i paesi e le montagne, viste da un balcone sopra i prati", caption: "Paesaggio d’autunno", credit: ownerCredit },
   { src: "/images/home/inverno-nuvole-1280.webp", alt: "Prati innevati e un mare di nuvole sotto le montagne, visti da un balcone", caption: "Neve e nuvole d’inverno", credit: ownerCredit },
-  { src: "/images/home/casa-1600.webp", alt: "La casa in pietra", caption: "Via Gardesani 15, Prada" },
+  { src: "/images/home/casa-1600.webp", alt: "La casa in pietra", caption: "B&B Cuore di Bosco", credit: ownerCredit },
 ];
 
 useHead({

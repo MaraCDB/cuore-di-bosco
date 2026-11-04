@@ -213,7 +213,7 @@ describe('italian home page', () => {
     expect(creditOf('inverno-brentonico-1280.webp')).toBe(`${aptCredit}Tommaso Prugnola`)
     expect(creditOf('castello-avio-1280.webp')).toBe(`${aptCredit}Martina Vanzo`)
     expect(creditOf('monte-altissimo-1200.webp')).toBe('360gardalife. Foto di Angela Trawoeger')
-    for (const ownerPhoto of ['primavera-prato-1280.webp', 'estate-arcobaleno-1280.webp', 'autunno-nuvole-1280.webp', 'inverno-nuvole-1280.webp'])
+    for (const ownerPhoto of ['bosco-1920.webp', 'casa-1600.webp', 'primavera-prato-1280.webp', 'estate-arcobaleno-1280.webp', 'autunno-nuvole-1280.webp', 'inverno-nuvole-1280.webp'])
       expect(creditOf(ownerPhoto)).toBe('Photo Mara')
   })
 
