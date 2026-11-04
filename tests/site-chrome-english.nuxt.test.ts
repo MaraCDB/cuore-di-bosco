@@ -20,10 +20,11 @@ async function track<T extends { unmount: () => void }>(mounting: Promise<T>): P
 }
 
 function linkSummaries(root: ParentNode, selector: string) {
-  return [...root.querySelectorAll<HTMLAnchorElement>(selector)].map(link => ({ text: link.textContent?.trim(), href: link.getAttribute('href') }))
+  return [...root.querySelectorAll<HTMLAnchorElement>(selector)].map(link => ({ text: link.getAttribute('aria-label') ?? link.textContent?.trim(), href: link.getAttribute('href') }))
 }
 
-const englishMenuTexts = ['Home', 'Rooms', 'Breakfast', 'Explore', 'Rules', 'How to get here', 'Italiano']
+const englishMenuTexts = ['Home', 'Rooms', 'Breakfast', 'Explore', 'Rules', 'How to get here', 'Italiano', 'English', 'Deutsch']
+const otherLanguageNames = ['Italiano', 'Deutsch']
 
 afterEach(() => {
   currentRoute.path = '/it'
@@ -40,13 +41,14 @@ describe('English site chrome', () => {
     await useNuxtApp().$i18n.setLocale('it')
   })
 
-  it('shows the English header links, with the language link going to the Italian twin', async () => {
+  it('shows the English header links, with the language links going to the Italian and German twins', async () => {
     const wrapper = await track(mountSuspended(SiteHeader, { attachTo: document.body }))
     const links = linkSummaries(wrapper.element, 'nav a')
 
     expect(links.map(link => link.text)).toEqual([...englishMenuTexts, 'Book'])
-    links.filter(link => link.text !== 'Italiano').forEach(link => expect(link.href).toMatch(/^\/en/))
+    links.filter(link => !otherLanguageNames.includes(link.text ?? '')).forEach(link => expect(link.href).toMatch(/^\/en/))
     expect(links.find(link => link.text === 'Italiano')?.href).toBe('/it/prenota')
+    expect(links.find(link => link.text === 'Deutsch')?.href).toBe('/de/buchen')
     expect(wrapper.element.querySelector('nav')?.getAttribute('aria-label')).toBe('Main')
     expect(wrapper.find('button.menu').text()).toBe('Menu')
   })
@@ -54,11 +56,12 @@ describe('English site chrome', () => {
   it('shows the same links in the open menu with an English close button', async () => {
     await track(mountSuspended(SiteMenu, { props: { open: true }, attachTo: document.body }))
     const panel = document.querySelector('[role=dialog]') as HTMLElement
-    const links = linkSummaries(panel, 'nav a')
+    const links = linkSummaries(panel, 'a')
 
     expect(links.map(link => link.text)).toEqual(englishMenuTexts)
-    links.filter(link => link.text !== 'Italiano').forEach(link => expect(link.href).toMatch(/^\/en/))
+    links.filter(link => !otherLanguageNames.includes(link.text ?? '')).forEach(link => expect(link.href).toMatch(/^\/en/))
     expect(links.find(link => link.text === 'Italiano')?.href).toBe('/it/prenota')
+    expect(links.find(link => link.text === 'Deutsch')?.href).toBe('/de/buchen')
     expect(panel.querySelector('.menu-close')?.textContent).toBe('Close')
     expect(panel.querySelector('nav')?.getAttribute('aria-label')).toBe('Site pages')
   })
@@ -125,7 +128,7 @@ describe('Italian site chrome', () => {
     const wrapper = await track(mountSuspended(SiteHeader, { attachTo: document.body }))
     const links = linkSummaries(wrapper.element, 'nav a')
 
-    expect(links.map(link => link.text)).toEqual(['Home', 'Camere', 'Colazione', 'Esplora', 'Regolamento', 'Come arrivare', 'English', 'Prenota'])
+    expect(links.map(link => link.text)).toEqual(['Home', 'Camere', 'Colazione', 'Esplora', 'Regolamento', 'Come arrivare', 'Italiano', 'English', 'Deutsch', 'Prenota'])
     expect(links.find(link => link.text === 'English')?.href).toBe('/en/booking')
   })
 })

@@ -4,8 +4,9 @@
       :aria-label="$t('site.menu')">
       <button ref="closeButton" type="button" class="menu-close" @click="emit('close', true)">{{ $t('site.close') }}</button>
       <nav :aria-label="$t('site.nav-pages')">
-        <NuxtLink v-for="link in links" :key="link.to" :to="link.to" no-prefetch @click="emit('close', false)">{{ link.label }}</NuxtLink>
+        <NuxtLink v-for="link in links" :key="link.label" :to="link.to" no-prefetch @click="emit('close', false)">{{ link.label }}</NuxtLink>
       </nav>
+      <SiteLanguageSwitch />
     </div>
   </Teleport>
 </template>
@@ -26,7 +27,6 @@ const links = computed<SiteLink[]>(() => {
   return [
     { label: t('site.home'), to: homePath(locale) + '#top' },
     ...primaryLinks(locale),
-    { label: t('site.language'), to: twinPath(route.path, locale === 'en' ? 'it' : 'en') },
   ]
 })
 

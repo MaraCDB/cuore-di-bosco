@@ -1,6 +1,8 @@
 import { readFileSync } from 'node:fs'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { mockNuxtImport, mountSuspended } from '@nuxt/test-utils/runtime'
+import SiteHeader from '~/components/site/header.vue'
+import SiteMenu from '~/components/site/menu.vue'
 import SiteDock from '~/components/site/dock.vue'
 import SiteFooter from '~/components/site/footer.vue'
 import SiteToTop from '~/components/site/to-top.vue'
@@ -43,6 +45,20 @@ describe('German site chrome', () => {
 
   afterEach(async () => {
     await useNuxtApp().$i18n.setLocale('it')
+  })
+
+  it('shows the German header links with the language switch', async () => {
+    const wrapper = await track(mountSuspended(SiteHeader, { attachTo: document.body }))
+    const linkNames = [...wrapper.element.querySelectorAll('nav a')].map(link => link.getAttribute('aria-label') ?? link.textContent?.trim())
+
+    expect(linkNames).toEqual(['Startseite', 'Zimmer', 'Frühstück', 'Entdecken', 'Hausordnung', 'Anfahrt', 'Italiano', 'English', 'Deutsch', 'Buchen'])
+    expect(wrapper.element.querySelector('nav')?.getAttribute('aria-label')).toBe('Hauptmenü')
+    expect(wrapper.find('button.menu').text()).toBe('Menü')
+  })
+
+  it('labels the close button of the open menu in German', async () => {
+    await track(mountSuspended(SiteMenu, { props: { open: true }, attachTo: document.body }))
+    expect(document.querySelector('[role=dialog] .menu-close')?.textContent).toBe('Schließen')
   })
 
   it('labels the dock in German and links to the German booking page', async () => {
