@@ -56,14 +56,14 @@ describe('italian booking page', () => {
   it('keeps every legacy text word for word', async () => {
     const pageText = await mountedPageText()
 
-    expect(legacyTexts.length).toBe(39)
+    expect(legacyTexts.length).toBe(37)
     expect(legacyTexts.filter(text => !pageText.includes(text))).toEqual([])
   })
 
   it('applies the owners\' text fixes and drops the paid-service captions', async () => {
     const pageText = await mountedPageText()
 
-    for (const removed of ['troverei', '(in realizzazione)', 'SERVIZIO LAVANDERIA', 'SERVIZIO PIC-NIC']) {
+    for (const removed of ['troverei', '(in realizzazione)', 'SERVIZIO LAVANDERIA', 'SERVIZIO PIC-NIC', 'SCRIVICI!', 'Giornata grigia?', 'NOLEGGIO BICI', 'PIC NIC DAY', 'a pagamento', 'in balcone (clima permettendo)']) {
       expect(pageText).not.toContain(removed)
     }
     expect(pageText).toContain('Nell’apposito stand inoltre troverai tutte le mappe')

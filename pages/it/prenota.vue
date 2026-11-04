@@ -118,12 +118,6 @@
           scaldabiberon o microonde a disposizione in sala colazione, frigobar in camera, passeggino, marsupio 6/36 mesi
           o preschool 3-6 anni o fasce (con cauzione), scaletta o gradino per il bagno, piattini, posate e bicchieri da
           bimbi, libreria ed angolo giochi attrezzato.</p>
-        <p>SCRIVICI! A colazione preferiscono qualcosa di particolare? Informateci e ci attrezziamo!<br>
-          Giornata grigia?
-          Organizziamo la merenda insieme! Merenda per i piccoli e aperitivo relax per i grandi!</p>
-        <p>NOLEGGIO BICI: le nostre bici per grandi e piccoli sono a vostra disposizione (con cauzione)</p>
-        <p>PIC NIC DAY: Gita nel bosco? Prepariamo noi il cestino, preavvisateci 1-2 giorni prima con le vostre
-          preferenze e l’orario e provvediamo al cesto pronto da portare via. (servizio a pagamento)</p>
       </div>
       <div class="service-column" data-reveal>
         <h3>Servizi in camera</h3>
@@ -135,15 +129,16 @@
           Omaggio di benvenuto<br>
           Bicchieri e tazze a disposizione<br>
           Materiale ecologico per pulizie, scopa e paletta<br>
-          Stendino e mollette in balcone (clima permettendo)</p>
+          Stendino e mollette in balcone</p>
       </div>
       <div class="service-column" data-reveal>
         <h3>Altri servizi per te!</h3>
         <p>Wi-fi gratuita<br>
           Servizio deposito bici / scarponi / sci e altro materiale<br>
-          Servizio a richiesta di lavanderia express con prodotti ecologici, biodegradabili certificati (a pagamento)<br>
+          Servizio a richiesta di lavanderia express con prodotti ecologici, biodegradabili certificati<br>
           Angolo libreria e relax (orario 15-18) con ampia terrazza (clima permettendo)<br>
           Nell’apposito stand inoltre troverai tutte le mappe e i depliant informativi di APT Rovereto e Vallagarina.</p>
+        <p>A colazione preferite qualcosa di particolare? Informateci e ci attrezziamo!</p>
       </div>
     </section>
   </div>
