@@ -111,6 +111,9 @@ describe('italian booking page', () => {
     expect(container?.getAttribute('data-colore')).toBe('green')
     expect(container?.getAttribute('data-wl')).toBe('true')
     expect(ruleBody('.booking-strip')).toContain('background:var(--lime)')
+    expect(ruleBody('.booking-strip')).not.toContain('text-align')
+    expect(ruleBody('.booking-strip h1')).toContain('text-align:center')
+    expect(pageStyles).toContain('.booking-widget :deep(button){font-family:inherit}')
     expect(wrapper.element.querySelector('.booking-strip h1')?.textContent).toBe('PRENOTA')
     expect(wrapper.element.querySelectorAll('.booking-carousel [data-reveal], .booking-carousel[data-reveal], .booking-strip [data-reveal], .booking-strip[data-reveal]')).toHaveLength(0)
   })
@@ -171,8 +174,8 @@ describe('italian booking page', () => {
   it('justifies the long paragraphs within 68ch and aligns them left on phones', () => {
     const phoneRules = pageStyles.match(/@media \(max-width:520px\)\{([\s\S]*?)\n\}/)?.[1] ?? ''
 
-    expect(pageStyles).toMatch(/\.booking-intro p,\.rooms-head p,\.room-text p,\.service-column p\{max-width:68ch;text-align:justify;hyphens:auto\}/)
-    expect(phoneRules).toContain('.booking-intro p,.rooms-head p,.room-text p,.service-column p{text-align:left}')
+    expect(pageStyles).toMatch(/\.booking-intro p,\.rooms-head p,\.room-text p:not\(\.lead\),\.service-column p\{max-width:68ch;text-align:justify;hyphens:auto\}/)
+    expect(phoneRules).toContain('.booking-intro p,.rooms-head p,.room-text p:not(.lead),.service-column p{text-align:left}')
   })
 })
 
@@ -267,6 +270,41 @@ describe('room photo lightbox', () => {
     expect(lightboxImage()?.hasAttribute('width')).toBe(false)
     expect(lightboxImage()?.hasAttribute('height')).toBe(false)
     expect(ruleBody('.lightbox')).toContain('z-index:10001')
+  })
+
+  it('announces itself as a modal dialog named after the photo shown', async () => {
+    await mountBooking()
+    await clickElement(roomPhoto('lampone', 3))
+
+    expect(lightboxElement()?.getAttribute('role')).toBe('dialog')
+    expect(lightboxElement()?.getAttribute('aria-modal')).toBe('true')
+    expect(lightboxElement()?.getAttribute('aria-label')).toBe('Camera Lampone foto 3')
+
+    await pressKey('ArrowRight')
+    expect(lightboxElement()?.getAttribute('aria-label')).toBe('Camera Lampone foto 4')
+  })
+
+  it('keeps Tab and Shift+Tab inside the dialog', async () => {
+    await mountBooking()
+    await clickElement(roomPhoto('lampone', 1))
+    const closeButton = lightboxButton('.lightbox-close')
+    const lastButton = lightboxButton('.lightbox-next')
+
+    lastButton?.focus()
+    const forward = new KeyboardEvent('keydown', { key: 'Tab', cancelable: true })
+    window.dispatchEvent(forward)
+    expect(forward.defaultPrevented).toBe(true)
+    expect(document.activeElement).toBe(closeButton)
+
+    const backward = new KeyboardEvent('keydown', { key: 'Tab', shiftKey: true, cancelable: true })
+    window.dispatchEvent(backward)
+    expect(backward.defaultPrevented).toBe(true)
+    expect(document.activeElement).toBe(lastButton)
+
+    lightboxButton('.lightbox-prev')?.focus()
+    const middle = new KeyboardEvent('keydown', { key: 'Tab', cancelable: true })
+    window.dispatchEvent(middle)
+    expect(middle.defaultPrevented).toBe(false)
   })
 
   it('opens the Mirtillo photos on their own', async () => {

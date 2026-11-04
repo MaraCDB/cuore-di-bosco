@@ -87,7 +87,7 @@
     </section>
 
     <Teleport to="body">
-      <div v-if="lightbox.visible" class="redesign lightbox" @click.self="closeLightbox">
+      <div v-if="lightbox.visible" ref="dialog" class="redesign lightbox" role="dialog" aria-modal="true" :aria-label="lightbox.photos[lightbox.index].alt" @click.self="closeLightbox">
         <button ref="closeButton" type="button" class="lightbox-close" aria-label="Chiudi" @click="closeLightbox">✕</button>
         <button type="button" class="lightbox-prev" aria-label="Precedente" @click="prevPhoto">&#8249;</button>
         <img :src="lightbox.photos[lightbox.index].src" class="lightbox-img" :alt="lightbox.photos[lightbox.index].alt" />
@@ -111,13 +111,15 @@
     <section class="wrap service-texts">
       <div class="service-column" data-reveal>
         <h3>Servizi per famiglie</h3>
-        <p>Sappiamo bene quanto è complicato spostarsi e rilassarsi con uno o più figli! Per questo abbiamo cercato di
+        <p>Sappiamo bene quanto è complicato spostarsi e rilassarsi con uno o più figli!<br>
+          Per questo abbiamo cercato di
           rendere la vita più facile e la vacanza più rilassata ai genitori! Da noi troverete:</p>
         <p>BABY KIT: Abbiamo tutto quello che serve! Fasciatoio con vaschetta per bagno o vasino, seggiolone,
           scaldabiberon o microonde a disposizione in sala colazione, frigobar in camera, passeggino, marsupio 6/36 mesi
           o preschool 3-6 anni o fasce (con cauzione), scaletta o gradino per il bagno, piattini, posate e bicchieri da
           bimbi, libreria ed angolo giochi attrezzato.</p>
-        <p>SCRIVICI! A colazione preferiscono qualcosa di particolare? Informateci e ci attrezziamo! Giornata grigia?
+        <p>SCRIVICI! A colazione preferiscono qualcosa di particolare? Informateci e ci attrezziamo!<br>
+          Giornata grigia?
           Organizziamo la merenda insieme! Merenda per i piccoli e aperitivo relax per i grandi!</p>
         <p>NOLEGGIO BICI: le nostre bici per grandi e piccoli sono a vostra disposizione (con cauzione)</p>
         <p>PIC NIC DAY: Gita nel bosco? Prepariamo noi il cestino, preavvisateci 1-2 giorni prima con le vostre
@@ -205,6 +207,7 @@ const lightbox = reactive({
   index: 0,
 });
 const closeButton = ref<HTMLButtonElement | null>(null);
+const dialog = ref<HTMLElement | null>(null);
 let openingButton: HTMLElement | null = null;
 
 function openLightbox(photos: RoomPhoto[], index: number, event: MouseEvent) {
@@ -229,8 +232,23 @@ function nextPhoto() {
   lightbox.index = (lightbox.index + 1) % lightbox.photos.length;
 }
 
+function trapFocus(e: KeyboardEvent) {
+  const focusable = dialog.value?.querySelectorAll<HTMLElement>('button');
+  if (!focusable?.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
+  }
+}
+
 function handleKeydown(e: KeyboardEvent) {
   if (!lightbox.visible) return;
+  if (e.key === 'Tab') trapFocus(e);
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowLeft') prevPhoto();
   if (e.key === 'ArrowRight') nextPhoto();
@@ -329,12 +347,13 @@ onMounted(() => {
 <style scoped>
 .booking-carousel{padding:var(--band-pad) 0;--carousel-control:var(--on-forest);--carousel-control-ink:var(--forest)}
 
-.booking-strip{background:var(--lime);padding:var(--band-pad) var(--margin);text-align:center}
+.booking-strip{background:var(--lime);padding:var(--band-pad) var(--margin)}
 .booking-strip h1{font-size:var(--step-display);line-height:1;color:var(--forest-deep);text-align:center;margin-bottom:20px}
 .booking-widget{width:100%;max-width:960px;margin:0 auto}
+.booking-widget :deep(button){font-family:inherit}
 
 .booking-intro{margin-top:var(--section-gap);margin-bottom:var(--section-gap)}
-.booking-intro p,.rooms-head p,.room-text p,.service-column p{max-width:68ch;text-align:justify;hyphens:auto}
+.booking-intro p,.rooms-head p,.room-text p:not(.lead),.service-column p{max-width:68ch;text-align:justify;hyphens:auto}
 .booking-intro p{margin-left:auto;margin-right:auto}
 
 .booking-rooms{background:var(--champagne);padding:var(--band-pad) 0}
@@ -378,7 +397,7 @@ onMounted(() => {
   .room:nth-of-type(even) .room-photos{order:0}
 }
 @media (max-width:520px){
-  .booking-intro p,.rooms-head p,.room-text p,.service-column p{text-align:left}
+  .booking-intro p,.rooms-head p,.room-text p:not(.lead),.service-column p{text-align:left}
   .service-icons{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 
