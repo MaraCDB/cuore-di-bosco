@@ -122,10 +122,11 @@ describe('english home page', () => {
     expect(otherInternalLinks.filter(href => href !== '/en/booking' && href !== '#rooms')).toEqual([])
   })
 
-  it("names the plateau Europe's Garden and never the Garden of Europe", async () => {
+  it("names the plateau Europe’s Garden and never the Garden of Europe", async () => {
     const pageText = normalize((await mountEnglish()).textContent ?? '')
 
-    expect(pageText).toContain("Europe's Garden")
+    expect(pageText).toContain('Europe’s Garden')
+    expect(pageText).not.toMatch(/Italy['’]s Garden/)
     expect(pageText).not.toContain('Garden of Europe')
     expect(englishSource).not.toContain('Garden of Europe')
   })

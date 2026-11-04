@@ -26,7 +26,7 @@
         <img src="/images/home/casa-1600.webp" alt="The stone house of B&B Cuore di Bosco in Prada" loading="lazy">
         <div class="welcome-text" data-reveal>
           <h2>Welcome</h2>
-          <p class="lead">Welcome to <strong>B&amp;B Cuore di Bosco</strong>, a refuge immersed in the nature of the <strong>Vallagarina</strong>, on the <strong>Brentonico Plateau, Europe's Garden</strong>. Surrounded by lush mountains, time slows down and tranquillity reigns supreme.</p>
+          <p class="lead">Welcome to <strong>B&amp;B Cuore di Bosco</strong>, a refuge immersed in the nature of the <strong>Vallagarina</strong>, on the <strong>Brentonico Plateau, Europe’s Garden</strong>. Surrounded by lush mountains, time slows down and tranquillity reigns supreme.</p>
           <p>The B&amp;B is easily reached by car from the <strong>Rovereto Sud exit</strong> of the A22 motorway and is an ideal starting point for exploring <strong>Monte Baldo</strong> in every season.</p>
           <p>The house, built of stone and furnished with wood and natural materials, offers warm, well-kept rooms where every detail tells of a deep bond with the <strong>mountains</strong> and with a slower, more mindful way of life. The welcome is simple and genuine, meant to make our <strong>guests</strong> feel at ease from the very first moment.</p>
           <p>The rooms are spacious and bright, ideal for both <strong>couples</strong> and <strong>families</strong>. They offer modern comforts, a <strong>private bathroom and balcony</strong>, linen included, and a relaxing atmosphere that invites you to rest. On request, items for the little ones are available, for a peaceful stay also for those travelling with <strong>children</strong>.</p>
@@ -208,7 +208,7 @@
 
       <section class="garden">
         <div class="wrap garden-head" data-reveal>
-          <h2>Europe's Garden</h2>
+          <h2>Europe’s Garden</h2>
           <p class="lead">Once you arrive, you will be welcomed by the silence and beauty of the Brentonico Plateau, with its frame of green mountains.</p>
         </div>
         <SitePhotoCarousel :photos="gardenPhotos" label="Photographs of the house, the Plateau and the surroundings" />

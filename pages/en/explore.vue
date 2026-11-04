@@ -143,7 +143,7 @@
           </p>
           <p>
             In the surrounding area you can also visit the <strong>Castello di Avio</strong>, an important example of local history and architecture,
-            and <strong>Lake Loppio</strong>, perfect for nature walks and birdwatching.
+            and <strong>Lago di Loppio</strong>, perfect for nature walks and birdwatching.
             To complete your holiday, in about 30 minutes you can reach <strong>Lake Garda</strong>,
             with Torbole and Riva del Garda, for excursions, water sports, clean water and unique views.
             <a href="https://www.gardatrentino.it/it" target="_blank">Find out more</a>.
@@ -191,7 +191,7 @@
 
     <section class="explore-garden">
       <div class="wrap">
-        <h2 data-reveal>“Europe's Garden” in the heart of the Monte Baldo Nature Park</h2>
+        <h2 data-reveal>“Europe’s Garden” in the heart of the Monte Baldo Nature Park</h2>
         <div class="text-columns" data-reveal>
           <p>
             It is the first mountain you meet when arriving in Trentino. Here you can go
@@ -201,7 +201,7 @@
           <p>
             You are on the Trentino side of Monte Baldo, between the Adige and Lake Garda, in the
             heart of the&nbsp;<a href="https://www.visitrovereto.it/scopri/territorio/parco-naturale-locale-del-monte-baldo/"
-              target="_blank" rel="noopener noreferrer nofollow">Monte Baldo Nature Park</a>&nbsp;known to botanists all over Europe as “Europe's Garden”
+              target="_blank" rel="noopener noreferrer nofollow">Monte Baldo Nature Park</a>&nbsp;known to botanists all over Europe as “Europe’s Garden”
             for its wealth of rare plants and flowers.
           </p>
           <p>

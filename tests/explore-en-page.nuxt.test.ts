@@ -6,7 +6,7 @@ import ItalianExplorePage from '~/pages/it/esplora.vue'
 
 const englishSource = readFileSync('pages/en/explore.vue', 'utf8')
 const exploreStyles = readFileSync('assets/css/pages/explore.css', 'utf8')
-const forbiddenWords = ['italy’s garden', 'italy\'s garden', 'garden of europe', 'castello di ala', 'lago di loppio', 'rental', 'vacation', 'tranquility', 'stroller', 'linens']
+const forbiddenWords = ['italy’s garden', 'italy\'s garden', 'garden of europe', 'castello di ala', 'rental', 'vacation', 'tranquility', 'stroller', 'linens']
 const placeNames = ['Brentonico', 'Monte Baldo', 'Canyon della Sorna', 'Lake Garda', 'Rovereto', 'Castello di Avio', 'Polsa e San Valentino', 'Cammino di San Rocco']
 const camminoLine = 'The Cammino di San Rocco passes right in front of our property and can be walked all year round. For more information and to download the map go to the official website'
 
@@ -121,14 +121,14 @@ describe('english explore page', () => {
     expect(blockTexts(english, '.cammino-note')).toEqual([camminoLine])
   })
 
-  it('names the plateau Europe\'s Garden and keeps removed names out', async () => {
+  it('names the plateau Europe’s Garden and keeps removed names out', async () => {
     const english = await mountEnglish()
     const pageText = blockTexts(english, 'h1, h2, h3, p, figcaption, li').join(' ').toLowerCase()
 
-    expect(pageText).toContain('europe\'s garden')
+    expect(pageText).toContain('europe’s garden')
     expect(forbiddenWords.filter(word => pageText.includes(word))).toEqual([])
     expect(pageText).not.toMatch(/\bhire\b/)
-    expect(blockTexts(english, 'h2').some(heading => heading.includes('Europe\'s Garden'))).toBe(true)
+    expect(blockTexts(english, 'h2').some(heading => heading.includes('Europe’s Garden'))).toBe(true)
   })
 
   it('uses the redesign layout, plain text, no-prefetch links and unsized images', async () => {
