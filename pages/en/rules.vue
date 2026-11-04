@@ -42,8 +42,8 @@
 
       <section class="rule" data-reveal>
         <h2>TIMES</h2>
-        <p><strong>Check-in</strong>: from 3:00 PM to 6:00 PM. Please tell us your expected arrival time so we can organise your welcome.</p>
-        <p><strong>Check-out</strong>: by 10:30 AM. If the room is free, you may stay longer on request.</p>
+        <p><strong>Check-in</strong>: from 3 pm to 6 pm. Please tell us your expected arrival time so we can organise your welcome.</p>
+        <p><strong>Check-out</strong>: by 10:30 am. If the room is free, you may stay longer on request.</p>
       </section>
 
       <section class="rule" data-reveal>
@@ -57,7 +57,7 @@
         <p>For the safety of all guests, of our family, and for hygiene reasons:</p>
         <ul>
           <li>We love animals, but at the moment we cannot accommodate pets inside the property, in order to comply with hygiene and safety regulations and to protect guests with health problems.</li>
-          <li>Cooking or using stoves in the rooms is prohibited. The rooms have mini-fridges and kettles, while you will find a microwave and a coffee machine in the breakfast room.</li>
+          <li>Cooking or using stoves in the rooms is prohibited. The rooms have minibars and kettles, while you will find a microwave and a coffee machine in the breakfast room.</li>
           <li>Smoking is strictly <b>prohibited in all indoor and outdoor areas of the property</b>; the rooms are fitted with smoke detectors with an alarm. We also ask you to be very careful in the woods and on the road, as mountain areas are often prone to fires of this kind. The woods, the air and the livestock thank you!</li>
         </ul>
       </section>
@@ -65,12 +65,12 @@
       <section class="rule" data-reveal>
         <h2>CLEANING AND MAINTENANCE</h2>
         <p>Room cleaning and a change of linen are included on arrival and every three days for long stays. We ask you to use the bathroom facilities properly and to respect the premises. Extra cleaning or linen changes are available on request and will incur an additional cost. Cleaning materials are available on request, or if any mishap should occur.</p>
-        <p>To make cleaning easier, please vacate the room by 10:30 AM, tidy your belongings and leave the towels to be replaced on the bathroom floor. If you do not need cleaning, would rather skip it, or would like it at a different time for personal reasons, please let us know so that we can agree on a solution.</p>
+        <p>To make cleaning easier, please vacate the room by 10:30 am, tidy your belongings and leave the towels to be replaced on the bathroom floor. If you do not need cleaning, would rather skip it, or would like it at a different time for personal reasons, please let us know so that we can agree on a solution.</p>
       </section>
 
       <section class="rule" data-reveal>
         <h2>BREAKFAST</h2>
-        <p>Breakfast is served in our <b>breakfast room from 7:30 AM to 9:30 AM</b>. We offer local products and mountain specialities to start your days outdoors in the best way.
+        <p>Breakfast is served in our <b>breakfast room from 7:30 am to 9:30 am</b>. We offer local products and mountain specialities to start your days outdoors in the best way.
           If you prefer a different time, we will do our best to accommodate you. Please let us know in good time so that we can organise.</p>
         <p>We can also prepare a breakfast to be enjoyed in your room (on request).</p>
         <p>We are happy to meet any dietary requirement: vegetarian, vegan, intolerances or allergies. Please let us know in good time before your arrival so that we can offer you a suitable choice.</p>
@@ -83,7 +83,7 @@
           <li>Turn off the lights and close the windows when you go out</li>
           <li>Not set the heating above 20 degrees (provincial regulation)</li>
           <li>Sort your waste for recycling</li>
-          <li>Respect quiet hours: 1:00–3:00 PM and 10:30 PM–7:00 AM</li>
+          <li>Respect quiet hours: 1–3 pm and 10:30 pm–7 am</li>
           <li>Not receive outside visitors or increase the number of guests per room</li>
           <li>Not smoke in any indoor or outdoor area of the property</li>
         </ul>

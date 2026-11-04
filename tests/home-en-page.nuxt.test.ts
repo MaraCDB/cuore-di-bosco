@@ -151,7 +151,7 @@ describe('english home page', () => {
     const familyTerms = english.querySelector('.rooms-head + .rooms-family')
     const roomFeatures = [...english.querySelectorAll('.room-features')].map(list => blockTexts(list, 'li'))
 
-    expect(familyTerms?.textContent).toBe('Free cot · 1st child free · 2nd child at 50% · <12 years')
+    expect(familyTerms?.textContent).toBe('Free cot · 1st child free · 2nd child 50% off · <12 years')
     expect(homeStyles).toMatch(/\.rooms-family\{[^}]*text-transform:uppercase/)
     expect(roomFeatures).toHaveLength(2)
     for (const features of roomFeatures) {

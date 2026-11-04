@@ -29,7 +29,7 @@
           <p class="lead">Welcome to <strong>B&amp;B Cuore di Bosco</strong>, a refuge immersed in the nature of the <strong>Vallagarina</strong>, on the <strong>Brentonico Plateau, Europe’s Garden</strong>. Surrounded by lush mountains, time slows down and tranquillity reigns supreme.</p>
           <p>The B&amp;B is easily reached by car from the <strong>Rovereto Sud exit</strong> of the A22 motorway and is an ideal starting point for exploring <strong>Monte Baldo</strong> in every season.</p>
           <p>The house, built of stone and furnished with wood and natural materials, offers warm, well-kept rooms where every detail tells of a deep bond with the <strong>mountains</strong> and with a slower, more mindful way of life. The welcome is simple and genuine, meant to make our <strong>guests</strong> feel at ease from the very first moment.</p>
-          <p>The rooms are spacious and bright, ideal for both <strong>couples</strong> and <strong>families</strong>. They offer modern comforts, a <strong>private bathroom and balcony</strong>, linen included, and a relaxing atmosphere that invites you to rest. On request, items for the little ones are available, for a peaceful stay also for those travelling with <strong>children</strong>.</p>
+          <p>The rooms are spacious and bright, ideal for both <strong>couples</strong> and <strong>families</strong>. They offer modern comforts, a <strong>private bathroom and balcony</strong>, linen included, and a relaxing atmosphere that invites you to rest. On request, items for the little ones are available, so that those travelling with <strong>children</strong> can enjoy a peaceful stay too.</p>
         </div>
       </section>
 
@@ -38,7 +38,7 @@
           <h2>Our rooms</h2>
           <NuxtLink class="button" to="/en/booking" no-prefetch>Check availability</NuxtLink>
         </div>
-        <p class="rooms-family" data-reveal>Free cot · 1st child free · 2nd child at 50% · &lt;12 years</p>
+        <p class="rooms-family" data-reveal>Free cot · 1st child free · 2nd child 50% off · &lt;12 years</p>
         <article class="room">
           <div class="room-photos" data-reveal>
             <img src="/images/home/lampone-camera-1600.webp" alt="The Lampone room" loading="lazy">
@@ -53,7 +53,7 @@
               <li>Private bathroom in the room</li>
               <li>Private balcony with clothes airer and deckchairs</li>
               <li>Equipped kettle corner</li>
-              <li>Toiletries and linen included</li>
+              <li>Personal hygiene products and linen included</li>
               <li>Cleaning included</li>
             </ul>
             <p class="beds">From 2 to 4 adult beds</p>
@@ -77,7 +77,7 @@
               <li>Private bathroom in the room</li>
               <li>Private balcony with clothes airer and deckchairs</li>
               <li>Equipped kettle corner</li>
-              <li>Toiletries and linen included</li>
+              <li>Personal hygiene products and linen included</li>
               <li>Cleaning included</li>
             </ul>
             <p class="beds">From 2 to 4 adult beds</p>
@@ -95,7 +95,7 @@
           <h2>Breakfast with us</h2>
           <p class="lead">Breakfast at our home is a special moment, to be enjoyed slowly and in good company. Every morning we carefully prepare a buffet full of good things: homemade cakes, fresh bread, local cured meats and cheeses, seasonal fruit and something indulgent to start the day with a smile.</p>
           <p>You can choose between sweet or savoury options and tell us about any intolerances or food preferences, so that you always find a breakfast that suits your needs. On request, breakfast can be served directly in your room, for an even slower awakening, accompanied by the scent of wood and the light of the woods coming in through the windows.</p>
-          <p>Great attention is paid to the quality of the ingredients, chosen from local producers, to offer authentic flavours and an experience that tells the story of the area from the very first morning.</p>
+          <p>Great attention is paid to the quality of the ingredients, chosen with a preference for local producers, to offer authentic flavours and an experience that tells the story of the area from the very first morning.</p>
           <p>And if you love the products of our local producers, we are happy to order them and have them waiting for you, so you can take the Vallagarina home with you when you leave! Jams, syrups, herbs, herbal teas, honey, flours and much more!</p>
         </div>
       </section>
@@ -112,7 +112,7 @@
               <div>
                 <h3>Sport and nature</h3>
                 <p>The location is perfect for those who love nature and outdoor activities in every season. In the winter months, the <strong>ski resorts</strong> of Polsa, San Valentino and San Giacomo are just minutes away.</p>
-                <p>For sports lovers, the <strong>Polsa bike park</strong> and the <strong>Polsa Family Adventure Park</strong> are a few minutes away, while the <strong>Canyon della Sorna</strong>, <strong>climbing</strong> and <strong>trekking</strong> let you experience the mountains actively. The Plateau also hosts <strong>training camps and sports retreats</strong>.</p>
+                <p>For sports lovers, the <strong>Polsa bike park</strong> and the <strong>Polsa Family Adventure Park</strong> are a few minutes away, while the <strong>Canyon della Sorna</strong>, <strong>climbing</strong> and <strong>trekking</strong> let you experience the mountains actively. The Plateau also hosts <strong>school camps and sports retreats</strong>.</p>
               </div>
             </article>
             <article class="guest guest-nature" data-reveal>
@@ -131,7 +131,7 @@
               <div>
                 <h3>For families</h3>
                 <p>We know how complicated it is to get around and relax with one or more children! That is why we have tried to make life easier and the holiday more relaxing for parents! We have everything you need, halve your luggage!</p>
-                <p>Cot, bed guards, changing table, potties, high chair, bottle warmer or microwave available in the breakfast room, minibar in the Lampone room, pushchair, baby carrier 6/36 months or preschool carrier 3-6 years or slings, step stool or step for the bathroom, children’s plates, cutlery and glasses, bookcase and equipped play corner, materials for colouring and drawing and stickers galore!</p>
+                <p>Cot, bed rails, changing table, potties, high chair, bottle warmer or microwave available in the breakfast room, minibar in the Lampone room, pushchair, baby carrier 6/36 months or preschool carrier 3-6 years or slings, step stool or step for the bathroom, children’s plates, cutlery and glasses, bookcase and equipped play corner, materials for colouring and drawing and stickers galore!</p>
               </div>
             </article>
             <article class="guest guest-nearby" data-reveal>

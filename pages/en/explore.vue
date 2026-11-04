@@ -265,7 +265,7 @@
         <p>
           In August don’t miss the&nbsp;<a
             href="https://www.visitrovereto.it/vivi/eventi/ferragosto-baldo-bio-benessere/" target="_blank"
-            rel="noopener noreferrer nofollow">Baldo Bio Benessere</a>&nbsp;festival in the Parco C. Battisti, an event dedicated to
+            rel="noopener noreferrer nofollow">Baldo Bio Benessere</a>&nbsp;festival in Cesare Battisti park, an event dedicated to
           relaxation, wellbeing and
           natural products.
         </p>
@@ -293,8 +293,8 @@
       <article class="season" data-reveal>
         <h3>Winter at Polsa and San Valentino: skiing and snow for families</h3>
         <p>
-          At&nbsp;<a href="https://www.visitrovereto.it/vivi/outdoor/neve/sci/sci-alpino/" target="_blank"
-            rel="noopener noreferrer nofollow">Polsa and San Valentino</a>&nbsp;are the slopes of Trentino closest to the
+          <a href="https://www.visitrovereto.it/vivi/outdoor/neve/sci/sci-alpino/" target="_blank"
+            rel="noopener noreferrer nofollow">Polsa and San Valentino</a>&nbsp;have the slopes in Trentino closest to the
           plain: you can ski in
           complete safety and peace on wide, sunny slopes. Is skiing not
           your sport? Choose from other&nbsp;<a href="https://www.visitrovereto.it/info/guide/inverno-sul-monte-baldo/"
