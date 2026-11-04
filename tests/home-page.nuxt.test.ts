@@ -48,6 +48,15 @@ describe('italian home page', () => {
     expect(mirtilloPhotos.slice(0, 2)).toEqual(['/images/home/mirtillo-camera-1280.webp', '/images/home/mirtillo-armadio-700.webp'])
   })
 
+  it('shows the Lampone kettle corner instead of the sofa photo', async () => {
+    const wrapper = await mountHome()
+    const lamponePhotos = [...wrapper.element.querySelectorAll('.room:nth-of-type(1) .room-photos img')]
+      .map(image => image.getAttribute('src'))
+
+    expect(lamponePhotos).toContain('/images/home/lampone-angolo-960.webp')
+    expect(lamponePhotos).not.toContain('/images/home/lampone-divano-900.webp')
+  })
+
   it('lists toiletries and linen apart from cleaning on both room cards', async () => {
     const wrapper = await mountHome()
     const featureLists = [...wrapper.element.querySelectorAll('.room-features')]

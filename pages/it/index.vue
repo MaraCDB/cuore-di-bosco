@@ -43,7 +43,7 @@
           <div class="room-photos" data-reveal>
             <img src="/images/home/lampone-camera-1600.webp" alt="La camera Lampone" loading="lazy">
             <img src="/images/home/lampone-finestra-700.webp" alt="La finestra di Lampone sulle montagne" loading="lazy">
-            <img src="/images/home/lampone-divano-900.webp" alt="L'angolo con il divano di Lampone" loading="lazy">
+            <img src="/images/home/lampone-angolo-960.webp" alt="L’angolo in legno con il bollitore nella camera Lampone" loading="lazy">
           </div>
           <div data-reveal>
             <h3>Lampone</h3>
