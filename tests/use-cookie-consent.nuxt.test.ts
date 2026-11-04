@@ -325,7 +325,7 @@ describe('CookieBanner style', () => {
 
   it('renders the redesigned banner with pill buttons', async () => {
     const wrapper = await mountSuspended(CookieBanner)
-    expect(wrapper.find('.cookie-banner').exists()).toBe(true)
+    expect(wrapper.find('.cookie-banner').classes()).toContain('redesign')
     expect(wrapper.findAll('.cookie-buttons button').map(button => button.classes())).toEqual([
       ['button', 'button-light'],
       ['button', 'button-quiet'],

@@ -1,5 +1,5 @@
 <template>
-    <div v-if="isBannerOpen" class="cookie-banner">
+    <div v-if="isBannerOpen" class="cookie-banner redesign">
         <div class="cookie-text">
             {{ bannerMessage }}
             <a :href="policyPage" class="link">
