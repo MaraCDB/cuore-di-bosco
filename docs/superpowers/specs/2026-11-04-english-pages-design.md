@@ -76,6 +76,8 @@ Each step is a separate deliverable. It is gated (lint, typecheck, tests, build)
 
 **Approval checkpoint (owner decision):** after each page (steps 2 to 6), work stops until the owner approves or edits that page's draft list. Apply the owner's edits, including words reused on later pages such as menu labels, service terms and place names, before the next page starts. Later pages reuse the approved wording.
 
+**Superseded by the owner on 2026-11-04** ("fai anche quello sulle pagine direttamente faccio il check da lì"): from step 3 on there are no draft lists and no approval checkpoint between pages. The English drafts go straight into the pages; the owner checks the English on the pages and sends corrections. The owner also asked to finish all English pages (steps 3 to 6) before the German work starts.
+
 1. Shared styles plus bilingual chrome, with no visible change in Italian. The English chrome strings can be tested through unit tests before any English page uses them.
 2. `/en/booking`.
 3. `/en` (home).

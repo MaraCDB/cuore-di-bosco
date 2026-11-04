@@ -11,7 +11,9 @@
 
 **Tech Stack:** Nuxt 3.17, Vue 3 `<script setup lang="ts">`, @nuxtjs/i18n (`strategy: 'no_prefix'`, `lazy`, `detectBrowserLanguage: false`), Vitest + @nuxt/test-utils (`mountSuspended`, `mockNuxtImport`).
 
-**Spec:** `docs/superpowers/specs/2026-11-04-german-and-language-switch-design.md`, step 1 of "Order of work" only. Step 2 (home, explore, rules, privacy in EN + DE) gets its own plan.
+**Spec:** `docs/superpowers/specs/2026-11-04-german-and-language-switch-design.md`, step 1 of "Order of work" only. Step 2 (German home, explore, rules, privacy) gets its own plan.
+
+**Status:** approved by the owner on 2026-11-04, ON HOLD until the remaining English pages are redesigned (owner: "si ma prima finisci le altre pagine di inglese!"). Before executing, refresh the baseline numbers and the "legacy pages" constraint: `layouts/english.vue` and its components will be gone by then.
 
 ## Global Constraints
 
