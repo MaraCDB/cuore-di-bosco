@@ -4,16 +4,6 @@ import { describe, expect, it } from 'vitest'
 const legacyCss = readFileSync('assets/css/legacy.css', 'utf8')
 const globalCss = readFileSync('assets/css/global.css', 'utf8')
 const exclusion = ':where(:not(.redesign, .redesign *))'
-const bookingSelectors = [
-  'section', '.booking-widget', '.intro-section', '.bg-red', '.page-title', '.landing-image', '.opacity50',
-  '.landing-title', '.welcome', '.contact-us', '.landing-text', '.intro', '.content-wrapper', '.image-container',
-  '.image-container img', '.text-content', '.text-content h2', '.separator-wrapper', '.separator', '.text-content p',
-  '.photos', '.photos img', '.card', '.room-info h2', '.room-info h3', '.room-short', '.room-list', '.room-list div',
-  'section.rooms', '.room-block', '.room-block .card', '.room-gallery', '.room-gallery img', '.room-gallery img:hover',
-  '.lightbox-overlay', '.lightbox-img', '.lightbox-close', '.lightbox-prev', '.lightbox-next', '.lightbox-prev:hover',
-  '.lightbox-next:hover', '.lightbox-counter', '.wp-block-group', '.icon', '.icon:hover', '.icon img', 'figcaption',
-  '.service-image', 'p', 'h1', 'h2', 'h3',
-]
 const privacySelectors = [
   '.landing-image', '.landing-text', '.landing-title', '.landing-title strong', '.welcome',
   '#cookie-policy-text', '#cookie-policy-text h3', '#cookie-policy-text a',
@@ -23,7 +13,6 @@ const legacySelectors = [
   '.italic', 'h1', 'h2', 'h3', 'p', 'li', 'section', '.page-title',
 ]
 const unscopedPageFiles: Array<[string, string[]]> = [
-  ['pages/en/booking.vue', bookingSelectors],
   ['pages/en/privacy-policy.vue', privacySelectors],
 ]
 

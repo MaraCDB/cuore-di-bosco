@@ -18,9 +18,10 @@ const { setLocale } = useI18n();
 const route = useRoute();
 const locale = computed(() => siteLocale(route.path));
 
-watch(locale, siteLanguage => setLocale(siteLanguage), { immediate: true });
+await setLocale(locale.value);
+watch(locale, siteLanguage => setLocale(siteLanguage));
 
-const redesignedRoutes = new Set(['/it', '/it/', '/it/esplora', '/it/esplora/', '/it/regolamento', '/it/regolamento/', '/it/privacy-policy', '/it/privacy-policy/', '/it/prenota', '/it/prenota/']);
+const redesignedRoutes = new Set(['/it', '/it/', '/it/esplora', '/it/esplora/', '/it/regolamento', '/it/regolamento/', '/it/privacy-policy', '/it/privacy-policy/', '/it/prenota', '/it/prenota/', '/en/booking', '/en/booking/']);
 const isRedesignedRoute = computed(() => redesignedRoutes.has(route.path));
 const structuredData = computed(() => JSON.stringify(lodgingBusinessJsonLd(locale.value)));
 
