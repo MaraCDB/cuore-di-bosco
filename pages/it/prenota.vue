@@ -38,14 +38,15 @@
         </div>
         <article id="lampone" class="room">
           <div class="room-photos" data-reveal>
-            <img
+            <button
               v-for="(photo, i) in lamponePhotos"
-              :key="i"
-              :src="photo"
-              :alt="`Camera Lampone foto ${i + 1}`"
-              loading="lazy"
-              @click="openLightbox(lamponePhotos, i)"
-            />
+              :key="photo.src"
+              type="button"
+              class="room-photo"
+              @click="openLightbox(lamponePhotos, i, $event)"
+            >
+              <img :src="photo.src" :alt="photo.alt" loading="lazy" />
+            </button>
           </div>
           <div class="room-text" data-reveal>
             <h3>Lampone</h3>
@@ -60,14 +61,15 @@
         </article>
         <article id="mirtillo" class="room">
           <div class="room-photos" data-reveal>
-            <img
+            <button
               v-for="(photo, i) in mirtilloPhotos"
-              :key="i"
-              :src="photo"
-              :alt="`Camera Mirtillo foto ${i + 1}`"
-              loading="lazy"
-              @click="openLightbox(mirtilloPhotos, i)"
-            />
+              :key="photo.src"
+              type="button"
+              class="room-photo"
+              @click="openLightbox(mirtilloPhotos, i, $event)"
+            >
+              <img :src="photo.src" :alt="photo.alt" loading="lazy" />
+            </button>
           </div>
           <div class="room-text" data-reveal>
             <h3>Mirtillo</h3>
@@ -85,12 +87,12 @@
     </section>
 
     <Teleport to="body">
-      <div v-if="lightbox.visible" class="lightbox-overlay" @click.self="closeLightbox">
-        <button class="lightbox-close" @click="closeLightbox" aria-label="Chiudi">✕</button>
-        <button class="lightbox-prev" @click="prevPhoto" aria-label="Precedente">&#8249;</button>
-        <img :src="lightbox.images[lightbox.index]" class="lightbox-img" :alt="`Foto ${lightbox.index + 1}`" />
-        <button class="lightbox-next" @click="nextPhoto" aria-label="Successiva">&#8250;</button>
-        <div class="lightbox-counter">{{ lightbox.index + 1 }} / {{ lightbox.images.length }}</div>
+      <div v-if="lightbox.visible" class="redesign lightbox" @click.self="closeLightbox">
+        <button ref="closeButton" type="button" class="lightbox-close" aria-label="Chiudi" @click="closeLightbox">✕</button>
+        <button type="button" class="lightbox-prev" aria-label="Precedente" @click="prevPhoto">&#8249;</button>
+        <img :src="lightbox.photos[lightbox.index].src" class="lightbox-img" :alt="lightbox.photos[lightbox.index].alt" />
+        <button type="button" class="lightbox-next" aria-label="Successiva" @click="nextPhoto">&#8250;</button>
+        <div class="lightbox-counter">{{ lightbox.index + 1 }} / {{ lightbox.photos.length }}</div>
       </div>
     </Teleport>
 
@@ -149,17 +151,19 @@
 const root = ref<HTMLElement | null>(null);
 useReveal(root);
 
-const lamponePhotos = [
-  '/images/lampone/1.webp',
-  '/images/lampone/2.webp',
-  '/images/lampone/3.webp',
-  '/images/lampone/4.webp',
+type RoomPhoto = { src: string, alt: string };
+
+const lamponePhotos: RoomPhoto[] = [
+  { src: '/images/lampone/1.webp', alt: 'Camera Lampone foto 1' },
+  { src: '/images/lampone/2.webp', alt: 'Camera Lampone foto 2' },
+  { src: '/images/lampone/3.webp', alt: 'Camera Lampone foto 3' },
+  { src: '/images/lampone/4.webp', alt: 'Camera Lampone foto 4' },
 ];
-const mirtilloPhotos = [
-  '/images/mirtillo/1.webp',
-  '/images/mirtillo/2.webp',
-  '/images/mirtillo/3.webp',
-  '/images/mirtillo/4.webp',
+const mirtilloPhotos: RoomPhoto[] = [
+  { src: '/images/mirtillo/1.webp', alt: 'Camera Mirtillo foto 1' },
+  { src: '/images/mirtillo/2.webp', alt: 'Camera Mirtillo foto 2' },
+  { src: '/images/mirtillo/3.webp', alt: 'Camera Mirtillo foto 3' },
+  { src: '/images/mirtillo/4.webp', alt: 'Camera Mirtillo foto 4' },
 ];
 
 const carouselPhotos: { src: string, alt: string }[] = [
@@ -197,26 +201,32 @@ const serviceIcons = [
 
 const lightbox = reactive({
   visible: false,
-  images: [] as string[],
+  photos: [] as RoomPhoto[],
   index: 0,
 });
+const closeButton = ref<HTMLButtonElement | null>(null);
+let openingButton: HTMLElement | null = null;
 
-function openLightbox(images: string[], index: number) {
-  lightbox.images = images;
+function openLightbox(photos: RoomPhoto[], index: number, event: MouseEvent) {
+  openingButton = event.currentTarget as HTMLElement;
+  lightbox.photos = photos;
   lightbox.index = index;
   lightbox.visible = true;
+  nextTick(() => closeButton.value?.focus());
 }
 
 function closeLightbox() {
   lightbox.visible = false;
+  openingButton?.focus();
+  openingButton = null;
 }
 
 function prevPhoto() {
-  lightbox.index = (lightbox.index - 1 + lightbox.images.length) % lightbox.images.length;
+  lightbox.index = (lightbox.index - 1 + lightbox.photos.length) % lightbox.photos.length;
 }
 
 function nextPhoto() {
-  lightbox.index = (lightbox.index + 1) % lightbox.images.length;
+  lightbox.index = (lightbox.index + 1) % lightbox.photos.length;
 }
 
 function handleKeydown(e: KeyboardEvent) {
@@ -333,7 +343,10 @@ onMounted(() => {
 .room:nth-of-type(even){grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
 .room:nth-of-type(even) .room-photos{order:2}
 .room-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
-.room-photos img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.room-photo{display:block;padding:0;border:0;background:none;cursor:pointer;transition:opacity var(--t-hover) var(--ease-out)}
+.room-photo:focus-visible{outline:3px solid var(--forest);outline-offset:3px}
+.room-photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+@media (hover:hover){.room-photo:hover{opacity:0.88}}
 .room h3{font-family:var(--display);font-weight:var(--display-weight);font-size:var(--step-title);line-height:1.05;color:var(--forest)}
 .room .lead{margin:12px 0 20px}
 .room .beds{display:inline-block;margin:8px 0 0;padding:8px 18px;border-radius:999px;background:var(--linen);color:var(--forest-deep);font-weight:600}
@@ -367,5 +380,19 @@ onMounted(() => {
 @media (max-width:520px){
   .booking-intro p,.rooms-head p,.room-text p,.service-column p{text-align:left}
   .service-icons{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+.lightbox{position:fixed;inset:0;z-index:10001;display:flex;align-items:center;justify-content:center;background:rgba(36,71,44,0.94);color:var(--on-forest)}
+.lightbox-img{max-width:90vw;max-height:85vh;object-fit:contain}
+.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;display:flex;align-items:center;justify-content:center;width:48px;height:48px;padding:0;border:0;border-radius:50%;background:rgba(251,248,241,0.14);color:var(--on-forest);font-size:var(--step-display);line-height:1;cursor:pointer;transition:background var(--t-hover) var(--ease-out)}
+.lightbox-close{top:1rem;right:1rem;font-size:var(--step-title)}
+.lightbox-prev{left:1rem;top:50%;transform:translateY(-50%)}
+.lightbox-next{right:1rem;top:50%;transform:translateY(-50%)}
+.lightbox-close:focus-visible,.lightbox-prev:focus-visible,.lightbox-next:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
+@media (hover:hover){.lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{background:rgba(251,248,241,0.28)}}
+.lightbox-counter{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);font-size:var(--step-small);color:var(--on-forest-soft)}
+@media (max-width:600px){
+  .lightbox-prev{left:0.25rem}
+  .lightbox-next{right:0.25rem}
 }
 </style>

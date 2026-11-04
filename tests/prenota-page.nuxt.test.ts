@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs'
+import { nextTick } from 'vue'
 import { afterEach, describe, expect, it } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import BookingPage from '~/pages/it/prenota.vue'
@@ -172,5 +173,107 @@ describe('italian booking page', () => {
 
     expect(pageStyles).toMatch(/\.booking-intro p,\.rooms-head p,\.room-text p,\.service-column p\{max-width:68ch;text-align:justify;hyphens:auto\}/)
     expect(phoneRules).toContain('.booking-intro p,.rooms-head p,.room-text p,.service-column p{text-align:left}')
+  })
+})
+
+describe('room photo lightbox', () => {
+  const lightboxElement = () => document.body.querySelector<HTMLElement>('.lightbox')
+  const lightboxButton = (selector: string) => document.body.querySelector<HTMLButtonElement>(`.lightbox ${selector}`)
+  const lightboxImage = () => document.body.querySelector<HTMLImageElement>('.lightbox img.lightbox-img')
+  const counterText = () => document.body.querySelector('.lightbox .lightbox-counter')?.textContent?.trim()
+  const roomPhoto = (roomId: string, position: number) => document.body.querySelectorAll<HTMLButtonElement>(`#${roomId} button.room-photo`)[position - 1]
+
+  async function pressKey(key: string) {
+    window.dispatchEvent(new KeyboardEvent('keydown', { key }))
+    await nextTick()
+  }
+
+  async function clickElement(element: HTMLElement | null | undefined) {
+    element?.click()
+    await nextTick()
+  }
+
+  it('opens the clicked photo full screen with its counter', async () => {
+    await mountBooking()
+    await clickElement(roomPhoto('lampone', 2))
+
+    expect(lightboxElement()).not.toBeNull()
+    expect(lightboxImage()?.getAttribute('src')).toBe('/images/lampone/2.webp')
+    expect(lightboxImage()?.getAttribute('alt')).toBe('Camera Lampone foto 2')
+    expect(counterText()).toBe('2 / 4')
+  })
+
+  it('loops through the room photos with the arrows', async () => {
+    await mountBooking()
+    await clickElement(roomPhoto('lampone', 4))
+
+    await clickElement(lightboxButton('.lightbox-next'))
+    expect(counterText()).toBe('1 / 4')
+    expect(lightboxImage()?.getAttribute('src')).toBe('/images/lampone/1.webp')
+
+    await clickElement(lightboxButton('.lightbox-prev'))
+    expect(counterText()).toBe('4 / 4')
+
+    await pressKey('ArrowRight')
+    expect(counterText()).toBe('1 / 4')
+
+    await pressKey('ArrowLeft')
+    expect(counterText()).toBe('4 / 4')
+  })
+
+  it('closes with the close button, the backdrop and Esc', async () => {
+    await mountBooking()
+
+    await clickElement(roomPhoto('lampone', 1))
+    await clickElement(lightboxButton('.lightbox-close'))
+    expect(lightboxElement()).toBeNull()
+
+    await clickElement(roomPhoto('lampone', 1))
+    await clickElement(lightboxImage())
+    expect(lightboxElement()).not.toBeNull()
+    await clickElement(lightboxElement())
+    expect(lightboxElement()).toBeNull()
+
+    await clickElement(roomPhoto('lampone', 1))
+    await pressKey('Escape')
+    expect(lightboxElement()).toBeNull()
+  })
+
+  it('moves focus to the close button and back to the opening photo', async () => {
+    await mountBooking()
+    const openingPhoto = roomPhoto('lampone', 2)
+    await clickElement(openingPhoto)
+    await nextTick()
+
+    expect(document.activeElement).toBe(lightboxButton('.lightbox-close'))
+
+    await pressKey('Escape')
+    expect(document.activeElement).toBe(openingPhoto)
+  })
+
+  it('ignores the arrow keys while the lightbox is closed', async () => {
+    await mountBooking()
+
+    await pressKey('ArrowRight')
+    await pressKey('Escape')
+    expect(lightboxElement()).toBeNull()
+  })
+
+  it('lightbox root carries the redesign class', async () => {
+    await mountBooking()
+    await clickElement(roomPhoto('lampone', 1))
+
+    expect(lightboxElement()?.classList.contains('redesign')).toBe(true)
+    expect(lightboxImage()?.hasAttribute('width')).toBe(false)
+    expect(lightboxImage()?.hasAttribute('height')).toBe(false)
+    expect(ruleBody('.lightbox')).toContain('z-index:10001')
+  })
+
+  it('opens the Mirtillo photos on their own', async () => {
+    await mountBooking()
+    await clickElement(roomPhoto('mirtillo', 1))
+
+    expect(lightboxImage()?.getAttribute('src')).toBe('/images/mirtillo/1.webp')
+    expect(counterText()).toBe('1 / 4')
   })
 })
