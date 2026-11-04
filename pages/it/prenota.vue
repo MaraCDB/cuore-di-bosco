@@ -1,5 +1,5 @@
 <template>
-  <div ref="root">
+  <div ref="root" class="booking-page">
     <div class="band booking-carousel">
       <SitePhotoCarousel :photos="carouselPhotos" label="Fotografie delle camere e della casa" />
     </div>
@@ -16,7 +16,7 @@
       <div class="booking-intro-photo">
         <img src="/images/home/casa-neve-1600.webp"
           srcset="/images/home/casa-neve-900.webp 900w, /images/home/casa-neve-1600.webp 1600w"
-          sizes="(max-width: 900px) 100vw, 50vw" alt="La casa in pietra del B&B Cuore di Bosco sotto la neve"
+          sizes="(max-width: 900px) 100vw, 50vw" alt="Neve in montagna in Trentino"
           loading="lazy">
       </div>
       <div class="booking-intro-text" data-reveal>
@@ -43,6 +43,7 @@
           <p>Su richiesta sono disponibili dotazioni dedicate ai più piccoli: lettino con materasso, lenzuola e coperte,
             fasciatoio e scalda biberon, spondine per letto, vasino e scalini per il bagno per tutte le età. E poi libri,
             colori e giochi! Per un soggiorno sereno anche a chi viaggia con bambini.</p>
+          <img class="rooms-logo" :src="logo" alt="">
         </div>
         <article id="lampone" class="room">
           <div class="room-photos" data-reveal>
@@ -153,6 +154,8 @@
 </template>
 
 <script lang="ts" setup>
+import logo from '~/assets/images/logo_400.webp';
+
 const root = ref<HTMLElement | null>(null);
 useReveal(root);
 
@@ -347,6 +350,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.booking-page{display:flow-root}
 .booking-carousel{padding:var(--band-pad) 0;--carousel-control:var(--on-forest);--carousel-control-ink:var(--forest)}
 
 .booking-strip{background:var(--lime);padding:var(--band-pad) var(--margin)}
@@ -363,6 +367,7 @@ onMounted(() => {
 
 .booking-rooms{background:var(--champagne);padding:var(--band-pad) 0}
 .rooms-head h2{margin-bottom:20px}
+.rooms-logo{display:none}
 .room{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,96px);align-items:center;margin-top:32px}
 .room:nth-of-type(even){grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
 .room:nth-of-type(even) .room-photos{order:2}
@@ -389,6 +394,9 @@ onMounted(() => {
 .service-column>:last-child{margin-bottom:0}
 @media (min-width:901px){
   .rooms-head h2{margin-bottom:14px}
+  .rooms-head{display:grid;grid-template-columns:minmax(0,68ch) minmax(0,1fr)}
+  .rooms-head>*{grid-column:1}
+  .rooms-logo{display:block;grid-column:2;grid-row:1 / span 4;align-self:center;justify-self:center;width:clamp(160px,16vw,240px);height:auto;margin-bottom:1em}
   .room{gap:clamp(22px,3.5vw,67px);margin-top:22px}
   .room .lead{margin:8px 0 14px}
   .room .beds{padding:8px 13px}

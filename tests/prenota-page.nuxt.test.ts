@@ -110,10 +110,28 @@ describe('italian booking page', () => {
 
     expect(photo?.getAttribute('src')).toBe('/images/home/casa-neve-1600.webp')
     expect(photo?.getAttribute('srcset')).toBe('/images/home/casa-neve-900.webp 900w, /images/home/casa-neve-1600.webp 1600w')
-    expect(photo?.getAttribute('alt')).toBe('La casa in pietra del B&B Cuore di Bosco sotto la neve')
+    expect(photo?.getAttribute('alt')).toBe('Neve in montagna in Trentino')
     expect(intro?.querySelectorAll('.booking-intro-text > p')).toHaveLength(4)
     expect(ruleBody('.booking-intro')).toContain('grid-template-columns:minmax(0,1fr) minmax(0,1fr)')
     expect(ruleBody('.booking-intro-photo img')).toContain('position:absolute;inset:0')
+  })
+
+  it('keeps the last section margin inside the linen page so no white strip shows above the footer', async () => {
+    const wrapper = await mountBooking()
+
+    expect(wrapper.element.classList.contains('booking-page')).toBe(true)
+    expect(ruleBody('.booking-page')).toBe('display:flow-root')
+  })
+
+  it('fills the space beside the rooms intro with the logo on desktop only', async () => {
+    const wrapper = await mountBooking()
+    const logo = wrapper.element.querySelector('.rooms-head > img.rooms-logo')
+    const desktopRules = pageStyles.match(/@media \(min-width:901px\)\{([\s\S]*?)\n\}/)?.[1] ?? ''
+
+    expect(logo?.getAttribute('src')).toContain('logo_400')
+    expect(logo?.getAttribute('alt')).toBe('')
+    expect(ruleBody('.rooms-logo')).toBe('display:none')
+    expect(desktopRules).toContain('.rooms-logo{display:block;grid-column:2')
   })
 
   it('keeps the booking widget container exactly as before', async () => {
