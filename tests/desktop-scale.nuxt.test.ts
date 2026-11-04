@@ -11,7 +11,6 @@ import cookieBannerSource from '~/components/cookie-banner.vue?raw'
 
 const exploreSource = readFileSync('pages/it/esplora.vue', 'utf8')
 const rulesSource = readFileSync('pages/it/regolamento.vue', 'utf8')
-const bookingSource = readFileSync('pages/it/prenota.vue', 'utf8')
 const bookingStyles = readFileSync('assets/css/pages/booking.css', 'utf8')
 const globalStyles = readFileSync('assets/css/global.css', 'utf8')
 const nuxtConfig = readFileSync('nuxt.config.ts', 'utf8')
