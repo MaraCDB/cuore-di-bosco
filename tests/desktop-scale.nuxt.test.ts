@@ -78,7 +78,7 @@ describe('exact sizes', () => {
   })
 
   it('sets Montserrat for all non-display text', () => {
-    const redesignSources = [globalStyles, homeSource, exploreSource, rulesSource, bookingSource, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource, cookieBannerSource]
+    const redesignSources = [globalStyles, homeSource, exploreSource, rulesSource, bookingStyles, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource, cookieBannerSource]
 
     expect(globalStyles).not.toContain('Numans')
     expect(nuxtConfig).not.toContain('Numans')
