@@ -46,8 +46,6 @@ function extractFontSizes(styles: string): string[] {
   return [...styles.matchAll(/font-size:\s*([^;}]+)/g)].map(match => match[1].trim())
 }
 
-const cookieBannerRedesignRules = (cookieBannerSource.match(/\.cookie-banner\.redesign[^{]*\{[^}]*\}/g) ?? []).join('\n')
-
 describe('exact sizes', () => {
   it('never zooms the redesigned site', () => {
     expect(globalStyles).not.toMatch(/zoom/)
@@ -90,12 +88,11 @@ describe('exact sizes', () => {
   it('sizes redesigned text only through the scale tokens', () => {
     const styles = [
       globalStyles,
-      ...[headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource].map(extractStyleBlocks),
+      ...[headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource, cookieBannerSource].map(extractStyleBlocks),
       homeStyles,
       exploreStyles,
       rulesStyles,
       bookingStyles,
-      cookieBannerRedesignRules,
     ].join('\n')
     const fontSizes = extractFontSizes(styles)
 

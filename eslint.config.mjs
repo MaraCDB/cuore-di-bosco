@@ -20,10 +20,6 @@ export default withNuxt(
     ignores: [
       '.superpowers/**',
       '.taste-skill/**',
-      'components/button.vue',
-      'components/carousel.vue',
-      'components/toast.vue',
-      'components/top-navbar.vue',
       'pages/en/booking.vue',
       'plugins/reload-script.client.ts',
       'pages/index.vue',

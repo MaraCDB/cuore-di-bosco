@@ -5,7 +5,6 @@ import CookieBanner from '~/components/cookie-banner.vue'
 import cookieBannerSource from '~/components/cookie-banner.vue?raw'
 import dockSource from '~/components/site/dock.vue?raw'
 import defaultLayoutSource from '~/layouts/default.vue?raw'
-import englishLayoutSource from '~/layouts/english.vue?raw'
 import SiteFooter from '~/components/site/footer.vue'
 import gtagPlugin from '~/plugins/gtag.client'
 import { expireDeclinedAnalyticsCookies, useCookieConsent } from '~/composables/use-cookie-consent'
@@ -280,7 +279,7 @@ describe('CookieBanner focus', () => {
     await nextTick()
     await nextTick()
 
-    expect(document.activeElement).toBe(wrapper.get('.accept-button').element)
+    expect(document.activeElement).toBe(wrapper.get('.button-light').element)
     expect(useCookieConsent().shouldFocusBanner.value).toBe(false)
     wrapper.unmount()
   })
@@ -291,7 +290,7 @@ describe('CookieBanner focus', () => {
     await nextTick()
 
     expect(wrapper.find('.cookie-banner').exists()).toBe(true)
-    expect(document.activeElement).not.toBe(wrapper.get('.accept-button').element)
+    expect(document.activeElement).not.toBe(wrapper.get('.button-light').element)
     wrapper.unmount()
   })
 })
@@ -302,18 +301,8 @@ describe('CookieBanner position', () => {
     clearNuxtState('cookie-banner-open')
   })
 
-  it('applies the dock offset class only when asked', async () => {
-    const withDock = await mountSuspended(CookieBanner, { props: { aboveDock: true } })
-    expect(withDock.find('.cookie-banner').classes()).toContain('above-dock')
-    withDock.unmount()
-
-    const withoutDock = await mountSuspended(CookieBanner)
-    expect(withoutDock.find('.cookie-banner').classes()).not.toContain('above-dock')
-    withoutDock.unmount()
-  })
-
   it('offsets the banner above the dock plus the safe area', () => {
-    expect(cookieBannerSource).toMatch(/\.cookie-banner\.above-dock\s*\{\s*bottom:\s*calc\(var\(--dock-height\) \+ env\(safe-area-inset-bottom\)\);/)
+    expect(cookieBannerSource).toMatch(/\.cookie-banner\s*\{[^}]*bottom:\s*calc\(var\(--dock-height\) \+ env\(safe-area-inset-bottom\)\);/)
   })
 
   it('follows the dock height on mobile and desktop', () => {
@@ -334,39 +323,25 @@ describe('CookieBanner style', () => {
     clearNuxtState('cookie-banner-open')
   })
 
-  it('uses the redesigned look and pill buttons only when asked', async () => {
-    const redesigned = await mountSuspended(CookieBanner, { props: { redesign: true } })
-    expect(redesigned.find('.cookie-banner').classes()).toContain('redesign')
-    expect(redesigned.findAll('.cookie-buttons button').map(button => button.classes())).toEqual([
+  it('renders the redesigned banner with pill buttons', async () => {
+    const wrapper = await mountSuspended(CookieBanner)
+    expect(wrapper.find('.cookie-banner').exists()).toBe(true)
+    expect(wrapper.findAll('.cookie-buttons button').map(button => button.classes())).toEqual([
       ['button', 'button-light'],
       ['button', 'button-quiet'],
     ])
-    redesigned.unmount()
-
-    const legacy = await mountSuspended(CookieBanner)
-    expect(legacy.find('.cookie-banner').classes()).not.toContain('redesign')
-    expect(legacy.findAll('.cookie-buttons button').map(button => button.classes())).toEqual([
-      ['accept-button'],
-      ['decline-button'],
-    ])
-    legacy.unmount()
+    wrapper.unmount()
   })
 
-  it('starts the consent question on a new line in the redesigned banner only', async () => {
-    const redesigned = await mountSuspended(CookieBanner, { props: { redesign: true } })
-    expect(redesigned.find('.cookie-text').text()).toContain('(Google Analytics).\n')
-    redesigned.unmount()
+  it('starts the consent question on a new line', async () => {
+    const wrapper = await mountSuspended(CookieBanner)
+    expect(wrapper.find('.cookie-text').text()).toContain('(Google Analytics).\n')
+    wrapper.unmount()
 
-    const legacy = await mountSuspended(CookieBanner)
-    expect(legacy.find('.cookie-text').text()).toContain('(Google Analytics). ')
-    expect(legacy.find('.cookie-text').text()).not.toContain('\n')
-    legacy.unmount()
-
-    expect(cookieBannerSource).toMatch(/\.cookie-banner\.redesign \.cookie-text \{[^}]*white-space: pre-line;/)
+    expect(cookieBannerSource).toMatch(/\.cookie-text \{[^}]*white-space: pre-line;/)
   })
 
-  it('keeps the redesigned banner on the italian layout only', () => {
-    expect(defaultLayoutSource).toMatch(/<CookieBanner above-dock redesign \/>/)
-    expect(englishLayoutSource).toMatch(/<CookieBanner \/>/)
+  it('is rendered without props by the default layout', () => {
+    expect(defaultLayoutSource).toMatch(/<CookieBanner \/>/)
   })
 })

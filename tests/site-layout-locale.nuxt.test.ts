@@ -2,7 +2,6 @@ import { readFileSync } from 'node:fs'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import DefaultLayout from '~/layouts/default.vue'
-import EnglishLayout from '~/layouts/english.vue'
 import SiteFooter from '~/components/site/footer.vue'
 
 const mountedWrappers: Array<{ unmount: () => void }> = []
@@ -59,18 +58,6 @@ describe('default layout language', () => {
 describe('default layout source', () => {
   it('awaits the locale change so the prerendered chrome has the page language', () => {
     expect(readFileSync('layouts/default.vue', 'utf8')).toContain('await setLocale(')
-  })
-})
-
-describe('english layout JSON-LD', () => {
-  it('emits the structured data as a single JSON object', async () => {
-    const wrapper = await mountSuspended(EnglishLayout, { route: '/en/rules', attachTo: document.body })
-    mountedWrappers.push(wrapper)
-    await vi.waitFor(() => expect(document.documentElement.lang).toBe('en'))
-
-    const jsonLd = emittedJsonLd()
-    expect(typeof jsonLd).toBe('object')
-    expect(jsonLd.tourBookingPage).toContain('/en/booking')
   })
 })
 
