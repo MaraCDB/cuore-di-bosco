@@ -86,10 +86,10 @@ German visitors only arrive if search engines index the German pages as German. 
 
 ## Order of work
 
-Each step is gated (lint, typecheck, tests, build), checked in the browser at 1440/1024/390, committed locally, and its drafts listed for the owner.
+Spec approved by the owner on 2026-11-04. Each step is gated (lint, typecheck, tests, build), checked in the browser at 1440/1024/390 and committed locally.
 
 1. **Switch, browser language, German chrome, `/de/buchen`.** Locale `de`, routes, three-way `twinPath`, flag switch in header and phone menu (replacing the "English" link on Italian and English pages too), root redirect with stored choice, `de.json`, German JSON-LD, `pages/de/buchen.vue`. Italian pages must look identical apart from the switch.
-2. **Then each remaining page in English and German together**, in the English spec's order: home, explore, rules, privacy. The English drafts go to the owner for approval as before (approval checkpoint unchanged); the German drafts of the same page are collected for the friend.
+2. **Then each remaining page in English and German together**, in the English spec's order: home, explore, rules, privacy. **English changes (owner, 2026-11-04: "fai anche quello sulle pagine direttamente faccio il check da lì")**: the English drafts go straight into the pages, with no separate English draft list and no approval checkpoint between pages; the owner checks the English on the pages themselves and sends corrections. This replaces the per-page draft-list approval of the English spec. The German drafts of the same page are collected for the friend.
 3. **Publishing** with the rest of the redesign, after the owners approve the whole site and the final SEO step (explicit owner OK required, as for every publication).
 4. **Friend's check** of the live German pages in one pass, corrections applied afterwards.
 
