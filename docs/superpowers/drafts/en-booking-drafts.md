@@ -9,6 +9,15 @@ How to read the "Why" column:
 - **new draft**: new English text. Please check it.
 - **changed in Italian**: you changed the Italian, so the English follows your change. Please check it.
 
+## Question for the owners: UK or US spelling?
+
+**Please choose one spelling for all English pages: British (UK) or American (US).** The English text now mixes both.
+
+- UK words in the text: "Yoghurt", "SAVOURY", "cot", "cutlery".
+- US words in the text: "tranquility", "vacations", "linens", "stroller".
+
+I have not changed the page text. Tell me your choice and I will make all English pages follow it.
+
 ## Page text
 
 ### Top of the page
@@ -106,11 +115,11 @@ The icon pictures have no description, as in Italian, because the caption under 
 
 | Italian | English | Why |
 |---|---|---|
-| Servizi per famiglie | Family services | legacy reused (capitals as in the Italian) |
+| Servizi per famiglie | Family services | legacy fixed: the old English used capitals ("Family Services"), the Italian does not |
 | Sappiamo bene quanto è complicato spostarsi e rilassarsi con uno o più figli! | We know how tricky it can be to travel and relax with one or more kids! | legacy reused |
 | Per questo abbiamo cercato di rendere la vita più facile e la vacanza più rilassata ai genitori! Da noi troverete: | That’s why we’ve tried to make life easier and vacations more relaxing for parents! Here you’ll find: | legacy reused |
 | BABY KIT: Abbiamo tutto quello che serve! Fasciatoio con vaschetta per bagno o vasino, seggiolone, scaldabiberon o microonde a disposizione in sala colazione, frigobar in camera, passeggino, marsupio 6/36 mesi o preschool 3-6 anni o fasce (con cauzione), scaletta o gradino per il bagno, piattini, posate e bicchieri da bimbi, libreria ed angolo giochi attrezzato. | BABY KIT: We have everything you need! Changing table with tub or potty, high chair, bottle warmer or microwave in the breakfast room, in-room minibar, stroller, baby carrier for 6–36 months or preschool 3–6 years or wraps (with a security bond), bathroom step stool, children’s plates, cutlery and glasses, library and a well-equipped play corner. | changed in Italian ("(in realizzazione)" is gone: the play corner is ready). Also fixed: "glasses" for "bicchieri", and "(con cauzione)" is now "(with a security bond)". Please check this last one. |
-| Servizi in camera | In-room services | legacy reused (capitals as in the Italian) |
+| Servizi in camera | In-room services | legacy fixed: the old English used capitals ("In-Room Services"), the Italian does not |
 | Nelle nostre stanze attrezzate troverai: | In our well-equipped rooms you’ll find: | legacy reused |
 | Bagno con doccia, bidet, wc | Bathroom with shower, bidet, toilet | legacy reused |
 | Kit asciugamani per ogni ospite | Towel kit for each guest | legacy reused |
