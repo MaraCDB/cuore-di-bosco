@@ -332,6 +332,7 @@
 
 <script lang="ts" setup>
 const aptCredit = "Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di";
+const ownerCredit = "Photo Mara";
 
 const flowerPhotos = [
   { src: "https://www.visitrovereto.it/wp-content/uploads/2019/11/paesaggio-inverno-monte-baldo-foto-valentino-azzolini-1.jpg", alt: "Monte Baldo in inverno - paesaggio innevato Altopiano di Brentonico", credit: `${aptCredit} Valentino Azzolini` },
@@ -339,6 +340,10 @@ const flowerPhotos = [
   { src: "https://www.visitrovereto.it/wp-content/uploads/2023/06/Giardino-Botanico-ph-lucamatassoni-web.png", alt: "Giardino Botanico del Parco Naturale Monte Baldo", credit: `${aptCredit} Luca Matassoni` },
   { src: "https://www.visitrovereto.it/wp-content/uploads/2019/10/paesaggio-inverno-monte-baldo-foto-tommaso-prugnola-3.jpg", alt: "Paesaggio invernale Monte Baldo - Trentino", credit: `${aptCredit} Tommaso Prugnola` },
   { src: "https://www.visitrovereto.it/wp-content/uploads/2024/10/Brentonico-il-fiore-del-Baldo-Graziano-Galvagni.jpg", alt: "Brentonico il fiore del Baldo - panorama montano", credit: `${aptCredit} Graziano Galvagni` },
+  { src: "/images/home/fiori-rosa-700.webp", alt: "Un prato di fiori rosa sotto il cielo d’estate, con le montagne sullo sfondo", credit: ownerCredit },
+  { src: "/images/home/fiori-gialli-700.webp", alt: "Fiori gialli su un pendio erboso al margine del bosco", credit: ownerCredit },
+  { src: "/images/home/anemoni-bianchi-700.webp", alt: "Anemoni bianchi in fiore", credit: ownerCredit },
+  { src: "/images/home/rose-rosse-700.webp", alt: "Rose rosse davanti ai prati e alle montagne tra le nuvole", credit: ownerCredit },
 ];
 
 useHead({

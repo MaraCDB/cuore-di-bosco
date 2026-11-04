@@ -221,6 +221,7 @@
 import logo from "~/assets/images/logo_400.webp";
 
 const aptCredit = "Archivio Fotografico APT Rovereto Vallagarina Monte Baldo. Foto di";
+const ownerCredit = "Photo Mara";
 
 const gardenPhotos = [
   { src: "/images/home/bosco-1920.webp", alt: "Il sentiero nel bosco", caption: "Il bosco" },
@@ -232,8 +233,12 @@ const gardenPhotos = [
   { src: "/images/home/monte-altissimo-1200.webp", alt: "Il Lago di Garda visto dal Monte Altissimo", caption: "Dal Monte Altissimo", credit: "360gardalife. Foto di Angela Trawoeger" },
   { src: "/images/home/forra-sorna-1280.webp", alt: "Un tuffo nelle acque della Forra della Sorna", caption: "Forra della Sorna", credit: `${aptCredit} Tommaso Prugnola` },
   { src: "/images/home/castello-rovereto-700.webp", alt: "Il Castello di Rovereto e la cascata del Leno", caption: "Castello di Rovereto", credit: `${aptCredit} Luca Matassoni` },
-  { src: "/images/home/campana-caduti-700.webp", alt: "La Campana dei Caduti a Rovereto", caption: "Campana dei Caduti, Rovereto", credit: `${aptCredit} Luca Matassoni` },
+  { src: "/images/home/campana-caduti-700.webp", alt: "La Campana dei Caduti a Rovereto", caption: "Campana dei Caduti, Rovereto", credit: "APT Rovereto Vallagarina. Foto di Luca Matassoni" },
   { src: "/images/home/castello-avio-1280.webp", alt: "Il castello di Avio tra i cipressi", caption: "Castello di Avio", credit: `${aptCredit} Martina Vanzo` },
+  { src: "/images/home/primavera-prato-1280.webp", alt: "Un prato fiorito in primavera tra gli alberi e le colline verdi, sotto le nuvole bianche", caption: "Prati in fiore", credit: ownerCredit },
+  { src: "/images/home/estate-arcobaleno-1280.webp", alt: "Una strada bianca tra i prati verdi sotto un cielo di pioggia con l’arcobaleno", caption: "Arcobaleno d’estate", credit: ownerCredit },
+  { src: "/images/home/autunno-nuvole-1280.webp", alt: "Nuvole d’autunno tra i paesi e le montagne, viste da un balcone sopra i prati", caption: "Paesaggio d’autunno", credit: ownerCredit },
+  { src: "/images/home/inverno-nuvole-1280.webp", alt: "Prati innevati e un mare di nuvole sotto le montagne, visti da un balcone", caption: "Neve e nuvole d’inverno", credit: ownerCredit },
   { src: "/images/home/casa-1600.webp", alt: "La casa in pietra", caption: "Via Gardesani 15, Prada" },
 ];
 

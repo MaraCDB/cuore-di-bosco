@@ -58,6 +58,10 @@ const flowerPhotos = [
   'https://www.visitrovereto.it/wp-content/uploads/2023/06/Giardino-Botanico-ph-lucamatassoni-web.png',
   'https://www.visitrovereto.it/wp-content/uploads/2019/10/paesaggio-inverno-monte-baldo-foto-tommaso-prugnola-3.jpg',
   'https://www.visitrovereto.it/wp-content/uploads/2024/10/Brentonico-il-fiore-del-Baldo-Graziano-Galvagni.jpg',
+  '/images/home/fiori-rosa-700.webp',
+  '/images/home/fiori-gialli-700.webp',
+  '/images/home/anemoni-bianchi-700.webp',
+  '/images/home/rose-rosse-700.webp',
 ]
 const flowerAlts = [
   'Monte Baldo in inverno - paesaggio innevato Altopiano di Brentonico',
@@ -65,8 +69,12 @@ const flowerAlts = [
   'Giardino Botanico del Parco Naturale Monte Baldo',
   'Paesaggio invernale Monte Baldo - Trentino',
   'Brentonico il fiore del Baldo - panorama montano',
+  'Un prato di fiori rosa sotto il cielo d’estate, con le montagne sullo sfondo',
+  'Fiori gialli su un pendio erboso al margine del bosco',
+  'Anemoni bianchi in fiore',
+  'Rose rosse davanti ai prati e alle montagne tra le nuvole',
 ]
-const flowerCredits = ['Valentino Azzolini', 'Luca Matassoni', 'Luca Matassoni', 'Tommaso Prugnola', 'Graziano Galvagni'].map(aptCredit)
+const flowerCredits = [...['Valentino Azzolini', 'Luca Matassoni', 'Luca Matassoni', 'Tommaso Prugnola', 'Graziano Galvagni'].map(aptCredit), 'Photo Mara', 'Photo Mara', 'Photo Mara', 'Photo Mara']
 
 const sectionOrder = ['explore-intro', 'places', 'explore-nature', 'explore-around', 'explore-flower', 'explore-garden', 'seasons', 'explore-note']
 
