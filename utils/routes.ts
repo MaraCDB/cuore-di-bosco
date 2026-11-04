@@ -1,4 +1,4 @@
-export type LanguageCode = "it" | "en";
+export type LanguageCode = "it" | "en" | "de";
 
 const italianRoutes = [
     {
@@ -70,10 +70,47 @@ const englishRoutes = [
 ];
 
 
+const germanRoutes = [
+    {
+        id: "welcome",
+        group: "",
+        label: "WILLKOMMEN",
+        path: `/de`,
+    },
+    {
+        id: "booking",
+        group: "",
+        label: "BUCHEN",
+        path: `/de/buchen`,
+    },
+    {
+        id: "explore",
+        group: "",
+        label: "ENTDECKEN",
+        path: `/de/entdecken`,
+    },
+    {
+        id: "rules",
+        group: "",
+        label: "HAUSORDNUNG",
+        path: `/de/hausordnung`,
+    },
+    {
+        id: "privacy-policy",
+        group: "",
+        label: "DATENSCHUTZ",
+        path: `/de/datenschutz`,
+        hidden: true,
+    },
+];
+
+
 export const routes = (languageCode: LanguageCode) => {
     switch (languageCode) {
         case "en":
             return englishRoutes;
+        case "de":
+            return germanRoutes;
         case "it":
         default:
             return italianRoutes;
