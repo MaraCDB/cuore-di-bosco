@@ -244,6 +244,8 @@ describe('italian explore page', () => {
     expect(redesignedRoutesDeclaration).toContain("'/it/prenota/'")
     expect(redesignedRoutesDeclaration).toContain("'/en/booking'")
     expect(redesignedRoutesDeclaration).toContain("'/en/booking/'")
+    expect(redesignedRoutesDeclaration).toContain("'/en'")
+    expect(redesignedRoutesDeclaration).toContain("'/en/'")
   })
 
   it('names the castle of Avio in the SEO keywords', () => {

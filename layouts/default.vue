@@ -21,7 +21,7 @@ const locale = computed(() => siteLocale(route.path));
 await setLocale(locale.value);
 watch(locale, siteLanguage => setLocale(siteLanguage).catch(() => {}));
 
-const redesignedRoutes = new Set(['/it', '/it/', '/it/esplora', '/it/esplora/', '/it/regolamento', '/it/regolamento/', '/it/privacy-policy', '/it/privacy-policy/', '/it/prenota', '/it/prenota/', '/en/booking', '/en/booking/']);
+const redesignedRoutes = new Set(['/it', '/it/', '/it/esplora', '/it/esplora/', '/it/regolamento', '/it/regolamento/', '/it/privacy-policy', '/it/privacy-policy/', '/it/prenota', '/it/prenota/', '/en', '/en/', '/en/booking', '/en/booking/']);
 const isRedesignedRoute = computed(() => redesignedRoutes.has(route.path));
 const structuredData = computed(() => JSON.stringify(lodgingBusinessJsonLd(locale.value)));
 
