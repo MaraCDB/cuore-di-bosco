@@ -4,7 +4,7 @@ import { mountSuspended } from '@nuxt/test-utils/runtime'
 import RulesPage from '~/pages/it/regolamento.vue'
 
 const pageSource = readFileSync('pages/it/regolamento.vue', 'utf8')
-const pageStyles = pageSource.match(/<style[^>]*>([\s\S]*?)<\/style>/)?.[1] ?? ''
+const pageStyles = readFileSync('assets/css/pages/rules.css', 'utf8')
 const legacyTexts: string[] = JSON.parse(readFileSync('tests/fixtures/regolamento-legacy-text.json', 'utf8'))
 
 const ruleTitles = ['TARIFFE E SERVIZI INCLUSI', 'PRENOTAZIONI E CONTATTI', 'MODALITÀ DI PAGAMENTO', 'POLITICHE DI CANCELLAZIONE', 'CHECK-IN E DOCUMENTI', 'ORARI', 'SICUREZZA E RESPONSABILITÀ', 'REGOLE DELLA CASA', 'PULIZIE E MANUTENZIONE', 'COLAZIONE', 'NORME COMPORTAMENTALI', 'SERVIZI ESTERNI', 'ACCESSO ALLA STRUTTURA']

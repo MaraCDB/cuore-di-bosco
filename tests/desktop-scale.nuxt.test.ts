@@ -9,7 +9,7 @@ import photoCarouselSource from '~/components/site/photo-carousel.vue?raw'
 import cookieBannerSource from '~/components/cookie-banner.vue?raw'
 
 const exploreStyles = readFileSync('assets/css/pages/explore.css', 'utf8')
-const rulesSource = readFileSync('pages/it/regolamento.vue', 'utf8')
+const rulesStyles = readFileSync('assets/css/pages/rules.css', 'utf8')
 const bookingStyles = readFileSync('assets/css/pages/booking.css', 'utf8')
 const homeStyles = readFileSync('assets/css/pages/home.css', 'utf8')
 const globalStyles = readFileSync('assets/css/global.css', 'utf8')
@@ -54,7 +54,7 @@ describe('exact sizes', () => {
   })
 
   it('never zooms the rules page', () => {
-    expect(extractStyleBlocks(rulesSource)).not.toMatch(/zoom/)
+    expect(rulesStyles).not.toMatch(/zoom/)
   })
 
   it('never zooms the booking page', () => {
@@ -77,7 +77,7 @@ describe('exact sizes', () => {
   })
 
   it('sets Montserrat for all non-display text', () => {
-    const redesignSources = [globalStyles, homeStyles, exploreStyles, rulesSource, bookingStyles, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource, cookieBannerSource]
+    const redesignSources = [globalStyles, homeStyles, exploreStyles, rulesStyles, bookingStyles, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource, cookieBannerSource]
 
     expect(globalStyles).not.toContain('Numans')
     expect(nuxtConfig).not.toContain('Numans')
@@ -90,9 +90,10 @@ describe('exact sizes', () => {
   it('sizes redesigned text only through the scale tokens', () => {
     const styles = [
       globalStyles,
-      ...[rulesSource, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource].map(extractStyleBlocks),
+      ...[headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource].map(extractStyleBlocks),
       homeStyles,
       exploreStyles,
+      rulesStyles,
       bookingStyles,
       cookieBannerRedesignRules,
     ].join('\n')
