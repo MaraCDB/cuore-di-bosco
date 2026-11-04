@@ -29,3 +29,35 @@ describe('englishTwin', () => {
     expect(englishTwin('/it/unknown')).toBe('/en')
   })
 })
+
+describe('siteLocale', () => {
+  it.each([['/en', 'en'], ['/en/booking', 'en'], ['/en/booking/', 'en'], ['/it', 'it'], ['/it/prenota', 'it'], ['/', 'it'], ['/english', 'it']])('reads %s as %s', (path, locale) => {
+    expect(siteLocale(path)).toBe(locale)
+  })
+})
+
+describe('primaryLinks in English', () => {
+  it('lists the same targets in the same order as Italian', () => {
+    expect(primaryLinks('en')).toEqual([
+      { label: 'Rooms', to: '/en#rooms' },
+      { label: 'Breakfast', to: '/en#breakfast' },
+      { label: 'Explore', to: '/en/explore' },
+      { label: 'Rules', to: '/en/rules' },
+      { label: 'How to get here', to: '/en#directions' },
+    ])
+  })
+})
+
+describe('twinPath', () => {
+  it.each([['/en/booking', 'it', '/it/prenota'], ['/en/booking/', 'it', '/it/prenota'], ['/en', 'it', '/it'], ['/it/prenota', 'en', '/en/booking'], ['/en/unknown', 'it', '/it']])('maps %s to %s', (path, target, expected) => {
+    expect(twinPath(path, target as SiteLocale)).toBe(expected)
+  })
+})
+
+describe('localePath', () => {
+  it('finds the booking page in each language', () => {
+    expect(localePath('it', 'booking')).toBe('/it/prenota')
+    expect(localePath('en', 'booking')).toBe('/en/booking')
+    expect(localePath('en', 'privacy-policy')).toBe('/en/privacy-policy')
+  })
+})
