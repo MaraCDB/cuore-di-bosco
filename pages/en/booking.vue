@@ -205,7 +205,7 @@ const carouselPhotos: { src: string, alt: string }[] = [
 const serviceIcons = [
   { src: '/images/altervista/wifi.png', caption: 'FREE WIFI' },
   { src: '/images/altervista/towels-1.png', caption: 'TOWELS AND LINENS INCLUDED' },
-  { src: '/images/altervista/products.png', caption: 'COMPLIMENTARY AMENITIES' },
+  { src: '/images/altervista/products.png', caption: 'COMPLI­MENTARY AMENITIES' },
   { src: '/images/altervista/shower.png', caption: 'PRIVATE SHOWER AND BATHROOM' },
   { src: '/images/altervista/breakfast.png', caption: 'SWEET AND SAVOURY BREAKFAST' },
   { src: '/images/altervista/kettle.png', caption: 'KETTLE SET' },

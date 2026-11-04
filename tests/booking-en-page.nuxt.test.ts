@@ -124,6 +124,13 @@ describe('english booking page', () => {
     expect(captions.filter(caption => caption === '' || caption !== caption.toUpperCase())).toEqual([])
   })
 
+  it('lets the long amenities caption break only at its soft hyphen', async () => {
+    const english = await mountEnglish()
+    const amenitiesCaption = blockTexts(english, '.service-icons figcaption').find(caption => caption.replace(/­/g, '') === 'COMPLIMENTARY AMENITIES')
+
+    expect(amenitiesCaption).toBe('COMPLI­MENTARY AMENITIES')
+  })
+
   it('keeps the owners\' italian edits in english', async () => {
     const english = await mountEnglish()
     const pageText = blockTexts(english, 'h1, h2, h3, p, figcaption, li').join(' ')
