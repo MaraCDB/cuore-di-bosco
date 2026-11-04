@@ -4,16 +4,9 @@ import { describe, expect, it } from 'vitest'
 const legacyCss = readFileSync('assets/css/legacy.css', 'utf8')
 const globalCss = readFileSync('assets/css/global.css', 'utf8')
 const exclusion = ':where(:not(.redesign, .redesign *))'
-const privacySelectors = [
-  '.landing-image', '.landing-text', '.landing-title', '.landing-title strong', '.welcome',
-  '#cookie-policy-text', '#cookie-policy-text h3', '#cookie-policy-text a',
-]
 const legacySelectors = [
   'a', '.link', 'a:hover', '.link:hover', '*', 'body', '.text-white', '.text-black', '.text-center', '.text-left',
   '.italic', 'h1', 'h2', 'h3', 'p', 'li', 'section', '.page-title',
-]
-const unscopedPageFiles: Array<[string, string[]]> = [
-  ['pages/en/privacy-policy.vue', privacySelectors],
 ]
 
 function removeBalancedBlocks(css: string, atRulePattern: RegExp): string {
@@ -104,16 +97,6 @@ describe('legacy.css', () => {
 describe('extractSelectors', () => {
   it('terminates on a keyframes block with an unclosed brace', () => {
     expect(extractSelectors('.kept { color: red } @keyframes spin { from { a: b }')).toEqual(['.kept'])
-  })
-})
-
-describe('unscoped page styles', () => {
-  it.each(unscopedPageFiles)('%s ends every selector with the redesign exclusion and keeps its legacy selectors', (file, expectedBaseSelectors) => {
-    const source = readFileSync(file, 'utf8')
-    const styleBlock = source.match(/<style[^>]*>([\s\S]*?)<\/style>/)?.[1] ?? ''
-    const selectors = extractSelectors(styleBlock)
-    expectExclusionAtEnd(selectors)
-    expectLegacySelectorsSurvive(selectors, expectedBaseSelectors)
   })
 })
 
