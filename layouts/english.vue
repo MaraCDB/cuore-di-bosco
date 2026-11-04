@@ -108,7 +108,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify(JSON.stringify(lodgingBusinessJsonLd('en'))),
+      innerHTML: JSON.stringify(lodgingBusinessJsonLd('en')),
     },
   ],
 });
