@@ -122,6 +122,14 @@ describe('english home page', () => {
     expect(otherInternalLinks.filter(href => href !== '/en/booking' && href !== '#rooms')).toEqual([])
   })
 
+  it("names the plateau Europe's Garden and never the Garden of Europe", async () => {
+    const pageText = normalize((await mountEnglish()).textContent ?? '')
+
+    expect(pageText).toContain("Europe's Garden")
+    expect(pageText).not.toContain('Garden of Europe')
+    expect(englishSource).not.toContain('Garden of Europe')
+  })
+
   it('keeps the external links of the italian page', async () => {
     const italianLinks = [...(await mountItalian()).querySelectorAll('a[target="_blank"]')].map(link => link.getAttribute('href'))
     const englishLinks = [...(await mountEnglish()).querySelectorAll('a[target="_blank"]')].map(link => link.getAttribute('href'))
