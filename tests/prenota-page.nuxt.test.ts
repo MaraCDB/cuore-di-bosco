@@ -5,7 +5,7 @@ import { mountSuspended } from '@nuxt/test-utils/runtime'
 import BookingPage from '~/pages/it/prenota.vue'
 
 const pageSource = readFileSync('pages/it/prenota.vue', 'utf8')
-const pageStyles = pageSource.match(/<style[^>]*>([\s\S]*?)<\/style>/)?.[1] ?? ''
+const pageStyles = readFileSync('assets/css/pages/booking.css', 'utf8')
 const legacyTexts: string[] = JSON.parse(readFileSync('tests/fixtures/prenota-legacy-text.json', 'utf8'))
 
 const iconCaptions = ['FREE WIFI', 'ASCIUGAMANI E BIANCHERIA INCLUSI', 'DOTAZIONI DI CORTESIA PER GLI OSPITI', 'DOCCIA E BAGNO PRIVATI', 'COLAZIONE DOLCE E SALATA', 'SET BOLLITORE', 'LAVANDERIA', 'BICICLETTE A DISPOSIZIONE', 'GIOCHI PER BAMBINI', 'DOTAZIONI PER BAMBINI', 'CULLA PER BAMBINI', 'MATERIALI PER BAMBINI', 'SUPPORTI PER PORTARE', 'LIBRERIA PER ADULTI E BAMBINI', 'PIC-NIC']

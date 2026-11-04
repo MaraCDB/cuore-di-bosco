@@ -12,6 +12,7 @@ import cookieBannerSource from '~/components/cookie-banner.vue?raw'
 const exploreSource = readFileSync('pages/it/esplora.vue', 'utf8')
 const rulesSource = readFileSync('pages/it/regolamento.vue', 'utf8')
 const bookingSource = readFileSync('pages/it/prenota.vue', 'utf8')
+const bookingStyles = readFileSync('assets/css/pages/booking.css', 'utf8')
 const globalStyles = readFileSync('assets/css/global.css', 'utf8')
 const nuxtConfig = readFileSync('nuxt.config.ts', 'utf8')
 
@@ -58,7 +59,7 @@ describe('exact sizes', () => {
   })
 
   it('never zooms the booking page', () => {
-    expect(extractStyleBlocks(bookingSource)).not.toMatch(/zoom/)
+    expect(bookingStyles).not.toMatch(/zoom/)
   })
 
   it('defines the phone type scale in rem', () => {
@@ -90,7 +91,8 @@ describe('exact sizes', () => {
   it('sizes redesigned text only through the scale tokens', () => {
     const styles = [
       globalStyles,
-      ...[homeSource, exploreSource, rulesSource, bookingSource, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource].map(extractStyleBlocks),
+      ...[homeSource, exploreSource, rulesSource, headerSource, dockSource, footerSource, toTopSource, menuSource, photoCarouselSource].map(extractStyleBlocks),
+      bookingStyles,
       cookieBannerRedesignRules,
     ].join('\n')
     const fontSizes = extractFontSizes(styles)
