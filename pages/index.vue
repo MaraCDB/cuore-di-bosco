@@ -5,7 +5,7 @@
 const router = useRouter();
 
 onMounted(() => {
-  router.replace('/it')
+  router.replace(homePath(rootLanguage(storedLanguage(), navigator.languages ?? [navigator.language])))
 })
 </script>
 

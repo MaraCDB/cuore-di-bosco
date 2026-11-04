@@ -1,5 +1,23 @@
 export const LANGUAGE_CHOICE_KEY = 'cdb-language'
 
+const SITE_LOCALES: readonly string[] = ['it', 'en', 'de']
+
+function isSiteLocale(value: string | null): value is SiteLocale {
+  return value !== null && SITE_LOCALES.includes(value)
+}
+
+/**
+ * Picks the language the root address opens in: the stored choice if it is a site language,
+ * else the first browser language whose primary subtag is a site language, else Italian.
+ */
+export function rootLanguage(storedChoice: string | null, browserLanguages: readonly string[]): SiteLocale {
+  if (isSiteLocale(storedChoice)) return storedChoice
+  const browserLocale = browserLanguages
+    .map(language => language.split('-')[0].toLowerCase())
+    .find(isSiteLocale)
+  return browserLocale ?? 'it'
+}
+
 /**
  * Stores the language picked by the visitor on this device, ignoring storage that is blocked or full.
  */
