@@ -74,8 +74,8 @@
           <div class="room-text" data-reveal>
             <h3>Mirtillo</h3>
             <p class="lead">Fresca e luminosa, perfetta per chi ama la natura.</p>
-            <p>Ampia camera matrimoniale da 28 mq con letto matrimoniale. Armadio con cassettiera, zona relax con divano
-              e scrivania. Divano letto matrimoniale per aggiungere due ospiti in più. Bagno privato con doccia, lavabo e
+            <p>Ampia camera matrimoniale da 28 mq con letto matrimoniale. Armadio con cassettiera, zona relax con divano,
+              scrivania e set bollitore. Divano letto matrimoniale per aggiungere due ospiti in più. Bagno privato con doccia, lavabo e
               bidet. Prodotti per igiene personale, pulizia e biancheria inclusi.</p>
             <p>Culla attrezzata, sponde per letti e fasciatoio su richiesta. Per famiglia o tra amici, con vista
               panoramica e pace!</p>
@@ -126,8 +126,8 @@
           Kit asciugamani per ogni ospite<br>
           Pulizia regolare<br>
           Prodotti ecologici ricaricabili per l’igiene personale<br>
-          Omaggio di benvenuto<br>
-          Bicchieri e tazze a disposizione<br>
+          Dolcetto di benvenuto<br>
+          Angolo tisane con bollitore, tè, camomilla, tisane, bicchieri e tazze<br>
           Materiale ecologico per pulizie, scopa e paletta<br>
           Stendino e mollette in balcone</p>
       </div>
