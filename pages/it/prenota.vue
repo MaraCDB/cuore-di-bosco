@@ -12,16 +12,24 @@
         data-colore="green" data-wl="true"></div>
     </section>
 
-    <section class="wrap booking-intro" data-reveal>
-      <p>Benvenuti al&nbsp;<strong>B&amp;B&nbsp;<em>Cuore di Bosco</em></strong>, un rifugio immerso nella natura
-        della&nbsp;<strong>Vallagarina</strong>, sull’<strong>Altopiano di Brentonico</strong>,&nbsp;<strong>il
-          giardino d’Europa</strong>. Circondati da rigogliose montagne, il tempo rallenta e la tranquillità regna
-        sovrana.</p>
-      <p>Di b&amp;b ce ne sono tanti, ma noi speriamo di offrirvi un mix di esperienze speciali: la bellezza delle
-        montagne intorno, la passione per la cucina e l’ospitalità e tutto l’entusiasmo che mettiamo nel nostro lavoro!</p>
-      <p>Per esigenze alimentari particolari come vegetariano, vegano, no glutine, no lattosio e altre siamo a tua
-        disposizione, ti chiediamo di avvisarci prima dell’arrivo per poterci organizzare al meglio!</p>
-      <p>Ci vediamo presto!</p>
+    <section class="booking-intro">
+      <div class="booking-intro-photo">
+        <img src="/images/home/casa-neve-1600.webp"
+          srcset="/images/home/casa-neve-900.webp 900w, /images/home/casa-neve-1600.webp 1600w"
+          sizes="(max-width: 900px) 100vw, 50vw" alt="La casa in pietra del B&B Cuore di Bosco sotto la neve"
+          loading="lazy">
+      </div>
+      <div class="booking-intro-text" data-reveal>
+        <p>Benvenuti al&nbsp;<strong>B&amp;B&nbsp;<em>Cuore di Bosco</em></strong>, un rifugio immerso nella natura
+          della&nbsp;<strong>Vallagarina</strong>, sull’<strong>Altopiano di Brentonico</strong>,&nbsp;<strong>il
+            giardino d’Europa</strong>. Circondati da rigogliose montagne, il tempo rallenta e la tranquillità regna
+          sovrana.</p>
+        <p>Di b&amp;b ce ne sono tanti, ma noi speriamo di offrirvi un mix di esperienze speciali: la bellezza delle
+          montagne intorno, la passione per la cucina e l’ospitalità e tutto l’entusiasmo che mettiamo nel nostro lavoro!</p>
+        <p>Per esigenze alimentari particolari come vegetariano, vegano, no glutine, no lattosio e altre siamo a tua
+          disposizione, ti chiediamo di avvisarci prima dell’arrivo per poterci organizzare al meglio!</p>
+        <p>Ci vediamo presto!</p>
+      </div>
     </section>
 
     <section class="booking-rooms">
@@ -168,7 +176,6 @@ const carouselPhotos: { src: string, alt: string }[] = [
   { src: '/images/lampone/1.webp', alt: 'Camera Lampone foto 1' },
   { src: '/images/lampone/2.webp', alt: 'Camera Lampone foto 2' },
   { src: '/images/lampone/3.webp', alt: 'Camera Lampone foto 3' },
-  { src: '/images/lampone/4.webp', alt: 'Camera Lampone foto 4' },
   { src: '/images/lampone/5.webp', alt: 'Camera Lampone foto 5' },
   { src: '/images/home/lampone-balcone-1200.webp', alt: 'Il Monte Baldo innevato visto dal balcone della camera Lampone' },
   { src: '/images/mirtillo/1.webp', alt: 'Camera Mirtillo foto 1' },
@@ -347,9 +354,12 @@ onMounted(() => {
 .booking-widget{width:100%;max-width:960px;margin:0 auto}
 .booking-widget :deep(button){font-family:inherit}
 
-.booking-intro{margin-top:var(--section-gap);margin-bottom:var(--section-gap)}
+.booking-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.booking-intro-photo{position:relative}
+.booking-intro-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.booking-intro-text{padding:var(--band-pad) max(var(--margin),calc((100vw - var(--page-max)) / 2 + var(--margin))) var(--band-pad) clamp(22px,3.5vw,67px)}
+.booking-intro-text>:last-child{margin-bottom:0}
 .booking-intro p,.rooms-head p,.room-text p:not(.lead),.service-column p{max-width:68ch;text-align:justify;hyphens:auto}
-.booking-intro p{margin-left:auto;margin-right:auto}
 
 .booking-rooms{background:var(--champagne);padding:var(--band-pad) 0}
 .rooms-head h2{margin-bottom:20px}
@@ -388,7 +398,9 @@ onMounted(() => {
   .service-texts{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3.5vw,67px)}
 }
 @media (max-width:900px){
-  .room,.room:nth-of-type(even){grid-template-columns:minmax(0,1fr)}
+  .booking-intro,.room,.room:nth-of-type(even){grid-template-columns:minmax(0,1fr)}
+  .booking-intro-photo img{position:static;height:auto;aspect-ratio:16/9}
+  .booking-intro-text{padding:24px var(--margin) 32px}
   .room:nth-of-type(even) .room-photos{order:0}
 }
 @media (max-width:520px){

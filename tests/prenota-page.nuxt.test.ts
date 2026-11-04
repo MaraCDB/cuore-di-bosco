@@ -9,10 +9,10 @@ const pageStyles = pageSource.match(/<style[^>]*>([\s\S]*?)<\/style>/)?.[1] ?? '
 const legacyTexts: string[] = JSON.parse(readFileSync('tests/fixtures/prenota-legacy-text.json', 'utf8'))
 
 const iconCaptions = ['FREE WIFI', 'ASCIUGAMANI E BIANCHERIA INCLUSI', 'DOTAZIONI DI CORTESIA PER GLI OSPITI', 'DOCCIA E BAGNO PRIVATI', 'COLAZIONE DOLCE E SALATA', 'SET BOLLITORE', 'LAVANDERIA', 'BICICLETTE A DISPOSIZIONE', 'GIOCHI PER BAMBINI', 'DOTAZIONI PER BAMBINI', 'CULLA PER BAMBINI', 'MATERIALI PER BAMBINI', 'SUPPORTI PER PORTARE', 'LIBRERIA PER ADULTI E BAMBINI', 'PIC-NIC']
-const carouselSources = ['/images/home/casa-1600.webp', '/images/lampone/1.webp', '/images/lampone/2.webp', '/images/lampone/3.webp', '/images/lampone/4.webp', '/images/lampone/5.webp', '/images/home/lampone-balcone-1200.webp', '/images/mirtillo/1.webp', '/images/mirtillo/2.webp', '/images/mirtillo/3.webp', '/images/mirtillo/4.webp', '/images/home/colazione-1280.webp']
+const carouselSources = ['/images/home/casa-1600.webp', '/images/lampone/1.webp', '/images/lampone/2.webp', '/images/lampone/3.webp', '/images/lampone/5.webp', '/images/home/lampone-balcone-1200.webp', '/images/mirtillo/1.webp', '/images/mirtillo/2.webp', '/images/mirtillo/3.webp', '/images/mirtillo/4.webp', '/images/home/colazione-1280.webp']
 const carouselAlts = [
   'La casa in pietra del B&B Cuore di Bosco a Prada',
-  ...[1, 2, 3, 4, 5].map(number => `Camera Lampone foto ${number}`),
+  ...[1, 2, 3, 5].map(number => `Camera Lampone foto ${number}`),
   'Il Monte Baldo innevato visto dal balcone della camera Lampone',
   ...[1, 2, 3, 4].map(number => `Camera Mirtillo foto ${number}`),
   'La colazione con la torta fatta in casa',
@@ -90,12 +90,30 @@ describe('italian booking page', () => {
   it('opens with the photo carousel on the forest band', async () => {
     const wrapper = await mountBooking()
     const band = wrapper.element.firstElementChild
-    const images = [...(band?.querySelectorAll('img') ?? [])].slice(0, 12)
+    const images = [...(band?.querySelectorAll('img') ?? [])].slice(0, carouselSources.length)
 
     expect(band?.matches('.band.booking-carousel')).toBe(true)
     expect(band?.querySelector('.carousel')?.getAttribute('aria-label')).toBe('Fotografie delle camere e della casa')
     expect(images.map(image => image.getAttribute('src'))).toEqual(carouselSources)
     expect(images.map(image => image.getAttribute('alt'))).toEqual(carouselAlts)
+  })
+
+  it('never shows the same photo twice in the carousel', () => {
+    expect(new Set(carouselSources).size).toBe(carouselSources.length)
+    expect(carouselSources).not.toContain('/images/lampone/4.webp')
+  })
+
+  it('puts the snowy house photo beside the welcome text', async () => {
+    const wrapper = await mountBooking()
+    const intro = wrapper.element.querySelector('.booking-intro')
+    const photo = intro?.querySelector('.booking-intro-photo > img')
+
+    expect(photo?.getAttribute('src')).toBe('/images/home/casa-neve-1600.webp')
+    expect(photo?.getAttribute('srcset')).toBe('/images/home/casa-neve-900.webp 900w, /images/home/casa-neve-1600.webp 1600w')
+    expect(photo?.getAttribute('alt')).toBe('La casa in pietra del B&B Cuore di Bosco sotto la neve')
+    expect(intro?.querySelectorAll('.booking-intro-text > p')).toHaveLength(4)
+    expect(ruleBody('.booking-intro')).toContain('grid-template-columns:minmax(0,1fr) minmax(0,1fr)')
+    expect(ruleBody('.booking-intro-photo img')).toContain('position:absolute;inset:0')
   })
 
   it('keeps the booking widget container exactly as before', async () => {
