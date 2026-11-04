@@ -110,7 +110,7 @@
         <h2 data-reveal>I nostri servizi</h2>
         <div class="service-icons" data-reveal>
           <figure v-for="icon in serviceIcons" :key="icon.src">
-            <img :src="icon.src" :alt="icon.caption">
+            <img :src="icon.src" alt="">
             <figcaption>{{ icon.caption }}</figcaption>
           </figure>
         </div>

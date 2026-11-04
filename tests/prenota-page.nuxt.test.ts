@@ -182,7 +182,7 @@ describe('italian booking page', () => {
     const desktopRules = pageStyles.match(/@media \(min-width:901px\)\{([\s\S]*?)\n\}/)?.[1] ?? ''
 
     expect(figures.map(figure => normalize(figure.querySelector('figcaption')?.textContent ?? ''))).toEqual(iconCaptions)
-    expect(figures.map(figure => figure.querySelector('img')?.getAttribute('alt'))).toEqual(iconCaptions)
+    expect(figures.map(figure => figure.querySelector('img')?.getAttribute('alt'))).toEqual(iconCaptions.map(() => ''))
     expect(desktopRules).toContain('.service-icons{grid-template-columns:repeat(8,minmax(0,1fr))')
   })
 
