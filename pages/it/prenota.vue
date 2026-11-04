@@ -125,7 +125,7 @@
           rendere la vita più facile e la vacanza più rilassata ai genitori! Da noi troverete:</p>
         <p>BABY KIT: Abbiamo tutto quello che serve! Fasciatoio con vaschetta per bagno o vasino, seggiolone,
           scaldabiberon o microonde a disposizione in sala colazione, frigobar in camera, passeggino, marsupio 6/36 mesi
-          o preschool 3-6 anni o fasce (con cauzione), scaletta o gradino per il bagno, piattini, posate e bicchieri da
+          o preschool 3-6 anni o fasce, scaletta o gradino per il bagno, piattini, posate e bicchieri da
           bimbi, libreria ed angolo giochi attrezzato.</p>
       </div>
       <div class="service-column" data-reveal>

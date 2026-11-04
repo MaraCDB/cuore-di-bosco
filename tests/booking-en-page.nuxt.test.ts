@@ -7,7 +7,7 @@ import ItalianBookingPage from '~/pages/it/prenota.vue'
 
 const englishSource = readFileSync('pages/en/booking.vue', 'utf8')
 const englishWidgetUrl = 'https://www.bed-and-breakfast.it/en/trentino-alto-adige/bb-cuore-di-bosco-brentonico/68002'
-const forbiddenWords = ['deposit', 'cancellation', 'refund', 'rental', '(paid)', 'weather permitting', 'welcome gift', 'picnic day', 'write to us']
+const forbiddenWords = ['deposit', 'cancellation', 'refund', 'rental', '(paid)', 'weather permitting', 'welcome gift', 'picnic day', 'write to us', 'security bond']
 const ownerEditDrafts = [
   'Welcome sweet treat',
   'Herbal tea corner with kettle, tea, chamomile, herbal teas, glasses and cups',
@@ -122,6 +122,14 @@ describe('english booking page', () => {
     expect(figures).toHaveLength(15)
     expect(figures.map(figure => figure.querySelector('img')?.getAttribute('alt'))).toEqual(captions.map(() => ''))
     expect(captions.filter(caption => caption === '' || caption !== caption.toUpperCase())).toEqual([])
+  })
+
+  it('uses British English', async () => {
+    const english = await mountEnglish()
+    const pageText = blockTexts(english, 'h1, h2, h3, p, figcaption, li').join(' ').toLowerCase()
+
+    expect(['tranquility', 'vacation', 'stroller', 'linens'].filter(word => pageText.includes(word))).toEqual([])
+    expect(['tranquillity', 'holidays', 'pushchair', 'bed linen'].filter(word => !pageText.includes(word))).toEqual([])
   })
 
   it('lets the long amenities caption break only at its soft hyphen', async () => {

@@ -22,7 +22,7 @@
       <div class="booking-intro-text" data-reveal>
         <p>Welcome to&nbsp;<strong>B&amp;B&nbsp;<em>Cuore di Bosco</em></strong>, a haven immersed in the nature of
           the&nbsp;<strong>Vallagarina</strong>, on the <strong>Brentonico Plateau</strong>,&nbsp;<strong>Europe’s
-            Garden</strong>. Surrounded by lush mountains, time slows down and tranquility reigns supreme.</p>
+            Garden</strong>. Surrounded by lush mountains, time slows down and tranquillity reigns supreme.</p>
         <p>There are many B&amp;Bs, but we hope to offer you a mix of special experiences: the beauty of the
           surrounding mountains, our passion for cooking and hospitality, and all the enthusiasm we put into our work!</p>
         <p>For special dietary needs like vegetarian, vegan, gluten-free, lactose-free, or others—we’re here for you!
@@ -38,7 +38,7 @@
           <p>B&amp;B Cuore di Bosco is our home and yours in the mountains—a peaceful refuge to rest your mind and
             heart.</p>
           <p>The rooms are spacious and bright, ideal for couples and families alike. They offer modern comforts, a
-            private bathroom, linens and toiletries included, and an atmosphere that invites you to rest.</p>
+            private bathroom, bed linen and toiletries included, and an atmosphere that invites you to rest.</p>
           <p>On request, we have things just for the little ones: a cot with mattress, sheets and blankets, a changing
             table and bottle warmer, bed rails, a potty and bathroom steps for all ages. And then books, crayons and
             toys! For a carefree stay, even when you travel with children.</p>
@@ -58,9 +58,9 @@
           </div>
           <div class="room-text" data-reveal>
             <h3>Lampone</h3>
-            <p class="lead">Spacious and welcoming, ideal for families seeking comfort and tranquility.</p>
+            <p class="lead">Spacious and welcoming, ideal for families seeking comfort and tranquillity.</p>
             <p>Spacious 34 sqm room with a double bed and two single beds. Wardrobe with drawers, kettle, minibar.
-              Private bathroom with shower, sink and bidet. Personal hygiene products, cleaning and linens
+              Private bathroom with shower, sink and bidet. Personal hygiene products, cleaning and linen
               included.</p>
             <p>Fully equipped baby cot, bed rails and changing table on request. For families with kids, all the space
               and comfort you need!</p>
@@ -84,7 +84,7 @@
             <p class="lead">Fresh and bright, perfect for nature lovers.</p>
             <p>Spacious 28 sqm double room with a double bed. Wardrobe with drawers, relax area with sofa, desk and
               kettle set. Double sofa bed for two more guests. Private bathroom with shower, sink and bidet. Personal
-              hygiene products, cleaning and linens included.</p>
+              hygiene products, cleaning and linen included.</p>
             <p>Fully equipped baby cot, bed rails and changing table on request. For families or friends, with
               panoramic views and peace!</p>
             <p class="beds">2 to 4 adult beds available</p>
@@ -120,10 +120,10 @@
       <div class="service-column" data-reveal>
         <h3>Family services</h3>
         <p>We know how tricky it can be to travel and relax with one or more kids!<br>
-          That’s why we’ve tried to make life easier and vacations more relaxing for parents! Here you’ll find:</p>
+          That’s why we’ve tried to make life easier and holidays more relaxing for parents! Here you’ll find:</p>
         <p>BABY KIT: We have everything you need! Changing table with tub or potty, high chair, bottle warmer or
-          microwave in the breakfast room, in-room minibar, stroller, baby carrier for 6–36 months or preschool 3–6
-          years or wraps (with a security bond), bathroom step stool, children’s plates, cutlery and glasses, library
+          microwave in the breakfast room, in-room minibar, pushchair, baby carrier for 6–36 months or preschool 3–6
+          years or wraps, bathroom step stool, children’s plates, cutlery and glasses, library
           and a well-equipped play corner.</p>
       </div>
       <div class="service-column" data-reveal>
@@ -204,7 +204,7 @@ const carouselPhotos: { src: string, alt: string }[] = [
 
 const serviceIcons = [
   { src: '/images/altervista/wifi.png', caption: 'FREE WIFI' },
-  { src: '/images/altervista/towels-1.png', caption: 'TOWELS AND LINENS INCLUDED' },
+  { src: '/images/altervista/towels-1.png', caption: 'TOWELS AND LINEN INCLUDED' },
   { src: '/images/altervista/products.png', caption: 'COMPLI­MENTARY AMENITIES' },
   { src: '/images/altervista/shower.png', caption: 'PRIVATE SHOWER AND BATHROOM' },
   { src: '/images/altervista/breakfast.png', caption: 'SWEET AND SAVOURY BREAKFAST' },

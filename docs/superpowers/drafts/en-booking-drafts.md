@@ -9,14 +9,11 @@ How to read the "Why" column:
 - **new draft**: new English text. Please check it.
 - **changed in Italian**: you changed the Italian, so the English follows your change. Please check it.
 
-## Question for the owners: UK or US spelling?
+## Owner answers (2026-11-04)
 
-**Please choose one spelling for all English pages: British (UK) or American (US).** The English text now mixes both.
-
-- UK words in the text: "Yoghurt", "SAVOURY", "cot", "cutlery".
-- US words in the text: "tranquility", "vacations", "linens", "stroller".
-
-I have not changed the page text. Tell me your choice and I will make all English pages follow it.
+- **British English** for all English pages: "tranquility" became "tranquillity", "vacations" became "holidays", "linens" became "linen" ("bed linen" in the rooms text), "stroller" became "pushchair".
+- **"(con cauzione)" removed** from the BABY KIT text, in Italian and in English.
+- **"(when the weather allows)" approved.**
 
 ## Page text
 
@@ -27,7 +24,7 @@ I have not changed the page text. Tell me your choice and I will make all Englis
 | Fotografie delle camere e della casa (carousel label, read by screen readers) | Photos of the rooms and the house | new draft |
 | PRENOTA | BOOK | new draft |
 | Neve in montagna in Trentino (photo description) | Snow in the mountains in Trentino | new draft |
-| Benvenuti al B&B Cuore di Bosco, un rifugio immerso nella natura della Vallagarina, sull’Altopiano di Brentonico, il giardino d’Europa. Circondati da rigogliose montagne, il tempo rallenta e la tranquillità regna sovrana. | Welcome to B&B Cuore di Bosco, a haven immersed in the nature of the Vallagarina, on the Brentonico Plateau, Europe’s Garden. Surrounded by lush mountains, time slows down and tranquility reigns supreme. | legacy reused |
+| Benvenuti al B&B Cuore di Bosco, un rifugio immerso nella natura della Vallagarina, sull’Altopiano di Brentonico, il giardino d’Europa. Circondati da rigogliose montagne, il tempo rallenta e la tranquillità regna sovrana. | Welcome to B&B Cuore di Bosco, a haven immersed in the nature of the Vallagarina, on the Brentonico Plateau, Europe’s Garden. Surrounded by lush mountains, time slows down and tranquillity reigns supreme. | legacy fixed: British spelling |
 | Di b&b ce ne sono tanti, ma noi speriamo di offrirvi un mix di esperienze speciali: la bellezza delle montagne intorno, la passione per la cucina e l’ospitalità e tutto l’entusiasmo che mettiamo nel nostro lavoro! | There are many B&Bs, but we hope to offer you a mix of special experiences: the beauty of the surrounding mountains, our passion for cooking and hospitality, and all the enthusiasm we put into our work! | legacy reused |
 | Per esigenze alimentari particolari come vegetariano, vegano, no glutine, no lattosio e altre siamo a tua disposizione, ti chiediamo di avvisarci prima dell’arrivo per poterci organizzare al meglio! | For special dietary needs like vegetarian, vegan, gluten-free, lactose-free, or others—we’re here for you! Just let us know before your arrival so we can prepare accordingly! | legacy fixed: added "dietary", because the Italian says "alimentari" |
 | Ci vediamo presto! | See you soon! | legacy reused |
@@ -38,16 +35,16 @@ I have not changed the page text. Tell me your choice and I will make all Englis
 |---|---|---|
 | Scopri le nostre camere | Discover our rooms | legacy reused |
 | B&B Cuore di Bosco è la nostra e la vostra casa in montagna, un rifugio di pace e quiete dove riposare mente e cuore | B&B Cuore di Bosco is our home and yours in the mountains—a peaceful refuge to rest your mind and heart. | legacy reused |
-| Le camere sono spaziose e luminose, ideali sia per coppie sia per famiglie. Offrono comfort moderni, bagno privato, biancheria e prodotti igiene inclusi e un’atmosfera che invita al riposo. | The rooms are spacious and bright, ideal for couples and families alike. They offer modern comforts, a private bathroom, linens and toiletries included, and an atmosphere that invites you to rest. | new draft |
+| Le camere sono spaziose e luminose, ideali sia per coppie sia per famiglie. Offrono comfort moderni, bagno privato, biancheria e prodotti igiene inclusi e un’atmosfera che invita al riposo. | The rooms are spacious and bright, ideal for couples and families alike. They offer modern comforts, a private bathroom, bed linen and toiletries included, and an atmosphere that invites you to rest. | new draft |
 | Su richiesta sono disponibili dotazioni dedicate ai più piccoli: lettino con materasso, lenzuola e coperte, fasciatoio e scalda biberon, spondine per letto, vasino e scalini per il bagno per tutte le età. E poi libri, colori e giochi! Per un soggiorno sereno anche a chi viaggia con bambini. | On request, we have things just for the little ones: a cot with mattress, sheets and blankets, a changing table and bottle warmer, bed rails, a potty and bathroom steps for all ages. And then books, crayons and toys! For a carefree stay, even when you travel with children. | new draft (the old English had only part of this). "colori" is "crayons" here: please tell us if "coloured pencils" is better. |
 | Lampone | Lampone | name kept in Italian |
-| Spaziosa e accogliente, adatta a famiglie che desiderano comfort e tranquillità. | Spacious and welcoming, ideal for families seeking comfort and tranquility. | legacy fixed: the old English put this text under Mirtillo |
-| Ampia camera da 34 mq con letto matrimoniale e due letti singoli. Armadio con cassettiera, bollitore, frigobar. Bagno privato con doccia, lavabo e bidet. Prodotti per igiene personale, pulizia e biancheria inclusi. | Spacious 34 sqm room with a double bed and two single beds. Wardrobe with drawers, kettle, minibar. Private bathroom with shower, sink and bidet. Personal hygiene products, cleaning and linens included. | legacy fixed: "Spacious room" (the old text said "Double room"), "singles beds" typo, "Private" bathroom as in the Italian, Lampone instead of Mirtillo |
+| Spaziosa e accogliente, adatta a famiglie che desiderano comfort e tranquillità. | Spacious and welcoming, ideal for families seeking comfort and tranquillity. | legacy fixed: the old English put this text under Mirtillo |
+| Ampia camera da 34 mq con letto matrimoniale e due letti singoli. Armadio con cassettiera, bollitore, frigobar. Bagno privato con doccia, lavabo e bidet. Prodotti per igiene personale, pulizia e biancheria inclusi. | Spacious 34 sqm room with a double bed and two single beds. Wardrobe with drawers, kettle, minibar. Private bathroom with shower, sink and bidet. Personal hygiene products, cleaning and linen included. | legacy fixed: "Spacious room" (the old text said "Double room"), "singles beds" typo, "Private" bathroom as in the Italian, Lampone instead of Mirtillo |
 | Culla attrezzata, sponde per letti e fasciatoio su richiesta. Per famiglie con bambini tutto lo spazio e le comodità necessarie! | Fully equipped baby cot, bed rails and changing table on request. For families with kids, all the space and comfort you need! | legacy fixed: "Fully equipped" for "attrezzata", dropped "Perfect", which the Italian does not say |
 | Da 2 a 4 posti letto adulti | 2 to 4 adult beds available | legacy reused |
 | Mirtillo | Mirtillo | name kept in Italian |
 | Fresca e luminosa, perfetta per chi ama la natura. | Fresh and bright, perfect for nature lovers. | legacy fixed: the old English put this text under Lampone |
-| Ampia camera matrimoniale da 28 mq con letto matrimoniale. Armadio con cassettiera, zona relax con divano, scrivania e set bollitore. Divano letto matrimoniale per aggiungere due ospiti in più. Bagno privato con doccia, lavabo e bidet. Prodotti per igiene personale, pulizia e biancheria inclusi. | Spacious 28 sqm double room with a double bed. Wardrobe with drawers, relax area with sofa, desk and kettle set. Double sofa bed for two more guests. Private bathroom with shower, sink and bidet. Personal hygiene products, cleaning and linens included. | changed in Italian (desk and "set bollitore" added) |
+| Ampia camera matrimoniale da 28 mq con letto matrimoniale. Armadio con cassettiera, zona relax con divano, scrivania e set bollitore. Divano letto matrimoniale per aggiungere due ospiti in più. Bagno privato con doccia, lavabo e bidet. Prodotti per igiene personale, pulizia e biancheria inclusi. | Spacious 28 sqm double room with a double bed. Wardrobe with drawers, relax area with sofa, desk and kettle set. Double sofa bed for two more guests. Private bathroom with shower, sink and bidet. Personal hygiene products, cleaning and linen included. | changed in Italian (desk and "set bollitore" added) |
 | Culla attrezzata, sponde per letti e fasciatoio su richiesta. Per famiglia o tra amici, con vista panoramica e pace! | Fully equipped baby cot, bed rails and changing table on request. For families or friends, with panoramic views and peace! | legacy fixed: "Fully equipped" for "attrezzata", dropped "Great", which the Italian does not say |
 | Da 2 a 4 posti letto adulti | 2 to 4 adult beds available | legacy fixed: "adults beds" typo |
 | Culla gratis · 1° bambino gratis · 2° bambino al 50% · <12 anni | Free cot · 1st child free · 2nd child 50% off · <12 years | new draft |
@@ -96,7 +93,7 @@ The icon pictures have no description, as in Italian, because the caption under 
 |---|---|---|
 | I nostri servizi | Our services | legacy fixed: the old title was all capitals and a page title; the Italian is a normal section title |
 | FREE WIFI | FREE WIFI | legacy reused |
-| ASCIUGAMANI E BIANCHERIA INCLUSI | TOWELS AND LINENS INCLUDED | legacy reused |
+| ASCIUGAMANI E BIANCHERIA INCLUSI | TOWELS AND LINEN INCLUDED | legacy fixed: British English |
 | DOTAZIONI DI CORTESIA PER GLI OSPITI | COMPLIMENTARY AMENITIES | legacy reused |
 | DOCCIA E BAGNO PRIVATI | PRIVATE SHOWER AND BATHROOM | legacy reused |
 | COLAZIONE DOLCE E SALATA | SWEET AND SAVOURY BREAKFAST | legacy reused |
@@ -117,8 +114,8 @@ The icon pictures have no description, as in Italian, because the caption under 
 |---|---|---|
 | Servizi per famiglie | Family services | legacy fixed: the old English used capitals ("Family Services"), the Italian does not |
 | Sappiamo bene quanto è complicato spostarsi e rilassarsi con uno o più figli! | We know how tricky it can be to travel and relax with one or more kids! | legacy reused |
-| Per questo abbiamo cercato di rendere la vita più facile e la vacanza più rilassata ai genitori! Da noi troverete: | That’s why we’ve tried to make life easier and vacations more relaxing for parents! Here you’ll find: | legacy reused |
-| BABY KIT: Abbiamo tutto quello che serve! Fasciatoio con vaschetta per bagno o vasino, seggiolone, scaldabiberon o microonde a disposizione in sala colazione, frigobar in camera, passeggino, marsupio 6/36 mesi o preschool 3-6 anni o fasce (con cauzione), scaletta o gradino per il bagno, piattini, posate e bicchieri da bimbi, libreria ed angolo giochi attrezzato. | BABY KIT: We have everything you need! Changing table with tub or potty, high chair, bottle warmer or microwave in the breakfast room, in-room minibar, stroller, baby carrier for 6–36 months or preschool 3–6 years or wraps (with a security bond), bathroom step stool, children’s plates, cutlery and glasses, library and a well-equipped play corner. | changed in Italian ("(in realizzazione)" is gone: the play corner is ready). Also fixed: "glasses" for "bicchieri", and "(con cauzione)" is now "(with a security bond)". Please check this last one. |
+| Per questo abbiamo cercato di rendere la vita più facile e la vacanza più rilassata ai genitori! Da noi troverete: | That’s why we’ve tried to make life easier and holidays more relaxing for parents! Here you’ll find: | legacy fixed: British English |
+| BABY KIT: Abbiamo tutto quello che serve! Fasciatoio con vaschetta per bagno o vasino, seggiolone, scaldabiberon o microonde a disposizione in sala colazione, frigobar in camera, passeggino, marsupio 6/36 mesi o preschool 3-6 anni o fasce, scaletta o gradino per il bagno, piattini, posate e bicchieri da bimbi, libreria ed angolo giochi attrezzato. | BABY KIT: We have everything you need! Changing table with tub or potty, high chair, bottle warmer or microwave in the breakfast room, in-room minibar, pushchair, baby carrier for 6–36 months or preschool 3–6 years or wraps, bathroom step stool, children’s plates, cutlery and glasses, library and a well-equipped play corner. | changed in Italian ("(in realizzazione)" and "(con cauzione)" are gone). Also fixed: "glasses" for "bicchieri", British "pushchair". |
 | Servizi in camera | In-room services | legacy fixed: the old English used capitals ("In-Room Services"), the Italian does not |
 | Nelle nostre stanze attrezzate troverai: | In our well-equipped rooms you’ll find: | legacy reused |
 | Bagno con doccia, bidet, wc | Bathroom with shower, bidet, toilet | legacy reused |
@@ -210,16 +207,15 @@ The later English pages will use these words, so the whole site says things the 
 | fasciatoio | changing table |
 | scaldabiberon | bottle warmer |
 | seggiolone | high chair |
-| passeggino | stroller |
+| passeggino | pushchair |
 | marsupio | baby carrier |
 | fasce | wraps |
 | vasino | potty |
-| cauzione | security bond |
 | bollitore, set bollitore | kettle, kettle set |
 | angolo tisane | herbal tea corner |
 | dolcetto di benvenuto | welcome sweet treat |
 | frigobar | minibar |
-| biancheria | linens |
+| biancheria | linen, bed linen |
 | prodotti per igiene personale | personal hygiene products |
 | lavanderia express | express laundry service |
 | deposito bici / scarponi / sci | storage for bikes / boots / skis |
