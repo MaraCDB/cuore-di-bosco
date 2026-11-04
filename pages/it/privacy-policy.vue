@@ -102,34 +102,4 @@ useReveal(root);
 const { openPreferences } = useCookieConsent();
 </script>
 
-<style scoped>
-.policy-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(calc(100svh - 84px),780px)}
-.policy-hero .hero-text{align-self:center;padding:48px clamp(32px,4vw,64px) 72px max(var(--margin),calc((100vw - var(--page-max)) / 2 + var(--margin)))}
-.policy-hero h1{font-size:var(--step-display);line-height:1;color:var(--on-forest)}
-.policy-hero .hero-photo{margin:0;position:relative}
-.policy-hero .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
-
-.policy{max-width:var(--page-max);margin:var(--section-gap) auto 0;padding:0 var(--margin) var(--section-gap);display:grid;grid-template-columns:minmax(0,1fr);align-items:start;gap:clamp(28px,3.5vw,56px) clamp(32px,5vw,96px)}
-.policy-card{border-top:3px solid var(--meadow);padding-top:16px}
-.policy-card h2{font-family:var(--display);font-weight:var(--display-weight);font-size:var(--step-title);line-height:1.1;color:var(--forest);margin-bottom:10px}
-.policy-card p,.policy-card li{max-width:68ch;text-align:justify;hyphens:auto}
-.policy-card ul{list-style:disc;padding-left:1.1em}
-.policy-card ol{list-style:decimal;padding-left:1.1em}
-.policy-card li+li{margin-top:0.5em}
-.policy-card a{color:var(--forest);text-decoration:underline}
-.policy-card .button{margin-top:16px;border:0;font-size:inherit;cursor:pointer}
-.policy-card>:last-child{margin-bottom:0}
-@media (min-width:901px){
-  .policy-hero{min-height:min(calc(50svh - 59px),340px)}
-  .policy-hero .hero-text{padding-top:34px;padding-right:clamp(22px,2.8vw,45px);padding-bottom:50px}
-  .policy{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media (max-width:900px){
-  .policy-hero{grid-template-columns:minmax(0,1fr);min-height:0}
-  .policy-hero .hero-photo{aspect-ratio:4/3;min-height:0;order:-1}
-  .policy-hero .hero-text{padding:24px var(--margin) 32px}
-}
-@media (max-width:520px){
-  .policy-card p,.policy-card li{text-align:left}
-}
-</style>
+<style scoped src="../../assets/css/pages/privacy.css"></style>
