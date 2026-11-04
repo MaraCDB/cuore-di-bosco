@@ -1,136 +1,113 @@
 <template>
-  <div class="page-container">
-    <div class="welcome">
-      <img decoding="async" width="1400" height="800" class="landing-image" alt="forest"
-        src="/images/altervista/regole-scaled.jpg" data-object-fit="cover"
-        sizes="(max-width: 1200px) 100vw, 1200px" /><span aria-hidden="true" style="background-color: #526a71"></span>
-      <div class="landing-text">
-        <h1 class="page-title text-white">Rules</h1>
-      </div>
+  <div ref="root">
+    <div class="band">
+      <section class="hero rules-hero">
+        <div class="hero-text">
+          <h1>Rules</h1>
+        </div>
+        <figure class="hero-photo">
+          <img src="/images/home/regole-1440.webp" alt="Game pieces and dice on a board game">
+        </figure>
+      </section>
     </div>
 
-    <main class="content">
-      <section v-for="(block, index) in sections" :key="index" class="rule-box">
-        <h2>{{ block.title }}</h2>
-        <div v-html="block.content"></div>
+    <div class="rules">
+      <section class="rule" data-reveal>
+        <h2>RATES AND INCLUDED SERVICES</h2>
+        <p>Our rates include the use of the room, a private bathroom with amenities, breakfast, bed linen and towels. All services are designed to offer you maximum comfort during your stay in the mountains.</p>
+        <p>We have chosen not to have TVs in the rooms, but we will provide all the entertainment possible for you and your family! Board games, cards, books and more are available in case of bad weather, and we organise snacks and games together!</p>
       </section>
 
-      <section class="rule-box text-center">
-        <hr />
-        <p class="italic">
-          We wish everyone an unforgettable stay among our mountains!
-        </p>
+      <section class="rule" data-reveal>
+        <h2>BOOKINGS AND CONTACTS</h2>
+        <p>For detailed information about our property or to book your stay, please use the booking form on our website in the “Book” section. You can also write to us directly by email or contact us by phone. We will reply quickly to confirm availability and give you all the necessary details.</p>
       </section>
-    </main>
+
+      <section class="rule" data-reveal>
+        <h2>PAYMENT METHODS</h2>
+        <p>Once the booking is confirmed, we require a deposit of 35% of the total amount by bank transfer or with the online booking. The remaining balance is paid on arrival in cash or by credit/debit card, with an official receipt issued.</p>
+        <p><strong>IMPORTANT:</strong> Please pay the deposit only after receiving official confirmation of availability and agreement on the amount.</p>
+      </section>
+
+      <section class="rule" data-reveal>
+        <h2>CANCELLATION POLICY</h2>
+        <p>If you cancel up to the 7th day before arrival, we will refund the deposit paid in full. No refunds are given for cancellations made in the last 7 days or for early departures compared to the original booking. By prior arrangement, the stay can be moved to another date in case of health problems or unavoidable commitments, except in high season.</p>
+      </section>
+
+      <section class="rule" data-reveal>
+        <h2>CHECK-IN AND DOCUMENTS</h2>
+        <p>Upon arrival, you must present a valid ID. Without valid documents, registration cannot be completed. All personal data is handled in compliance with current privacy regulations.</p>
+        <p>After registration and payment of the balance, we will hand over the keys to the main entrance and to your room. To speed up check-in, you may alternatively send us clear copies of your documents via WhatsApp or email the day before arrival.</p>
+      </section>
+
+      <section class="rule" data-reveal>
+        <h2>TIMES</h2>
+        <p><strong>Check-in</strong>: from 3:00 PM to 6:00 PM. Please tell us your expected arrival time so we can organise your welcome.</p>
+        <p><strong>Check-out</strong>: by 10:30 AM. If the room is free, you may stay longer on request.</p>
+      </section>
+
+      <section class="rule" data-reveal>
+        <h2>SECURITY AND LIABILITY</h2>
+        <p>We recommend not leaving valuables unattended in the rooms or common areas. The rooms do not have safes, so please always lock doors and windows when you go out.</p>
+        <p>The property is not responsible for theft, loss or damage to personal belongings, nor for damage caused by or to third parties. Any damage to the property or furnishings must be reported immediately and compensated.</p>
+      </section>
+
+      <section class="rule" data-reveal>
+        <h2>HOUSE RULES</h2>
+        <p>For the safety of all guests, of our family, and for hygiene reasons:</p>
+        <ul>
+          <li>We love animals, but at the moment we cannot accommodate pets inside the property, in order to comply with hygiene and safety regulations and to protect guests with health problems.</li>
+          <li>Cooking or using stoves in the rooms is prohibited. The rooms have mini-fridges and kettles, while you will find a microwave and a coffee machine in the breakfast room.</li>
+          <li>Smoking is strictly <b>prohibited in all indoor and outdoor areas of the property</b>; the rooms are fitted with smoke detectors with an alarm. We also ask you to be very careful in the woods and on the road, as mountain areas are often prone to fires of this kind. The woods, the air and the livestock thank you!</li>
+        </ul>
+      </section>
+
+      <section class="rule" data-reveal>
+        <h2>CLEANING AND MAINTENANCE</h2>
+        <p>Room cleaning and a change of linen are included on arrival and every three days for long stays. We ask you to use the bathroom facilities properly and to respect the premises. Extra cleaning or linen changes are available on request and will incur an additional cost. Cleaning materials are available on request, or if any mishap should occur.</p>
+        <p>To make cleaning easier, please vacate the room by 10:30 AM, tidy your belongings and leave the towels to be replaced on the bathroom floor. If you do not need cleaning, would rather skip it, or would like it at a different time for personal reasons, please let us know so that we can agree on a solution.</p>
+      </section>
+
+      <section class="rule" data-reveal>
+        <h2>BREAKFAST</h2>
+        <p>Breakfast is served in our <b>breakfast room from 7:30 AM to 9:30 AM</b>. We offer local products and mountain specialities to start your days outdoors in the best way.
+          If you prefer a different time, we will do our best to accommodate you. Please let us know in good time so that we can organise.</p>
+        <p>We can also prepare a breakfast to be enjoyed in your room (on request).</p>
+        <p>We are happy to meet any dietary requirement: vegetarian, vegan, intolerances or allergies. Please let us know in good time before your arrival so that we can offer you a suitable choice.</p>
+      </section>
+
+      <section class="rule rule-conduct" data-reveal>
+        <h2>BEHAVIOURAL RULES</h2>
+        <p>We kindly ask you to:</p>
+        <ul>
+          <li>Turn off the lights and close the windows when you go out</li>
+          <li>Not set the heating above 20 degrees (provincial regulation)</li>
+          <li>Sort your waste for recycling</li>
+          <li>Respect quiet hours: 1:00–3:00 PM and 10:30 PM–7:00 AM</li>
+          <li>Not receive outside visitors or increase the number of guests per room</li>
+          <li>Not smoke in any indoor or outdoor area of the property</li>
+        </ul>
+      </section>
+
+      <section class="rule" data-reveal>
+        <h2>EXTERNAL SERVICES</h2>
+        <p>We are not responsible for any disruption outside our control (internet, telephone network, public services) due to the mountain location.</p>
+      </section>
+
+      <section class="rule" data-reveal>
+        <h2>ACCESS TO THE PROPERTY</h2>
+        <p>Access is open 24 hours a day thanks to personal keys. Please avoid disturbing others when moving around at night.</p>
+        <p>Keys must be returned on departure. In case of loss, the cost of replacement will be charged.</p>
+      </section>
+    </div>
+
+    <section class="rules-closing">
+      <p data-reveal>We wish everyone an unforgettable stay among our mountains!</p>
+    </section>
   </div>
 </template>
 
-
 <script lang="ts" setup>
-definePageMeta({
-  layout: 'english'
-});
-
-const sections = [
-  {
-    title: "RATES AND INCLUDED SERVICES",
-    content: `
-      <p>Our rates include the use of the room, a private bathroom with amenities, breakfast, bed linen, and towels. All services are designed to offer you maximum comfort during your stay in the mountains.</p>
-      <p>We have chosen not to have TVs in the rooms, but we will provide all the entertainment possible for you and your family! Board games, cards, books, and more are available in case of bad weather, and we also organize snacks and games together!</p>
-    `,
-  },
-  {
-    title: "BOOKINGS AND CONTACTS",
-    content: `
-      <p>For detailed information about our property or to book your stay, please use the booking form on our website in the “Book” section. You can also write to us directly via email or contact us by phone. We will respond quickly to confirm availability and provide all necessary details.</p>
-    `,
-  },
-  {
-    title: "PAYMENT METHODS",
-    content: `
-      <p>Once the booking is confirmed, we require a deposit of 35% of the total amount via bank transfer or online booking. The remaining balance will be paid upon arrival in cash or by credit/debit card, with an official receipt issued.</p>
-      <p><strong>IMPORTANT:</strong> Please make the deposit only after receiving official confirmation of availability and agreement on the amount.</p>
-    `,
-  },
-  {
-    title: "CANCELLATION POLICY",
-    content: `
-      <p>If the cancellation is communicated the 15th day before arrival, we will fully refund the deposit paid. No refunds are provided for cancellations communicated in the last 7 days or for early departures compared to the original booking.</p>
-    `,
-  },
-  {
-    title: "CHECK-IN AND DOCUMENTS",
-    content: `
-      <p>Upon arrival, you must present a valid ID. Without valid documents, registration cannot be completed. All personal data is handled in compliance with current privacy regulations.</p>
-      <p>After registration and payment, we will hand over the keys to the main entrance and your room. To speed up check-in, you may alternatively send us clear copies of your documents via WhatsApp or email the day before arrival.</p>
-    `,
-  },
-  {
-    title: "TIMES",
-    content: `
-      <p><strong>Check-in</strong>: from 3:00 PM to 6:00 PM. Please inform us of your expected arrival time so we can organize your welcome.</p>
-      <p><strong>Check-out</strong>: by 10:30 AM. If the room is available, it is possible to stay longer upon request.</p>
-    `,
-  },
-  {
-    title: "SECURITY AND LIABILITY",
-    content: `<p>We recommend not leaving valuables unattended in the rooms or common areas. Rooms do not have safes, so please always lock doors and windows when leaving.</p>
-    <p>The property is not responsible for theft, loss, or damage to personal belongings, nor for damage caused by or to third parties. Any damage to the property or furnishings must be reported immediately and compensated.</p>`,
-  },
-  {
-    title: "HOUSE RULES",
-    content: `<p>For the safety of all guests, our family, and for hygiene reasons:</p>
-    <ul>
-      <li>We love animals, but at the moment we cannot accommodate pets inside the property to ensure compliance with hygiene and safety regulations and to protect guests with health issues.</li>
-      <li>Cooking or using stoves in the rooms is prohibited. Mini-fridges and kettles are available in the rooms, while a microwave and coffee machine can be found in the breakfast room.</li>
-      <li>Smoking is strictly prohibited in all indoor and outdoor areas of the property. Rooms feature smoke allarms. We also advise extreme caution in forests and along roads, as mountain areas are often prone to wildfires — the forests, air, and livestock thank you!</li>
-    </ul>`,
-  },
-  {
-    title: "CLEANING AND MAINTENANCE",
-    content: `
-      <p>Room cleaning and linen change are included upon arrival and every three days for long stays. We ask you to use the bathroom facilities correctly and respect the premises. Extra cleaning or linen changes are available upon request and will incur an additional cost. Cleaning materials will be available upon request in case of need.</p>
-      <p>To facilitate cleaning, please vacate the room by 10:30 AM, arrange personal items, and leave towels to be replaced on the bathroom floor. If you do not require cleaning, prefer to avoid it, or need it at different times for personal reasons, please inform us to arrange accordingly.</p>
-    `,
-  },
-  {
-    title: "BREAKFAST",
-    content: `
-      <p>Breakfast is served in our breakfast room from 7:30 AM to 9:30 AM. We offer local products and mountain specialties to start your outdoor days in the best way. 
-      If you prefer a different time we will do our best to accommodate you. Please notify us in time to arrange.</p>
-      <p>We can also prepare breakfast to be enjoyed in your room (on request) and picnic baskets to take with you (paid service, book at least 24 hours in advance).</p>
-    `,
-  },
-  {
-    title: "BEHAVIORAL RULES",
-    content: `
-      <p>Please kindly:</p>
-      <ul>
-        <li>Turn off lights and windows when leaving</li>
-        <li>Sort your waste for recycling</li>
-        <li>Do not set the heating to more than 20 degrees (provincial rules)</li>
-        <li>Respect quiet hours: 1:00–3:00 PM and 10:30 PM–7:00 AM</li>
-        <li>Do not receive outside visitors or increase the number of guests per room</li>
-        <li>Smoking is strictly prohibited in all indoor and outdoor areas of the property.</li>
-      </ul>
-    `,
-  },
-  {
-    title: "EXTERNAL SERVICES",
-    content: `
-      <p>We are not responsible for any disruptions not under our management (internet, telephone network, public services) due to the mountain location.</p>
-    `,
-  },
-  {
-    title: "ACCESS TO THE PROPERTY",
-    content: `
-      <p>Access is available 24/7 thanks to personal keys. Please avoid disturbing others during nighttime movements.</p>
-      <p>Keys must be returned upon departure. In case of loss, the replacement cost will be charged.</p>
-    `,
-  },
-];
-
-
 useHead({
   title: "House Rules | Cuore di Bosco - Prada di Brentonico",
   meta: [
@@ -181,138 +158,9 @@ useHead({
   ],
   link: [{ rel: "canonical", href: "https://www.cuoredibosco.it/en/rules" }],
 });
+
+const root = ref<HTMLElement | null>(null);
+useReveal(root);
 </script>
 
-<style scoped>
-.welcome {
-  position: relative;
-  overflow: hidden;
-}
-
-.landing-image {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  object-position: center 50%;
-  display: block;
-}
-
-.landing-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.page-container {
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f6f3ee;
-  color: #2f2f2f;
-  min-height: 100vh;
-}
-
-.hero {
-  background-image: url("/images/hero-montagna.jpg");
-  /* Cambia con il tuo percorso */
-  background-size: cover;
-  background-position: center;
-  height: 240px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.45);
-  width: 100%;
-  height: 100%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-overlay h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-.hero-overlay p {
-  font-size: 1.1rem;
-  font-style: italic;
-  margin-top: 0.5rem;
-}
-
-.content {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.rule-box {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 1.8rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.rule-box h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
-  border-left: 4px solid #8d6748;
-  padding-left: 0.5rem;
-  color: #493e36;
-}
-
-.rule-box p,
-.rule-box li {
-  line-height: 1.6;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.rule-box ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-}
-
-.page-title {
-  font-size: 64pt;
-  font-variant: small-caps;
-}
-
-@media (max-width: 1024px) {
-  #page {
-    margin-top: 50px;
-  }
-
-  p {
-    font-size: 14pt;
-  }
-
-  h1,
-  .page-title,
-  .landing-title {
-    font-size: 24pt;
-  }
-
-  h2 {
-    font-size: 18pt;
-  }
-
-  h3 {
-    font-size: 16pt;
-  }
-}
-</style>
+<style scoped src="../../assets/css/pages/rules.css"></style>
