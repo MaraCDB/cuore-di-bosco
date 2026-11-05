@@ -14,7 +14,7 @@
     <div class="policy">
       <section class="policy-card" data-reveal>
         <h2>Cookie-Richtlinie von Cuore di Bosco</h2>
-        <p>Diese Website (<strong>cuoredibosco.it</strong>) verwendet Cookies, um den ordnungsgemäßen Betrieb zu gewährleisten und das Surferlebnis der Nutzer zu verbessern.</p>
+        <p>Diese Website (<strong>cuoredibosco.it</strong>) verwendet Cookies, um den ordnungsgemäßen Betrieb zu gewährleisten und das Nutzungserlebnis der Nutzer zu verbessern.</p>
       </section>
 
       <section class="policy-card" data-reveal>
@@ -47,7 +47,7 @@
         <p>Sie können die Cookie-Einstellungen direkt über das Banner verwalten, das beim Öffnen der Website angezeigt wird. Außerdem können Sie Cookies in Ihrem Browser deaktivieren, indem Sie den jeweiligen Anleitungen folgen:</p>
         <ul>
           <li><a href="https://support.google.com/chrome/answer/95647?hl=de" target="_blank" rel="noopener">Google Chrome</a></li>
-          <li><a href="https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+          <li><a href="https://support.mozilla.org/de/kb/cookies-information-websites-store-on-your-computer" target="_blank" rel="noopener">Mozilla Firefox</a></li>
           <li><a href="https://support.microsoft.com/de-de/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">Microsoft Edge</a></li>
           <li><a href="https://support.apple.com/de-de/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari (Mac)</a></li>
         </ul>

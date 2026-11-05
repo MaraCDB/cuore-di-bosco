@@ -28,7 +28,7 @@
           <h2>Willkommen</h2>
           <p class="lead">Willkommen im <strong>B&amp;B Cuore di Bosco</strong>, einem Rückzugsort mitten in der Natur der <strong>Vallagarina</strong>, auf der <strong>Hochebene von Brentonico, dem Garten Europas</strong>. Umgeben von üppig grünen Bergen vergeht die Zeit langsamer, und überall herrscht Ruhe.</p>
           <p>Das B&amp;B ist mit dem Auto leicht von der <strong>Ausfahrt Rovereto Sud</strong> der Autobahn A22 aus zu erreichen und ein idealer Ausgangspunkt, um den <strong>Monte Baldo</strong> zu jeder Jahreszeit zu erkunden.</p>
-          <p>Das Haus ist aus Stein gebaut und mit Holz und natürlichen Materialien eingerichtet. Es bietet warme, gepflegte Räume, in denen jedes Detail von einer tiefen Verbundenheit mit den <strong>Bergen</strong> und mit einem langsameren, bewussteren Lebensstil erzählt. Der Empfang ist schlicht und herzlich und soll dafür sorgen, dass sich unsere <strong>Gäste</strong> vom ersten Moment an wohlfühlen.</p>
+          <p>Das Haus ist aus Stein gebaut und mit Holz und natürlichen Materialien eingerichtet. Es bietet warme, gepflegte Räume, in denen jedes Detail von einer tiefen Verbundenheit mit den <strong>Bergen</strong> und mit einem langsameren, bewussteren Lebensstil erzählt. Der Empfang ist schlicht und authentisch und soll dafür sorgen, dass sich unsere <strong>Gäste</strong> vom ersten Moment an wohlfühlen.</p>
           <p>Die Zimmer sind geräumig und hell, ideal für <strong>Paare</strong> wie für <strong>Familien</strong>. Sie bieten modernen Komfort, ein <strong>eigenes Bad und einen eigenen Balkon</strong>, Bettwäsche inklusive und eine entspannte Atmosphäre, die zum Ausruhen einlädt. Auf Wunsch gibt es Ausstattung speziell für die Kleinsten, damit auch alle, die mit <strong>Kindern</strong> reisen, einen entspannten Aufenthalt haben.</p>
         </div>
       </section>
@@ -156,7 +156,7 @@
             <h2>Der Cammino di San Rocco</h2>
             <p class="lead">Der <strong>Cammino di San Rocco</strong> führt direkt an unserem Haus vorbei und ist ein reizvoller Rundweg von etwa 70&nbsp;km in 5 Etappen, der Geschichte, Natur und Kultur im Val di Gresta, in Mori, Ronzo-Chienis und auf der Hochebene von Brentonico verbindet.</p>
             <p>Er führt durch Wälder, historische Dörfer und Schützengräben des Ersten Weltkriegs und ist das ganze Jahr über begehbar. Den „Pilgerpass“ können Sie in Mori abholen und den GPX-Tracks folgen, die von den SAT-Schildern angezeigt werden. Für weitere Informationen und um die Karte herunterzuladen <a href="https://camminosanrocco.it/" target="_blank" rel="noopener">besuchen Sie die offizielle Website</a></p>
-            <p>In den Pass können Sie die 11 offiziellen Stempel eintragen, die Sie entlang des Cammino finden, und die inoffiziellen, die es zu entdecken gilt – vergessen Sie nicht unseren!</p>
+            <p>In den Pass können Sie die 11 offiziellen Stempel sammeln, die Sie entlang des Cammino finden, und die inoffiziellen, die es zu entdecken gilt – vergessen Sie nicht unseren!</p>
           </div>
           <div class="pilgrims-welcome" data-reveal>
             <h3>Willkommen für Pilger</h3>
@@ -209,7 +209,7 @@
       <section class="garden">
         <div class="wrap garden-head" data-reveal>
           <h2>Der Garten Europas</h2>
-          <p class="lead">Wenn Sie angekommen sind, empfangen Sie die Stille und die Schönheit der Hochebene von Brentonico mit ihrer Kulisse aus grünen Bergen.</p>
+          <p class="lead">Bei Ihrer Ankunft empfängt Sie die Stille und die Schönheit der Hochebene von Brentonico mit ihrer Kulisse aus grünen Bergen.</p>
         </div>
         <SitePhotoCarousel :photos="gardenPhotos" label="Fotos des Hauses, der Hochebene und der Umgebung" />
       </section>

@@ -214,7 +214,7 @@
             Im botanischen Garten des&nbsp;<a href="http://www.visitrovereto.it/scopri/palazzi/palazzo-eccheli-baisi/"
               target="_blank" rel="noopener noreferrer nofollow">Palazzo Eccheli-Baisi</a>&nbsp;finden Sie viele
             der 1.655 Pflanzen des Naturparks Monte
-            Baldo gesammelt, die Mehrheit der in den Alpen vorkommenden. Am besten lernen Sie ihn
+            Baldo gesammelt, die meisten der in den Alpen vorkommenden Arten. Am besten lernen Sie ihn
             bei einer Führung kennen, die Ihnen auch die Ausstellungen des
             Palazzo und das&nbsp;<strong>Fossilienmuseum</strong>&nbsp;zeigt. Lauschen Sie der
             Stille in der alten&nbsp;<a

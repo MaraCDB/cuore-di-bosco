@@ -2,7 +2,7 @@
 
 This list covers the German pages of step 2, one section per page:
 
-- the home page /de (this section);
+- the home page /de;
 - the explore page /de/entdecken;
 - the rules page /de/hausordnung;
 - the privacy page /de/datenschutz.
@@ -38,7 +38,7 @@ The link preview (og:title, og:description) uses the same two German texts.
 | Benvenuti | Willkommen |
 | Benvenuti al B&B Cuore di Bosco, un rifugio immerso nella natura della Vallagarina, sull’Altopiano di Brentonico, il giardino d’Europa. Circondati da rigogliose montagne, il tempo rallenta e la tranquillità regna sovrana. | Willkommen im B&B Cuore di Bosco, einem Rückzugsort mitten in der Natur der Vallagarina, auf der Hochebene von Brentonico, dem Garten Europas. Umgeben von üppig grünen Bergen vergeht die Zeit langsamer, und überall herrscht Ruhe. |
 | Il B&B è facilmente raggiungibile in auto dall’uscita di Rovereto Sud dell’autostrada A22 e rappresenta un punto di partenza ideale per esplorare il Monte Baldo in ogni stagione. | Das B&B ist mit dem Auto leicht von der Ausfahrt Rovereto Sud der Autobahn A22 aus zu erreichen und ein idealer Ausgangspunkt, um den Monte Baldo zu jeder Jahreszeit zu erkunden. |
-| La casa, realizzata in pietra e arredata con legno e materiali naturali, offre ambienti caldi e curati, dove ogni dettaglio racconta un profondo legame con la montagna e con uno stile di vita più lento e consapevole. L’accoglienza è semplice e autentica, pensata per far sentire gli ospiti a proprio agio fin dal primo momento. | Das Haus ist aus Stein gebaut und mit Holz und natürlichen Materialien eingerichtet. Es bietet warme, gepflegte Räume, in denen jedes Detail von einer tiefen Verbundenheit mit den Bergen und mit einem langsameren, bewussteren Lebensstil erzählt. Der Empfang ist schlicht und herzlich und soll dafür sorgen, dass sich unsere Gäste vom ersten Moment an wohlfühlen. |
+| La casa, realizzata in pietra e arredata con legno e materiali naturali, offre ambienti caldi e curati, dove ogni dettaglio racconta un profondo legame con la montagna e con uno stile di vita più lento e consapevole. L’accoglienza è semplice e autentica, pensata per far sentire gli ospiti a proprio agio fin dal primo momento. | Das Haus ist aus Stein gebaut und mit Holz und natürlichen Materialien eingerichtet. Es bietet warme, gepflegte Räume, in denen jedes Detail von einer tiefen Verbundenheit mit den Bergen und mit einem langsameren, bewussteren Lebensstil erzählt. Der Empfang ist schlicht und authentisch und soll dafür sorgen, dass sich unsere Gäste vom ersten Moment an wohlfühlen. |
 | Le camere sono spaziose e luminose, ideali sia per coppie sia per famiglie. Offrono comfort moderni, bagno e balcone privati, biancheria inclusa e un’atmosfera rilassante che invita al riposo. Su richiesta sono disponibili dotazioni dedicate ai più piccoli, per garantire un soggiorno sereno anche a chi viaggia con bambini. | Die Zimmer sind geräumig und hell, ideal für Paare wie für Familien. Sie bieten modernen Komfort, ein eigenes Bad und einen eigenen Balkon, Bettwäsche inklusive und eine entspannte Atmosphäre, die zum Ausruhen einlädt. Auf Wunsch gibt es Ausstattung speziell für die Kleinsten, damit auch alle, die mit Kindern reisen, einen entspannten Aufenthalt haben. |
 
 ### Unsere Zimmer (section "Zimmer")
@@ -112,7 +112,7 @@ The list items, "Da 2 a 4 posti letto adulti", "Dettagli" and "Prenota" of Mirti
 | Il Cammino di San Rocco | Der Cammino di San Rocco |
 | Il Cammino di San Rocco passa proprio davanti alla nostra struttura ed è un suggestivo percorso ad anello di circa 70 km, strutturato in 5 tappe, che unisce storia, natura e cultura tra la Val di Gresta, Mori, Ronzo-Chienis e l’altopiano di Brentonico. | Der Cammino di San Rocco führt direkt an unserem Haus vorbei und ist ein reizvoller Rundweg von etwa 70 km in 5 Etappen, der Geschichte, Natur und Kultur im Val di Gresta, in Mori, Ronzo-Chienis und auf der Hochebene von Brentonico verbindet. |
 | Attraversa boschi, borghi storici e trincee della Grande Guerra, ed è percorribile tutto l’anno. È possibile ritirare il “passaporto del pellegrino” a Mori e seguire le tracce GPX segnalate dai cartelli SAT. Per maggiori informazioni e per scaricare la mappa vai sul sito ufficiale | Er führt durch Wälder, historische Dörfer und Schützengräben des Ersten Weltkriegs und ist das ganze Jahr über begehbar. Den „Pilgerpass“ können Sie in Mori abholen und den GPX-Tracks folgen, die von den SAT-Schildern angezeigt werden. Für weitere Informationen und um die Karte herunterzuladen besuchen Sie die offizielle Website |
-| Sul passaporto potrai apporre gli 11 timbri ufficiali che incontrerai lungo il Cammino e quelli non ufficiali da scoprire, non dimenticare il nostro! | In den Pass können Sie die 11 offiziellen Stempel eintragen, die Sie entlang des Cammino finden, und die inoffiziellen, die es zu entdecken gilt – vergessen Sie nicht unseren! |
+| Sul passaporto potrai apporre gli 11 timbri ufficiali che incontrerai lungo il Cammino e quelli non ufficiali da scoprire, non dimenticare il nostro! | In den Pass können Sie die 11 offiziellen Stempel sammeln, die Sie entlang des Cammino finden, und die inoffiziellen, die es zu entdecken gilt – vergessen Sie nicht unseren! |
 | L’accoglienza per i pellegrini | Willkommen für Pilger |
 | Colazione a partire dalle 7 | Frühstück ab 7 Uhr |
 | Sdraio in terrazza e sul balcone panoramico | Liegestühle auf der Terrasse und auf dem Panoramabalkon |
@@ -151,7 +151,7 @@ The list items, "Da 2 a 4 posti letto adulti", "Dettagli" and "Prenota" of Mirti
 | Italiano | Deutsch |
 |---|---|
 | Il giardino d’Europa | Der Garten Europas |
-| Una volta arrivati, vi accoglierà il silenzio e la bellezza dell’Altopiano di Brentonico, con la sua cornice di verdi montagne. | Wenn Sie angekommen sind, empfangen Sie die Stille und die Schönheit der Hochebene von Brentonico mit ihrer Kulisse aus grünen Bergen. |
+| Una volta arrivati, vi accoglierà il silenzio e la bellezza dell’Altopiano di Brentonico, con la sua cornice di verdi montagne. | Bei Ihrer Ankunft empfängt Sie die Stille und die Schönheit der Hochebene von Brentonico mit ihrer Kulisse aus grünen Bergen. |
 | Fotografie della casa, dell'Altopiano e dei dintorni (carousel label, read by screen readers) | Fotos des Hauses, der Hochebene und der Umgebung |
 | Il sentiero nel bosco (photo description) | Der Waldweg |
 | Il bosco di Prada (caption) | Der Wald von Prada |
@@ -269,7 +269,7 @@ The link preview (og:title, og:description) uses the same two German texts.
 | È la prima montagna che incontri arrivando in Trentino. Qui puoi fare trekking e mountain bike d’estate e sciare sulle piste di Polsa, San Valentino e San Giacomo d’inverno. | Es ist der erste Berg, dem Sie begegnen, wenn Sie ins Trentino kommen. Hier können Sie im Sommer wandern und Mountainbike fahren und im Winter auf den Pisten von Polsa, San Valentino und San Giacomo Ski fahren. |
 | Sei sul versante Trentino del Monte Baldo, fra l’Adige ed il Garda, nel cuore del Parco del Monte Baldo conosciuto dai botanici di tutta Europa come “Giardino d’Italia” per la sua ricchezza di piante e fiori rari. | Sie befinden sich auf der Trentiner Seite des Monte Baldo, zwischen der Etsch und dem Gardasee, im Herzen des Naturparks Monte Baldo, den Botaniker in ganz Europa als „Garten Europas“ kennen, wegen seines Reichtums an seltenen Pflanzen und Blumen. |
 | Brentonico è il nome della frazione capoluogo ed il suo comune comprende ulteriori frazioni e località montane: Castione, Cazzano, Crosano, Cornè, Prada, Saccone e Sorne, così come i centri turistici di San Giacomo, San Valentino e Polsa. | Brentonico ist der Name des Hauptortes, und die Gemeinde umfasst weitere Ortsteile und Berglagen: Castione, Cazzano, Crosano, Cornè, Prada, Saccone und Sorne, sowie die Tourismuszentren San Giacomo, San Valentino und Polsa. |
-| Al giardino botanico di Palazzo Eccheli-Baisi troverai raccolte molte delle 1.655 piante del Parco del Monte Baldo, la maggioranza di quelle presenti sulle Alpi. Lo apprezzerai al meglio con una visita guidata, che ti illustrerà anche le mostre del palazzo e il Museo del fossile. Ascolta il silenzio nell’antica cripta romanica della chiesa tardo-medievale dei SS. Pietro e Paolo. Rilassati all’ombra dei secolari ippocastani del parco Cesare Battisti, al centro del paese. In località Sorne, scopri il Mulino Zeni, un mulino dell’Ottocento ancora perfettamente in funzione. | Im botanischen Garten des Palazzo Eccheli-Baisi finden Sie viele der 1.655 Pflanzen des Naturparks Monte Baldo gesammelt, die Mehrheit der in den Alpen vorkommenden. Am besten lernen Sie ihn bei einer Führung kennen, die Ihnen auch die Ausstellungen des Palazzo und das Fossilienmuseum zeigt. Lauschen Sie der Stille in der alten romanischen Krypta der spätmittelalterlichen Kirche der Heiligen Petrus und Paulus. Entspannen Sie im Schatten der jahrhundertealten Rosskastanien des Parks Cesare Battisti im Zentrum des Ortes. Entdecken Sie im Ortsteil Sorne die Zeni-Mühle, eine Mühle aus dem 19. Jahrhundert, die noch einwandfrei in Betrieb ist. |
+| Al giardino botanico di Palazzo Eccheli-Baisi troverai raccolte molte delle 1.655 piante del Parco del Monte Baldo, la maggioranza di quelle presenti sulle Alpi. Lo apprezzerai al meglio con una visita guidata, che ti illustrerà anche le mostre del palazzo e il Museo del fossile. Ascolta il silenzio nell’antica cripta romanica della chiesa tardo-medievale dei SS. Pietro e Paolo. Rilassati all’ombra dei secolari ippocastani del parco Cesare Battisti, al centro del paese. In località Sorne, scopri il Mulino Zeni, un mulino dell’Ottocento ancora perfettamente in funzione. | Im botanischen Garten des Palazzo Eccheli-Baisi finden Sie viele der 1.655 Pflanzen des Naturparks Monte Baldo gesammelt, die meisten der in den Alpen vorkommenden Arten. Am besten lernen Sie ihn bei einer Führung kennen, die Ihnen auch die Ausstellungen des Palazzo und das Fossilienmuseum zeigt. Lauschen Sie der Stille in der alten romanischen Krypta der spätmittelalterlichen Kirche der Heiligen Petrus und Paulus. Entspannen Sie im Schatten der jahrhundertealten Rosskastanien des Parks Cesare Battisti im Zentrum des Ortes. Entdecken Sie im Ortsteil Sorne die Zeni-Mühle, eine Mühle aus dem 19. Jahrhundert, die noch einwandfrei in Betrieb ist. |
 
 ### Die vier Jahreszeiten
 
@@ -394,7 +394,7 @@ The long word in the title carries a soft hyphen (an invisible syllable break) s
 | Italiano | Deutsch |
 |---|---|
 | Cookie Policy di Cuore di Bosco | Cookie-Richtlinie von Cuore di Bosco |
-| Questo sito web (cuoredibosco.it) utilizza cookie per garantire il corretto funzionamento e migliorare l’esperienza di navigazione degli utenti. | Diese Website (cuoredibosco.it) verwendet Cookies, um den ordnungsgemäßen Betrieb zu gewährleisten und das Surferlebnis der Nutzer zu verbessern. |
+| Questo sito web (cuoredibosco.it) utilizza cookie per garantire il corretto funzionamento e migliorare l’esperienza di navigazione degli utenti. | Diese Website (cuoredibosco.it) verwendet Cookies, um den ordnungsgemäßen Betrieb zu gewährleisten und das Nutzungserlebnis der Nutzer zu verbessern. |
 | Cosa sono i cookie | Was sind Cookies? |
 | I cookie sono piccoli file di testo che i siti web inviano al dispositivo dell’utente durante la navigazione. Servono per raccogliere informazioni su come l’utente utilizza il sito, per memorizzare le preferenze e per fornire contenuti personalizzati. | Cookies sind kleine Textdateien, die Websites während des Besuchs an das Gerät des Nutzers senden. Sie dienen dazu, Informationen darüber zu sammeln, wie der Nutzer die Website verwendet, Einstellungen zu speichern und personalisierte Inhalte bereitzustellen. |
 | Tipologie di cookie utilizzati | Arten der verwendeten Cookies |
@@ -413,11 +413,13 @@ The long word in the title carries a soft hyphen (an invisible syllable break) s
 | Titolare del trattamento | Verantwortlicher |
 | Email: | E-Mail: |
 
+Note for the friend: the language-choice sentence in card 4 („Gewählte Sprache: …“) addresses the reader as „Sie“, while the rest of the page says „der Nutzer“. The consistent alternative would be „Wenn der Nutzer … klickt, … im Browser seines Geräts …“.
+
 The four browser help links keep the browser names (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari (Mac)) and point to the German help pages of the same vendors.
 
 ## Glossar-Ergänzungen
 
-New words of the home page, to be used the same way on the other German pages.
+New words of the German pages, to be used the same way on all German pages.
 
 | Italiano | Deutsch |
 |---|---|
