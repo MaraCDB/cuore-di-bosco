@@ -14,6 +14,8 @@
 
 
 <script setup lang="ts">
+import type { SiteLocale } from '~/utils/site-links';
+
 const { setLocale } = useI18n();
 const route = useRoute();
 const locale = computed(() => siteLocale(route.path));
@@ -24,21 +26,20 @@ watch(locale, siteLanguage => setLocale(siteLanguage).catch(() => {}));
 const redesignedRoutes = new Set(['/it', '/it/', '/it/esplora', '/it/esplora/', '/it/regolamento', '/it/regolamento/', '/it/privacy-policy', '/it/privacy-policy/', '/it/prenota', '/it/prenota/', '/en', '/en/', '/en/explore', '/en/explore/', '/en/rules', '/en/rules/', '/en/privacy-policy', '/en/privacy-policy/', '/en/booking', '/en/booking/', '/de/buchen', '/de/buchen/', '/de', '/de/', '/de/entdecken', '/de/entdecken/', '/de/hausordnung', '/de/hausordnung/', '/de/datenschutz', '/de/datenschutz/']);
 const isRedesignedRoute = computed(() => redesignedRoutes.has(route.path));
 const structuredData = computed(() => JSON.stringify(lodgingBusinessJsonLd(locale.value)));
+const alternateOpenGraphLocales = computed(() => (['it', 'en', 'de'] as SiteLocale[]).filter(siteLanguage => siteLanguage !== locale.value));
 
 useHead({
   htmlAttrs: { lang: locale },
-  meta: [
+  meta: () => [
+    { property: 'og:locale', content: openGraphLocale(locale.value) },
+    ...alternateOpenGraphLocales.value.map(siteLanguage => ({ key: `og:locale:alternate:${siteLanguage}`, property: 'og:locale:alternate', content: openGraphLocale(siteLanguage) })),
+    { property: 'og:site_name', content: 'B&B Cuore di Bosco' },
     { name: 'geo.position', content: '45.8015;10.9562' },
     { name: 'geo.placename', content: 'Prada di Brentonico, Trentino' },
     { name: 'geo.region', content: 'IT-TN' },
     { name: 'ICBM', content: '45.8015, 10.9562' },
     { name: 'place:location:latitude', content: '45.8015' },
     { name: 'place:location:longitude', content: '10.9562' },
-  ],
-  link: [
-    { rel: 'alternate', hreflang: 'it', href: 'https://www.cuoredibosco.it/it' },
-    { rel: 'alternate', hreflang: 'en', href: 'https://www.cuoredibosco.it/en' },
-    { rel: 'alternate', hreflang: 'x-default', href: 'https://www.cuoredibosco.it/it' },
   ],
   script: [
     {
@@ -47,4 +48,5 @@ useHead({
     },
   ],
 });
+useHead(computed(() => ({ link: alternateLinks(route.path) })));
 </script>
