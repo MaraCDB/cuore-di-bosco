@@ -277,26 +277,26 @@ onMounted(() => window.addEventListener('keydown', handleKeydown));
 onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown));
 
 useHead({
-  title: "Book Your Stay | B&B Cuore di Bosco - Family Holidays Brentonico",
+  title: "Book | B&B Cuore di Bosco in Brentonico, near Polsa",
   meta: [
     {
       name: "description",
       content:
-        "Book at B&B Cuore di Bosco: family mountain holidays with children in Prada di Brentonico. Baby kit, homemade breakfasts and nature in Trentino.",
+        "Book your stay at B&B Cuore di Bosco in Prada di Brentonico: Lampone and Mirtillo rooms, breakfast included, baby kit and free parking nearby.",
     },
     {
       name: "keywords",
       content:
-        "family B&B booking, mountain holidays with kids Trentino, B&B Cuore di Bosco, Prada di Brentonico, family bed and breakfast, baby kit mountain, family stay Brentonico",
+        "family B&B booking, mountain holidays with kids Trentino, B&B Cuore di Bosco, Prada di Brentonico, family bed and breakfast, baby kit mountain, family stay Brentonico, where to stay Polsa skiing, B&B near Polsa ski slopes, snow holiday Brentonico, B&B hiking Monte Baldo, B&B Brentonico, book B&B Brentonico",
     },
     {
       property: "og:title",
-      content: "Book | B&B Cuore di Bosco - Family Holidays in Trentino",
+      content: "Book | B&B Cuore di Bosco in Brentonico, near Polsa",
     },
     {
       property: "og:description",
       content:
-        "Book your family mountain holiday with children at B&B Cuore di Bosco. Baby kit, homemade breakfasts and nature in Brentonico.",
+        "Book your stay at B&B Cuore di Bosco in Prada di Brentonico: Lampone and Mirtillo rooms, breakfast included, baby kit and free parking nearby.",
     },
     {
       property: "og:type",
@@ -316,12 +316,12 @@ useHead({
     },
     {
       name: "twitter:title",
-      content: "Book | B&B Cuore di Bosco - Family Mountain Holidays",
+      content: "Book | B&B Cuore di Bosco in Brentonico, near Polsa",
     },
     {
       name: "twitter:description",
       content:
-        "Book at B&B Cuore di Bosco: family mountain holidays with children in Brentonico, Trentino.",
+        "Book your stay at B&B Cuore di Bosco in Prada di Brentonico: Lampone and Mirtillo rooms, breakfast included, baby kit and free parking nearby.",
     },
   ],
   link: [

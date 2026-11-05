@@ -245,26 +245,26 @@ const gardenPhotos = [
 ];
 
 useHead({
-  title: "B&B Cuore di Bosco | Family Mountain Holidays - Brentonico, Trentino",
+  title: "Cuore di Bosco | Mountain B&B in Monte Baldo Nature Park",
   meta: [
     {
       name: "description",
       content:
-        "Family-friendly B&B on the Brentonico Plateau, Trentino. Mountain holidays with children: homemade breakfasts, baby kit, nature and peace in the Monte Baldo Nature Park.",
+        "B&B in Prada di Brentonico, 776 m, at the Polsa junction: genuine breakfasts, baby kit and Monte Baldo trails, near Rovereto and Lake Garda.",
     },
     {
       name: "keywords",
       content:
-        "family B&B, mountain holidays with kids, bed and breakfast Brentonico, kids stay free mountains, family vacation Trentino, B&B children Trentino, Brentonico Plateau, homemade breakfast, Cuore di Bosco, Monte Baldo, family hotel Trentino",
+        "family B&B, mountain holidays with kids, bed and breakfast Brentonico, kids stay free mountains, family vacation Trentino, B&B children Trentino, Brentonico Plateau, homemade breakfast, Cuore di Bosco, Monte Baldo, family hotel Trentino, B&B near Lake Garda, B&B Brentonico, B&B Prada di Brentonico, Brentonico accommodation, B&B Polsa, B&B near Polsa ski slopes, B&B Monte Baldo, B&B near Rovereto, Trentino near Lake Garda, quiet mountain B&B, B&B in the woods, family holiday Brentonico Plateau, romantic weekend Trentino, Monte Baldo Nature Park",
     },
     {
       property: "og:title",
-      content: "B&B Cuore di Bosco - Family Holidays in the Woods of Brentonico",
+      content: "Cuore di Bosco | Mountain B&B in Monte Baldo Nature Park",
     },
     {
       property: "og:description",
       content:
-        "Family-friendly B&B on the Brentonico Plateau. Homemade breakfasts, baby kit, bikes and plenty of space in the nature of Trentino.",
+        "B&B in Prada di Brentonico, 776 m, at the Polsa junction: genuine breakfasts, baby kit and Monte Baldo trails, near Rovereto and Lake Garda.",
     },
     {
       property: "og:type",
@@ -284,12 +284,12 @@ useHead({
     },
     {
       name: "twitter:title",
-      content: "B&B Cuore di Bosco - Family Mountain Holidays in Trentino",
+      content: "Cuore di Bosco | Mountain B&B in Monte Baldo Nature Park",
     },
     {
       name: "twitter:description",
       content:
-        "Family-friendly B&B on the Brentonico Plateau. Nature, homemade breakfasts and child-friendly services.",
+        "B&B in Prada di Brentonico, 776 m, at the Polsa junction: genuine breakfasts, baby kit and Monte Baldo trails, near Rovereto and Lake Garda.",
     },
   ],
 

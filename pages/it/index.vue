@@ -245,26 +245,26 @@ const gardenPhotos = [
 ];
 
 useHead({
-  title: "B&B Cuore di Bosco | Vacanze in montagna per famiglie - Brentonico, Trentino",
+  title: "Cuore di Bosco | B&B in montagna nel Parco Naturale Monte Baldo",
   meta: [
     {
       name: "description",
       content:
-        "B&B per famiglie sull’Altopiano di Brentonico, Trentino. Vacanze in montagna con bambini: colazioni genuine, kit bimbo, natura e pace tra i boschi del Parco del Monte Baldo.",
+        "B&B a Prada di Brentonico, 776 m, sul bivio per Polsa: colazioni genuine, kit bimbo e sentieri del Monte Baldo, vicino a Rovereto e al Lago di Garda.",
     },
     {
       name: "keywords",
       content:
-        "b&b per famiglie, vacanze montagna con bambini, bed and breakfast Brentonico, montagna bambini gratis, vacanze Trentino famiglie, b&b bambini Trentino, Altopiano di Brentonico, colazione genuina, Cuore di Bosco, Monte Baldo, family hotel Trentino",
+        "b&b per famiglie, vacanze montagna con bambini, bed and breakfast Brentonico, montagna bambini gratis, vacanze Trentino famiglie, b&b bambini Trentino, Altopiano di Brentonico, colazione genuina, Cuore di Bosco, Monte Baldo, family hotel Trentino, b&b trentino, B&B Brentonico, B&B Altopiano di Brentonico, B&B Prada di Brentonico, Brentonico alloggi, B&B Polsa, B&B vicino a Polsa, Polsa alloggi, B&B Monte Baldo, B&B Vallagarina, B&B vicino a Rovereto, B&B vicino al Lago di Garda, trentino vicino lago di garda, montagne sopra rovereto, posti in montagna vicino, B&B nel bosco, B&B tranquillo in montagna, vacanza in famiglia Altopiano di Brentonico, weekend romantico in Trentino, Parco Naturale Monte Baldo",
     },
     {
       property: "og:title",
-      content: "B&B Cuore di Bosco - Vacanze per famiglie tra i boschi di Brentonico",
+      content: "Cuore di Bosco | B&B in montagna nel Parco Naturale Monte Baldo",
     },
     {
       property: "og:description",
       content:
-        "B&B ideale per famiglie con bambini sull’Altopiano di Brentonico. Colazioni fatte in casa, kit bimbo, bici e tanto spazio nella natura del Trentino.",
+        "B&B a Prada di Brentonico, 776 m, sul bivio per Polsa: colazioni genuine, kit bimbo e sentieri del Monte Baldo, vicino a Rovereto e al Lago di Garda.",
     },
     {
       property: "og:type",
@@ -284,12 +284,12 @@ useHead({
     },
     {
       name: "twitter:title",
-      content: "B&B Cuore di Bosco - Vacanze in montagna per famiglie",
+      content: "Cuore di Bosco | B&B in montagna nel Parco Naturale Monte Baldo",
     },
     {
       name: "twitter:description",
       content:
-        "B&B per famiglie con bambini sull'Altopiano di Brentonico. Natura, colazioni genuine e servizi dedicati ai piccoli.",
+        "B&B a Prada di Brentonico, 776 m, sul bivio per Polsa: colazioni genuine, kit bimbo e sentieri del Monte Baldo, vicino a Rovereto e al Lago di Garda.",
     },
   ],
   link: [{ rel: "canonical", href: "https://www.cuoredibosco.it/it" }],

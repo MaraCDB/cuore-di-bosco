@@ -245,21 +245,26 @@ const gardenPhotos = [
 ];
 
 useHead({
-  title: "B&B Cuore di Bosco | Familienurlaub in den Bergen – Brentonico, Trentino",
+  title: "Cuore di Bosco | B&B in den Bergen im Naturpark Monte Baldo",
   meta: [
     {
       name: "description",
       content:
-        "B&B für Familien auf der Hochebene von Brentonico im Trentino. Bergurlaub mit Kindern: natürliches Frühstück, Babyausstattung, Natur und Ruhe in den Wäldern des Naturparks Monte Baldo.",
+        "B&B in Prada di Brentonico, 776 m, an der Abzweigung nach Polsa: natürliches Frühstück, Babyausstattung und Monte-Baldo-Wege, nahe Rovereto und Gardasee.",
+    },
+    {
+      name: "keywords",
+      content:
+        "B&B für Familien, Urlaub mit Kindern in den Bergen, Familienurlaub Trentino, Familienhotel Trentino, B&B Brentonico, Unterkunft Brentonico, B&B Prada di Brentonico, Hochebene von Brentonico, B&B Polsa, Unterkunft Polsa, B&B Monte Baldo, B&B nahe Gardasee, Unterkunft nahe Rovereto, Trentino nahe Gardasee, ruhiges B&B in den Bergen, B&B im Wald, romantisches Wochenende Trentino, Naturpark Monte Baldo, Cuore di Bosco",
     },
     {
       property: "og:title",
-      content: "B&B Cuore di Bosco | Familienurlaub in den Bergen – Brentonico, Trentino",
+      content: "Cuore di Bosco | B&B in den Bergen im Naturpark Monte Baldo",
     },
     {
       property: "og:description",
       content:
-        "B&B für Familien auf der Hochebene von Brentonico im Trentino. Bergurlaub mit Kindern: natürliches Frühstück, Babyausstattung, Natur und Ruhe in den Wäldern des Naturparks Monte Baldo.",
+        "B&B in Prada di Brentonico, 776 m, an der Abzweigung nach Polsa: natürliches Frühstück, Babyausstattung und Monte-Baldo-Wege, nahe Rovereto und Gardasee.",
     },
     {
       property: "og:type",
@@ -272,6 +277,19 @@ useHead({
     {
       property: "og:image",
       content: "https://www.cuoredibosco.it/images/cuore-casa.webp",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Cuore di Bosco | B&B in den Bergen im Naturpark Monte Baldo",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "B&B in Prada di Brentonico, 776 m, an der Abzweigung nach Polsa: natürliches Frühstück, Babyausstattung und Monte-Baldo-Wege, nahe Rovereto und Gardasee.",
     },
   ],
   link: [{ rel: "canonical", href: "https://www.cuoredibosco.it/de" }],

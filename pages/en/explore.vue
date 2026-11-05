@@ -345,26 +345,26 @@ const flowerPhotos = [
 ];
 
 useHead({
-  title: "Explore the Surroundings of Brentonico | B&B Cuore di Bosco - Trekking, alpine huts and family activities",
+  title: "Explore Brentonico and Monte Baldo | B&B Cuore di Bosco",
   meta: [
     {
       name: "description",
       content:
-        "Explore the surroundings of B&B Cuore di Bosco in Brentonico: Monte Baldo trekking, alpine huts, skiing at Polsa, Lake Garda and family activities with children in Trentino.",
+        "Hikes on Monte Baldo, snowshoeing and Polsa ski slopes, alpine huts, Canyon della Sorna, Rovereto and Lake Garda: things to do around Brentonico.",
     },
     {
       name: "keywords",
       content:
-        "things to do Brentonico, hiking Monte Baldo, trekking Brentonico, alpine huts Trentino, Monte Baldo Nature Park, Lake Garda day trip, Rovereto museums, skiing Polsa San Valentino, B&B near ski slopes Polsa, family mountain holidays Trentino, kids activities Brentonico, Prada di Brentonico families",
+        "things to do Brentonico, hiking Monte Baldo, trekking Brentonico, alpine huts Trentino, Monte Baldo Nature Park, Lake Garda day trip, Rovereto museums, skiing Polsa San Valentino, B&B near ski slopes Polsa, family mountain holidays Trentino, kids activities Brentonico, Prada di Brentonico families, ski slopes for kids Trentino, snowshoeing Monte Baldo, Christmas markets Brentonico, easy walks Trentino, easy mountain hikes, mountain trekking, visit Monte Baldo, panoramic views Trentino, scenic viewpoints mountains, photography spots Trentino, birdwatching Trentino, what to see in Trentino",
     },
     {
       property: "og:title",
-      content: "Explore the Surroundings of Brentonico | B&B Cuore di Bosco",
+      content: "Explore Brentonico and Monte Baldo | B&B Cuore di Bosco",
     },
     {
       property: "og:description",
       content:
-        "Explore the surroundings of B&B Cuore di Bosco: Monte Baldo trekking, alpine huts, skiing at Polsa and Lake Garda. Family mountain holidays in Trentino.",
+        "Hikes on Monte Baldo, snowshoeing and Polsa ski slopes, alpine huts, Canyon della Sorna, Rovereto and Lake Garda: things to do around Brentonico.",
     },
     {
       property: "og:type",
@@ -384,12 +384,12 @@ useHead({
     },
     {
       name: "twitter:title",
-      content: "Explore the Surroundings of Brentonico | B&B Cuore di Bosco",
+      content: "Explore Brentonico and Monte Baldo | B&B Cuore di Bosco",
     },
     {
       name: "twitter:description",
       content:
-        "Explore the surroundings of B&B Cuore di Bosco: trekking, alpine huts, skiing at Polsa and Lake Garda for families in Trentino.",
+        "Hikes on Monte Baldo, snowshoeing and Polsa ski slopes, alpine huts, Canyon della Sorna, Rovereto and Lake Garda: things to do around Brentonico.",
     },
   ],
   link: [{ rel: "canonical", href: "https://www.cuoredibosco.it/en/explore" }],

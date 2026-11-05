@@ -174,11 +174,11 @@ describe('german home page', () => {
     expect([...german.querySelectorAll('img')].filter(image => image.hasAttribute('width') || image.hasAttribute('height'))).toEqual([])
   })
 
-  it('sets the german head block without keywords or twitter tags', () => {
+  it('sets the german head block with keywords and twitter tags', () => {
     expect(germanSource).toContain('https://www.cuoredibosco.it/de"')
-    expect(germanSource).toContain('title: "B&B Cuore di Bosco | Familienurlaub in den Bergen – Brentonico, Trentino"')
-    expect(germanSource).not.toContain('name: "keywords"')
-    expect(germanSource).not.toContain('twitter:')
+    expect(germanSource).toContain('title: "Cuore di Bosco | B&B in den Bergen im Naturpark Monte Baldo"')
+    expect(germanSource).toContain('name: "keywords"')
+    expect(germanSource).toContain('name: "twitter:card"')
   })
 
   it('keeps the shared home styles free of section ids', () => {

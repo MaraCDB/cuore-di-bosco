@@ -281,21 +281,26 @@ onMounted(() => window.addEventListener('keydown', handleKeydown));
 onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown));
 
 useHead({
-  title: "Buchen | B&B Cuore di Bosco – Familienurlaub in Brentonico",
+  title: "Buchen | B&B Cuore di Bosco in Brentonico, nahe Polsa",
   meta: [
     {
       name: "description",
       content:
-        "Buchen Sie Ihren Familienurlaub im B&B Cuore di Bosco in Prada di Brentonico: zwei Zimmer, Frühstück inklusive und viel Natur im Naturpark Monte Baldo im Trentino.",
+        "Buchen Sie Ihren Aufenthalt im B&B Cuore di Bosco in Prada di Brentonico: Zimmer Lampone und Mirtillo, Frühstück inklusive, Babyausstattung, Parkplatz gratis.",
+    },
+    {
+      name: "keywords",
+      content:
+        "B&B Brentonico buchen, Familienurlaub Trentino buchen, B&B Cuore di Bosco, Prada di Brentonico, Unterkunft Brentonico, Unterkunft Polsa Skifahren, B&B nahe Skipisten Polsa, Winterurlaub Brentonico, B&B zum Wandern Monte Baldo, Babyausstattung",
     },
     {
       property: "og:title",
-      content: "Buchen | B&B Cuore di Bosco – Familienurlaub in Brentonico",
+      content: "Buchen | B&B Cuore di Bosco in Brentonico, nahe Polsa",
     },
     {
       property: "og:description",
       content:
-        "Buchen Sie Ihren Familienurlaub im B&B Cuore di Bosco in Prada di Brentonico: zwei Zimmer, Frühstück inklusive und viel Natur im Naturpark Monte Baldo im Trentino.",
+        "Buchen Sie Ihren Aufenthalt im B&B Cuore di Bosco in Prada di Brentonico: Zimmer Lampone und Mirtillo, Frühstück inklusive, Babyausstattung, Parkplatz gratis.",
     },
     {
       property: "og:type",
@@ -308,6 +313,19 @@ useHead({
     {
       property: "og:image",
       content: "https://www.cuoredibosco.it/images/cuore-casa.webp",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Buchen | B&B Cuore di Bosco in Brentonico, nahe Polsa",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Buchen Sie Ihren Aufenthalt im B&B Cuore di Bosco in Prada di Brentonico: Zimmer Lampone und Mirtillo, Frühstück inklusive, Babyausstattung, Parkplatz gratis.",
     },
   ],
   link: [

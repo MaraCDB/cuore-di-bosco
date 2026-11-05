@@ -346,21 +346,26 @@ const flowerPhotos = [
 ];
 
 useHead({
-  title: "Die Umgebung von Brentonico entdecken | B&B Cuore di Bosco – Wandern, Almen und Familienaktivitäten",
+  title: "Brentonico und Monte Baldo entdecken | B&B Cuore di Bosco",
   meta: [
     {
       name: "description",
       content:
-        "Entdecken Sie die Umgebung des B&B Cuore di Bosco in Brentonico: Trekking am Monte Baldo, Almen, Canyon della Sorna, Skifahren in Polsa, Gardasee und Familienaktivitäten mit Kindern im Trentino.",
+        "Wanderungen am Monte Baldo, Schneeschuhwandern und Pisten in Polsa, Almen, Canyon della Sorna, Rovereto und Gardasee: Ausflugsziele rund um Brentonico.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Ausflüge Brentonico, Wandern Monte Baldo, Schneeschuhwandern Monte Baldo, Skifahren Polsa mit Kindern, Skipisten für Kinder Trentino, Almen Trentino, Canyon della Sorna, Rovereto Museen, Gardasee Ausflug, Weihnachtsmärkte Brentonico, einfache Wanderungen Trentino, Panoramablick Trentino, Aussichtspunkte Trentino, Fotospots Trentino, Vogelbeobachtung Trentino, Sehenswürdigkeiten Trentino, Monte Baldo besuchen, Naturpark Monte Baldo",
     },
     {
       property: "og:title",
-      content: "Die Umgebung von Brentonico entdecken | B&B Cuore di Bosco – Wandern, Almen und Familienaktivitäten",
+      content: "Brentonico und Monte Baldo entdecken | B&B Cuore di Bosco",
     },
     {
       property: "og:description",
       content:
-        "Entdecken Sie die Umgebung des B&B Cuore di Bosco in Brentonico: Trekking am Monte Baldo, Almen, Canyon della Sorna, Skifahren in Polsa, Gardasee und Familienaktivitäten mit Kindern im Trentino.",
+        "Wanderungen am Monte Baldo, Schneeschuhwandern und Pisten in Polsa, Almen, Canyon della Sorna, Rovereto und Gardasee: Ausflugsziele rund um Brentonico.",
     },
     {
       property: "og:type",
@@ -373,6 +378,19 @@ useHead({
     {
       property: "og:image",
       content: "https://www.cuoredibosco.it/images/cuore-casa.webp",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Brentonico und Monte Baldo entdecken | B&B Cuore di Bosco",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Wanderungen am Monte Baldo, Schneeschuhwandern und Pisten in Polsa, Almen, Canyon della Sorna, Rovereto und Gardasee: Ausflugsziele rund um Brentonico.",
     },
   ],
   link: [{ rel: "canonical", href: "https://www.cuoredibosco.it/de/entdecken" }],

@@ -347,26 +347,26 @@ const flowerPhotos = [
 ];
 
 useHead({
-  title: "Esplora i dintorni di Brentonico | B&B Cuore di Bosco - Trekking, malghe e attività famiglie",
+  title: "Esplora Brentonico e il Monte Baldo | B&B Cuore di Bosco",
   meta: [
     {
       name: "description",
       content:
-        "Esplora i dintorni del B&B Cuore di Bosco a Brentonico: trekking Monte Baldo, malghe, Canyon della Sorna, sci a Polsa, Lago di Garda e attività per famiglie con bambini in Trentino.",
+        "Escursioni sul Monte Baldo, ciaspolate e piste di Polsa, malghe, Canyon della Sorna, Rovereto e Lago di Garda: cosa fare intorno a Brentonico.",
     },
     {
       name: "keywords",
       content:
-        "cosa fare con bambini Brentonico, escursioni famiglie Trentino, trekking Brentonico, escursioni Monte Baldo, malghe Trentino, Canyon della Sorna, Cammino di San Rocco Brentonico, Parco Naturale Monte Baldo, Lago di Loppio, Lago di Garda, Rovereto musei, Castello di Avio, B&B vicino piste Polsa, sci famiglie Polsa San Valentino, vacanze montagna famiglie Trentino",
+        "cosa fare con bambini Brentonico, escursioni famiglie Trentino, trekking Brentonico, escursioni Monte Baldo, malghe Trentino, Canyon della Sorna, Cammino di San Rocco Brentonico, Parco Naturale Monte Baldo, Lago di Loppio, Lago di Garda, Rovereto musei, Castello di Avio, B&B vicino piste Polsa, sci famiglie Polsa San Valentino, vacanze montagna famiglie Trentino, piste sci bambini, piste sci bambini trentino, ciaspolate Monte Baldo, mercatini di Natale Brentonico, camminate semplici trentino, escursioni facili montagna, trekking montagna, escursioni monte Baldo, visitare il monte Baldo, viste panoramiche trentino, panorami belli in montagna, panorami Baldo, zone belle per fotografie, birdwatching Trentino, da vedere trentino",
     },
     {
       property: "og:title",
-      content: "Esplora i dintorni di Brentonico | B&B Cuore di Bosco",
+      content: "Esplora Brentonico e il Monte Baldo | B&B Cuore di Bosco",
     },
     {
       property: "og:description",
       content:
-        "Esplora i dintorni del B&B Cuore di Bosco: trekking Monte Baldo, malghe, Canyon della Sorna, sci a Polsa e Lago di Garda. Vacanze in montagna per famiglie in Trentino.",
+        "Escursioni sul Monte Baldo, ciaspolate e piste di Polsa, malghe, Canyon della Sorna, Rovereto e Lago di Garda: cosa fare intorno a Brentonico.",
     },
     {
       property: "og:type",
@@ -386,12 +386,12 @@ useHead({
     },
     {
       name: "twitter:title",
-      content: "Esplora i dintorni di Brentonico | B&B Cuore di Bosco",
+      content: "Esplora Brentonico e il Monte Baldo | B&B Cuore di Bosco",
     },
     {
       name: "twitter:description",
       content:
-        "Esplora i dintorni del B&B Cuore di Bosco: trekking, malghe, Canyon della Sorna, sci a Polsa e Lago di Garda per famiglie in Trentino.",
+        "Escursioni sul Monte Baldo, ciaspolate e piste di Polsa, malghe, Canyon della Sorna, Rovereto e Lago di Garda: cosa fare intorno a Brentonico.",
     },
   ],
   link: [{ rel: "canonical", href: "https://www.cuoredibosco.it/it/esplora" }],

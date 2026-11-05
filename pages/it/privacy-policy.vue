@@ -74,6 +74,11 @@ useHead({
         "Informativa sulla privacy e cookie policy del sito cuoredibosco.it. Scopri come gestiamo i tuoi dati e i cookie.",
     },
     {
+      name: "keywords",
+      content:
+        "privacy policy, cookie policy, informativa privacy, preferenze cookie, B&B Cuore di Bosco",
+    },
+    {
       property: "og:title",
       content: "Cookie e Privacy Policy | B&B Cuore di Bosco",
     },
@@ -93,6 +98,19 @@ useHead({
     {
       property: "og:image",
       content: "https://www.cuoredibosco.it/images/cuore-casa.webp",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Cookie e Privacy Policy | B&B Cuore di Bosco",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Informativa sulla privacy e cookie policy del sito cuoredibosco.it.",
     },
   ],
   link: [{ rel: "canonical", href: "https://www.cuoredibosco.it/it/privacy-policy" }],

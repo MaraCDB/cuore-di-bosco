@@ -117,6 +117,11 @@ useHead({
         "Lesen Sie die Hausordnung des B&B Cuore di Bosco, damit alle einen ruhigen und respektvollen Aufenthalt genießen.",
     },
     {
+      name: "keywords",
+      content:
+        "Hausordnung B&B, Aufenthalt Regeln, Cuore di Bosco Hausordnung, Ferienhaus Regeln",
+    },
+    {
       property: "og:title",
       content: "Hausordnung | Cuore di Bosco – Prada di Brentonico",
     },
@@ -136,6 +141,19 @@ useHead({
     {
       property: "og:image",
       content: "https://www.cuoredibosco.it/images/cuore-casa.webp",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Hausordnung | Cuore di Bosco – Prada di Brentonico",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Lesen Sie die Hausordnung des B&B Cuore di Bosco, damit alle einen ruhigen und respektvollen Aufenthalt genießen.",
     },
   ],
   link: [{ rel: "canonical", href: "https://www.cuoredibosco.it/de/hausordnung" }],

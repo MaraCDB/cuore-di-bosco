@@ -279,26 +279,26 @@ onMounted(() => window.addEventListener('keydown', handleKeydown));
 onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown));
 
 useHead({
-  title: "Prenota il tuo soggiorno | B&B Cuore di Bosco - Vacanze famiglie Brentonico",
+  title: "Prenota | B&B Cuore di Bosco a Brentonico, vicino a Polsa",
   meta: [
     {
       name: "description",
       content:
-        "Prenota al B&B Cuore di Bosco: vacanze in montagna per famiglie con bambini a Prada di Brentonico. Kit bimbo, colazioni genuine e natura nel Trentino.",
+        "Prenota il tuo soggiorno al B&B Cuore di Bosco a Prada di Brentonico: camere Lampone e Mirtillo, colazione inclusa, kit bimbo e parcheggio gratuito vicino.",
     },
     {
       name: "keywords",
       content:
-        "prenotazione B&B famiglie, vacanze montagna bambini Trentino, B&B Cuore di Bosco, Prada di Brentonico, bed and breakfast famiglie, kit bimbo montagna, soggiorno famiglia Brentonico",
+        "prenotazione B&B famiglie, vacanze montagna bambini Trentino, B&B Cuore di Bosco, Prada di Brentonico, bed and breakfast famiglie, kit bimbo montagna, soggiorno famiglia Brentonico, dove dormire a Polsa sci, B&B vicino alle piste Polsa, vacanza sulla neve Brentonico, B&B per trekking Monte Baldo, B&B Brentonico",
     },
     {
       property: "og:title",
-      content: "Prenota | B&B Cuore di Bosco - Vacanze per famiglie in Trentino",
+      content: "Prenota | B&B Cuore di Bosco a Brentonico, vicino a Polsa",
     },
     {
       property: "og:description",
       content:
-        "Prenota la tua vacanza in montagna per famiglie con bambini al B&B Cuore di Bosco. Kit bimbo, colazioni fatte in casa e natura a Brentonico.",
+        "Prenota il tuo soggiorno al B&B Cuore di Bosco a Prada di Brentonico: camere Lampone e Mirtillo, colazione inclusa, kit bimbo e parcheggio gratuito vicino.",
     },
     {
       property: "og:type",
@@ -318,12 +318,12 @@ useHead({
     },
     {
       name: "twitter:title",
-      content: "Prenota | B&B Cuore di Bosco - Famiglie in montagna",
+      content: "Prenota | B&B Cuore di Bosco a Brentonico, vicino a Polsa",
     },
     {
       name: "twitter:description",
       content:
-        "Prenota al B&B Cuore di Bosco: vacanze in montagna per famiglie con bambini a Brentonico, Trentino.",
+        "Prenota il tuo soggiorno al B&B Cuore di Bosco a Prada di Brentonico: camere Lampone e Mirtillo, colazione inclusa, kit bimbo e parcheggio gratuito vicino.",
     },
   ],
   link: [
