@@ -28,6 +28,14 @@ describe('root page', () => {
     return replace
   }
 
+  it('renders an element root so the prerendered HTML hydrates without mismatches', async () => {
+    vi.spyOn(useRouter(), 'replace').mockResolvedValue(undefined)
+    const wrapper = await mountSuspended(IndexPage, { route: false })
+    mountedWrappers.push(wrapper)
+
+    expect(wrapper.element.nodeType).toBe(Node.ELEMENT_NODE)
+  })
+
   it('opens the stored language', async () => {
     localStorage.setItem(LANGUAGE_CHOICE_KEY, 'en')
 
