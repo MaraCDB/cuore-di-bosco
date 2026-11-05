@@ -295,4 +295,4 @@ When a visitor clicks a flag, the site remembers the language in the browser (`l
 
 ### Booking widget
 
-To be filled in after the browser check: whether the booking widget on /de/buchen shows in German or falls back to English.
+The booking widget shows in German (checked in the browser on 2026-11-05: "Gäste", "2 Erwachsene", "Verfügbarkeit prüfen"). The page keeps `data-lingua="de"`.
