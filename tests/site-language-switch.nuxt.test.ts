@@ -47,7 +47,7 @@ describe('language switch', () => {
 
   it('finds the twins of a path with a trailing slash', async () => {
     const wrapper = await mountSwitch('/it/esplora/')
-    expect(switchLinks(wrapper.element).map(link => link.getAttribute('href'))).toEqual(['/it/esplora', '/en/explore', '/de/buchen'])
+    expect(switchLinks(wrapper.element).map(link => link.getAttribute('href'))).toEqual(['/it/esplora', '/en/explore', '/de/entdecken'])
   })
 
   it('marks German as current on the German booking page', async () => {

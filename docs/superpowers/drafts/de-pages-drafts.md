@@ -186,6 +186,114 @@ The list items, "Da 2 a 4 posti letto adulti", "Dettagli" and "Prenota" of Mirti
 | La casa in pietra (photo description) | Das Steinhaus |
 | B&B Cuore di Bosco (caption) | B&B Cuore di Bosco |
 
+## /de/entdecken – Entdecken
+
+### Search results and link previews (not shown on the page)
+
+| Italiano | Deutsch |
+|---|---|
+| Esplora i dintorni di Brentonico \| B&B Cuore di Bosco - Trekking, malghe e attività famiglie (page title) | Die Umgebung von Brentonico entdecken \| B&B Cuore di Bosco – Wandern, Almen und Familienaktivitäten |
+| Esplora i dintorni del B&B Cuore di Bosco a Brentonico: trekking Monte Baldo, malghe, Canyon della Sorna, sci a Polsa, Lago di Garda e attività per famiglie con bambini in Trentino. (description) | Entdecken Sie die Umgebung des B&B Cuore di Bosco in Brentonico: Trekking am Monte Baldo, Almen, Canyon della Sorna, Skifahren in Polsa, Gardasee und Familienaktivitäten mit Kindern im Trentino. |
+
+The link preview (og:title, og:description) uses the same two German texts.
+
+### Top of the page and the eight places
+
+| Italiano | Deutsch |
+|---|---|
+| Esplora i dintorni | Die Umgebung entdecken |
+| A pochi minuti da Brentonico, Prada è una piccola frazione di montagna nel cuore del Parco Naturale del Monte Baldo, un luogo tranquillo ma facile da raggiungere, ottimo punto per escursioni e attività di ogni genere. | Nur wenige Minuten von Brentonico entfernt liegt Prada, ein kleiner Bergweiler im Herzen des Naturparks Monte Baldo, ein ruhiger und doch leicht erreichbarer Ort, ein ausgezeichneter Ausgangspunkt für Ausflüge und Aktivitäten aller Art. |
+| Il giardino all’italiana di Palazzo Eccheli Baisi a Brentonico (photo description) | Der Garten im italienischen Stil des Palazzo Eccheli Baisi in Brentonico |
+| Brentonico (place) | Brentonico |
+| Escursionisti su uno sperone di roccia del Monte Baldo in autunno (photo description) | Wanderer auf einem Felsvorsprung des Monte Baldo im Herbst |
+| Monte Baldo (place) | Monte Baldo |
+| Un tuffo nelle acque della Forra della Sorna (photo description) | Ein Sprung in das Wasser der Forra della Sorna |
+| Canyon della Sorna (place) | Canyon della Sorna (name kept in Italian) |
+| Il Lago di Garda visto dal Monte Altissimo (photo description) | Der Gardasee, vom Monte Altissimo aus gesehen |
+| Lago di Garda (place) | Gardasee |
+| Il Castello di Rovereto e la cascata del Leno (photo description) | Das Castello di Rovereto und der Wasserfall des Leno |
+| Rovereto (place) | Rovereto |
+| Il castello di Avio tra i cipressi (photo description) | Das Castello di Avio zwischen den Zypressen |
+| Castello di Avio (place) | Castello di Avio |
+| L’Altopiano di Brentonico innevato (photo description) | Die verschneite Hochebene von Brentonico |
+| Polsa e San Valentino (place) | Polsa e San Valentino |
+| Il segnavia del Cammino di San Rocco su un muro in pietra (photo description) | Die Wegmarkierung des Cammino di San Rocco an einer Steinmauer |
+| Cammino di San Rocco (place) | Cammino di San Rocco |
+
+### Natur und Familien
+
+| Italiano | Deutsch |
+|---|---|
+| Situato a Prada di Brentonico, il B&B Cuore di Bosco è il punto di partenza ideale per famiglie e appassionati di natura. | Das B&B Cuore di Bosco in Prada di Brentonico ist der ideale Ausgangspunkt für Familien und Naturliebhaber. |
+| Dai sentieri facili per passeggiate con bambini ai percorsi panoramici per trekking, ogni camminata offre scenari mozzafiato immersi nella natura del Monte Baldo e dei boschi circostanti. | Von einfachen Wegen für Spaziergänge mit Kindern bis zu aussichtsreichen Trekking-Routen bietet jede Wanderung atemberaubende Landschaften inmitten der Natur des Monte Baldo und der umliegenden Wälder. |
+| L’Altopiano di Brentonico è ideale per le famiglie in cerca di natura, silenzio e libertà. | Die Hochebene von Brentonico ist ideal für Familien, die Natur, Stille und Freiheit suchen. |
+| Qui i bambini di ogni età (anche quelli cresciuti!) possono correre tra i prati, osservare gli animali, ascoltare il canto degli uccelli e vivere l’esperienza della montagna in tranquillità. | Hier können Kinder jeden Alters (auch die erwachsen gewordenen!) über die Wiesen laufen, die Tiere beobachten, dem Vogelgesang lauschen und das Bergerlebnis in aller Ruhe genießen. |
+| La zona è ricca di sentieri adatti anche ai più piccoli, malghe da raggiungere con facili passeggiate, e boschi che cambiano volto a ogni stagione: dal verde brillante della primavera ai colori caldi dell’autunno. In estate si possono scoprire le malghe del Parco Naturale del Monte Baldo, assaggiare i prodotti locali e godersi l’aria fresca d’altura. | Die Gegend ist reich an Wegen, die auch für die Kleinsten geeignet sind, an Almen, die man bei leichten Spaziergängen erreicht, und an Wäldern, die mit jeder Jahreszeit ihr Gesicht verändern: vom leuchtenden Grün des Frühlings bis zu den warmen Farben des Herbstes. Im Sommer können Sie die Almen des Naturparks Monte Baldo entdecken, regionale Produkte probieren und die frische Bergluft genießen. |
+| Non perdere il magnifico Canyon della Sorna, una meraviglia naturale con gole scavate dall’acqua, cascate e punti panoramici unici per passeggiate e fotografie. | Verpassen Sie nicht den herrlichen Canyon della Sorna, ein Naturwunder mit vom Wasser ausgewaschenen Schluchten, Wasserfällen und einzigartigen Aussichtspunkten für Spaziergänge und Fotos. |
+| Il Cammino di San Rocco passa proprio davanti alla nostra struttura ed è percorribile tutto l’anno. Per maggiori informazioni e per scaricare la mappa vai sul sito ufficiale | Der Cammino di San Rocco führt direkt an unserem Haus vorbei und ist das ganze Jahr über begehbar. Für weitere Informationen und um die Karte herunterzuladen besuchen Sie die offizielle Website |
+| Sul sito del Parco qui sotto puoi trovare i percorsi e le tante attività in programma! | Auf der Website des Parks unten finden Sie die Routen und die vielen Aktivitäten im Programm! |
+| Logo Parco Naturale Monte Baldo (photo description) | Logo des Naturparks Monte Baldo |
+
+### Winter, Rovereto, Vallagarina
+
+| Italiano | Deutsch |
+|---|---|
+| In inverno si raggiungono le località sciistiche di Polsa (10 minuti), San Giacomo (15 minuti) e San Valentino (20 minuti), con piste per ogni età e parchi per bambini, ideali per le prime discese sulla neve, imparare a sciare con scuole sci riconosciute o per divertirsi con lo slittino in famiglia, o partecipare alle tante attività di giorno e di notte. | Im Winter erreichen Sie die Skigebiete Polsa (10 Minuten), San Giacomo (15 Minuten) und San Valentino (20 Minuten), mit Pisten für jedes Alter und Kinderparks, ideal für die ersten Abfahrten im Schnee, zum Skifahrenlernen in anerkannten Skischulen, zum Rodeln mit der Familie oder um an den vielen Aktivitäten bei Tag und bei Nacht teilzunehmen. |
+| Per tutti gli eventi aggiornati e le informazioni puoi visitare www.brentonicoski.com. | Alle aktuellen Veranstaltungen und Informationen finden Sie auf www.brentonicoski.com. |
+| Anche Rovereto è vicina a 25 minuti, con i suoi musei, il centro storico e le attività culturali per tutte le età con i suoi rinomati musei tra arte, storia e scienza come il MART e l’innovativo museo di scienza ed archeologia, oltre alla sua famosa Campana dei Caduti ed il centro storico con il castello e lo storico teatro Zandonai. Per scoprire nel dettaglio Cosa vedere a Rovereto. | Auch Rovereto ist mit 25 Minuten nicht weit, mit seinen Museen, dem historischen Zentrum und kulturellen Angeboten für jedes Alter, mit seinen renommierten Museen zwischen Kunst, Geschichte und Wissenschaft wie dem MART und dem innovativen Museum für Wissenschaft und Archäologie, dazu der berühmten Campana dei Caduti und dem historischen Zentrum mit dem Castello und dem historischen Teatro Zandonai. Um alles im Detail zu entdecken: Was es in Rovereto zu sehen gibt. |
+| Nei dintorni si possono visitare anche il Castello di Avio, un importante esempio di storia e architettura locale, e il Lago di Loppio, perfetto per passeggiate naturalistiche e birdwatching. Per completare la vacanza, in circa 30 minuti si raggiunge il Lago di Garda, con Torbole e Riva del Garda, per escursioni, sport acquatici, acqua pulita e panorami unici. Per saperne di più. | In der Umgebung können Sie außerdem das Castello di Avio besuchen, ein bedeutendes Beispiel für lokale Geschichte und Architektur, und den Lago di Loppio, ideal für Spaziergänge in der Natur und zur Vogelbeobachtung. Um Ihren Urlaub abzurunden, erreichen Sie in etwa 30 Minuten den Gardasee mit Torbole und Riva del Garda, für Ausflüge, Wassersport, sauberes Wasser und einzigartige Ausblicke. Mehr erfahren. |
+| Siamo all’interno della Vallagarina: dove natura, cultura e gusto si incontrano. In struttura troverete un display con mappe e materiale informativo e i nostri consigli, per ogni informazione e materiale è possibile visitare il sito www.visitrovereto.it e l’accogliente punto di informazioni turistiche accanto al comune di Brentonico, proprio accanto ad un ampio e curato parco giochi e la piazza alberata principale del paese, Piazza Cesare Battisti, dove si svolgono eventi e feste tutto l’anno. | Wir befinden uns in der Vallagarina: wo Natur, Kultur und Genuss zusammentreffen. Im Haus finden Sie ein Display mit Karten und Informationsmaterial sowie unsere Empfehlungen; für alle Informationen und Materialien können Sie die Website www.visitrovereto.it besuchen und das einladende Touristeninformationsbüro neben dem Rathaus von Brentonico, direkt neben einem großen, gepflegten Spielplatz und dem baumbestandenen Hauptplatz des Ortes, der Piazza Cesare Battisti, auf dem das ganze Jahr über Veranstaltungen und Feste stattfinden. |
+| Panorama Altopiano di Brentonico (photo description) | Panorama der Hochebene von Brentonico |
+| Guida All’Altopiano di Brentonico (PDF – 4,61 MB) | Führer zur Hochebene von Brentonico (PDF – 4,61 MB) |
+
+### Brentonico, die Blume des Monte Baldo (photo carousel)
+
+| Italiano | Deutsch |
+|---|---|
+| Brentonico, il fiore del Baldo (heading and carousel label) | Brentonico, die Blume des Monte Baldo |
+| Monte Baldo in inverno - paesaggio innevato Altopiano di Brentonico (photo description) | Monte Baldo im Winter – verschneite Landschaft auf der Hochebene von Brentonico |
+| Giardino botanico di Palazzo Eccheli-Baisi a Brentonico (photo description) | Botanischer Garten des Palazzo Eccheli-Baisi in Brentonico |
+| Giardino Botanico del Parco Naturale Monte Baldo (photo description) | Botanischer Garten des Naturparks Monte Baldo |
+| Paesaggio invernale Monte Baldo - Trentino (photo description) | Winterlandschaft am Monte Baldo – Trentino |
+| Brentonico il fiore del Baldo - panorama montano (photo description) | Brentonico, die Blume des Monte Baldo – Bergpanorama |
+| Un prato di fiori rosa sotto il cielo d’estate, con le montagne sullo sfondo (photo description) | Eine Wiese mit rosa Blumen unter dem Sommerhimmel, im Hintergrund die Berge |
+| Fiori gialli su un pendio erboso al margine del bosco (photo description) | Gelbe Blumen auf einem Grashang am Waldrand |
+| Anemoni bianchi in fiore (photo description) | Blühende weiße Anemonen |
+| Rose rosse davanti ai prati e alle montagne tra le nuvole (photo description) | Rote Rosen vor den Wiesen und den Bergen zwischen den Wolken |
+
+### Garten Europas
+
+| Italiano | Deutsch |
+|---|---|
+| “Giardino d’Italia” nel cuore del Parco del Monte Baldo | „Garten Europas“ im Herzen des Naturparks Monte Baldo |
+| È la prima montagna che incontri arrivando in Trentino. Qui puoi fare trekking e mountain bike d’estate e sciare sulle piste di Polsa, San Valentino e San Giacomo d’inverno. | Es ist der erste Berg, dem Sie begegnen, wenn Sie ins Trentino kommen. Hier können Sie im Sommer wandern und Mountainbike fahren und im Winter auf den Pisten von Polsa, San Valentino und San Giacomo Ski fahren. |
+| Sei sul versante Trentino del Monte Baldo, fra l’Adige ed il Garda, nel cuore del Parco del Monte Baldo conosciuto dai botanici di tutta Europa come “Giardino d’Italia” per la sua ricchezza di piante e fiori rari. | Sie befinden sich auf der Trentiner Seite des Monte Baldo, zwischen der Etsch und dem Gardasee, im Herzen des Naturparks Monte Baldo, den Botaniker in ganz Europa als „Garten Europas“ kennen, wegen seines Reichtums an seltenen Pflanzen und Blumen. |
+| Brentonico è il nome della frazione capoluogo ed il suo comune comprende ulteriori frazioni e località montane: Castione, Cazzano, Crosano, Cornè, Prada, Saccone e Sorne, così come i centri turistici di San Giacomo, San Valentino e Polsa. | Brentonico ist der Name des Hauptortes, und die Gemeinde umfasst weitere Ortsteile und Berglagen: Castione, Cazzano, Crosano, Cornè, Prada, Saccone und Sorne, sowie die Tourismuszentren San Giacomo, San Valentino und Polsa. |
+| Al giardino botanico di Palazzo Eccheli-Baisi troverai raccolte molte delle 1.655 piante del Parco del Monte Baldo, la maggioranza di quelle presenti sulle Alpi. Lo apprezzerai al meglio con una visita guidata, che ti illustrerà anche le mostre del palazzo e il Museo del fossile. Ascolta il silenzio nell’antica cripta romanica della chiesa tardo-medievale dei SS. Pietro e Paolo. Rilassati all’ombra dei secolari ippocastani del parco Cesare Battisti, al centro del paese. In località Sorne, scopri il Mulino Zeni, un mulino dell’Ottocento ancora perfettamente in funzione. | Im botanischen Garten des Palazzo Eccheli-Baisi finden Sie viele der 1.655 Pflanzen des Naturparks Monte Baldo gesammelt, die Mehrheit der in den Alpen vorkommenden. Am besten lernen Sie ihn bei einer Führung kennen, die Ihnen auch die Ausstellungen des Palazzo und das Fossilienmuseum zeigt. Lauschen Sie der Stille in der alten romanischen Krypta der spätmittelalterlichen Kirche der Heiligen Petrus und Paulus. Entspannen Sie im Schatten der jahrhundertealten Rosskastanien des Parks Cesare Battisti im Zentrum des Ortes. Entdecken Sie im Ortsteil Sorne die Zeni-Mühle, eine Mühle aus dem 19. Jahrhundert, die noch einwandfrei in Betrieb ist. |
+
+### Die vier Jahreszeiten
+
+| Italiano | Deutsch |
+|---|---|
+| Cosa fare in primavera sull'Altopiano di Brentonico | Was Sie im Frühling auf der Hochebene von Brentonico unternehmen können |
+| Il periodo delle fioriture è perfetto per incontrare e conoscere le piante e i fiori rari che ravvivano l’Altopiano di Brentonico. Percorri i numerosi itinerari panoramici scegliendo quello più adatto alle tue capacità, come l’itinerario che parte da Polsa, prosegue fino a Bocca d’Ardole, al Corno della Paura e raggiunge il Monte Vignola, oppure l’escursione nella selvaggia Val del Parol per ammirarne le preziose fioriture e gli animali all’alpeggio. | Die Blütezeit ist ideal, um die seltenen Pflanzen und Blumen kennenzulernen, die die Hochebene von Brentonico beleben. Wandern Sie auf den zahlreichen aussichtsreichen Routen und wählen Sie diejenige, die am besten zu Ihren Fähigkeiten passt, etwa die Route, die in Polsa beginnt, über die Bocca d’Ardole und das Corno della Paura weiterführt und den Monte Vignola erreicht, oder die Wanderung durch das wilde Val del Parol, um seine kostbaren Blüten und die Tiere auf der Alm zu bewundern. |
+| Estate sul Monte Baldo: trekking e malghe | Sommer auf dem Monte Baldo: Wandern und Almen |
+| L’estate sul Monte Baldo significa attività all’aria aperta: escursionismo, mountain bike, passeggiate a cavallo e visite ai rifugi e malghe per assaporare latte e formaggi locali. Sentieri panoramici offrono viste sul Lago di Garda, e il Sentiero della Pace attraversa luoghi della Grande Guerra come trincee, gallerie e fortificazioni. | Der Sommer auf dem Monte Baldo bedeutet Aktivitäten im Freien: Wandern, Mountainbiken, Ausritte und Besuche in Berghütten und Almen, um Milch und Käse aus der Region zu kosten. Aussichtsreiche Wege bieten Blicke auf den Gardasee, und der Sentiero della Pace führt zu Orten des Ersten Weltkriegs wie Schützengräben, Stollen und Befestigungen. |
+| L’altopiano di Brentonico è inoltre sede di camp estivi per ragazzi e punto di riferimento per la preparazione atletica di squadre di calcio professionistiche e delle nazionali azzurre e tedesche di sci. | Die Hochebene von Brentonico ist außerdem Standort von Sommercamps für Jugendliche und Anlaufstelle für das Konditionstraining professioneller Fußballmannschaften sowie der italienischen und der deutschen Skinationalmannschaft. |
+| In agosto non perderti il festival Baldo Bio Benessere sul Parco C.Battisti, un evento dedicato al relax, al benessere e ai prodotti naturali. | Verpassen Sie im August nicht das Festival Baldo Bio Benessere im Parco C. Battisti, eine Veranstaltung, die der Entspannung, dem Wohlbefinden und natürlichen Produkten gewidmet ist. |
+| Autunno in Trentino: castagne e sapori tipici a Brentonico | Herbst im Trentino: Kastanien und typische Aromen in Brentonico |
+| Passeggia fra i maestosi alberi dell’altopiano e scopri i caldi colori e i deliziosi sapori dell’autunno. In questa stagione le famose castagne di Castione diventano le protagoniste indiscusse degli eventi locali, come la Festa del Marrone, la Festa della castagna o Sapori d’Autunno e dei menù autunnali in abbinamento ad altri piatti tipici della tradizione trentina: canederli, strangolapreti, polenta di patate, che potrai accompagnare con gustosi formaggi, strudel e zelten. | Spazieren Sie zwischen den majestätischen Bäumen der Hochebene und entdecken Sie die warmen Farben und die köstlichen Aromen des Herbstes. In dieser Jahreszeit sind die berühmten Kastanien von Castione die unbestrittenen Stars der lokalen Veranstaltungen, etwa der Festa del Marrone, der Festa della castagna oder der Sapori d’Autunno und der Herbstmenüs in Kombination mit anderen typischen Gerichten der Trentiner Tradition: Canederli, Strangolapreti, Kartoffelpolenta, dazu können Sie herzhaften Käse, Strudel und Zelten genießen. |
+| Inverno a Polsa e San Valentino: sci e neve per famiglie | Winter in Polsa und San Valentino: Ski und Schnee für Familien |
+| A Polsa e a San Valentino le piste del Trentino più vicine alla pianura: potrai sciare in totale sicurezza e tranquillità su piste ampie e soleggiate. Lo sci non è il tuo sport? Scegli fra altre attività dell’inverno: ciaspole, pattinaggio sul ghiaccio, parco giochi sulla neve o slittino! Imperdibile la fiaccolata notturna e gli eventi sulla neve per tutti! | In Polsa und San Valentino liegen die Pisten des Trentino, die der Ebene am nächsten sind: Sie können in völliger Sicherheit und Ruhe auf breiten, sonnigen Pisten Ski fahren. Ist Skifahren nicht Ihr Sport? Wählen Sie unter weiteren Winteraktivitäten: Schneeschuhwandern, Eislaufen, Schneespielplatz oder Rodeln! Der nächtliche Fackelzug und die Veranstaltungen im Schnee für alle sind ein Muss! |
+| Se vieni a trovarci per le festività natalizie, non perderti il Natale dell’Albero: da dicembre all’epifania tante attività per grandi e piccini e il simposio di scultura nel centro storico del paese. | Wenn Sie uns über die Weihnachtsfeiertage besuchen, lassen Sie sich das Natale dell’Albero nicht entgehen: von Dezember bis zum Dreikönigstag viele Aktivitäten für Groß und Klein und das Bildhauersymposium im historischen Zentrum des Ortes. |
+
+### Hinweis am Ende
+
+| Italiano | Deutsch |
+|---|---|
+| Per scoprire tutti gli eventi in corso ti consigliamo il sito www.visitrovereto.it e l’apt di Brentonico, inoltre troverai un display in struttura con mappe e depliant aggiornati della zona a tua disposizione! | Um alle aktuellen Veranstaltungen zu entdecken, empfehlen wir Ihnen die Website www.visitrovereto.it und die APT von Brentonico; außerdem finden Sie im Haus ein Display mit aktuellen Karten und Prospekten der Gegend, die Ihnen zur Verfügung stehen! |
+| FONTE TESTO WWW.VISITROVERETO.IT | TEXTQUELLE WWW.VISITROVERETO.IT |
+
 ## Glossar-Ergänzungen
 
 New words of the home page, to be used the same way on the other German pages.
@@ -210,3 +318,14 @@ New words of the home page, to be used the same way on the other German pages.
 | alto Lago di Garda | der nördliche Gardasee |
 | Trentino Guest Card | Trentino Guest Card (name kept) |
 | verifica le date | Verfügbarkeit prüfen (same words as the booking widget) |
+| malghe | Almen |
+| rifugi | Berghütten |
+| sentieri, percorsi panoramici | Wege, aussichtsreiche Routen |
+| ciaspole | Schneeschuhwandern |
+| slittino | Rodeln |
+| fiaccolata notturna | nächtlicher Fackelzug |
+| il fiore del Baldo | die Blume des Monte Baldo |
+| frazione (village of the municipality) | Ortsteil (Brentonico: Hauptort) |
+| tutto l’anno (path open) | das ganze Jahr über begehbar |
+| punto di informazioni turistiche | Touristeninformationsbüro |
+| FONTE TESTO | TEXTQUELLE |
