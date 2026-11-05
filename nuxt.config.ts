@@ -49,6 +49,7 @@ export default defineNuxtConfig({
         '/de/buchen',
         '/de',
         '/de/entdecken',
+        '/de/hausordnung',
       ],
     },
   },

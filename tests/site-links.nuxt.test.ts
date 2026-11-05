@@ -75,7 +75,7 @@ describe('three languages', () => {
 
   it.each([
     ['/it/prenota', 'de', '/de/buchen'], ['/de/buchen', 'it', '/it/prenota'], ['/de/buchen/', 'en', '/en/booking'],
-    ['/it/esplora/', 'de', '/de/entdecken'], ['/it/esplora/', 'en', '/en/explore'], ['/en', 'de', '/de'],
+    ['/it/esplora/', 'de', '/de/entdecken'], ['/it/regolamento', 'de', '/de/hausordnung'], ['/it/esplora/', 'en', '/en/explore'], ['/en', 'de', '/de'],
   ])('maps %s to %s as %s', (path, target, expected) => {
     expect(twinPath(path, target as SiteLocale)).toBe(expected)
   })
@@ -85,10 +85,11 @@ describe('interim fallback for German pages not built yet', () => {
   it('sends unbuilt German pages to the German booking page', () => {
     expect(availablePath('/de')).toBe('/de')
     expect(availablePath('/de#zimmer')).toBe('/de#zimmer')
-    expect(availablePath('/de/hausordnung/')).toBe('/de/buchen')
+    expect(availablePath('/de/hausordnung/')).toBe('/de/hausordnung/')
+    expect(availablePath('/de/datenschutz')).toBe('/de/buchen')
     expect(homePath('de')).toBe('/de')
     expect(localePath('de', 'privacy-policy')).toBe('/de/buchen')
-    expect(primaryLinks('de').map(link => link.to)).toEqual(['/de#zimmer', '/de#fruehstueck', '/de/entdecken', '/de/buchen', '/de#anfahrt'])
+    expect(primaryLinks('de').map(link => link.to)).toEqual(['/de#zimmer', '/de#fruehstueck', '/de/entdecken', '/de/hausordnung', '/de#anfahrt'])
     expect(primaryLinks('de').map(link => link.label)).toEqual(['Zimmer', 'Frühstück', 'Entdecken', 'Hausordnung', 'Anfahrt'])
   })
 

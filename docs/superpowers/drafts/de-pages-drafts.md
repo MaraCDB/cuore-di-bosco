@@ -294,6 +294,81 @@ The link preview (og:title, og:description) uses the same two German texts.
 | Per scoprire tutti gli eventi in corso ti consigliamo il sito www.visitrovereto.it e l’apt di Brentonico, inoltre troverai un display in struttura con mappe e depliant aggiornati della zona a tua disposizione! | Um alle aktuellen Veranstaltungen zu entdecken, empfehlen wir Ihnen die Website www.visitrovereto.it und die APT von Brentonico; außerdem finden Sie im Haus ein Display mit aktuellen Karten und Prospekten der Gegend, die Ihnen zur Verfügung stehen! |
 | FONTE TESTO WWW.VISITROVERETO.IT | TEXTQUELLE WWW.VISITROVERETO.IT |
 
+## /de/hausordnung – Hausordnung
+
+### Search results and link previews (not shown on the page)
+
+| Italiano | Deutsch |
+|---|---|
+| Regole della casa \| Cuore di Bosco - Prada di Brentonico (page title) | Hausordnung \| Cuore di Bosco – Prada di Brentonico |
+| Leggi le regole della casa del B&B Cuore di Bosco per garantire a tutti un soggiorno sereno e rispettoso. (description) | Lesen Sie die Hausordnung des B&B Cuore di Bosco, damit alle einen ruhigen und respektvollen Aufenthalt genießen. |
+
+The link preview (og:title, og:description) uses the same two German texts.
+
+### Top of the page
+
+| Italiano | Deutsch |
+|---|---|
+| Regolamento | Hausordnung |
+| Pedine e dadi su un gioco da tavolo (photo description) | Spielfiguren und Würfel auf einem Brettspiel |
+
+### The thirteen rules
+
+The long uppercase titles carry soft hyphens (invisible syllable breaks) so that they do not overflow on a phone. Here they are shown with "·"; the page text has no dot.
+
+| Italiano | Deutsch |
+|---|---|
+| TARIFFE E SERVIZI INCLUSI | PREISE UND INKLUSIV·LEISTUNGEN |
+| Le nostre tariffe comprendono l’utilizzo della camera, bagno privato con accessori, colazione, fornitura di biancheria da letto e da bagno. Tutti i servizi sono pensati per offrirvi il massimo comfort durante la vostra permanenza in montagna. | Unsere Preise beinhalten die Nutzung des Zimmers, ein eigenes Bad mit Körperpflegeprodukten, Frühstück sowie Bettwäsche und Handtücher. Alle Leistungen sind darauf ausgerichtet, Ihnen während Ihres Aufenthalts in den Bergen höchsten Komfort zu bieten. |
+| Abbiamo scelto di non avere TV nelle camere ma vi offriremo tutto l’intrattenimento possibile per voi e la famiglia! Giochi da tavolo, carte, libri e altro sono a vostra disposizione in caso di brutto tempo e organizziamo merende insieme e giochi! | Wir haben uns entschieden, keine Fernseher in den Zimmern zu haben, bieten Ihnen und Ihrer Familie aber jede mögliche Unterhaltung! Brettspiele, Karten, Bücher und mehr stehen Ihnen bei schlechtem Wetter zur Verfügung, und wir organisieren gemeinsame Snacks und Spiele! |
+| PRENOTAZIONI E CONTATTI | BUCHUNG UND KONTAKT |
+| Per informazioni dettagliate sulla nostra struttura o per prenotare il vostro soggiorno, utilizzate il form presente sul nostro sito web nella sezione prenota. Potete anche scriverci direttamente via email o contattarci telefonicamente. Risponderemo rapidamente per confermare la disponibilità e fornirvi tutti i dettagli necessari. | Für ausführliche Informationen zu unserer Unterkunft oder um Ihren Aufenthalt zu buchen, nutzen Sie das Formular auf unserer Website im Bereich „Buchen“. Sie können uns auch direkt per E-Mail schreiben oder telefonisch kontaktieren. Wir antworten schnell, um die Verfügbarkeit zu bestätigen und Ihnen alle nötigen Einzelheiten mitzuteilen. |
+| MODALITÀ DI PAGAMENTO | ZAHLUNGS·BEDINGUNGEN |
+| Una volta confermata la prenotazione, richiediamo il versamento di un acconto pari al 35% dell’importo totale tramite bonifico bancario o con la prenotazione online. Il saldo finale verrà effettuato all’arrivo in contanti o con carta di credito/bancomat, con rilascio di regolare ricevuta. | Sobald die Buchung bestätigt ist, bitten wir um eine Anzahlung von 35 % des Gesamtbetrags per Banküberweisung oder bei der Online-Buchung. Der Restbetrag wird bei der Ankunft bar oder mit Kredit-/Debitkarte beglichen, gegen ordnungsgemäße Quittung. |
+| IMPORTANTE: Versate l’acconto solo dopo aver ricevuto la conferma ufficiale della disponibilità e l’accordo sull’importo. | WICHTIG: Leisten Sie die Anzahlung erst, nachdem Sie die offizielle Bestätigung der Verfügbarkeit erhalten und sich mit uns über den Betrag geeinigt haben. |
+| POLITICHE DI CANCELLAZIONE | STORNIERUNGS·BEDINGUNGEN |
+| In caso di cancellazione comunicata entro il 7° giorno prima dell’arrivo, restituiremo per intero l’acconto versato. Non sono previsti rimborsi per cancellazioni comunicate negli ultimi 7 giorni o per partenze anticipate rispetto alla prenotazione originaria. Previo accordi è possibile spostare il soggiorno ad altra data in caso di salute o impegni improrogabili, salvo alta stagione. | Wenn Sie bis zum 7. Tag vor der Anreise stornieren, erstatten wir die geleistete Anzahlung vollständig. Für Stornierungen in den letzten 7 Tagen vor der Anreise oder für eine vorzeitige Abreise gegenüber der ursprünglichen Buchung ist keine Erstattung vorgesehen. Nach vorheriger Absprache kann der Aufenthalt bei gesundheitlichen Problemen oder unaufschiebbaren Verpflichtungen auf einen anderen Termin verschoben werden, außer in der Hochsaison. |
+| CHECK-IN E DOCUMENTI | CHECK-IN UND AUSWEIS·DOKUMENTE |
+| All’arrivo dovrete presentare un documento d’identità valido. Senza documenti validi non sarà possibile procedere con la registrazione. Trattiamo tutti i dati personali nel rispetto delle normative sulla privacy vigenti. | Bei der Ankunft müssen Sie einen gültigen Ausweis vorlegen. Ohne gültige Ausweisdokumente kann die Anmeldung nicht durchgeführt werden. Alle personenbezogenen Daten verarbeiten wir unter Einhaltung der geltenden Datenschutzbestimmungen. |
+| Dopo la registrazione e il saldo, vi consegneremo le chiavi dell’ingresso principale e della vostra camera. Per velocizzare il check in alternativa potete inviarci i documenti, ben leggibili, via whatsapp o mail il giorno prima dell'arrivo. | Nach der Anmeldung und der Begleichung des Restbetrags übergeben wir Ihnen die Schlüssel für den Haupteingang und für Ihr Zimmer. Um den Check-in zu beschleunigen, können Sie uns die Dokumente alternativ gut lesbar am Tag vor der Anreise per WhatsApp oder E-Mail senden. |
+| ORARI | ZEITEN |
+| Check-in: dalle 15:00 alle 18:00. Vi preghiamo di comunicarci l’orario previsto di arrivo per organizzare l’accoglienza. | Check-in: von 15:00 bis 18:00 Uhr. Bitte teilen Sie uns Ihre voraussichtliche Ankunftszeit mit, damit wir Ihren Empfang organisieren können. |
+| Check-out: entro le 10:30. In caso di camera libera, è possibile trattenersi su richiesta. | Check-out: bis 10:30 Uhr. Wenn das Zimmer frei ist, können Sie auf Anfrage länger bleiben. |
+| SICUREZZA E RESPONSABILITÀ | SICHERHEIT UND HAFTUNG |
+| Vi consigliamo di non lasciare oggetti di valore incustoditi nelle camere o negli spazi comuni. Le camere non dispongono di cassaforte, quindi abbiate cura di chiudere sempre porte e finestre quando uscite. | Wir empfehlen, keine Wertsachen unbeaufsichtigt in den Zimmern oder in den Gemeinschaftsbereichen zu lassen. Die Zimmer haben keinen Safe, schließen Sie daher beim Verlassen immer Türen und Fenster. |
+| La struttura non si assume responsabilità per furti, smarrimenti o danneggiamenti di oggetti personali, né per danni causati da o a terzi. Eventuali danni alla struttura o agli arredi dovranno essere immediatamente segnalati e risarciti. | Die Unterkunft übernimmt keine Haftung für Diebstahl, Verlust oder Beschädigung persönlicher Gegenstände, auch nicht für Schäden, die durch Dritte oder an Dritten verursacht werden. Schäden an der Unterkunft oder an der Einrichtung müssen unverzüglich gemeldet und ersetzt werden. |
+| REGOLE DELLA CASA | HAUSREGELN |
+| Per la sicurezza di tutti gli ospiti, della nostra famiglia e per ragioni igienico-sanitarie: | Zur Sicherheit aller Gäste und unserer Familie sowie aus hygienischen und gesundheitlichen Gründen: |
+| Amiamo gli animali ma attualmente non possiamo ospitare animali domestici all’interno della struttura per garantire il rispetto delle norme igieniche e di sicurezza, nonché per tutelare eventuali ospiti con problematiche di salute. | Wir lieben Tiere, können derzeit aber keine Haustiere im Inneren der Unterkunft aufnehmen, um die Hygiene- und Sicherheitsvorschriften einzuhalten und Gäste mit gesundheitlichen Problemen zu schützen. |
+| È vietato cucinare o utilizzare fornelli nelle camere. Sono presenti frigobar e bollitori nelle camere, mentre troverete microonde e macchina del caffè in sala colazione. | Das Kochen oder die Benutzung von Kochplatten in den Zimmern ist verboten. In den Zimmern gibt es Minibars und Wasserkocher, im Frühstücksraum finden Sie Mikrowelle und Kaffeemaschine. |
+| È rigorosamente vietato fumare negli ambienti interni ed esterni della struttura, le camere sono dotate di rilevatori di fumo con allarme. Vi invitiamo inoltre a fare molta attenzione nei boschi e per strada in quanto le aree montane sono spesso suscettibili di incendi di questa natura, boschi, aria e bestiame vi ringraziano! | Das Rauchen ist in allen Innen- und Außenbereichen der Unterkunft streng verboten, die Zimmer sind mit Rauchmeldern mit Alarm ausgestattet. Bitte seien Sie außerdem in den Wäldern und auf den Straßen sehr vorsichtig, da Berggebiete oft anfällig für Brände dieser Art sind. Wälder, Luft und Vieh danken es Ihnen! |
+| PULIZIE E MANUTENZIONE | REINIGUNG UND INSTAND·HALTUNG |
+| Il servizio di pulizia della camera e cambio biancheria è incluso all’arrivo e ogni tre giorni per soggiorni lunghi. Vi chiediamo di utilizzare correttamente i servizi igienici e di rispettare gli ambienti. Pulizie o cambi biancheria straordinari sono su richiesta e comporteranno un costo aggiuntivo. Saranno a vostra disposizione materiali di pulizia su richiesta e se dovessero capitare inconvenienti. | Die Reinigung des Zimmers und der Wechsel der Bettwäsche sind bei der Ankunft und bei längeren Aufenthalten alle drei Tage inklusive. Wir bitten Sie, die sanitären Anlagen sachgemäß zu benutzen und die Räumlichkeiten zu respektieren. Zusätzliche Reinigungen oder Wäschewechsel erfolgen auf Wunsch und werden gesondert berechnet. Reinigungsmaterial steht Ihnen auf Wunsch und bei eventuellen Missgeschicken zur Verfügung. |
+| Per facilitare il lavoro di pulizia, vi chiediamo di liberare la camera per le pulizie per le 10:30, sistemate gli effetti personali in modo ordinato e lasciate sul pavimento del bagno gli asciugamani da sostituire. Se non avete bisogno o preferite evitare la pulizia o la preferite in orari diversi per ragioni personali vi chiediamo di avvisarci per accordarci. | Um die Reinigung zu erleichtern, bitten wir Sie, das Zimmer bis 10:30 Uhr für die Reinigung freizugeben, Ihre persönlichen Sachen ordentlich zu verstauen und die auszutauschenden Handtücher auf dem Badezimmerboden zu lassen. Wenn Sie keine Reinigung benötigen, lieber darauf verzichten möchten oder sie aus persönlichen Gründen zu einer anderen Uhrzeit wünschen, bitten wir Sie, uns Bescheid zu geben, damit wir uns abstimmen können. |
+| COLAZIONE | FRÜHSTÜCK |
+| La colazione viene servita nella nostra sala colazioni dalle 7:30 alle 9:30. Offriamo prodotti locali e specialità montane per iniziare al meglio le vostre giornate all’aria aperta. Se preferite un orario differente faremo del nostro meglio per accontentarvi. Vi preghiamo di avvisarci per tempo per organizzarci. | Das Frühstück wird in unserem Frühstücksraum von 7:30 bis 9:30 Uhr serviert. Wir bieten regionale Produkte und Bergspezialitäten, damit Sie Ihre Tage an der frischen Luft bestens beginnen. Wenn Sie eine andere Uhrzeit bevorzugen, tun wir unser Bestes, Ihnen entgegenzukommen. Bitte sagen Sie uns rechtzeitig Bescheid, damit wir uns organisieren können. |
+| Inoltre possiamo preparare una colazione da consumare in camera (a richiesta) | Außerdem können wir ein Frühstück zum Verzehr auf dem Zimmer zubereiten (auf Anfrage). |
+| Siamo a disposizione per ogni esigenza di regime alimentare, vegetariano, vegano, intolleranze o allergie, vi preghiamo di avvisarci per tempo prima dell'arrivo per potervi offrire una scelta adeguata. | Wir sind für jeden Ernährungswunsch da: vegetarisch, vegan, bei Unverträglichkeiten oder Allergien. Bitte sagen Sie uns rechtzeitig vor Ihrer Anreise Bescheid, damit wir Ihnen eine passende Auswahl anbieten können. |
+| NORME COMPORTAMENTALI | VERHALTENS·REGELN |
+| Vi chiediamo cortesemente di: | Wir bitten Sie freundlich: |
+| Spegnere le luci e chiudere le finestre quando uscite | Beim Verlassen des Zimmers das Licht auszuschalten und die Fenster zu schließen |
+| Non impostare il riscaldamento su più di 20 gradi (regolamento provinciale) | Die Heizung nicht höher als auf 20 Grad einzustellen (Vorschrift der Provinz) |
+| Differenziare la spazzatura | Den Müll zu trennen |
+| Rispettare gli orari di silenzio: 13–15 e 22:30–7 | Die Ruhezeiten einzuhalten: 13–15 Uhr und 22:30–7 Uhr |
+| Non ricevere visitatori esterni o aumentare il numero di ospiti per camera | Keine externen Besucher zu empfangen und die Zahl der Gäste pro Zimmer nicht zu erhöhen |
+| Non fumare negli ambienti esterni ed interni della struttura | In keinem Innen- oder Außenbereich der Unterkunft zu rauchen |
+| SERVIZI ESTERNI | EXTERNE DIENST·LEISTUNGEN |
+| Non rispondiamo di eventuali disservizi non dipendenti dalla nostra gestione (internet, rete telefonica, servizi pubblici) legati alla posizione montana. | Wir haften nicht für Störungen, die nicht in unserem Einflussbereich liegen (Internet, Telefonnetz, öffentliche Dienste) und mit der Lage in den Bergen zusammenhängen. |
+| ACCESSO ALLA STRUTTURA | ZUGANG ZUR UNTERKUNFT |
+| L’ingresso è libero 24h su 24 grazie alle chiavi personali. Vi preghiamo di non disturbare durante gli spostamenti notturni. | Der Zugang ist dank persönlicher Schlüssel rund um die Uhr frei. Bitte stören Sie niemanden, wenn Sie sich nachts im Haus bewegen. |
+| Le chiavi devono essere restituite alla partenza. In caso di smarrimento sarà addebitato il costo della sostituzione. | Die Schlüssel müssen bei der Abreise zurückgegeben werden. Bei Verlust werden die Kosten für den Ersatz in Rechnung gestellt. |
+
+### Closing line
+
+| Italiano | Deutsch |
+|---|---|
+| Auguriamo a tutti un soggiorno indimenticabile tra le nostre montagne! | Wir wünschen allen einen unvergesslichen Aufenthalt in unseren Bergen! |
+
 ## Glossar-Ergänzungen
 
 New words of the home page, to be used the same way on the other German pages.
@@ -329,3 +404,17 @@ New words of the home page, to be used the same way on the other German pages.
 | tutto l’anno (path open) | das ganze Jahr über begehbar |
 | punto di informazioni turistiche | Touristeninformationsbüro |
 | FONTE TESTO | TEXTQUELLE |
+| acconto | Anzahlung (35 %; only on the rules page, elsewhere never "Anzahlung" or "Kaution") |
+| saldo | Restbetrag |
+| cancellazione / cancellare | Stornierung / stornieren |
+| rimborso, restituire | Erstattung, erstatten (only on the rules page) |
+| alta stagione | Hochsaison |
+| documento d’identità | Ausweis |
+| registrazione | Anmeldung |
+| orari di silenzio | Ruhezeiten |
+| rilevatori di fumo | Rauchmelder |
+| comporteranno un costo aggiuntivo | werden gesondert berechnet (never "kostenpflichtig") |
+| addebitato il costo | in Rechnung gestellt |
+| merende insieme | gemeinsame Snacks |
+| regolamento provinciale | Vorschrift der Provinz |
+| servizi esterni | externe Dienstleistungen |
