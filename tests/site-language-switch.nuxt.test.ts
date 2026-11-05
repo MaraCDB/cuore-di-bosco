@@ -64,7 +64,7 @@ describe('language switch', () => {
     const wrapper = await mountSwitch('/it/prenota')
     const englishLink = wrapper.find('a[lang=en]')
 
-    wrapper.element.addEventListener('click', event => event.preventDefault(), { capture: true })
+    wrapper.element.addEventListener('click', (event: Event) => event.preventDefault(), { capture: true })
     await englishLink.trigger('click')
 
     expect(localStorage.getItem(LANGUAGE_CHOICE_KEY)).toBe('en')
