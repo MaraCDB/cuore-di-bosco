@@ -286,7 +286,7 @@ useHead({
     {
       name: "description",
       content:
-        "Buchen Sie Ihren Aufenthalt im B&B Cuore di Bosco in Prada di Brentonico: Zimmer Lampone und Mirtillo, Frühstück inklusive, Babyausstattung, Parkplatz gratis.",
+        "Buchen Sie Ihren Aufenthalt im B&B Cuore di Bosco in Prada di Brentonico: Zimmer Lampone und Mirtillo, Frühstück inklusive, kostenlose Parkplätze in der Nähe.",
     },
     {
       name: "keywords",
@@ -300,7 +300,7 @@ useHead({
     {
       property: "og:description",
       content:
-        "Buchen Sie Ihren Aufenthalt im B&B Cuore di Bosco in Prada di Brentonico: Zimmer Lampone und Mirtillo, Frühstück inklusive, Babyausstattung, Parkplatz gratis.",
+        "Buchen Sie Ihren Aufenthalt im B&B Cuore di Bosco in Prada di Brentonico: Zimmer Lampone und Mirtillo, Frühstück inklusive, kostenlose Parkplätze in der Nähe.",
     },
     {
       property: "og:type",
@@ -325,7 +325,7 @@ useHead({
     {
       name: "twitter:description",
       content:
-        "Buchen Sie Ihren Aufenthalt im B&B Cuore di Bosco in Prada di Brentonico: Zimmer Lampone und Mirtillo, Frühstück inklusive, Babyausstattung, Parkplatz gratis.",
+        "Buchen Sie Ihren Aufenthalt im B&B Cuore di Bosco in Prada di Brentonico: Zimmer Lampone und Mirtillo, Frühstück inklusive, kostenlose Parkplätze in der Nähe.",
     },
   ],
   link: [

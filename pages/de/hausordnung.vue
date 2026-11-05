@@ -119,7 +119,7 @@ useHead({
     {
       name: "keywords",
       content:
-        "Hausordnung B&B, Aufenthalt Regeln, Cuore di Bosco Hausordnung, Ferienhaus Regeln",
+        "Hausordnung B&B, Hausordnung Unterkunft, Cuore di Bosco Hausordnung, Regeln B&B Brentonico",
     },
     {
       property: "og:title",
