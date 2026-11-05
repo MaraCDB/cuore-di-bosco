@@ -80,17 +80,17 @@ describe('German site chrome', () => {
     expect(element.querySelector('.footer-welcome p')?.textContent).toBe('Buchen ist ganz einfach: Schreiben Sie uns eine E-Mail an info@cuoredibosco.it oder eine WhatsApp- oder Telegram-Nachricht an 349 4960228, wir antworten Ihnen so schnell wie möglich!')
     expect(linkSummaries(element, '.footer-welcome p a').map(link => link.href)).toEqual(['mailto:info@cuoredibosco.it', 'https://wa.me/393494960228'])
     expect(privacyLink?.textContent).toBe('Datenschutz')
-    expect(privacyLink?.getAttribute('href')).toBe('/de/buchen')
+    expect(privacyLink?.getAttribute('href')).toBe('/de/datenschutz')
     expect(wrapper.find('button.cookie-preferences').text()).toBe('Cookie-Einstellungen')
     expect(element.querySelector('.footer-info p')?.textContent).toBe('B&B Cuore di BoscoVia Gardesani, 15Brentonico – fraz. Prada (TN)')
   })
 
-  it('shows the cookie banner in German with the policy link on the German booking page', async () => {
+  it('shows the cookie banner in German with the policy link on the German privacy page', async () => {
     openCookieBanner()
     const wrapper = await track(mountSuspended(CookieBanner))
 
     expect(wrapper.find('.cookie-text').text().startsWith('Wir verwenden Cookies für statistische Analysen (Google Analytics).\nSind Sie damit einverstanden?')).toBe(true)
-    expect(wrapper.find('.cookie-text a').attributes('href')).toBe('/de/buchen')
+    expect(wrapper.find('.cookie-text a').attributes('href')).toBe('/de/datenschutz')
     expect(wrapper.findAll('.cookie-buttons button').map(button => button.text())).toEqual(['Akzeptieren', 'Ablehnen'])
   })
 

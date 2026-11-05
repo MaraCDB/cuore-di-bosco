@@ -39,6 +39,7 @@
           <li>Social plugin (es. Facebook, Instagram) per condividere contenuti.</li>
           <li>Booking o mappe incorporate (es. Google Maps, sistemi di prenotazione).</li>
         </ul>
+        <p>Lingua scelta: quando l’utente clicca su una delle bandierine (IT, EN, DE), il sito salva nel browser del suo dispositivo (localStorage) la voce «cdb-language» con il valore «it», «en» o «de». Serve solo ad aprire l’indirizzo principale del sito nella lingua scelta: resta sul dispositivo, non viene inviata a nessuno e si può cancellare in qualsiasi momento dalle impostazioni del browser.</p>
       </section>
 
       <section class="policy-card" data-reveal>

@@ -50,6 +50,7 @@ export default defineNuxtConfig({
         '/de',
         '/de/entdecken',
         '/de/hausordnung',
+        '/de/datenschutz',
       ],
     },
   },

@@ -369,6 +369,52 @@ The long uppercase titles carry soft hyphens (invisible syllable breaks) so that
 |---|---|
 | Auguriamo a tutti un soggiorno indimenticabile tra le nostre montagne! | Wir wünschen allen einen unvergesslichen Aufenthalt in unseren Bergen! |
 
+## /de/datenschutz – Datenschutz
+
+### Search results and link previews (not shown on the page)
+
+| Italiano | Deutsch |
+|---|---|
+| Cookie e Privacy Policy \| Cuore di Bosco - B&B Prada di Brentonico (page title) | Cookie- und Datenschutzerklärung \| Cuore di Bosco – B&B Prada di Brentonico |
+| Informativa sulla privacy e cookie policy del sito cuoredibosco.it. Scopri come gestiamo i tuoi dati e i cookie. (description) | Datenschutzerklärung und Cookie-Richtlinie der Website cuoredibosco.it. Erfahren Sie, wie wir mit Ihren Daten und Cookies umgehen. |
+
+The link preview (og:title, og:description) uses the same two German texts.
+
+### Top of the page
+
+The long word in the title carries a soft hyphen (an invisible syllable break) so that it does not overflow on a phone. Here it is shown with "·"; the page text has no dot.
+
+| Italiano | Deutsch |
+|---|---|
+| COOKIES PRIVACY POLICY | COOKIE- UND DATENSCHUTZ·ERKLÄRUNG |
+| Casetta di pan di zenzero e biscotti a forma di casa (photo description) | Lebkuchenhaus und Kekse in Hausform |
+
+### The six cards
+
+| Italiano | Deutsch |
+|---|---|
+| Cookie Policy di Cuore di Bosco | Cookie-Richtlinie von Cuore di Bosco |
+| Questo sito web (cuoredibosco.it) utilizza cookie per garantire il corretto funzionamento e migliorare l’esperienza di navigazione degli utenti. | Diese Website (cuoredibosco.it) verwendet Cookies, um den ordnungsgemäßen Betrieb zu gewährleisten und das Surferlebnis der Nutzer zu verbessern. |
+| Cosa sono i cookie | Was sind Cookies? |
+| I cookie sono piccoli file di testo che i siti web inviano al dispositivo dell’utente durante la navigazione. Servono per raccogliere informazioni su come l’utente utilizza il sito, per memorizzare le preferenze e per fornire contenuti personalizzati. | Cookies sind kleine Textdateien, die Websites während des Besuchs an das Gerät des Nutzers senden. Sie dienen dazu, Informationen darüber zu sammeln, wie der Nutzer die Website verwendet, Einstellungen zu speichern und personalisierte Inhalte bereitzustellen. |
+| Tipologie di cookie utilizzati | Arten der verwendeten Cookies |
+| Cookie tecnici (necessari): essenziali per il corretto funzionamento del sito e non richiedono il consenso dell’utente. | Technische Cookies (notwendig): unerlässlich für das ordnungsgemäße Funktionieren der Website; sie erfordern nicht die Einwilligung des Nutzers. |
+| Cookie di funzionalità: permettono al sito di ricordare le scelte dell’utente (come la lingua o le credenziali per l’accesso). Possono essere disattivati, ma alcune funzionalità potrebbero non essere disponibili. | Funktionalitäts-Cookies: ermöglichen es der Website, sich an die Entscheidungen des Nutzers zu erinnern (wie die Sprache oder die Anmeldedaten). Sie können deaktiviert werden, aber einige Funktionen könnten dann nicht verfügbar sein. |
+| Cookie di terze parti (analitici e di profilazione): strumenti come Google Analytics, mappe o social plugin che raccolgono dati a fini statistici o pubblicitari. Questi cookie richiedono il consenso esplicito dell’utente. | Cookies von Drittanbietern (Analyse und Profilbildung): Werkzeuge wie Google Analytics, Karten oder Social-Media-Plugins, die Daten zu statistischen oder Werbezwecken erfassen. Diese Cookies erfordern die ausdrückliche Einwilligung des Nutzers. |
+| Cookie usati su questo sito | Auf dieser Website verwendete Cookies |
+| Il sito può utilizzare: | Die Website kann Folgendes verwenden: |
+| Google Analytics per raccogliere informazioni anonime sull’uso del sito. | Google Analytics, um anonyme Informationen über die Nutzung der Website zu erfassen. |
+| Social plugin (es. Facebook, Instagram) per condividere contenuti. | Social-Media-Plugins (z. B. Facebook, Instagram), um Inhalte zu teilen. |
+| Booking o mappe incorporate (es. Google Maps, sistemi di prenotazione). | Eingebettete Buchungsfunktionen oder Karten (z. B. Google Maps, Buchungssysteme). |
+| Lingua scelta: quando l’utente clicca su una delle bandierine (IT, EN, DE), il sito salva nel browser del suo dispositivo (localStorage) la voce «cdb-language» con il valore «it», «en» o «de». Serve solo ad aprire l’indirizzo principale del sito nella lingua scelta: resta sul dispositivo, non viene inviata a nessuno e si può cancellare in qualsiasi momento dalle impostazioni del browser. | Gewählte Sprache: Wenn Sie auf eine der Flaggen (IT, EN, DE) klicken, speichert die Website im Browser Ihres Geräts (localStorage) den Eintrag „cdb-language“ mit dem Wert „it“, „en“ oder „de“. Er dient nur dazu, die Hauptadresse der Website in der gewählten Sprache zu öffnen: Er bleibt auf Ihrem Gerät, wird an niemanden weitergegeben und kann jederzeit in den Browsereinstellungen gelöscht werden. (Entwurf, Eigentümerin informieren: new paragraph, also added to the Italian and English privacy pages) |
+| Come gestire i cookie | Cookies verwalten |
+| Puoi gestire le preferenze sui cookie direttamente dal banner mostrato all’apertura del sito. Inoltre, puoi disattivarli dal tuo browser, seguendo le istruzioni specifiche: | Sie können die Cookie-Einstellungen direkt über das Banner verwalten, das beim Öffnen der Website angezeigt wird. Außerdem können Sie Cookies in Ihrem Browser deaktivieren, indem Sie den jeweiligen Anleitungen folgen: |
+| Preferenze cookie (button) | Cookie-Einstellungen |
+| Titolare del trattamento | Verantwortlicher |
+| Email: | E-Mail: |
+
+The four browser help links keep the browser names (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari (Mac)) and point to the German help pages of the same vendors.
+
 ## Glossar-Ergänzungen
 
 New words of the home page, to be used the same way on the other German pages.
@@ -418,3 +464,12 @@ New words of the home page, to be used the same way on the other German pages.
 | merende insieme | gemeinsame Snacks |
 | regolamento provinciale | Vorschrift der Provinz |
 | servizi esterni | externe Dienstleistungen |
+| cookie policy | Cookie-Richtlinie |
+| informativa sulla privacy | Datenschutzerklärung |
+| titolare del trattamento | Verantwortlicher |
+| utente | Nutzer (third person, as in the Italian) |
+| terze parti | Drittanbieter |
+| consenso | Einwilligung |
+| profilazione | Profilbildung |
+| social plugin | Social-Media-Plugins |
+| credenziali per l’accesso | Anmeldedaten |

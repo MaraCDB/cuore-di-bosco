@@ -39,6 +39,7 @@
           <li>Social plugins (e.g., Facebook, Instagram) to share content.</li>
           <li>Booking or embedded maps (e.g., Google Maps, booking systems).</li>
         </ul>
+        <p>Chosen language: when the user clicks one of the flags (IT, EN, DE), the site saves the entry "cdb-language" with the value "it", "en" or "de" in the browser of their device (localStorage). It is used only to open the site's main address in the chosen language: it stays on the device, is not sent to anyone and can be deleted at any time in the browser settings.</p>
       </section>
 
       <section class="policy-card" data-reveal>
