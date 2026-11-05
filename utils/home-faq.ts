@@ -28,7 +28,7 @@ const homeFaqByLocale: Record<SiteLocale, HomeFaqContent> = {
     items: [
       {
         question: 'Dove si trova il B&B e a che altitudine?',
-        answer: "Siamo a Prada di Brentonico, a 776 metri s.l.m., sul bivio per Polsa: sull'Altopiano di Brentonico, il giardino d'Europa, in Vallagarina, nel Parco Naturale Monte Baldo, in Trentino. Attorno a noi la catena del Monte Baldo, con vista su una delle sue cime più alte e famose, il Monte Altissimo di Nago.",
+        answer: 'Siamo a Prada di Brentonico, a 776 metri s.l.m., sul bivio per Polsa: sull’Altopiano di Brentonico, il giardino d’Europa, in Vallagarina, nel Parco Naturale Monte Baldo, in Trentino. Attorno a noi la catena del Monte Baldo, con vista su una delle sue cime più alte e famose, il Monte Altissimo di Nago.',
       },
       {
         question: 'Ci sono passeggiate e sentieri?',
@@ -37,19 +37,19 @@ const homeFaqByLocale: Record<SiteLocale, HomeFaqContent> = {
       },
       {
         question: 'Dove si mangia nei dintorni?',
-        answer: "A Brentonico, a pochi minuti, ci sono diversi ristoranti, poi rifugi, agriturismi e malghe; giù ad Ala, Mori e Rovereto c'è un po' di tutto. In paese un piccolo alimentari fa panini e vende generi alimentari e di necessità.",
+        answer: 'A Brentonico, a pochi minuti, ci sono diversi ristoranti, poi rifugi, agriturismi e malghe; giù ad Ala, Mori e Rovereto c’è un po’ di tutto. In paese un piccolo alimentari fa panini e vende generi alimentari e di necessità.',
       },
       {
         question: 'Cosa si raggiunge da qui?',
         answer: 'Polsa in 10 minuti, San Giacomo in 15, San Valentino in 20, Rovereto in 25 e il Lago di Garda in circa 30.',
       },
       {
-        question: "C'è un parcheggio gratuito?",
+        question: 'C’è un parcheggio gratuito?',
         answer: 'Ci sono parcheggi liberi e gratuiti disponibili a pochi minuti dalla struttura, alla chiesa e in fondo alla via, con ampia disponibilità. Vi preghiamo gentilmente di non parcheggiare in strada di fronte alla struttura.',
       },
       {
         question: 'Si arriva senza auto?',
-        answer: "Sì: l'autobus B305 Saccone-Brentonico-Mori-Rovereto ferma all'entrata di Prada. La stazione dei treni più vicina è Rovereto.",
+        answer: 'Sì: l’autobus B305 Saccone-Brentonico-Mori-Rovereto ferma all’entrata di Prada. La stazione dei treni più vicina è Rovereto.',
       },
     ],
   },
@@ -94,7 +94,7 @@ const homeFaqByLocale: Record<SiteLocale, HomeFaqContent> = {
       },
       {
         question: 'Gibt es Spazierwege und Wanderwege?',
-        answer: 'Der Monte Baldo bietet ein dichtes Netz von Wegen zwischen dem Gardasee und der Vallagarina, geeignet für jedes Erfahrungsniveau. Außerdem führt der Cammino di San Rocco direkt am Haus vorbei: Wir sind eine seiner offiziellen Raststationen.',
+        answer: 'Der Monte Baldo bietet ein dichtes Netz von Wegen zwischen dem Gardasee und der Vallagarina, geeignet für jedes Erfahrungsniveau. Außerdem führt der Cammino di San Rocco direkt am Haus vorbei: Wir sind eine offizielle Etappenstation des Cammino di San Rocco.',
         link: { text: 'Einige Routen sind beschrieben auf', label: 'Visit Rovereto', href: visitRoveretoHref },
       },
       {

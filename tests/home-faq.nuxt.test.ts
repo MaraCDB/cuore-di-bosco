@@ -16,17 +16,17 @@ const italianQuestions = [
   'Ci sono passeggiate e sentieri?',
   'Dove si mangia nei dintorni?',
   'Cosa si raggiunge da qui?',
-  "C'è un parcheggio gratuito?",
+  'C’è un parcheggio gratuito?',
   'Si arriva senza auto?',
 ]
 
 const italianAnswers = [
-  "Siamo a Prada di Brentonico, a 776 metri s.l.m., sul bivio per Polsa: sull'Altopiano di Brentonico, il giardino d'Europa, in Vallagarina, nel Parco Naturale Monte Baldo, in Trentino. Attorno a noi la catena del Monte Baldo, con vista su una delle sue cime più alte e famose, il Monte Altissimo di Nago.",
+  'Siamo a Prada di Brentonico, a 776 metri s.l.m., sul bivio per Polsa: sull’Altopiano di Brentonico, il giardino d’Europa, in Vallagarina, nel Parco Naturale Monte Baldo, in Trentino. Attorno a noi la catena del Monte Baldo, con vista su una delle sue cime più alte e famose, il Monte Altissimo di Nago.',
   'Il Monte Baldo offre una fitta rete di sentieri tra il Lago di Garda e la Vallagarina, adatti a ogni livello di esperienza. Inoltre il Cammino di San Rocco passa proprio davanti a casa: siamo un suo punto di sosta ufficiale.',
-  "A Brentonico, a pochi minuti, ci sono diversi ristoranti, poi rifugi, agriturismi e malghe; giù ad Ala, Mori e Rovereto c'è un po' di tutto. In paese un piccolo alimentari fa panini e vende generi alimentari e di necessità.",
+  'A Brentonico, a pochi minuti, ci sono diversi ristoranti, poi rifugi, agriturismi e malghe; giù ad Ala, Mori e Rovereto c’è un po’ di tutto. In paese un piccolo alimentari fa panini e vende generi alimentari e di necessità.',
   'Polsa in 10 minuti, San Giacomo in 15, San Valentino in 20, Rovereto in 25 e il Lago di Garda in circa 30.',
   'Ci sono parcheggi liberi e gratuiti disponibili a pochi minuti dalla struttura, alla chiesa e in fondo alla via, con ampia disponibilità. Vi preghiamo gentilmente di non parcheggiare in strada di fronte alla struttura.',
-  "Sì: l'autobus B305 Saccone-Brentonico-Mori-Rovereto ferma all'entrata di Prada. La stazione dei treni più vicina è Rovereto.",
+  'Sì: l’autobus B305 Saccone-Brentonico-Mori-Rovereto ferma all’entrata di Prada. La stazione dei treni più vicina è Rovereto.',
 ]
 
 function normalize(text: string): string {
