@@ -29,33 +29,15 @@ const primaryLinksByLocale: Record<SiteLocale, SiteLink[]> = {
   ],
 }
 
-const pendingRouteIds: Partial<Record<SiteLocale, readonly string[]>> = {
-}
-
 function withoutTrailingSlash(path: string): string {
   return path.length > 1 ? path.replace(/\/+$/, '') : path
-}
-
-/**
- * Returns the path unchanged when its page exists; a page of a language that is not built yet
- * is replaced by the booking page of that language, without hash.
- */
-export function availablePath(path: string): string {
-  const normalizedPath = withoutTrailingSlash(path.split('#')[0])
-  const locale = siteLocale(normalizedPath)
-  const localeRoutes = routes(locale)
-  const routeId = localeRoutes.find(route => route.path === normalizedPath)?.id
-  if (!routeId || !pendingRouteIds[locale]?.includes(routeId)) {
-    return path
-  }
-  return localeRoutes.find(route => route.id === 'booking')?.path ?? path
 }
 
 /**
  * Returns the main navigation links of the site in the given language, in display order.
  */
 export function primaryLinks(locale: SiteLocale = 'it'): SiteLink[] {
-  return primaryLinksByLocale[locale].map(link => ({ ...link, to: availablePath(link.to) }))
+  return primaryLinksByLocale[locale]
 }
 
 /**
@@ -72,15 +54,14 @@ export function siteLocale(path: string): SiteLocale {
  * Returns the home page path of a language.
  */
 export function homePath(locale: SiteLocale): string {
-  return availablePath(`/${locale}`)
+  return `/${locale}`
 }
 
 /**
  * Returns the path of a route id in a language, falling back to the home page.
  */
 export function localePath(locale: SiteLocale, routeId: string): string {
-  const routePath = routes(locale).find(route => route.id === routeId)?.path
-  return routePath ? availablePath(routePath) : homePath(locale)
+  return routes(locale).find(route => route.id === routeId)?.path ?? homePath(locale)
 }
 
 /**

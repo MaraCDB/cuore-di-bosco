@@ -81,21 +81,20 @@ describe('three languages', () => {
   })
 })
 
-describe('interim fallback for German pages not built yet', () => {
-  it('sends unbuilt German pages to the German booking page', () => {
-    expect(availablePath('/de')).toBe('/de')
-    expect(availablePath('/de#zimmer')).toBe('/de#zimmer')
-    expect(availablePath('/de/hausordnung/')).toBe('/de/hausordnung/')
-    expect(availablePath('/de/datenschutz')).toBe('/de/datenschutz')
+describe('German links', () => {
+  it('points every German link at its own page', () => {
     expect(homePath('de')).toBe('/de')
     expect(localePath('de', 'privacy-policy')).toBe('/de/datenschutz')
-    expect(primaryLinks('de').map(link => link.to)).toEqual(['/de#zimmer', '/de#fruehstueck', '/de/entdecken', '/de/hausordnung', '/de#anfahrt'])
-    expect(primaryLinks('de').map(link => link.label)).toEqual(['Zimmer', 'Frühstück', 'Entdecken', 'Hausordnung', 'Anfahrt'])
+    expect(primaryLinks('de')).toEqual([
+      { label: 'Zimmer', to: '/de#zimmer' },
+      { label: 'Frühstück', to: '/de#fruehstueck' },
+      { label: 'Entdecken', to: '/de/entdecken' },
+      { label: 'Hausordnung', to: '/de/hausordnung' },
+      { label: 'Anfahrt', to: '/de#anfahrt' },
+    ])
   })
 
-  it('leaves Italian and English paths untouched', () => {
-    expect(availablePath('/it#camere')).toBe('/it#camere')
-    expect(availablePath('/en/rules')).toBe('/en/rules')
+  it('keeps the Italian and English home paths', () => {
     expect(homePath('it')).toBe('/it')
     expect(homePath('en')).toBe('/en')
   })
