@@ -175,7 +175,7 @@ describe('italian home page', () => {
     const sectionOrder = [...wrapper.element.querySelectorAll('section')]
       .map(section => section.id || [...section.classList].find(name => !['band', 'wrap'].includes(name)))
 
-    expect(sectionOrder).toEqual(['hero', 'welcome', 'camere', 'colazione', 'everyone', 'cammino', 'storia', 'reviews', 'arrivare', 'garden'])
+    expect(sectionOrder).toEqual(['hero', 'welcome', 'camere', 'colazione', 'everyone', 'faq', 'cammino', 'storia', 'reviews', 'arrivare', 'garden'])
   })
 
   it('sets the welcome and the garden on champagne bands so the cream rooms and directions never touch another cream section', () => {

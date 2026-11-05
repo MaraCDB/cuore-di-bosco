@@ -149,6 +149,8 @@
         </div>
       </section>
 
+      <HomeFaq locale="de" />
+
       <section class="band pilgrims" id="cammino">
         <div class="wrap pilgrims-grid">
           <img class="pilgrims-photo" src="/images/home/cammino-san-rocco-960.webp" alt="Die Wegmarkierung des Cammino di San Rocco an einer Steinmauer" loading="lazy" data-reveal>

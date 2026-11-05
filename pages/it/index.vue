@@ -149,6 +149,8 @@
         </div>
       </section>
 
+      <HomeFaq locale="it" />
+
       <section class="band pilgrims" id="cammino">
         <div class="wrap pilgrims-grid">
           <img class="pilgrims-photo" src="/images/home/cammino-san-rocco-960.webp" alt="Il segnavia del Cammino di San Rocco su un muro in pietra" loading="lazy" data-reveal>

@@ -7,7 +7,7 @@ import ItalianHomePage from '~/pages/it/index.vue'
 const germanSource = readFileSync('pages/de/index.vue', 'utf8')
 const homeStyles = readFileSync('assets/css/pages/home.css', 'utf8')
 const forbiddenWords = ['kaution', 'anzahlung', 'stornierung', 'erstattung', 'verleih', 'vermietung', 'kostenpflichtig', 'picknick', 'noleggio', 'rental']
-const sectionIds: Record<string, string> = { camere: 'zimmer', colazione: 'fruehstueck', cammino: 'cammino', storia: 'geschichte', arrivare: 'anfahrt' }
+const sectionIds: Record<string, string> = { camere: 'zimmer', colazione: 'fruehstueck', cammino: 'cammino', storia: 'geschichte', arrivare: 'anfahrt', faq: 'faq' }
 
 const mountedWrappers: Array<{ unmount: () => void }> = []
 
@@ -67,7 +67,7 @@ describe('german home page', () => {
 
     expect([...german.children].map(child => child.className)).toEqual(italianTopLevel)
     expect(sectionClassNames(german)).toEqual(italianSections)
-    expect(italianSections).toHaveLength(10)
+    expect(italianSections).toHaveLength(11)
   })
 
   it('renames the section ids for in-page links and keeps the others', async () => {
