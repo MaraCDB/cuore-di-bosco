@@ -66,7 +66,7 @@ describe('German site chrome', () => {
     const links = linkSummaries(wrapper.element, 'a')
 
     expect(links.map(link => link.text)).toEqual(['Startseite', 'Anrufen', 'WhatsApp', 'E-Mail', 'Buchen'])
-    expect(links[0].href).toBe('/de/buchen#top')
+    expect(links[0].href).toBe('/de#top')
     expect(links[4].href).toBe('/de/buchen')
     expect(wrapper.element.getAttribute('aria-label')).toBe('Schnellkontakt')
   })

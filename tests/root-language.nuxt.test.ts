@@ -43,6 +43,6 @@ describe('root page', () => {
     const replace = await mountRootPage()
 
     expect(replace).toHaveBeenCalledTimes(1)
-    expect(replace).toHaveBeenCalledWith('/de/buchen')
+    expect(replace).toHaveBeenCalledWith('/de')
   })
 })

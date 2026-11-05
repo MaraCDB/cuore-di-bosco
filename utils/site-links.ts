@@ -30,7 +30,7 @@ const primaryLinksByLocale: Record<SiteLocale, SiteLink[]> = {
 }
 
 const pendingRouteIds: Partial<Record<SiteLocale, readonly string[]>> = {
-  de: ['welcome', 'explore', 'rules', 'privacy-policy'],
+  de: ['explore', 'rules', 'privacy-policy'],
 }
 
 function withoutTrailingSlash(path: string): string {
