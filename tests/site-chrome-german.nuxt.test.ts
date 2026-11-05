@@ -128,9 +128,10 @@ describe('German JSON-LD', () => {
     forbiddenWords.forEach(word => expect(germanJsonLd).not.toContain(word))
   })
 
-  it('leaves the Italian and English descriptions as they are', () => {
-    expect(lodgingBusinessJsonLd('en').description).toMatch(/^Family-friendly B&B/)
-    expect(lodgingBusinessJsonLd('it').description).toMatch(/^B&B per famiglie/)
+  it('gives each language its own home description', () => {
+    expect(lodgingBusinessJsonLd('en').description).toMatch(/^B&B in Prada di Brentonico, 776 m, at the Polsa junction/)
+    expect(lodgingBusinessJsonLd('it').description).toMatch(/^B&B a Prada di Brentonico, 776 m, sul bivio per Polsa/)
+    expect(lodgingBusinessJsonLd('de').description).toMatch(/^B&B in Prada di Brentonico, 776 m, an der Abzweigung nach Polsa/)
   })
 })
 

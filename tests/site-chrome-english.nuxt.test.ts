@@ -140,7 +140,7 @@ describe('lodgingBusinessJsonLd', () => {
   })
 
   it('describes the B&B in the language of the page', () => {
-    expect(lodgingBusinessJsonLd('en').description).toMatch(/^Family-friendly B&B/)
-    expect(lodgingBusinessJsonLd('it').description).toMatch(/^B&B per famiglie/)
+    expect(lodgingBusinessJsonLd('en').description).toMatch(/^B&B in Prada di Brentonico, 776 m, at the Polsa junction/)
+    expect(lodgingBusinessJsonLd('it').description).toMatch(/^B&B a Prada di Brentonico, 776 m, sul bivio per Polsa/)
   })
 })
