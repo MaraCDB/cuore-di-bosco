@@ -157,7 +157,7 @@ describe('site menu', () => {
     await menuButton.trigger('click')
     await nextTick()
 
-    useRouter().push('/it/esplora')
+    await useRouter().push('/it/esplora')
     await vi.waitFor(() => expect(document.querySelector('[role=dialog]')).toBeNull())
 
     expect(document.querySelector('[role=dialog]')).toBeNull()
