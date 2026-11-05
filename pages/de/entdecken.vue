@@ -270,6 +270,14 @@
           Entspannung, dem Wohlbefinden und
           natürlichen Produkten gewidmet ist.
         </p>
+        <p>
+          Viele Routen finden Sie beschrieben auf&nbsp;<a
+            href="https://www.visitrovereto.it/info/guide/percorsi-trekking-monte-baldo/" target="_blank"
+            rel="noreferrer noopener">Visit Rovereto</a>. Für weniger bekannte Wege verwenden viele Wanderer
+          <a
+            href="https://www.outdooractive.com/it/escursionismo/brentonico/escursionismo-a-brentonico/2521850/"
+            target="_blank" rel="noreferrer noopener">Outdooractive</a>.
+        </p>
       </article>
 
       <article class="season" data-reveal>

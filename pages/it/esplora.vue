@@ -271,6 +271,14 @@
           relax, al benessere e
           ai prodotti naturali.
         </p>
+        <p>
+          Trovate molti percorsi descritti su&nbsp;<a
+            href="https://www.visitrovereto.it/info/guide/percorsi-trekking-monte-baldo/" target="_blank"
+            rel="noreferrer noopener">Visit Rovereto</a>. Per i sentieri meno conosciuti molti escursionisti
+          usano&nbsp;<a
+            href="https://www.outdooractive.com/it/escursionismo/brentonico/escursionismo-a-brentonico/2521850/"
+            target="_blank" rel="noreferrer noopener">Outdooractive</a>.
+        </p>
       </article>
 
       <article class="season" data-reveal>
