@@ -144,7 +144,7 @@
         <h3>Altri servizi per te!</h3>
         <p>Wi-fi gratuita<br>
           Servizio deposito bici / scarponi / sci e altro materiale<br>
-          Servizio a richiesta di lavanderia express con prodotti ecologici, biodegradabili certificati<br>
+          Servizio a richiesta di lavanderia con prodotti ecologici, biodegradabili certificati<br>
           Angolo libreria e relax (orario 15-18) con ampia terrazza (clima permettendo)<br>
           Nell’apposito stand inoltre troverai tutte le mappe e i depliant informativi di APT Rovereto e Vallagarina.</p>
         <p>A colazione preferite qualcosa di particolare? Informateci e ci attrezziamo!</p>

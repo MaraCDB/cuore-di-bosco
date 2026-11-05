@@ -146,7 +146,7 @@
         <h3>Weitere Angebote für Sie!</h3>
         <p>Kostenloses WLAN<br>
           Aufbewahrung für Fahrräder / Stiefel / Ski und weitere Ausrüstung<br>
-          Express-Wäscheservice auf Anfrage mit zertifiziert umweltfreundlichen, biologisch abbaubaren Produkten<br>
+          Wäscheservice auf Anfrage mit zertifiziert umweltfreundlichen, biologisch abbaubaren Produkten<br>
           Lese- und Ruheecke (15–18 Uhr) mit großer Terrasse (wenn das Wetter es zulässt)<br>
           Am Infostand finden Sie außerdem alle Karten und Informationsbroschüren der APT Rovereto und Vallagarina.</p>
         <p>Wünschen Sie sich zum Frühstück etwas Besonderes? Sagen Sie uns Bescheid, und wir kümmern uns darum!</p>

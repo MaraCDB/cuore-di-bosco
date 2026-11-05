@@ -8,7 +8,7 @@ import ItalianBookingPage from '~/pages/it/prenota.vue'
 const germanSource = readFileSync('pages/de/buchen.vue', 'utf8')
 const reloadPluginSource = readFileSync('plugins/reload-script.client.ts', 'utf8')
 const germanWidgetUrl = 'https://www.bed-and-breakfast.it/de/trentino-alto-adige/bb-cuore-di-bosco-brentonico/68002'
-const forbiddenWords = ['kaution', 'anzahlung', 'stornierung', 'erstattung', 'verleih', 'vermietung', 'kostenpflichtig', 'picknick-tag']
+const forbiddenWords = ['kaution', 'anzahlung', 'stornierung', 'erstattung', 'verleih', 'vermietung', 'kostenpflichtig', 'picknick-tag', 'express']
 const ownerEditDrafts = [
   'Süße Kleinigkeit zur Begrüßung',
   'Tee-Ecke mit Wasserkocher, Tee, Kamillentee, Kräutertees, Gläsern und Tassen',

@@ -142,7 +142,7 @@
         <h3>Other services for you!</h3>
         <p>Free Wi-Fi<br>
           Storage for bikes / boots / skis and other gear<br>
-          Express laundry service on request with certified ecological, biodegradable products<br>
+          Laundry service on request with certified ecological, biodegradable products<br>
           Reading and relaxation corner (open 3–6 pm) with a large terrace (when the weather allows)<br>
           You’ll also find all maps and brochures from APT Rovereto and Vallagarina at the dedicated stand.</p>
         <p>Would you like something special at breakfast? Let us know and we’ll get it ready!</p>

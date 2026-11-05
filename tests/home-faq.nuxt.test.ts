@@ -108,6 +108,13 @@ describe('mounted FAQ section', () => {
     expect(faqSection.querySelector('h2')?.textContent).toBe('Domande frequenti')
   })
 
+  it.each(['it', 'en', 'de'] as SiteLocale[])('fades in the heading block and the question list on the %s home', async (locale) => {
+    const home = await mountHome(locale)
+    const revealedBlocks = [...home.querySelectorAll('section#faq [data-reveal]')].map(block => block.classList[0])
+
+    expect(revealedBlocks).toEqual(['faq-head', 'faq-list'])
+  })
+
   it('opens the Visit Rovereto link in a new tab with noopener', async () => {
     const home = await mountHome('it')
     const link = home.querySelector('section#faq a') as HTMLAnchorElement

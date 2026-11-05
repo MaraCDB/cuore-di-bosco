@@ -80,7 +80,7 @@ describe('italian booking page', () => {
   it('applies the owners\' text fixes and drops the paid-service captions', async () => {
     const pageText = await mountedPageText()
 
-    for (const removed of ['troverei', '(in realizzazione)', 'SERVIZIO LAVANDERIA', 'SERVIZIO PIC-NIC', 'SCRIVICI!', 'Giornata grigia?', 'NOLEGGIO BICI', 'PIC NIC DAY', 'a pagamento', 'in balcone (clima permettendo)', 'Omaggio di benvenuto', 'Bicchieri e tazze a disposizione', 'zona relax con divano e scrivania.', '(con cauzione)']) {
+    for (const removed of ['troverei', '(in realizzazione)', 'SERVIZIO LAVANDERIA', 'SERVIZIO PIC-NIC', 'SCRIVICI!', 'Giornata grigia?', 'NOLEGGIO BICI', 'PIC NIC DAY', 'a pagamento', 'in balcone (clima permettendo)', 'Omaggio di benvenuto', 'Bicchieri e tazze a disposizione', 'zona relax con divano e scrivania.', '(con cauzione)', 'lavanderia express']) {
       expect(pageText).not.toContain(removed)
     }
     expect(pageText).toContain('Nell’apposito stand inoltre troverai tutte le mappe')

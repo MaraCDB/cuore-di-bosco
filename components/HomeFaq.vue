@@ -2,11 +2,11 @@
   <section class="faq" id="faq">
     <div class="wrap">
       <div class="faq-grid">
-        <div class="faq-head">
+        <div class="faq-head" data-reveal>
           <h2>{{ faq.heading }}</h2>
           <p class="lead">{{ faq.lead }}</p>
         </div>
-        <div class="faq-list">
+        <div class="faq-list" data-reveal>
           <details v-for="(item, index) in faq.items" :key="item.question" :open="index === 0">
             <summary><span>{{ item.question }}</span></summary>
             <p>{{ item.answer }}<template v-if="item.link">{{ ' ' + item.link.text + ' ' }}<a :href="item.link.href" target="_blank" rel="noopener">{{ item.link.label }}</a>.</template></p>
