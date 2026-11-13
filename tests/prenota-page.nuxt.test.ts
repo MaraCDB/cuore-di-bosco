@@ -87,12 +87,11 @@ describe('italian booking page', () => {
     expect(pageText).toContain('libreria ed angolo giochi attrezzato.')
   })
 
-  it('shows no payment or cancellation conditions', async () => {
-    const pageText = (await mountedPageText()).toLowerCase()
+  it('explains how booking works right after the widget', async () => {
+    const wrapper = await mountBooking()
 
-    for (const forbidden of ['acconto', 'cancellazion', 'rimbors', 'caparra']) {
-      expect(pageText).not.toContain(forbidden)
-    }
+    expect(wrapper.element.querySelector('.booking-strip > .booking-widget + details.booking-guide')).not.toBeNull()
+    expect(await mountedPageText()).toContain('oggi non paghi nulla (0 €)')
   })
 
   it('titles the page and its sections', async () => {

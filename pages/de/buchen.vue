@@ -10,6 +10,7 @@
         data-tipo="widget" data-lingua="de"
         data-action="https://www.bed-and-breakfast.it/de/trentino-alto-adige/bb-cuore-di-bosco-brentonico/68002"
         data-colore="green" data-wl="true"></div>
+      <BookingGuide locale="de" />
     </section>
 
     <section class="booking-intro">

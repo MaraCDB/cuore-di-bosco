@@ -8,7 +8,7 @@ import ItalianBookingPage from '~/pages/it/prenota.vue'
 const germanSource = readFileSync('pages/de/buchen.vue', 'utf8')
 const reloadPluginSource = readFileSync('plugins/reload-script.client.ts', 'utf8')
 const germanWidgetUrl = 'https://www.bed-and-breakfast.it/de/trentino-alto-adige/bb-cuore-di-bosco-brentonico/68002'
-const forbiddenWords = ['kaution', 'anzahlung', 'stornierung', 'erstattung', 'verleih', 'vermietung', 'kostenpflichtig', 'picknick-tag', 'express']
+const forbiddenWords = ['kaution', 'anzahlung', 'erstattung', 'verleih', 'vermietung', 'kostenpflichtig', 'picknick-tag', 'express']
 const ownerEditDrafts = [
   'Süße Kleinigkeit zur Begrüßung',
   'Tee-Ecke mit Wasserkocher, Tee, Kamillentee, Kräutertees, Gläsern und Tassen',
@@ -106,11 +106,17 @@ describe('german booking page', () => {
     expect(blockTexts(german, 'h1')).toEqual(['BUCHEN'])
   })
 
-  it('shows no deposit, payment, cancellation or rental text', async () => {
+  it('shows no deposit, advance payment or rental text', async () => {
     const german = await mountGerman()
     const pageText = blockTexts(german, 'h1, h2, h3, p, figcaption, li').join(' ').toLowerCase()
 
     expect(forbiddenWords.filter(word => pageText.includes(word))).toEqual([])
+  })
+
+  it('explains how booking works right after the widget', async () => {
+    const german = await mountGerman()
+
+    expect(german.querySelector('.booking-strip > .booking-widget + details.booking-guide')).not.toBeNull()
   })
 
   it('uses the redesign layout, plain text, no-prefetch links and unsized images', async () => {

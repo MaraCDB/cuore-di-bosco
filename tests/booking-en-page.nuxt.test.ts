@@ -104,6 +104,12 @@ describe('english booking page', () => {
     expect(pageText).not.toMatch(/\bhire\b/)
   })
 
+  it('explains how booking works right after the widget', async () => {
+    const english = await mountEnglish()
+
+    expect(english.querySelector('.booking-strip > .booking-widget + details.booking-guide')).not.toBeNull()
+  })
+
   it('uses the redesign layout, plain text, no-prefetch links and unsized images', async () => {
     const english = await mountEnglish()
     const links = [...englishSource.matchAll(/<NuxtLink\b[^>]*>/g)].map(match => match[0])
