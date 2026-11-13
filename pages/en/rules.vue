@@ -25,13 +25,16 @@
 
       <section class="rule" data-reveal>
         <h2>PAYMENT METHODS</h2>
-        <p>Once the booking is confirmed, we require a deposit of 35% of the total amount by bank transfer or with the online booking. The remaining balance is paid on arrival in cash or by credit/debit card, with an official receipt issued.</p>
+        <p><strong>Online booking:</strong> your credit card is requested as a guarantee only, and nothing is paid at the time of booking. 7 days before arrival the amount of the stay is held on the card, and it is charged at check-in.</p>
+        <p><strong>Direct booking (phone or email):</strong> once the booking is confirmed, we require a deposit of 35% of the total amount by bank transfer. The remaining balance is paid on arrival in cash or by credit/debit card, with an official receipt issued.</p>
         <p><strong>IMPORTANT:</strong> Please pay the deposit only after receiving official confirmation of availability and agreement on the amount.</p>
       </section>
 
       <section class="rule" data-reveal>
         <h2>CANCELLATION POLICY</h2>
-        <p>If you cancel up to the 7th day before arrival, we will refund the deposit paid in full. No refunds are given for cancellations made in the last 7 days or for early departures compared to the original booking. By prior arrangement, the stay can be moved to another date in case of health problems or unavoidable commitments, except in high season.</p>
+        <p><strong>Online booking:</strong> free cancellation up to the 7th day before arrival. For cancellations in the last 7 days or no-shows, the full amount of the stay is charged.</p>
+        <p><strong>Direct booking:</strong> if you cancel up to the 7th day before arrival, we will refund the deposit paid in full. No refunds are given for cancellations made in the last 7 days or for early departures compared to the original booking.</p>
+        <p>For cancellations in the last 7 days, we can offer a voucher for the amount paid, valid for another stay within 12 months, excluding the weeks of Ferragosto (mid-August), Christmas and New Year.</p>
       </section>
 
       <section class="rule" data-reveal>

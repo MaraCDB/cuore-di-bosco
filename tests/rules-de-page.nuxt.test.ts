@@ -32,7 +32,10 @@ const hyphenatedTitleParts = [
   'DIENST­LEISTUNGEN',
 ]
 const cancellationSentence = 'Wenn Sie bis zum 7. Tag vor der Anreise stornieren, erstatten wir die geleistete Anzahlung vollständig.'
-const rescheduleSentence = 'Nach vorheriger Absprache kann der Aufenthalt bei gesundheitlichen Problemen oder unaufschiebbaren Verpflichtungen auf einen anderen Termin verschoben werden, außer in der Hochsaison.'
+const onlinePaymentSentence = 'Online-Buchung: Die Kreditkarte wird nur als Garantie verlangt, bei der Buchung zahlen Sie nichts.'
+const directPaymentSentence = 'Direktbuchung (Telefon oder E-Mail): Sobald die Buchung bestätigt ist, bitten wir um eine Anzahlung von 35 % des Gesamtbetrags per Banküberweisung.'
+const onlineCancellationSentence = 'Online-Buchung: Kostenlose Stornierung bis zum 7. Tag vor der Anreise.'
+const voucherSentence = 'Bei Stornierungen in den letzten 7 Tagen können wir einen Gutschein über den gezahlten Betrag anbieten'
 const dietsParagraph = 'Wir sind für jeden Ernährungswunsch da: vegetarisch, vegan, bei Unverträglichkeiten oder Allergien. Bitte sagen Sie uns rechtzeitig vor Ihrer Anreise Bescheid, damit wir Ihnen eine passende Auswahl anbieten können.'
 const inRoomBreakfastSentence = 'Außerdem können wir ein Frühstück zum Verzehr auf dem Zimmer zubereiten (auf Anfrage).'
 
@@ -118,7 +121,12 @@ describe('german rules page', () => {
     const pageText = normalize(german.textContent ?? '')
 
     expect(pageText).toContain(cancellationSentence)
-    expect(pageText).toContain(rescheduleSentence)
+    expect(pageText).toContain(onlinePaymentSentence)
+    expect(pageText).toContain(directPaymentSentence)
+    expect(pageText).toContain(onlineCancellationSentence)
+    expect(pageText).toContain(voucherSentence)
+    expect(pageText).not.toContain('außer in der Hochsaison')
+    expect(pageText).not.toContain('oder bei der Online-Buchung')
     expect(pageText).toContain(dietsParagraph)
     expect(pageText).toContain(inRoomBreakfastSentence)
     expect(pageText).toContain('Anzahlung')

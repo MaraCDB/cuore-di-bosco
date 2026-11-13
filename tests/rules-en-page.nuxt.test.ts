@@ -7,8 +7,11 @@ import ItalianRulesPage from '~/pages/it/regolamento.vue'
 const englishSource = readFileSync('pages/en/rules.vue', 'utf8')
 const rulesStyles = readFileSync('assets/css/pages/rules.css', 'utf8')
 const forbiddenWords = ['picnic', '15th day', 'rental', 'vacation', 'tranquility', 'stroller', 'linens', 'behavioral']
-const cancellationSentence = 'If you cancel up to the 7th day before arrival, we will refund the deposit paid in full.'
-const rescheduleSentence = 'By prior arrangement, the stay can be moved to another date in case of health problems or unavoidable commitments, except in high season.'
+const cancellationSentence = 'if you cancel up to the 7th day before arrival, we will refund the deposit paid in full.'
+const onlinePaymentSentence = 'Online booking: your credit card is requested as a guarantee only, and nothing is paid at the time of booking.'
+const directPaymentSentence = 'Direct booking (phone or email): once the booking is confirmed, we require a deposit of 35% of the total amount by bank transfer.'
+const onlineCancellationSentence = 'Online booking: free cancellation up to the 7th day before arrival.'
+const voucherSentence = 'For cancellations in the last 7 days, we can offer a voucher for the amount paid, valid for another stay within 12 months'
 const dietsParagraph = 'We are happy to meet any dietary requirement: vegetarian, vegan, intolerances or allergies. Please let us know in good time before your arrival so that we can offer you a suitable choice.'
 const inRoomBreakfastSentence = 'We can also prepare a breakfast to be enjoyed in your room (on request).'
 
@@ -82,12 +85,17 @@ describe('english rules page', () => {
     expect(titles[12]).toBe('ACCESS TO THE PROPERTY')
   })
 
-  it('states the 7-day cancellation, the reschedule sentence and the diets paragraph', async () => {
+  it('splits payment and cancellation into online and direct booking and keeps the diets paragraph', async () => {
     const english = await mountEnglish()
     const pageText = normalize(english.textContent ?? '')
 
     expect(pageText).toContain(cancellationSentence)
-    expect(pageText).toContain(rescheduleSentence)
+    expect(pageText).toContain(onlinePaymentSentence)
+    expect(pageText).toContain(directPaymentSentence)
+    expect(pageText).toContain(onlineCancellationSentence)
+    expect(pageText).toContain(voucherSentence)
+    expect(pageText).not.toContain('except in high season')
+    expect(pageText).not.toContain('or with the online booking')
     expect(pageText).toContain(dietsParagraph)
     expect(pageText).toContain(inRoomBreakfastSentence)
     ;['vegetarian', 'vegan', 'intolerances', 'allergies'].forEach(word => expect(pageText).toContain(word))

@@ -25,13 +25,16 @@
 
       <section class="rule" data-reveal>
         <h2>ZAHLUNGS&shy;BEDINGUNGEN</h2>
-        <p>Sobald die Buchung bestätigt ist, bitten wir um eine Anzahlung von 35&nbsp;% des Gesamtbetrags per Banküberweisung oder bei der Online-Buchung. Der Restbetrag wird bei der Ankunft bar oder mit Kredit-/Debitkarte beglichen, gegen ordnungsgemäße Quittung.</p>
+        <p><strong>Online-Buchung:</strong> Die Kreditkarte wird nur als Garantie verlangt, bei der Buchung zahlen Sie nichts. 7 Tage vor der Anreise wird der Betrag des Aufenthalts auf der Karte reserviert und beim Check-in abgebucht.</p>
+        <p><strong>Direktbuchung (Telefon oder E-Mail):</strong> Sobald die Buchung bestätigt ist, bitten wir um eine Anzahlung von 35&nbsp;% des Gesamtbetrags per Banküberweisung. Der Restbetrag wird bei der Ankunft bar oder mit Kredit-/Debitkarte beglichen, gegen ordnungsgemäße Quittung.</p>
         <p><strong>WICHTIG:</strong> Leisten Sie die Anzahlung erst, nachdem Sie die offizielle Bestätigung der Verfügbarkeit erhalten und sich mit uns über den Betrag geeinigt haben.</p>
       </section>
 
       <section class="rule" data-reveal>
         <h2>STORNIERUNGS&shy;BEDINGUNGEN</h2>
-        <p>Wenn Sie bis zum 7. Tag vor der Anreise stornieren, erstatten wir die geleistete Anzahlung vollständig. Für Stornierungen in den letzten 7 Tagen vor der Anreise oder für eine vorzeitige Abreise gegenüber der ursprünglichen Buchung ist keine Erstattung vorgesehen. Nach vorheriger Absprache kann der Aufenthalt bei gesundheitlichen Problemen oder unaufschiebbaren Verpflichtungen auf einen anderen Termin verschoben werden, außer in der Hochsaison.</p>
+        <p><strong>Online-Buchung:</strong> Kostenlose Stornierung bis zum 7. Tag vor der Anreise. Bei Stornierungen in den letzten 7 Tagen oder bei Nichtanreise wird der volle Betrag des Aufenthalts abgebucht.</p>
+        <p><strong>Direktbuchung:</strong> Wenn Sie bis zum 7. Tag vor der Anreise stornieren, erstatten wir die geleistete Anzahlung vollständig. Für Stornierungen in den letzten 7 Tagen vor der Anreise oder für eine vorzeitige Abreise gegenüber der ursprünglichen Buchung ist keine Erstattung vorgesehen.</p>
+        <p>Bei Stornierungen in den letzten 7 Tagen können wir einen Gutschein über den gezahlten Betrag anbieten, gültig für einen anderen Aufenthalt innerhalb von 12 Monaten, ausgenommen die Wochen um Ferragosto (Mitte August), Weihnachten und Neujahr.</p>
       </section>
 
       <section class="rule" data-reveal>

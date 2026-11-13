@@ -25,13 +25,16 @@
 
       <section class="rule" data-reveal>
         <h2>MODALITÀ DI PAGAMENTO</h2>
-        <p>Una volta confermata la prenotazione, richiediamo il versamento di un acconto pari al 35% dell’importo totale tramite bonifico bancario o con la prenotazione online. Il saldo finale verrà effettuato all’arrivo in contanti o con carta di credito/bancomat, con rilascio di regolare ricevuta.</p>
+        <p><strong>Prenotazione online:</strong> la carta di credito viene richiesta solo a garanzia e alla prenotazione non si paga nulla. 7 giorni prima dell’arrivo l’importo del soggiorno viene bloccato sulla carta e viene addebitato al check-in.</p>
+        <p><strong>Prenotazione diretta (telefono o email):</strong> una volta confermata la prenotazione, richiediamo il versamento di un acconto pari al 35% dell’importo totale tramite bonifico bancario. Il saldo finale verrà effettuato all’arrivo in contanti o con carta di credito/bancomat, con rilascio di regolare ricevuta.</p>
         <p><strong>IMPORTANTE:</strong> Versate l’acconto solo dopo aver ricevuto la conferma ufficiale della disponibilità e l’accordo sull’importo.</p>
       </section>
 
       <section class="rule" data-reveal>
         <h2>POLITICHE DI CANCELLAZIONE</h2>
-        <p>In caso di cancellazione comunicata entro il 7° giorno prima dell’arrivo, restituiremo per intero l’acconto versato. Non sono previsti rimborsi per cancellazioni comunicate negli ultimi 7 giorni o per partenze anticipate rispetto alla prenotazione originaria. Previo accordi è possibile spostare il soggiorno ad altra data in caso di salute o impegni improrogabili, salvo alta stagione.</p>
+        <p><strong>Prenotazione online:</strong> cancellazione gratuita fino al 7° giorno prima dell’arrivo. Per cancellazioni negli ultimi 7 giorni o mancato arrivo viene addebitato l’intero importo del soggiorno.</p>
+        <p><strong>Prenotazione diretta:</strong> in caso di cancellazione comunicata entro il 7° giorno prima dell’arrivo, restituiremo per intero l’acconto versato. Non sono previsti rimborsi per cancellazioni comunicate negli ultimi 7 giorni o per partenze anticipate rispetto alla prenotazione originaria.</p>
+        <p>In caso di cancellazione negli ultimi 7 giorni possiamo offrire un buono pari all’importo versato, valido per un altro soggiorno entro 12 mesi, escluse le settimane di Ferragosto, Natale e Capodanno.</p>
       </section>
 
       <section class="rule" data-reveal>

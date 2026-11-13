@@ -48,11 +48,17 @@ describe('italian rules page', () => {
     }
   })
 
-  it('shows the owners\' seven-day cancellation policy', async () => {
+  it('splits payment and cancellation into online and direct booking', async () => {
     const wrapper = await mountRules()
     const pageText = normalize(wrapper.element.textContent ?? '')
 
-    expect(pageText).toContain('In caso di cancellazione comunicata entro il 7° giorno prima dell’arrivo, restituiremo per intero l’acconto versato. Non sono previsti rimborsi per cancellazioni comunicate negli ultimi 7 giorni o per partenze anticipate rispetto alla prenotazione originaria. Previo accordi è possibile spostare il soggiorno ad altra data in caso di salute o impegni improrogabili, salvo alta stagione.')
+    expect(pageText).toContain('Prenotazione online: la carta di credito viene richiesta solo a garanzia e alla prenotazione non si paga nulla.')
+    expect(pageText).toContain('Prenotazione diretta (telefono o email): una volta confermata la prenotazione, richiediamo il versamento di un acconto pari al 35% dell’importo totale tramite bonifico bancario.')
+    expect(pageText).toContain('Prenotazione online: cancellazione gratuita fino al 7° giorno prima dell’arrivo.')
+    expect(pageText).toContain('Prenotazione diretta: in caso di cancellazione comunicata entro il 7° giorno prima dell’arrivo, restituiremo per intero l’acconto versato.')
+    expect(pageText).toContain('In caso di cancellazione negli ultimi 7 giorni possiamo offrire un buono pari all’importo versato, valido per un altro soggiorno entro 12 mesi')
+    expect(pageText).not.toContain('salvo alta stagione')
+    expect(pageText).not.toContain('con la prenotazione online')
     expect(pageText).not.toContain('15° giorno')
   })
 
