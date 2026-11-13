@@ -56,7 +56,7 @@ describe('italian rules page', () => {
     expect(pageText).toContain('Prenotazione diretta (telefono o email): una volta confermata la prenotazione, richiediamo il versamento di un acconto pari al 35% dell’importo totale tramite bonifico bancario.')
     expect(pageText).toContain('Prenotazione online: cancellazione gratuita fino al 7° giorno prima dell’arrivo.')
     expect(pageText).toContain('Prenotazione diretta: in caso di cancellazione comunicata entro il 7° giorno prima dell’arrivo, restituiremo per intero l’acconto versato.')
-    expect(pageText).toContain('In caso di cancellazione negli ultimi 7 giorni possiamo offrire un buono pari all’importo versato, valido per un altro soggiorno entro 12 mesi')
+    expect(pageText).toContain('In caso di cancellazione negli ultimi 7 giorni possiamo offrire un buono pari all’importo pagato, valido per un altro soggiorno entro 12 mesi')
     expect(pageText).not.toContain('salvo alta stagione')
     expect(pageText).not.toContain('con la prenotazione online')
     expect(pageText).not.toContain('15° giorno')

@@ -25,7 +25,7 @@
 
       <section class="rule" data-reveal>
         <h2>PAYMENT METHODS</h2>
-        <p><strong>Online booking:</strong> your credit card is requested as a guarantee only, and nothing is paid at the time of booking. 7 days before arrival the amount of the stay is held on the card, and it is charged at check-in.</p>
+        <p><strong>Online booking:</strong> your credit card is requested as a guarantee only, and nothing is paid at the time of booking. Seven days before arrival, the amount of the stay is held on the card, and it is charged at check-in.</p>
         <p><strong>Direct booking (phone or email):</strong> once the booking is confirmed, we require a deposit of 35% of the total amount by bank transfer. The remaining balance is paid on arrival in cash or by credit/debit card, with an official receipt issued.</p>
         <p><strong>IMPORTANT:</strong> Please pay the deposit only after receiving official confirmation of availability and agreement on the amount.</p>
       </section>
