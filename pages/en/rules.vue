@@ -40,7 +40,7 @@
       <section class="rule" data-reveal>
         <h2>CHECK-IN AND DOCUMENTS</h2>
         <p>Upon arrival, you must present a valid ID. Without valid documents, registration cannot be completed. All personal data is handled in compliance with current privacy regulations.</p>
-        <p>After registration and payment of the balance, we will hand over the keys to the main entrance and to your room. To speed up check-in, you may alternatively send us clear copies of your documents via WhatsApp or email the day before arrival.</p>
+        <p>After registration and payment of the balance, we will hand over the keys to the main entrance and to your room. To speed up check-in, you may alternatively send us clear copies of your documents via WhatsApp or email the day before arrival. If you booked online, you can also check in online by uploading your documents to a secure, private area.</p>
       </section>
 
       <section class="rule" data-reveal>

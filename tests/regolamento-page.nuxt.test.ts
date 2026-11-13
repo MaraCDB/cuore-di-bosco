@@ -62,6 +62,13 @@ describe('italian rules page', () => {
     expect(pageText).not.toContain('15° giorno')
   })
 
+  it('offers online check-in to guests who booked online', async () => {
+    const wrapper = await mountRules()
+    const pageText = normalize(wrapper.element.textContent ?? '')
+
+    expect(pageText).toContain('Se avete prenotato online, potete anche fare il check-in online caricando i documenti in un’area protetta e riservata.')
+  })
+
   it('offers breakfast for every diet in the breakfast card', async () => {
     const wrapper = await mountRules()
     const breakfastCard = [...wrapper.element.querySelectorAll('.rule')].find(card => card.querySelector('h2')?.textContent === 'COLAZIONE')

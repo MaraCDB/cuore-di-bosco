@@ -109,6 +109,12 @@ describe('english rules page', () => {
     expect(pageText).not.toMatch(/\bhire\b/)
   })
 
+  it('offers online check-in to guests who booked online', async () => {
+    const english = await mountEnglish()
+
+    expect(normalize(english.textContent ?? '')).toContain('If you booked online, you can also check in online by uploading your documents to a secure, private area.')
+  })
+
   it('translates the photo description', async () => {
     const italianLabels = accessibleLabels(await mountItalian())
     const englishLabels = accessibleLabels(await mountEnglish())

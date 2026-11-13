@@ -10,7 +10,17 @@ function normalize(text: string): string {
   return text.replace(/\xa0/g, ' ').replace(/\s+/g, ' ').trim()
 }
 
+const idDocumentSentences: Record<SiteLocale, string> = {
+  it: 'In ogni caso porta con te un documento d’identità valido: senza non è possibile soggiornare.',
+  en: 'Either way, please bring a valid ID document: without one you cannot stay.',
+  de: 'Bringen Sie in jedem Fall einen gültigen Ausweis mit: Ohne Ausweis ist kein Aufenthalt möglich.',
+}
+
 describe('booking guide', () => {
+  it.each(locales)('requires an ID document and offers online check-in as an option in %s', (locale) => {
+    expect(bookingGuide(locale).paragraphs[3]).toContain(idDocumentSentences[locale])
+  })
+
   it.each(locales)('renders a closed disclosure with the %s copy and rules link', async (locale) => {
     const copy = bookingGuide(locale)
     const wrapper = await mountSuspended(BookingGuide, { props: { locale } })
@@ -22,6 +32,7 @@ describe('booking guide', () => {
     expect(normalize(details?.querySelector('summary')?.textContent ?? '')).toBe(copy.summary)
     expect(text).toContain(normalize(copy.paragraphs[0]))
     expect(text).toContain(normalize(copy.paragraphs[2]))
+    expect(text).toContain(normalize(copy.paragraphs[3]))
     expect(details?.querySelectorAll('p')).toHaveLength(copy.paragraphs.length + 1)
     expect(details?.querySelector('p:last-child a')?.getAttribute('href')).toBe(copy.closing.to)
     expect(normalize(details?.querySelector('p:last-child')?.textContent ?? '')).toBe(normalize(copy.closing.before + copy.closing.linkLabel + copy.closing.after))

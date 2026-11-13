@@ -141,6 +141,12 @@ describe('german rules page', () => {
     expect(forbiddenWords.filter(word => pageText.includes(word))).toEqual([])
   })
 
+  it('offers online check-in to guests who booked online', async () => {
+    const german = await mountGerman()
+
+    expect(normalize(german.textContent ?? '')).toContain('Wenn Sie online gebucht haben, können Sie auch online einchecken und Ihre Dokumente in einen geschützten, vertraulichen Bereich hochladen.')
+  })
+
   it('translates the photo description', async () => {
     const italianLabels = accessibleLabels(await mountItalian())
     const germanLabels = accessibleLabels(await mountGerman())

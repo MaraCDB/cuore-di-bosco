@@ -40,7 +40,7 @@
       <section class="rule" data-reveal>
         <h2>CHECK-IN E DOCUMENTI</h2>
         <p>All’arrivo dovrete presentare un documento d’identità valido. Senza documenti validi non sarà possibile procedere con la registrazione. Trattiamo tutti i dati personali nel rispetto delle normative sulla privacy vigenti.</p>
-        <p>Dopo la registrazione e il saldo, vi consegneremo le chiavi dell’ingresso principale e della vostra camera. Per velocizzare il check in alternativa potete inviarci i documenti, ben leggibili, via whatsapp o mail il giorno prima dell'arrivo.</p>
+        <p>Dopo la registrazione e il saldo, vi consegneremo le chiavi dell’ingresso principale e della vostra camera. Per velocizzare il check in alternativa potete inviarci i documenti, ben leggibili, via whatsapp o mail il giorno prima dell'arrivo. Se avete prenotato online, potete anche fare il check-in online caricando i documenti in un’area protetta e riservata.</p>
       </section>
 
       <section class="rule" data-reveal>

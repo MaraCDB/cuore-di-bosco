@@ -40,7 +40,7 @@
       <section class="rule" data-reveal>
         <h2>CHECK-IN UND AUSWEIS&shy;DOKUMENTE</h2>
         <p>Bei der Ankunft müssen Sie einen gültigen Ausweis vorlegen. Ohne gültige Ausweisdokumente kann die Anmeldung nicht durchgeführt werden. Alle personenbezogenen Daten verarbeiten wir unter Einhaltung der geltenden Datenschutzbestimmungen.</p>
-        <p>Nach der Anmeldung und der Begleichung des Restbetrags übergeben wir Ihnen die Schlüssel für den Haupteingang und für Ihr Zimmer. Um den Check-in zu beschleunigen, können Sie uns die Dokumente alternativ gut lesbar am Tag vor der Anreise per WhatsApp oder E-Mail senden.</p>
+        <p>Nach der Anmeldung und der Begleichung des Restbetrags übergeben wir Ihnen die Schlüssel für den Haupteingang und für Ihr Zimmer. Um den Check-in zu beschleunigen, können Sie uns die Dokumente alternativ gut lesbar am Tag vor der Anreise per WhatsApp oder E-Mail senden. Wenn Sie online gebucht haben, können Sie auch online einchecken und Ihre Dokumente in einen geschützten, vertraulichen Bereich hochladen.</p>
       </section>
 
       <section class="rule" data-reveal>
