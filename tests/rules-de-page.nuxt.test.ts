@@ -35,7 +35,7 @@ const cancellationSentence = 'Wenn Sie bis zum 7. Tag vor der Anreise stornieren
 const onlinePaymentSentence = 'Online-Buchung: Die Kreditkarte wird nur als Garantie verlangt, bei der Buchung zahlen Sie nichts.'
 const directPaymentSentence = 'Direktbuchung (Telefon oder E-Mail): Sobald die Buchung bestätigt ist, bitten wir um eine Anzahlung von 35 % des Gesamtbetrags per Banküberweisung.'
 const onlineCancellationSentence = 'Online-Buchung: Kostenlose Stornierung bis zum 7. Tag vor der Anreise.'
-const voucherSentence = 'Bei Stornierungen in den letzten 7 Tagen können wir einen Gutschein über den gezahlten Betrag anbieten'
+const voucherSentence = 'können wir nach vorheriger Absprache einen Gutschein über den Buchungsbetrag anbieten, gültig für einen anderen Aufenthalt innerhalb von 12 Monaten, ausgenommen die Wochen um Ferragosto (Mitte August), Weihnachten und Neujahr. Der Gutschein ist persönlich und nicht weiterverkäuflich.'
 const dietsParagraph = 'Wir sind für jeden Ernährungswunsch da: vegetarisch, vegan, bei Unverträglichkeiten oder Allergien. Bitte sagen Sie uns rechtzeitig vor Ihrer Anreise Bescheid, damit wir Ihnen eine passende Auswahl anbieten können.'
 const inRoomBreakfastSentence = 'Außerdem können wir ein Frühstück zum Verzehr auf dem Zimmer zubereiten (auf Anfrage).'
 

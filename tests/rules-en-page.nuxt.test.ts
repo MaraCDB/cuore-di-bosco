@@ -11,7 +11,7 @@ const cancellationSentence = 'if you cancel up to the 7th day before arrival, we
 const onlinePaymentSentence = 'Online booking: your credit card is requested as a guarantee only, and nothing is paid at the time of booking.'
 const directPaymentSentence = 'Direct booking (phone or email): once the booking is confirmed, we require a deposit of 35% of the total amount by bank transfer.'
 const onlineCancellationSentence = 'Online booking: free cancellation up to the 7th day before arrival.'
-const voucherSentence = 'For cancellations in the last 7 days, we can offer a voucher for the amount paid, valid for another stay within 12 months'
+const voucherSentence = 'by prior arrangement we can offer a voucher for the amount of the booking, valid for another stay within 12 months, excluding the weeks of Ferragosto (mid-August), Christmas and New Year. The voucher is personal and cannot be resold.'
 const dietsParagraph = 'We are happy to meet any dietary requirement: vegetarian, vegan, intolerances or allergies. Please let us know in good time before your arrival so that we can offer you a suitable choice.'
 const inRoomBreakfastSentence = 'We can also prepare a breakfast to be enjoyed in your room (on request).'
 

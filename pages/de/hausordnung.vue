@@ -34,7 +34,7 @@
         <h2>STORNIERUNGS&shy;BEDINGUNGEN</h2>
         <p><strong>Online-Buchung:</strong> Kostenlose Stornierung bis zum 7. Tag vor der Anreise. Bei Stornierungen in den letzten 7 Tagen oder bei Nichtanreise wird der volle Betrag des Aufenthalts abgebucht.</p>
         <p><strong>Direktbuchung:</strong> Wenn Sie bis zum 7. Tag vor der Anreise stornieren, erstatten wir die geleistete Anzahlung vollständig. Für Stornierungen in den letzten 7 Tagen vor der Anreise oder für eine vorzeitige Abreise gegenüber der ursprünglichen Buchung ist keine Erstattung vorgesehen.</p>
-        <p>Bei Stornierungen in den letzten 7 Tagen können wir einen Gutschein über den gezahlten Betrag anbieten, gültig für einen anderen Aufenthalt innerhalb von 12 Monaten, ausgenommen die Wochen um Ferragosto (Mitte August), Weihnachten und Neujahr.</p>
+        <p>Wenn Sie Ihren Aufenthalt in den letzten 7 Tagen vor der Anreise verschieben, zum Beispiel wegen Krankheit, Verletzung, schlechten Wetters oder beruflicher Verpflichtungen, können wir nach vorheriger Absprache einen Gutschein über den Buchungsbetrag anbieten, gültig für einen anderen Aufenthalt innerhalb von 12 Monaten, ausgenommen die Wochen um Ferragosto (Mitte August), Weihnachten und Neujahr. Der Gutschein ist persönlich und nicht weiterverkäuflich. Der Betrag wird in jedem Fall am Check-in-Tag von der Karte abgebucht.</p>
       </section>
 
       <section class="rule" data-reveal>

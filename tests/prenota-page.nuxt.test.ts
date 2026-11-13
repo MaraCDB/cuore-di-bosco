@@ -90,8 +90,8 @@ describe('italian booking page', () => {
   it('explains how booking works right after the widget', async () => {
     const wrapper = await mountBooking()
 
-    expect(wrapper.element.querySelector('.booking-strip > .booking-widget + details.booking-guide')).not.toBeNull()
-    expect(await mountedPageText()).toContain('oggi non paghi nulla (0 €)')
+    expect(wrapper.element.querySelectorAll('.booking-strip > .booking-widget + .booking-guide > details')).toHaveLength(3)
+    expect(await mountedPageText()).toContain('Dopo la prenotazione è possibile fare il check-in online')
   })
 
   it('titles the page and its sections', async () => {

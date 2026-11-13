@@ -34,7 +34,7 @@
         <h2>CANCELLATION POLICY</h2>
         <p><strong>Online booking:</strong> free cancellation up to the 7th day before arrival. For cancellations in the last 7 days or no-shows, the full amount of the stay is charged.</p>
         <p><strong>Direct booking:</strong> if you cancel up to the 7th day before arrival, we will refund the deposit paid in full. No refunds are given for cancellations made in the last 7 days or for early departures compared to the original booking.</p>
-        <p>For cancellations in the last 7 days, we can offer a voucher for the amount paid, valid for another stay within 12 months, excluding the weeks of Ferragosto (mid-August), Christmas and New Year.</p>
+        <p>If you postpone your stay in the last 7 days before arrival, for example because of illness, injury, bad weather or work commitments, by prior arrangement we can offer a voucher for the amount of the booking, valid for another stay within 12 months, excluding the weeks of Ferragosto (mid-August), Christmas and New Year. The voucher is personal and cannot be resold. The amount on the card will be taken on the check-in day in any case.</p>
       </section>
 
       <section class="rule" data-reveal>

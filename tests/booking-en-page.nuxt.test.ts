@@ -107,7 +107,7 @@ describe('english booking page', () => {
   it('explains how booking works right after the widget', async () => {
     const english = await mountEnglish()
 
-    expect(english.querySelector('.booking-strip > .booking-widget + details.booking-guide')).not.toBeNull()
+    expect(english.querySelectorAll('.booking-strip > .booking-widget + .booking-guide > details')).toHaveLength(3)
   })
 
   it('uses the redesign layout, plain text, no-prefetch links and unsized images', async () => {

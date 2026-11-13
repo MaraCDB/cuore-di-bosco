@@ -34,7 +34,7 @@
         <h2>POLITICHE DI CANCELLAZIONE</h2>
         <p><strong>Prenotazione online:</strong> cancellazione gratuita fino al 7° giorno prima dell’arrivo. Per cancellazioni negli ultimi 7 giorni o mancato arrivo viene addebitato l’intero importo del soggiorno.</p>
         <p><strong>Prenotazione diretta:</strong> in caso di cancellazione comunicata entro il 7° giorno prima dell’arrivo, restituiremo per intero l’acconto versato. Non sono previsti rimborsi per cancellazioni comunicate negli ultimi 7 giorni o per partenze anticipate rispetto alla prenotazione originaria.</p>
-        <p>In caso di cancellazione negli ultimi 7 giorni possiamo offrire un buono pari all’importo pagato, valido per un altro soggiorno entro 12 mesi, escluse le settimane di Ferragosto, Natale e Capodanno.</p>
+        <p>In caso di spostamento del soggiorno nei 7 giorni precedenti alla data di arrivo, ad esempio per malattia, infortunio, maltempo o esigenze lavorative, previo accordi, possiamo offrire un buono pari all’importo della prenotazione, valido per un altro soggiorno entro 12 mesi, escluse le settimane di Ferragosto, Natale e Capodanno. Tale buono è personale e non rivendibile. L’importo dalla carta sarà in ogni caso prelevato il giorno del check-in.</p>
       </section>
 
       <section class="rule" data-reveal>
