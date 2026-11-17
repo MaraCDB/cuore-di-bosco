@@ -29,6 +29,7 @@ describe('booking guide', () => {
 
     expect(copy.sections.map((section) => section.title)).toEqual(italianSectionTitles)
     expect(plainText(copy.sections[1].paragraphs[0])).toContain('per malattia, infortunio, maltempo o esigenze lavorative, previo accordi, possiamo offrirti un buono pari all’importo della prenotazione')
+    expect(plainText(copy.sections[0].paragraphs[1])).toContain('Per cancellare o modificare la prenotazione usa il link nella mail di conferma della prenotazione, oppure accedi al tuo account su Bed-and-breakfast.it per ritrovare le tue prenotazioni e i tuoi dati.')
     expect(plainText(copy.sections[2].paragraphs[1])).toContain('documento d’identità in corso di validità per ogni ospite soggiornante, bambini compresi')
   })
 

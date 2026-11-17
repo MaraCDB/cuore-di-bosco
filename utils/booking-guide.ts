@@ -24,7 +24,7 @@ const bookingGuideByLocale: Record<SiteLocale, BookingGuideCopy> = {
         numbered: true,
         paragraphs: [
           'Usa il modulo qui sopra per vedere le date libere e prenotare. Ti porterà sul portale sicuro Bed-and-breakfast.it, dove inserisci la carta di credito solo a garanzia.',
-          'Puoi cancellare gratis **fino a 7 giorni prima dell’arrivo**. Da quel momento l’importo del soggiorno viene **bloccato sulla carta**, senza addebito: assicurati solo che sia disponibile.',
+          'Puoi cancellare gratis **fino a 7 giorni prima dell’arrivo**. Da quel momento l’importo del soggiorno viene **bloccato sulla carta**, senza addebito: assicurati solo che sia disponibile. Per **cancellare** o **modificare** la prenotazione usa il link nella mail di conferma della prenotazione, oppure accedi al tuo account su Bed-and-breakfast.it per ritrovare le tue prenotazioni e i tuoi dati.',
           'L’**addebito effettivo avviene il giorno previsto del check-in**. Se cancelli negli ultimi 7 giorni o non arrivi, viene addebitato l’intero importo del soggiorno il giorno previsto di arrivo.',
         ],
       },
@@ -56,7 +56,7 @@ const bookingGuideByLocale: Record<SiteLocale, BookingGuideCopy> = {
         numbered: true,
         paragraphs: [
           'Use the form above to check available dates and book. It will take you to the secure Bed-and-breakfast.it booking page, where you enter your credit card details as a guarantee only.',
-          'You can cancel free of charge **up to 7 days before arrival**. From then on, the amount of your stay is **held on your card**, not charged: please just make sure the funds are available.',
+          'You can cancel free of charge **up to 7 days before arrival**. From then on, the amount of your stay is **held on your card**, not charged: please just make sure the funds are available. To **cancel** or **change** your booking, use the link in your booking confirmation email, or log in to your account on Bed-and-breakfast.it to access your bookings and details.',
           '**Payment is actually taken on the scheduled check-in day**. If you cancel in the last 7 days or do not turn up, the full amount of the stay is charged on the scheduled arrival day.',
         ],
       },
@@ -88,7 +88,7 @@ const bookingGuideByLocale: Record<SiteLocale, BookingGuideCopy> = {
         numbered: true,
         paragraphs: [
           'Nutzen Sie das Formular oben, um freie Termine zu sehen und zu buchen. Es führt Sie zum sicheren Portal Bed-and-breakfast.it, wo Sie Ihre Kreditkartendaten nur als Garantie angeben.',
-          'Sie können **bis 7 Tage vor der Anreise** kostenlos stornieren. Ab diesem Zeitpunkt wird der Betrag Ihres Aufenthalts **auf der Karte reserviert**, aber nicht abgebucht: Bitte sorgen Sie nur für ausreichende Deckung.',
+          'Sie können **bis 7 Tage vor der Anreise** kostenlos stornieren. Ab diesem Zeitpunkt wird der Betrag Ihres Aufenthalts **auf der Karte reserviert**, aber nicht abgebucht: Bitte sorgen Sie nur für ausreichende Deckung. Um Ihre Buchung zu **stornieren** oder zu **ändern**, nutzen Sie den Link in der Bestätigungs-E-Mail Ihrer Buchung oder melden Sie sich in Ihrem Konto auf Bed-and-breakfast.it an: Dort finden Sie Ihre Buchungen und Ihre Daten.',
           'Die **tatsächliche Abbuchung erfolgt am geplanten Check-in-Tag**. Bei einer Stornierung in den letzten 7 Tagen oder bei Nichtanreise wird der volle Betrag des Aufenthalts am geplanten Anreisetag abgebucht.',
         ],
       },
