@@ -55,6 +55,11 @@
       </section>
 
       <section class="policy-card" data-reveal>
+        <h2>Online booking</h2>
+        <p>Online booking takes place on the Bed-and-breakfast.it portal, which processes your data according to its own <a href="https://www.bed-and-breakfast.it/privacy.cfm?locale=en" target="_blank" rel="noopener">privacy policy</a>.</p>
+      </section>
+
+      <section class="policy-card" data-reveal>
         <h2>Data Controller</h2>
         <p><strong>Cuore di Bosco – B&amp;B</strong><br>Email: <a href="mailto:info@cuoredibosco.it"><em>info@cuoredibosco.it</em></a></p>
       </section>

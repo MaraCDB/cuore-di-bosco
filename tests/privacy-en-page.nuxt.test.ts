@@ -74,11 +74,11 @@ describe('english privacy policy page', () => {
     expect(italianSources).toHaveLength(1)
   })
 
-  it('has six policy cards, each with a heading', async () => {
+  it('has seven policy cards, each with a heading', async () => {
     const english = await mountEnglish()
     const cards = [...english.querySelectorAll('section.policy-card')]
 
-    expect(cards).toHaveLength(6)
+    expect(cards).toHaveLength(7)
     cards.forEach(card => expect(card.querySelector('h2')).not.toBeNull())
     expect([...english.querySelectorAll('.policy-card h2')].map(heading => normalize(heading.textContent ?? ''))).toEqual([
       'Cuore di Bosco Cookie Policy',
@@ -86,6 +86,7 @@ describe('english privacy policy page', () => {
       'Types of cookies used',
       'Cookies used on this site',
       'How to manage cookies',
+      'Online booking',
       'Data Controller',
     ])
   })
@@ -108,13 +109,14 @@ describe('english privacy policy page', () => {
     expect(englishMail).toBe(italianMail)
   })
 
-  it('points the four browser help links to english pages', async () => {
+  it('points the four browser help links and the booking privacy link to english pages', async () => {
     const italianHosts = externalHrefs(await mountItalian()).map(href => new URL(href).hostname)
     const englishHrefs = externalHrefs(await mountEnglish())
 
     expect(englishHrefs.map(href => new URL(href).hostname)).toEqual(italianHosts)
-    expect(englishHrefs).toHaveLength(4)
-    expect(englishHrefs.filter(href => /hl=it|\/it-it\/|it-it|\/it\//.test(href))).toEqual([])
+    expect(englishHrefs).toHaveLength(5)
+    expect(englishHrefs.filter(href => /hl=it|\/it-it\/|it-it|\/it\/|locale=it/.test(href))).toEqual([])
+    expect(englishHrefs).toContain('https://www.bed-and-breakfast.it/privacy.cfm?locale=en')
   })
 
   it('translates the photo description', async () => {

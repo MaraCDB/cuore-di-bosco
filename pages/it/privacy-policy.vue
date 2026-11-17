@@ -55,6 +55,11 @@
       </section>
 
       <section class="policy-card" data-reveal>
+        <h2>Prenotazione online</h2>
+        <p>La prenotazione online avviene sul portale Bed-and-breakfast.it, che tratta i dati secondo la propria <a href="https://www.bed-and-breakfast.it/privacy.cfm?locale=it" target="_blank" rel="noopener">privacy policy</a>.</p>
+      </section>
+
+      <section class="policy-card" data-reveal>
         <h2>Titolare del trattamento</h2>
         <p><strong>Cuore di Bosco – B&amp;B</strong><br>Email: <a href="mailto:info@cuoredibosco.it"><em>info@cuoredibosco.it</em></a></p>
       </section>

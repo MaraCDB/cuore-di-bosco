@@ -55,6 +55,11 @@
       </section>
 
       <section class="policy-card" data-reveal>
+        <h2>Online-Buchung</h2>
+        <p>Die Online-Buchung erfolgt über das Portal Bed-and-breakfast.it, das Ihre Daten gemäß seiner eigenen <a href="https://www.bed-and-breakfast.it/privacy.cfm?locale=de" target="_blank" rel="noopener">Datenschutzerklärung</a> verarbeitet.</p>
+      </section>
+
+      <section class="policy-card" data-reveal>
         <h2>Verantwortlicher</h2>
         <p><strong>Cuore di Bosco – B&amp;B</strong><br>E-Mail: <a href="mailto:info@cuoredibosco.it"><em>info@cuoredibosco.it</em></a></p>
       </section>
