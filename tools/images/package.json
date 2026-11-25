@@ -1,0 +1,9 @@
+{
+  "name": "cuore-di-bosco-image-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Image resize and contact-sheet scripts, run from the repository root",
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

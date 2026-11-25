@@ -6,7 +6,7 @@
 
 **Architecture:** `layouts/default.vue` turns `main.redesign` on for `/it/regolamento` too. `pages/it/regolamento.vue` is rewritten in place: same `useHead`, the `sections` array + `v-html` replaced by 13 sections written out in the template, scoped styles mirroring `pages/it/index.vue` (`.hero`, `.story`) and `pages/it/esplora.vue` (`.seasons`/`.season`), `useReveal(root)`. Redesign globals (`.band`, `.wrap`, tokens) already live in `assets/css/global.css` under `.redesign`.
 
-**Tech Stack:** Nuxt 3.17, Vue SFC, vitest + `@nuxt/test-utils` (`mountSuspended`), plain CSS, sharp via `C:/Users/Mara/Workspace/cdb-tools`.
+**Tech Stack:** Nuxt 3.17, Vue SFC, vitest + `@nuxt/test-utils` (`mountSuspended`), plain CSS, sharp via `tools/images`.
 
 **Spec:** `docs/superpowers/specs/2026-11-03-regolamento-port-design.md` (read it: structure table, Hero, Rule cards, text changes, Tests).
 
@@ -64,7 +64,7 @@ Check: the JSON has h1 "Regolamento", the 13 h2, every paragraph and list item, 
 
 - [ ] **Step 2: Make the hero WebP**
 
-Run from the repo root: `node ../cdb-tools/apt-resize.mjs public/images/altervista/regole-scaled.jpg regole 1440`
+Run from the repo root: `node tools/images/apt-resize.mjs public/images/altervista/regole-scaled.jpg regole 1440`
 Expected: `public/images/home/regole-1440.webp` exists. `regole-scaled.jpg` unchanged.
 
 - [ ] **Step 3: Write the failing tests** in `tests/regolamento-page.nuxt.test.ts` (setup as in `tests/explore-page.nuxt.test.ts:1-11,73-95`: `normalize()`, mount helper, `pageStyles`, `ruleBody()`)

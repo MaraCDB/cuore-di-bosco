@@ -48,7 +48,7 @@ Sequence: forest, linen, champagne, footer forest-deep: no adjacent pair alike. 
 ## Hero
 
 - Photo: `public/images/altervista/regole-scaled.jpg` (2560x1424, board game with pawns and dice). Owner: keep it, no credit (none known).
-- Serve a resized WebP, run from the cuore-di-bosco root (the script writes to a relative path): `node ../cdb-tools/apt-resize.mjs public/images/altervista/regole-scaled.jpg regole 1440` -> `public/images/home/regole-1440.webp`. The JPG stays in the repo untouched.
+- Serve a resized WebP, run from the cuore-di-bosco root (the script writes to a relative path): `node tools/images/apt-resize.mjs public/images/altervista/regole-scaled.jpg regole 1440` -> `public/images/home/regole-1440.webp`. The JPG stays in the repo untouched.
 - Alt text: legacy alt "bosco" is wrong for this photo. Draft for owner approval: "Pedine e dadi su un gioco da tavolo". Until approved, use the draft (it is not page copy) and list it in the report.
 - Hero height: the text half holds only the h1, so the desktop hero is shorter than the home's (builder picks, about 300-360px at 1440); h1 at `--step-display` with an explicit scoped `color:var(--on-forest)` (global `.redesign h1` is `--forest`; `.band` recolours only h2/h3), as the home `.hero h1`.
 

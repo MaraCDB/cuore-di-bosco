@@ -85,7 +85,7 @@ Tile layout (my call): square photo (`aspect-ratio:1/1`, `object-fit:cover`), pl
 
 - Exact grid gaps, card spacing, section margins (reuse `--section-gap`, `--band-pad`, home values).
 - Whether section CSS lives scoped in `esplora.vue` or shared; prefer scoped, mirroring `index.vue`.
-- Whether `castello-rovereto-700.webp` is too soft in a ~430px tile at 2x; if so, regenerate a larger width from the APT original with `cdb-tools/apt-resize.mjs` (original never committed).
+- Whether `castello-rovereto-700.webp` is too soft in a ~430px tile at 2x; if so, regenerate a larger width from the APT original with `tools/images/apt-resize.mjs` (original never committed).
 - Legacy `useHead` stays as is, except the Avio keyword.
 
 ## Done when
